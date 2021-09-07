@@ -1,9 +1,5 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <div id="app">    
     <router-view/>
   </div>
 </template>
@@ -30,3 +26,14 @@
   }
 }
 </style>
+
+<script>
+export default {
+  mounted() {
+    if (localStorage.step) {
+      let step = localStorage.step
+      this.$store.dispatch('step', {step})
+    }
+  }
+}
+</script>

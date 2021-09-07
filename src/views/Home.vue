@@ -1,18 +1,21 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>A home page with CTA button</h1>
+    <button @click="start">Build your CV now</button>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
-  }
+  methods: {
+    async start() {
+      let step = 1;
+      await this.$store.dispatch('step', {step})
+      this.$router.push('/builder');
+    }
+  },
 }
 </script>
