@@ -1,22 +1,25 @@
 <template>
   <div class="about">
+    <steps />
     <h1>This is the BUILDER page</h1>
-
-    <cv-templates v-if="step == 1" />
-    <cv-form v-if="step == 2" />
-
+    <div style="display: flex; width: 100%; justify-content:center">
+      <cv-form />
+      <templates />
+    </div>
     <h1>{{step}}</h1>
   </div>
 </template>
 
 <script>
-import CvTemplates from '../components/CvTemplates.vue'
 import CvForm from '../components/CvForm.vue'
+import Templates from '../components/Template.vue'
+import Steps from '../components/Steps.vue'
 
 export default {
   components: {
-    CvTemplates,
-    CvForm
+    CvForm,
+    Templates,
+    Steps
   },
   computed: {
     step() {
@@ -25,3 +28,4 @@ export default {
   }
 }
 </script>
+

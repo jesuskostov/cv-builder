@@ -1,0 +1,40 @@
+<template>
+  <div>
+    <div>
+        <label for="accomplishments">Accomplishments</label>
+        <textarea name="accomplishments" id="accomplishments" cols="30" rows="10" v-model="accomplishments"></textarea>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+    data() {
+        return {
+            accomplishments: ''
+        }
+    },
+    watch: {
+        accomplishments: {
+            handler(val){
+                // Saving data to localStorage
+                localStorage.setItem('accomplishments', JSON.stringify(val))
+            },
+            deep: true
+        }
+    },
+    mounted() {
+        // Retrieving data from localStorage
+        if (JSON.parse(localStorage.getItem('accomplishments')) != null) {
+            this.accomplishments = JSON.parse(localStorage.getItem('accomplishments'));
+        }
+    }
+}
+</script>
+
+<style>
+svg.active {
+    fill: #ffd06a;
+}
+</style>
+

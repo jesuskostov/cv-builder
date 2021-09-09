@@ -7,13 +7,12 @@
 
 <script>
 // @ is an alias to /src
-
 export default {
   name: 'Home',
   methods: {
     async start() {
       let step = 1;
-      await this.$store.dispatch('step', {step})
+      await this.$store.dispatch('step', {step});
       this.$router.push('/builder');
     }
   },

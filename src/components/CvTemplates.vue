@@ -30,6 +30,7 @@ export default {
       this.selectedCv = variant
     },
     async forward() {
+      // Choosing CV template and commiting to store
       let variant = this.selectedCv
       if (variant != null) {
         let step = 2
