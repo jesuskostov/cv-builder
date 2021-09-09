@@ -1,17 +1,12 @@
-
 <template>
   <div class="template">
     <keep-alive>
-      <component :is="templateComponent" :personal="personal" :workHistory="workHistory" />
+      <component :is="templateComponent" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :interests="interests" :accomp="accomp" />
     </keep-alive>
   </div>
 </template>
 
 <style scoped>
-.template {
-  width: 30%;
-  border: 1px solid red;
-}
 </style>
 
 <script>
@@ -33,14 +28,28 @@ export default {
       default: () => {},
     },
     workHistory: {
+      type: Array,
+    },
+    education: {
+      type: Array,
+    },
+    skills: {
+      type: Array,
+    },
+    languages: {
+      type: Array,
+    },
+    interests: {
       type: Array
+    },
+    accomp: {
+      type: String
     },
     templateName: {
       type: Number,
       default: 1,
     },
   },
-
   computed: {
     templateComponent() {
       return templates[this.templateName];

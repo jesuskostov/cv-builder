@@ -1,6 +1,6 @@
 <template>
   <div class="template">
-    <div>
+    <div v-if="personal">
       PERSONAL
       <br>
       {{personal.firstName}} 

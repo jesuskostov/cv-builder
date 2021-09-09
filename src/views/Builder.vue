@@ -6,7 +6,6 @@
       <cv-form />
       <templates />
     </div>
-    <h1>{{step}}</h1>
   </div>
 </template>
 
@@ -21,11 +20,6 @@ export default {
     Templates,
     Steps
   },
-  computed: {
-    step() {
-      return this.$store.state.step
-    }
-  }
 }
 </script>
 

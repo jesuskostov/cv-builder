@@ -123,7 +123,11 @@ export default {
         deleteSkill(i) {
             this.skills.splice(i, 1);
         },
-        nextStep(step) {
+        async nextStep(step) {
+            let education = this.education
+            let skills = this.skills
+            await this.$store.dispatch('saveEducation', {education});
+            await this.$store.dispatch('saveSkills', {skills});
             this.$store.dispatch('step', {step})
         }
     },

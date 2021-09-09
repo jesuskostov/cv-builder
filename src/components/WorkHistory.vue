@@ -3,22 +3,32 @@
     <!-- Work History -->
     <div v-for="(work, i) in workHistory" :key="i">
         <p>Job Title: {{work.jobTitle}}</p>
-        <input type="text" v-model="work.jobTitle">
-        <input type="text" v-model="work.employer">
+        <label for="jobTitle">Job title</label>
+        <input type="text" id="jobTitle" v-model="work.jobTitle">
         <br>
         <br>
-        <input type="text" v-model="work.startDate">
-        <input type="text" v-model="work.endDate">
-        <br>
-        <label for="work">I currently work here</label>
-        <input type="checkbox" id="work" name="work" :checked="work.currentlyWork" v-model="work.currentlyWork">
+        <label for="employer">Employer</label>
+        <input type="text" id="employer" v-model="work.employer">
         <br>
         <br>
-        <textarea type="text" v-model="work.description"></textarea>
+        <label for="startDate">Start date</label>
+        <input type="date" id="startDate" v-model="work.startDate">
+        <br>
+        <label for="endDate">End date</label>
+        <input type="date" id="endDate" v-model="work.endDate">
+        <br>
+        <label for="currentWork">I currently work here</label>
+        <input type="checkbox" id="currentWork" name="work" :checked="work.currentlyWork" v-model="work.currentlyWork">
+        <br>
+        <br>
+        <label for="workDescription">Work description</label>
+        <textarea type="text" id="workDescription" v-model="work.description"></textarea>
         <br>
         <button @click="deleteJob(i)">Delete {{work.jobTitle}}</button>
     </div>
+    <br>
     <button @click="addNewJob">Add new job</button>
+    <br>
     <br>
     <br>
     <button @click="nextStep(3)">Next</button>
