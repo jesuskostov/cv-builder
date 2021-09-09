@@ -1,5 +1,9 @@
 module.exports = {
-    devServer: {
+
+    configureWebpack: {
+      devServer: {
         historyApiFallback: true
+      }
     }
-};
+  
+  };
