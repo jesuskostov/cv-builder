@@ -14,7 +14,6 @@ export default new Vuex.Store({
     SET_STEP: (state, step) => {
       state.step = step;
       localStorage.step = step;
-      console.log(step);
     },
     SET_CV_VARIANT: (state, variant) => {
       state.cv_variant = variant
