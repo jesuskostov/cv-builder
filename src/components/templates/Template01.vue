@@ -2,7 +2,6 @@
   <div class="template">
     <!-- Personal -->
     <div v-if="personal">
-      {{templateName}}
       PERSONAL
       <br>
       First name: {{personal.firstName}} 

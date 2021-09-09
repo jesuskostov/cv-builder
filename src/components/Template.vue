@@ -70,13 +70,13 @@ export default {
     if(personal) {
       this.$store.dispatch('savePersonal', {personal})
     }
-    if(workHistory != 0) {
+    if(workHistory.length != 0) {
       this.$store.dispatch('saveWorkHistory', {workHistory});
     }
-    if (education != 0) {
+    if (education.length != 0) {
       this.$store.dispatch('saveEducation', {education})
     }
-    if (skills != 0) {
+    if (skills.length != 0) {
       this.$store.dispatch('saveSkills', {skills})
     }
     if (lang.length != 0) {
