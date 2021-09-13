@@ -115,6 +115,7 @@ export default {
 <style lang="scss" scoped>
 .template {
   width: 1024px;
+  height: 1280px;
   padding: 50px;
   background-color: #fff;
   color: rgb(17, 17, 17);

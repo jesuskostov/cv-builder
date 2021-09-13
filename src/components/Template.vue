@@ -68,7 +68,6 @@ export default {
     let interests = JSON.parse(localStorage.getItem('interests'));
     let accomp = JSON.parse(localStorage.getItem('accomplishments'));
     let cv_variant = JSON.parse(localStorage.getItem('cv_variant'));
-    console.log(cv_variant);
     if (cv_variant != null) {
       let payload = cv_variant
       this.$store.dispatch('selectCv', {payload});
