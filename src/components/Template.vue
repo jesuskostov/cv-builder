@@ -1,16 +1,16 @@
 <template>
-  <div class="hello">
-    <div>
+  <div class="template">
+    <!-- <div>
       <button v-for="item in list" :key="item" @click="onClick(item)">
         {{ item }}
       </button>
     </div>
-    <h1>Loaded {{ selectedCv }}</h1>
-    <templates :template-name="selectedCv" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :interests="interests" :accomp="accomp" />
-    <!-- <h1>Display All</h1>
-    <div v-for="item in list" :key="item">
-      <templates :template-name="item" :content="content" />
-    </div> -->
+    <h1>Loaded {{ selectedCv }}</h1> -->
+    <!-- <templates :template-name="selectedCv" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :interests="interests" :accomp="accomp" /> -->
+      <div v-for="item in list" :key="item">
+        <templates :template-name="item" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :interests="interests" :accomp="accomp" />
+        <button @click="onClick(item)">Use template</button>
+      </div>
   </div>
 </template>
 
@@ -31,8 +31,11 @@ export default {
     };
   },
   methods: {
-    onClick(payload) {
+    async onClick(payload) {
       this.selectedCv = payload;
+      let step = 1;
+      await this.$store.dispatch('step', {step});
+      this.$router.push('/builder');
     },
   },
   computed: {
@@ -94,7 +97,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.hello {
-  width: 30%;
+.template {
+  width: 100%;
+  display: flex;
+  zoom: 0.65;
+  overflow-x: scroll;
 }
 </style>

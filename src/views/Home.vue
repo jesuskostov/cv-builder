@@ -43,7 +43,7 @@
                 <p class="price">1,99 EUR</p>
                 <p class="text">* Then automatically renewed by subscription,<br>for an indefinite period, at 39 € per month.</p>
               </div>
-              <router-link to="/" class="btn">Get started now</router-link>
+              <router-link to="/" class="btn">Get Started Now</router-link>
             </div>
           </div>
           <div class="col-md-6 position-relative">
@@ -112,6 +112,7 @@
           </div>
         </div>
       </div>
+      <templates />
     </div>
     <div id="why-section">
       <div class="section-title">
@@ -139,12 +140,14 @@
 
 <script>
 // @ is an alias to /src
-import Navbar from '../components/NavBar.vue'
+import Navbar from '../components/Navbar.vue'
+import Templates from '../components/Template.vue'
 
 export default {
   name: 'Home',
   components: {
-    Navbar
+    Navbar,
+    Templates
   },
   methods: {
     async start() {

@@ -4,17 +4,35 @@
         <div class="nav__logo">
             <img src="../assets/images/logo.png" alt="logo">
         </div>
-        <ul class="nav__menu">
+        <steps v-if="steps" />
+        <ul v-if="!steps" class="nav__menu">
             <router-link to="/">Browse Templates</router-link>
-            <router-link class="btn" to="/">Get started</router-link>
+            <button @click="start" class="btn">Get Started</button>
         </ul>
       </div>
   </div>
 </template>
 
 <script>
+import steps from '../components/Steps.vue'
+
 export default {
-    name: 'Navbar'
+    name: 'Navbar',
+    props: {
+        steps: {
+            type: Boolean,
+        },
+    },
+    components: {
+        steps
+    },
+    methods: {
+        async start() {
+            let step = 1;
+            await this.$store.dispatch('step', {step});
+            this.$router.push('/builder');
+        }
+    }
 }
 </script>
 
@@ -37,11 +55,11 @@ export default {
             &.router-link-exact-active {
             color: #2c3e50;
             }
-
-            &.btn {
-                color: #fff;
-                background-color: var(--primary-color);
-            }
+        }
+        .btn {
+            font-weight: bold;
+            color: #fff;
+            background-color: var(--primary-color);
         }
     }
 }
