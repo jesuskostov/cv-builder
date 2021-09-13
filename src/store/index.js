@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    selectedCv: 1,
     step: null,
     personal: null,
     workHistory: [],
@@ -15,6 +16,9 @@ export default new Vuex.Store({
     accomplishments: ''
   },
   mutations: {
+    SET_CV_TEMPLATE: (state, payload) => {
+      state.selectedCv = payload
+    },
     SET_STEP: (state, step) => {
       state.step = step;
       localStorage.step = step;
@@ -42,6 +46,9 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    selectCv: ({commit}, {payload}) => {
+      commit('SET_CV_TEMPLATE', payload)
+    },
     step: ({commit}, {step}) => {
       commit('SET_STEP', step)
     },

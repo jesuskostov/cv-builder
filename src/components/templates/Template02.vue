@@ -105,7 +105,7 @@ export default {
     },
     templateName: {
       type: Number,
-      default: 1,
+      default: 2,
     },
   },
 };
@@ -117,7 +117,7 @@ export default {
   width: 1024px;
   padding: 50px;
   background-color: #fff;
-  color: rgb(17, 17, 17);
+  color: red;
   margin: 30px;
 }
 h1 {

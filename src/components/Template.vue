@@ -1,16 +1,12 @@
 <template>
-  <div class="template">
-    <!-- <div>
-      <button v-for="item in list" :key="item" @click="onClick(item)">
-        {{ item }}
-      </button>
-    </div>
-    <h1>Loaded {{ selectedCv }}</h1> -->
-    <!-- <templates :template-name="selectedCv" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :interests="interests" :accomp="accomp" /> -->
+  <div>
+    <templates v-if="onBuilder" :template-name="selected" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :interests="interests" :accomp="accomp" />
+    <div v-if="!onBuilder"  class="template">
       <div v-for="item in list" :key="item">
         <templates :template-name="item" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :interests="interests" :accomp="accomp" />
         <button @click="onClick(item)">Use template</button>
       </div>
+    </div>
   </div>
 </template>
 
@@ -22,9 +18,9 @@ export default {
   components: {
     Templates,
   },
+  props: ['onBuilder','selected'],
   data() {
     return {
-      selectedCv: 1,
       list: Array(templatesCount)
         .fill(0)
         .map((e, i) => i + 1),
@@ -32,8 +28,9 @@ export default {
   },
   methods: {
     async onClick(payload) {
-      this.selectedCv = payload;
       let step = 1;
+      localStorage.setItem('cv_variant', payload);
+      await this.$store.dispatch('selectCv', {payload});
       await this.$store.dispatch('step', {step});
       this.$router.push('/builder');
     },
@@ -70,6 +67,12 @@ export default {
     let lang = JSON.parse(localStorage.getItem('spokenLanguages'));
     let interests = JSON.parse(localStorage.getItem('interests'));
     let accomp = JSON.parse(localStorage.getItem('accomplishments'));
+    let cv_variant = JSON.parse(localStorage.getItem('cv_variant'));
+    console.log(cv_variant);
+    if (cv_variant != null) {
+      let payload = cv_variant
+      this.$store.dispatch('selectCv', {payload});
+    }
     if(personal) {
       this.$store.dispatch('savePersonal', {personal})
     }

@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 50%">
+  <div>
     <personal v-if="step == 1" />
     <work-history v-if="step == 2" />
     <education v-if="step == 3" />
