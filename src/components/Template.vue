@@ -59,7 +59,7 @@ export default {
     }
   },
   mounted() {
-    // Get them back on refresh
+    // Get them back on refresh from the local storage
     let personal = JSON.parse(localStorage.getItem('user'));
     let workHistory = JSON.parse(localStorage.getItem('workHistory'));
     let education = JSON.parse(localStorage.getItem('education'));

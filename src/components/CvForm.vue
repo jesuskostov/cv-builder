@@ -9,6 +9,15 @@
         <accomplishments />
         <button @click="forward">Next</button>
     </div>
+    <div v-if="step == 5">
+        <button @click="goTo(1)">Edit Personal</button>
+        <br>
+        <button @click="goTo(2)">Edit Work history</button>
+        <br>
+        <button @click="goTo(3)">Edit Education and skills</button>
+        <br>
+        <button @click="goTo(4)">Edit Languages, iterests and accomplishments</button>
+    </div>
   </div>
 </template>
 
@@ -48,6 +57,11 @@ export default {
             if (accomp.length != '') {
                 this.$store.dispatch('saveAccomp', {accomp});
             }
+            let step = 5
+            this.$store.dispatch('step', {step})
+        },
+        goTo(step) {
+            this.$store.dispatch('step', {step})
         }
     }
 }
