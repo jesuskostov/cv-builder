@@ -4,19 +4,19 @@
       <h1>{{personal.firstName}} <br>{{personal.lastName}}</h1>
       <p class="profession">{{personal.profession}}</p>
     </div>
-    <div v-if="personal" class="info">
+    <div class="info">
       <!-- LEFT SIDE -->
       <div class="text-left pt-3 border-right pr-5">
         <h2 class="mb-3">DETAILS</h2>
-        <div class="box">
+        <div v-if="personal" class="box">
           <h3>Address</h3>
           <p>{{personal.city}}, {{personal.zipCode}}</p>
         </div>
-        <div class="box">
+        <div v-if="personal" class="box">
           <h3>Phone</h3>
           <p>{{personal.phoneNumber}}</p>
         </div>
-        <div class="box mb-5">
+        <div v-if="personal" class="box mb-5">
           <h3>Email</h3>
           <p>{{personal.email}}</p>
         </div>
@@ -43,7 +43,7 @@
         </div>
       </div>
       <!-- RIGHT SIDE -->
-      <div class="text-left pt-3 pl-5">
+      <div class="text-left pt-3 pl-5 flex-grow-1">
         <div class="border-bottom mb-4">
           <h2 class="mb-3">Profile</h2>
           <p>{{accomp}}</p>

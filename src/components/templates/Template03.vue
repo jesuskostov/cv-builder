@@ -43,7 +43,7 @@
         </div>
       </div>
       <!-- RIGHT SIDE -->
-      <div class="text-left pt-3 pl-5">
+      <div class="text-left pt-3 pl-5 flex-grow-1">
         <div class="border-bottom mb-4">
           <h2 class="mb-3">Profile</h2>
           <p>{{accomp}}</p>

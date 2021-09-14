@@ -72,22 +72,22 @@ export default {
       let payload = cv_variant
       this.$store.dispatch('selectCv', {payload});
     }
-    if(personal.firstName) {
+    if(personal) {
       this.$store.dispatch('savePersonal', {personal})
     }
-    if(workHistory.length != 0) {
+    if(workHistory != null && workHistory.length != 0) {
       this.$store.dispatch('saveWorkHistory', {workHistory});
     }
-    if (education.length != 0) {
+    if (education != null && education.length != 0) {
       this.$store.dispatch('saveEducation', {education})
     }
-    if (skills.length != 0) {
+    if (skills != null && skills.length != 0) {
       this.$store.dispatch('saveSkills', {skills})
     }
-    if (lang.length != 0) {
+    if (lang != null && lang.length != 0) {
       this.$store.dispatch('saveLanguages', {lang})
     }
-    if (interests.length != 0) {
+    if (interests != null && interests.length != 0) {
       this.$store.dispatch('saveInterests', {interests})
     }
     if (accomp != '') {

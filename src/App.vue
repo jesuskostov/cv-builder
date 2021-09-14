@@ -26,6 +26,9 @@ html, body {
 
 .steps-title {
   text-align: left;
+  h1 {
+    font-weight: bold;
+  }
   .line {
     display: block;
     width: 92px;
@@ -74,6 +77,88 @@ html, body {
     border:0; 
     border-radius: 4px;
     padding: 4px 18px;
+}
+
+
+.opt-dropdown {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.box-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #D2D4D6;
+    padding: 1.3rem 0;
+    h4 {
+        font-size: 1rem;
+        font-weight: bold;
+        img {
+            position: relative;
+            top: -1px;
+        }
+    }
+}
+
+.accordion {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: 0.5s;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 0;
+    h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 1.1rem;
+    }
+}
+
+.arrow {
+    transform: rotate(90deg);
+    transition: 0.4s;
+    &.is-open {
+        transform: rotate(0);
+        transition: 0.4s;
+    }
+}
+
+.action-btn {
+    background-color: transparent;
+    border: 0;
+}
+
+.add-more-btn {
+    display: flex;
+    font-weight: bold;
+    border: 0;
+    background-color: transparent;
+    img {
+        position: relative;
+        top: -1px;
+        margin-right: 8px;
+    }
+}
+
+svg {
+    fill: #D2D4D6;
+}
+
+svg:hover {
+    fill: var(--primary-color);
+}
+
+svg.active {
+    fill: var(--primary-color);
+}
+
+.no-border {
+    border: 0;
 }
 </style>
 

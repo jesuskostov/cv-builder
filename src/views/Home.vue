@@ -111,7 +111,7 @@
           </div>
         </div>
       </div>
-      <!-- <templates /> -->
+      <templates />
     </div>
     <div id="why-section">
       <div class="section-title">
@@ -140,13 +140,13 @@
 <script>
 // @ is an alias to /src
 import Navbar from '../components/Navigation.vue'
-// import Templates from '../components/Template.vue'
+import Templates from '../components/Template.vue'
 
 export default {
   name: 'Home',
   components: {
     Navbar,
-    // Templates
+    Templates
   },
   methods: {
     async start() {
