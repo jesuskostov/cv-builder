@@ -5,7 +5,7 @@
         <span class="line"></span>
         <p class="text">Employers scan your resume for 5 seconds to decide if you’re a match. We’ll suggest to add only your job positions that make a great impression.</p>
     </div>
-    <draggable v-model="workHistory">
+    <draggable v-model="workHistory" @end="drag">
         <transition-group>
             <div v-for="(work, i) in workHistory" :key="i" class="accordion">
                 <div class="job-label">
@@ -68,16 +68,16 @@
                 </b-collapse>
             </div>
         </transition-group>
-        <div class="text-left">
-            <button class="add-job-btn" @click="addNewJob">
-                <img src="../assets/images/red-cross.svg" alt="red plus icon">
-                <span v-if="workHistory.length != 0">Add another job</span>
-                <span v-else>Add a job</span>
-            </button>
-        </div>
     </draggable>
+    <div class="text-left">
+        <button class="add-job-btn" @click="addNewJob">
+            <img src="../assets/images/red-cross.svg" alt="red plus icon">
+            <span v-if="workHistory.length != 0">Add another job</span>
+            <span v-else>Add a job</span>
+        </button>
+    </div>
     <br>
-    <div class="d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center justify-content-between mt-5">
         <router-link class="go-back" to="/">Go Back</router-link>
         <button class="custom-btn" @click="nextStep(3)">Next: Education and skills</button>
     </div>
@@ -119,7 +119,11 @@ export default {
         },
         toggle: function( event ) {
           event.target.classList.toggle('is-open')
-        }
+        },
+        async drag() {
+            let workHistory = this.workHistory;
+            await this.$store.dispatch('saveWorkHistory', {workHistory});
+        },
     },
     watch: {
         workHistory: {
@@ -158,6 +162,7 @@ export default {
         font-size: 1.2rem;
         margin: 0;
         img {
+            cursor: move;
             position: relative;
             top: -1px;
         }

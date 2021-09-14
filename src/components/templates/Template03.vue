@@ -1,10 +1,10 @@
 <template>
   <div class="template">
-    <div class="text-left">
+    <div v-if="personal" class="text-left">
       <h1>{{personal.firstName}} <br>{{personal.lastName}}</h1>
       <p class="profession">{{personal.profession}}</p>
     </div>
-    <div class="info">
+    <div v-if="personal" class="info">
       <!-- LEFT SIDE -->
       <div class="text-left pt-3 border-right pr-5">
         <h2 class="mb-3">DETAILS</h2>
