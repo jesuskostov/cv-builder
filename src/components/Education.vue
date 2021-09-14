@@ -227,7 +227,7 @@ export default {
             this.$store.dispatch('saveEducation', {education});
         },
         addPredifinedSkill(skill) {
-            var index = this.skills.findIndex(x => x.title == skill)
+            var index = this.skills.findIndex(item => item.title == skill)
             index === -1 ? this.skills.push({'title': skill, 'rating': 0}) : console.log("object already exists")
         }
     },
