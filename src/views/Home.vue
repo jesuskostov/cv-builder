@@ -140,7 +140,7 @@
 
 <script>
 // @ is an alias to /src
-import Navbar from '../components/Navbar.vue'
+import Navbar from '../components/Navigation.vue'
 import Templates from '../components/Template.vue'
 
 export default {

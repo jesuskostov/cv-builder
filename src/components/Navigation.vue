@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import steps from '../components/Steps.vue'
+import steps from './Steps.vue'
 
 export default {
     name: 'Navbar',

@@ -19,7 +19,7 @@
 <script>
 import CvForm from '../components/CvForm.vue'
 import Templates from '../components/Template.vue'
-import Navbar from '../components/Navbar.vue'
+import Navbar from '../components/Navigation.vue'
 
 export default {
   components: {
