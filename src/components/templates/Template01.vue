@@ -20,7 +20,7 @@
           <h3>Email</h3>
           <p>{{personal.email}}</p>
         </div>
-        <div v-if="skills" class="box mb-5">
+        <div v-if="skills.length != 0" class="box mb-5">
           <h2 class="mb-3">Skills</h2>
           <div v-for="(skill, i) in skills" :key="i">
             {{skill.title}}
@@ -31,7 +31,7 @@
             </div>
           </div>
         </div>
-        <div v-if="languages" class="box">
+        <div v-if="languages.length != 0" class="box mb-5">
           <h2 class="mb-3">Languages</h2>
           <div v-for="(lang, i) in languages" :key="i">
             {{lang.title}}
@@ -41,35 +41,37 @@
             </div>
           </div>
         </div>
+        <div v-if="interests.length != 0" class="box">
+          <h2 class="mb-3">Interests</h2>
+          <h5 v-for="(int, i) in interests" :key="i" class="mb-1">- {{int.title}}</h5>
+        </div>
       </div>
       <!-- RIGHT SIDE -->
       <div class="text-left pt-3 pl-5 flex-grow-1">
-        <div class="border-bottom mb-4">
+        <div class="border-bottom mb-5">
           <h2 class="mb-3">Profile</h2>
           <p>{{accomp}}</p>
         </div>
-        <div class="border-bottom mb-4 right-side">
+        <div class="border-bottom mb-5 right-side">
           <h2 class="mb-3">Employment History</h2>
-          <div class="mb-5">
-            <div v-for="(work, i) in workHistory" :key="i" class="mb-4">
-              <div class="d-flex justify-content-between">
-                <h3>{{work.jobTitle}}</h3>
-                <p class="mb-1">At {{work.employer}}</p>
-              </div>
-              <p class="mb-0">{{work.startDate}} - <span v-if="work.currentlyWork == true">Working here now</span> <span v-else>{{work.endDate}}</span></p>
-              <p>{{work.description}}</p>
+          <div v-for="(work, i) in workHistory" :key="i" class="mb-4">
+            <div class="d-flex justify-content-between">
+              <h3>{{work.jobTitle}}</h3>
+              <p class="mb-1">At {{work.employer}}</p>
             </div>
+            <p class="mb-0">{{work.startDate}} - <span v-if="work.currentlyWork == true">Working here now</span> <span v-else>{{work.endDate}}</span></p>
+            <p>{{work.description}}</p>
           </div>
-          <div class="mb-5">
-            <h2 class="mb-3">Education</h2>
-            <div v-for="(school, i) in education" :key="i">
-              <div class="d-flex justify-content-between">
-                <h3>{{school.schoolName}}</h3>
-                <p>At {{school.schoolLocation}}</p>
-              </div>
-              <p class="mb-0">{{school.startDate}} - {{school.endDate}}</p>
-              <p>{{school.description}}</p>
+        </div>
+        <div class="mb-5">
+          <h2 class="mb-3">Education</h2>
+          <div v-for="(school, i) in education" :key="i">
+            <div class="d-flex justify-content-between">
+              <h3>{{school.schoolName}}</h3>
+              <p>At {{school.schoolLocation}}</p>
             </div>
+            <p class="mb-0">{{school.startDate}} - {{school.endDate}}</p>
+            <p>{{school.description}}</p>
           </div>
         </div>
       </div>
@@ -97,9 +99,9 @@ export default {
     languages: {
       type: Array
     },
-    // interests: {
-    //   type: Array
-    // },
+    interests: {
+      type: Array
+    },
     accomp: {
       type: String
     },

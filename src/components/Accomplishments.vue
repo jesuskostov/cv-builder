@@ -1,9 +1,8 @@
 <template>
-  <div>
-    <div>
-        <label for="accomplishments">Accomplishments</label>
-        <textarea name="accomplishments" id="accomplishments" cols="30" rows="10" v-model="accomplishments"></textarea>
-    </div>
+  <div class="accordion text-left px-4 pt-4">
+    <label for="accomplishments">Accomplishments:</label>
+    <br>
+    <textarea name="accomplishments w-100" id="accomplishments" v-model="accomplishments"></textarea>
   </div>
 </template>
 

@@ -7,7 +7,10 @@
         <languages  />
         <interests />
         <accomplishments />
-        <button @click="forward">Next</button>
+        <div class="d-flex justify-content-between mt-5">
+            <router-link class="go-back" to="/">Go Back</router-link>
+            <button class="custom-btn" @click="forward">Next: Summary</button>
+        </div>
     </div>
     <div v-if="step == 5">
         <button @click="goTo(1)">Edit Personal</button>

@@ -79,7 +79,6 @@ html, body {
     padding: 4px 18px;
 }
 
-
 .opt-dropdown {
     width: 100%;
     height: 50px;
@@ -145,6 +144,19 @@ html, body {
     }
 }
 
+input, textarea {
+    padding: 5px;
+    border: 1px solid #D2D4D6;
+    border-radius: 4px;
+    height: 44px;
+    margin-bottom: 1.5rem !important;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+}
+
 svg {
     fill: #D2D4D6;
 }
@@ -157,9 +169,10 @@ svg.active {
     fill: var(--primary-color);
 }
 
-.no-border {
-    border: 0;
+.card.no-border {
+  border: 0;
 }
+
 </style>
 
 <script>

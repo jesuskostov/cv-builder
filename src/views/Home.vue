@@ -259,7 +259,8 @@ h1 {
 
 // STEP SECTION START
 #step-section {
-  margin-bottom: 8rem;
+  padding: 8rem 0;
+  background-color: #fff;
   .section-title {
     margin-bottom: 8rem;
   }
@@ -296,6 +297,7 @@ h1 {
 // WHY SECTION START
 #why-section {
   padding: 5rem 0 0 0;
+  background-color: #fff;
   .text {
     margin-top: 2.3rem;
     font-weight: bold;
