@@ -120,16 +120,17 @@ export default {
 }
 </script>
 
-<style >
+<style>
 label {
     font-size: 1rem;
     font-weight: bold;
 }
-input {
+input, textarea {
     padding: 5px;
     border: 1px solid #D2D4D6;
     border-radius: 4px;
     height: 44px;
+    margin-bottom: 1.5rem !important;
 }
 svg.active {
     fill: #ffd06a;

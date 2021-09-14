@@ -43,7 +43,7 @@
                 <p class="price">1,99 EUR</p>
                 <p class="text">* Then automatically renewed by subscription,<br>for an indefinite period, at 39 € per month.</p>
               </div>
-              <router-link to="/" class="btn">Get Started Now</router-link>
+              <button @click="start" class="btn">Get Started Now</button>
             </div>
           </div>
           <div class="col-md-6 position-relative">
@@ -52,7 +52,6 @@
           </div>
         </div>
       </div>
-      <!-- <button @click="start">Build your CV now</button> -->
     </div>
     <div id="optimized-career">
       <div class="container">
