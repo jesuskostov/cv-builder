@@ -72,7 +72,7 @@ export default {
       let payload = cv_variant
       this.$store.dispatch('selectCv', {payload});
     }
-    if(personal) {
+    if(personal.firstName) {
       this.$store.dispatch('savePersonal', {personal})
     }
     if(workHistory.length != 0) {
