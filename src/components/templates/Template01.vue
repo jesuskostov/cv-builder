@@ -121,7 +121,7 @@ export default {
   padding: 50px;
   background-color: #fff;
   color: rgb(17, 17, 17);
-  margin: 30px;
+  margin: 0 30px 30px 30px;
 }
 h1 {
   font-size: 6rem;

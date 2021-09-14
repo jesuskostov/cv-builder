@@ -2,7 +2,9 @@
   <div id="nav" class="nav">
       <div class="d-flex align-items-center justify-content-between container">
         <div class="nav__logo">
-            <img src="../assets/images/logo.png" alt="logo">
+            <router-link to="/">
+                <img src="../assets/images/logo.png" alt="logo">
+            </router-link>
         </div>
         <steps v-if="steps" />
         <ul v-if="!steps" class="nav__menu">

@@ -149,12 +149,18 @@ input, textarea {
     border: 1px solid #D2D4D6;
     border-radius: 4px;
     height: 44px;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 0.7rem !important;
 }
 
 textarea {
   width: 100%;
   min-height: 100px;
+}
+
+span {
+  &.red {
+    color: red;
+  }
 }
 
 svg {
@@ -171,6 +177,11 @@ svg.active {
 
 .card.no-border {
   border: 0;
+}
+
+label {
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 </style>

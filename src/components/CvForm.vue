@@ -8,19 +8,11 @@
         <interests />
         <accomplishments />
         <div class="d-flex justify-content-between mt-5">
-            <router-link class="go-back" to="/">Go Back</router-link>
-            <button class="custom-btn" @click="forward">Next: Summary</button>
+            <button class="go-back" @click="goTo(3)">Go Back</button>
+            <button class="custom-btn" @click="goTo(5)">Next: Summary</button>
         </div>
     </div>
-    <div v-if="step == 5">
-        <button @click="goTo(1)">Edit Personal</button>
-        <br>
-        <button @click="goTo(2)">Edit Work history</button>
-        <br>
-        <button @click="goTo(3)">Edit Education and skills</button>
-        <br>
-        <button @click="goTo(4)">Edit Languages, iterests and accomplishments</button>
-    </div>
+    
   </div>
 </template>
 
@@ -47,7 +39,7 @@ export default {
         }
     },
     methods: {
-        forward() {
+        goTo(toStep) {
             let lang = JSON.parse(localStorage.getItem('spokenLanguages'))
             let interests = JSON.parse(localStorage.getItem('interests'));
             let accomp = JSON.parse(localStorage.getItem('accomplishments'));
@@ -60,19 +52,9 @@ export default {
             if (accomp.length != '') {
                 this.$store.dispatch('saveAccomp', {accomp});
             }
-            let step = 5
+            let step = toStep
             this.$store.dispatch('step', {step})
-        },
-        goTo(step) {
-            this.$store.dispatch('step', {step})
-        }
+        },        
     }
 }
 </script>
-
-<style>
-svg.active {
-    fill: #ffd06a;
-}
-</style>
-

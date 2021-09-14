@@ -63,6 +63,8 @@ export default {
             handler(val){
                 // Saving data to localStorage
                 localStorage.setItem('interests', JSON.stringify(val))
+                let interests = this.interests
+                this.$store.dispatch('saveInterests', {interests});
             },
             deep: true
         },
@@ -75,10 +77,3 @@ export default {
     }
 }
 </script>
-
-<style>
-svg.active {
-    fill: #ffd06a;
-}
-</style>
-

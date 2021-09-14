@@ -7,63 +7,63 @@
     </div>
     <form @submit.prevent="goToFormStep(2)">
         <div class="form mb-5">
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <div class="text-left">
-                            <label for="firstName"><span class="red">*</span> Name</label>
-                            <br>
-                            <input type="text" class="w-100" name="firstName" id="firstName" v-model="personal.firstName" v-validate="'required'">
-                            <span>{{ errors.first('firstName') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <div class="text-left">
-                            <label for="lastName"><span class="red">*</span> Last Name</label>
-                            <br>
-                            <input type="text" class="w-100" name="lastName" id="lastName" v-model="personal.lastName" v-validate="'required'">
-                            <span>{{ errors.first('lastName') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-12 mb-4">
-                        <div class="text-left">
-                            <label for="profession">Profession</label>
-                            <br>
-                            <input type="text" class="w-100" name="profession" id="profession" v-model="personal.profession" v-validate="'required'">
-                            <span>{{ errors.first('profession') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-8 mb-4">
-                        <div class="text-left">
-                            <label for="city"><span class="red">*</span> City</label>
-                            <input type="text" class="w-100" name="city" id="city" v-model="personal.city" v-validate="'required'">
-                            <span>{{ errors.first('city') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="text-left">
-                            <label for="zipCode"><span class="red">*</span> Zip code</label>
-                            <br>
-                            <input type="text" class="w-100" name="zipCode" id="zipCode" v-model="personal.zipCode" v-validate="'required'">
-                            <span>{{ errors.first('zipCode') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="text-left">
-                            <label for="phoneNumber">Phone number</label>
-                            <br>
-                            <input type="text" class="w-100" name="phoneNumber" id="phoneNumber" v-model="personal.phoneNumber" v-validate="'required'">
-                            <span>{{ errors.first('phoneNumber') }}</span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="text-left">
-                            <label for="email">Email</label>
-                            <br>
-                            <input type="text" class="w-100" name="email" id="email" v-model="personal.email" v-validate="'required'">
-                            <span>{{ errors.first('email') }}</span>
-                        </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="text-left">
+                        <label for="firstName"><span class="red">*</span> Name</label>
+                        <br>
+                        <input type="text" class="w-100" name="firstName" id="firstName" v-model="personal.firstName" v-validate="'required'">
+                        <span>{{ errors.first('firstName') }}</span>
                     </div>
                 </div>
+                <div class="col-md-6 mb-4">
+                    <div class="text-left">
+                        <label for="lastName"><span class="red">*</span> Last Name</label>
+                        <br>
+                        <input type="text" class="w-100" name="lastName" id="lastName" v-model="personal.lastName" v-validate="'required'">
+                        <span>{{ errors.first('lastName') }}</span>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-4">
+                    <div class="text-left">
+                        <label for="profession">Profession</label>
+                        <br>
+                        <input type="text" class="w-100" name="profession" id="profession" v-model="personal.profession" v-validate="'required'">
+                        <span>{{ errors.first('profession') }}</span>
+                    </div>
+                </div>
+                <div class="col-md-8 mb-4">
+                    <div class="text-left">
+                        <label for="city"><span class="red">*</span> City</label>
+                        <input type="text" class="w-100" name="city" id="city" v-model="personal.city" v-validate="'required'">
+                        <span>{{ errors.first('city') }}</span>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-left">
+                        <label for="zipCode"><span class="red">*</span> Zip code</label>
+                        <br>
+                        <input type="text" class="w-100" name="zipCode" id="zipCode" v-model="personal.zipCode" v-validate="'required'">
+                        <span>{{ errors.first('zipCode') }}</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-left">
+                        <label for="phoneNumber">Phone number</label>
+                        <br>
+                        <input type="text" class="w-100" name="phoneNumber" id="phoneNumber" v-model="personal.phoneNumber" v-validate="'required'">
+                        <span>{{ errors.first('phoneNumber') }}</span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-left">
+                        <label for="email">Email</label>
+                        <br>
+                        <input type="text" class="w-100" name="email" id="email" v-model="personal.email" v-validate="'required'">
+                        <span>{{ errors.first('email') }}</span>
+                    </div>
+                </div>
+            </div>
                 <!-- <label for="socialProfiles">Social profiles</label>
                 <input type="text" name="socialProfiles" id="socialProfiles" v-model="personal.socialProfiles" v-validate="'required'">
                 <span>{{ errors.first('socialProfiles') }}</span> -->
@@ -107,6 +107,8 @@ export default {
             handler(val){
                 // Saving data to localStorage
                 localStorage.setItem('user', JSON.stringify(val))
+                let personal = this.personal
+                this.$store.dispatch('savePersonal', {personal})
             },
             deep: true
         },
@@ -121,14 +123,6 @@ export default {
 </script>
 
 <style>
-label {
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-svg.active {
-    fill: #ffd06a;
-}
 
 .go-back {
     display: inline-flex;

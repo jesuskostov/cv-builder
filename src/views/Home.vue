@@ -236,7 +236,6 @@ h1 {
 // OPTIMIZED CAREER SECTION START
 #optimized-career {
   padding: 3.2rem 0;
-  margin-bottom: 5rem;
   background-color: var(--gray-color);
   h3 {
     text-align: left;

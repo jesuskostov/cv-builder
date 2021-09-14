@@ -117,6 +117,8 @@ export default {
             handler(val){
                 // Saving data to localStorage
                 localStorage.setItem('spokenLanguages', JSON.stringify(val))
+                let lang = this.spokenLanguages
+                this.$store.dispatch('saveLanguages', {lang});
             },
             deep: true
         },

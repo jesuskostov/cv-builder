@@ -78,8 +78,8 @@
     </div>
     <br>
     <div class="d-flex align-items-center justify-content-between mt-5">
-        <router-link class="go-back" to="/">Go Back</router-link>
-        <button class="custom-btn" @click="nextStep(3)">Next: Education and skills</button>
+        <button class="go-back" @click="step(1)">Go Back</button>
+        <button class="custom-btn" @click="step(3)">Next: Education and skills</button>
     </div>
   </div>
 </template>
@@ -112,7 +112,7 @@ export default {
         deleteJob(i) {
             this.workHistory.splice(i, 1);
         },
-        async nextStep(step) {
+        async step(step) {
             let workHistory = this.workHistory;
             await this.$store.dispatch('saveWorkHistory', {workHistory});
             this.$store.dispatch('step', {step});
@@ -130,6 +130,8 @@ export default {
             handler(val){
                 // Saving data to localStorage
                 localStorage.setItem('workHistory', JSON.stringify(val))
+                let workHistory = this.workHistory;
+                this.$store.dispatch('saveWorkHistory', {workHistory});
             },
             deep: true
         },
@@ -144,10 +146,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.no-border {
-    border: 0;
-}
 
 .job-label {
     padding-left: 2rem;
@@ -169,30 +167,6 @@ export default {
     }
 }
 
-.arrow {
-    transform: rotate(90deg);
-    transition: 0.4s;
-    &.is-open {
-        transform: rotate(0);
-        transition: 0.4s;
-    }
-}
-
-.accordion {
-    width: 100%;
-    background-color: #fff;
-    border-radius: 4px;
-    transition: 0.5s;
-    overflow: hidden;
-    margin-bottom: 1rem;
-    border: 0;
-}
-
-.action-btn {
-    background-color: transparent;
-    border: 0;
-}
-
 .add-job-btn {
     display: flex;
     font-weight: bold;
@@ -205,8 +179,5 @@ export default {
     }
 }
 
-svg.active {
-    fill: #ffd06a;
-}
 </style>
 

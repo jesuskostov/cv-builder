@@ -18,6 +18,8 @@ export default {
             handler(val){
                 // Saving data to localStorage
                 localStorage.setItem('accomplishments', JSON.stringify(val))
+                let accomp = this.accomplishments
+                this.$store.dispatch('saveAccomp', {accomp});
             },
             deep: true
         }
@@ -30,10 +32,3 @@ export default {
     }
 }
 </script>
-
-<style>
-svg.active {
-    fill: #ffd06a;
-}
-</style>
-

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- SCHOOLS -->
+    <!-- Education -->
     <section>
         <div class="steps-title mb-5">
             <h1>Education and skills</h1>
@@ -8,7 +8,6 @@
             <h3 class="mt-4 mb-2">Education</h3>
             <p class="text mt-0">Employers quickly scan the education section. We’ll take care of the formatting so it’s easy to find. Include every school, even if you’re still there or didn’t graduate.</p>
         </div>
-        <!-- Education -->
         <draggable v-model="education" @end="dragSchool">
             <transition-group>
                 <div v-for="(school, i) in education" :key="i" class="accordion">
@@ -165,8 +164,8 @@
         </div>
     </section>
     <div class="mt-5 d-flex justify-content-between">
-        <router-link class="go-back" to="/">Go Back</router-link>
-        <button class="custom-btn" @click="nextStep(4)">Next: Other</button>
+        <button class="go-back" @click="step(2)">Go Back</button>
+        <button class="custom-btn" @click="step(4)">Next: Other</button>
     </div>
   </div>
 </template>
@@ -216,7 +215,7 @@ export default {
         deleteSkill(i) {
             this.skills.splice(i, 1);
         },
-        async nextStep(step) {
+        async step(step) {
             let education = this.education
             let skills = this.skills
             await this.$store.dispatch('saveEducation', {education});
@@ -244,6 +243,8 @@ export default {
             handler(val){
                 // Saving data to localStorage
                 localStorage.setItem('education', JSON.stringify(val))
+                let education = this.education
+                this.$store.dispatch('saveEducation', {education});
             },
             deep: true
         },
@@ -251,6 +252,8 @@ export default {
             handler(val){
                 // Saving data to localStorage
                 localStorage.setItem('skills', JSON.stringify(val))
+                let skills = this.skills
+                this.$store.dispatch('saveSkills', {skills});
             },
             deep: true
         },
@@ -268,7 +271,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 
 .job-label {
     padding-left: 2rem;
