@@ -37,6 +37,10 @@ html, body {
     font-size: 1rem;
     font-weight: bold;
   }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 }
 
 .section-title {

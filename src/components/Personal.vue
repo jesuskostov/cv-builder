@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="steps-title">
+    <div class="steps-title mb-5">
         <h1>Personal information</h1>
         <span class="line"></span>
         <p class="text">What’s the best way for employers to contact you? We suggest including an email and phone number. Also a photo will not hurt sometimes.</p>
@@ -47,7 +47,7 @@
                             <span>{{ errors.first('zipCode') }}</span>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-4">
+                    <div class="col-md-6">
                         <div class="text-left">
                             <label for="phoneNumber">Phone number</label>
                             <br>
@@ -55,7 +55,7 @@
                             <span>{{ errors.first('phoneNumber') }}</span>
                         </div>
                     </div>
-                    <div class="col-md-6 mb-4">
+                    <div class="col-md-6">
                         <div class="text-left">
                             <label for="email">Email</label>
                             <br>
