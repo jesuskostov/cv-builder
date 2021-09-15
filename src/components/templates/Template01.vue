@@ -1,7 +1,7 @@
 <template>
   <div class="template">
     <div v-if="personal" class="text-left">
-      <h1>{{personal.firstName}} <br>{{personal.lastName}}</h1>
+      <h1>{{personal.firstName}} {{personal.lastName}}</h1>
       <p class="profession">{{personal.profession}}</p>
     </div>
     <div class="info">

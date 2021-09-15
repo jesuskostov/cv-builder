@@ -6,10 +6,7 @@
     </div>
     <div class="accordion px-4 py-4">
         <h3>Spoken Languages:</h3>
-        <select class="opt-dropdown" @change="addPredefinedLang(selected)" v-model="selected">
-            <option disabled value="">Please select one</option>
-            <option v-for="(language, i) in languages" :key="i" :value="language.title">{{language.title}}</option>
-        </select>
+        <multiselect v-model="spokenLanguages" class="w-100" :options="languages" :multiple="true" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some" label="title" track-by="title" />
         <draggable v-model="spokenLanguages" @end="drag">
             <div v-for="(lang, i) in spokenLanguages" :key="i" class="box-row">
                 <div class="d-flex align-items-center">
@@ -81,6 +78,7 @@
 
 <script>
 import draggable from 'vuedraggable'
+import Multiselect from 'vue-multiselect'
 
 export default {
     data() {
@@ -97,7 +95,8 @@ export default {
         }
     },
     components: {
-        draggable
+        draggable,
+        Multiselect
     },
     methods: {
         deleteLanguage(i) {

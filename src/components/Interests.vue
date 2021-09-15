@@ -2,10 +2,11 @@
   <div>
        <div class="accordion px-4 py-4">
         <h3>Interests:</h3>
-        <select class="opt-dropdown" @change="addPredefinedInterests(selected)" v-model="selected">
+        <!-- <select class="opt-dropdown" @change="addPredefinedInterests(selected)" v-model="selected">
             <option disabled value="">Please select one</option>
             <option v-for="(int, i) in interestsPredefined" :key="i" :value="int.title">{{int.title}}</option>
-        </select>
+        </select> -->
+        <multiselect v-model="interests" class="w-100" :options="interestsPredefined" :multiple="true" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some" label="title" track-by="title" />
         <draggable v-model="interests" @end="drag">
             <div v-for="(interes, i) in interests" :key="i" class="box-row">
                 <div class="d-flex align-items-center">
@@ -23,6 +24,7 @@
 
 <script>
 import draggable from 'vuedraggable'
+import Multiselect from 'vue-multiselect'
 
 export default {
     data() {
@@ -38,7 +40,8 @@ export default {
         }
     },
     components: {
-        draggable
+        draggable,
+        Multiselect
     },
     methods: {
         addNewInterests() {

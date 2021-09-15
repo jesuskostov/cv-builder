@@ -107,7 +107,6 @@ html, body {
     background-color: #fff;
     border-radius: 4px;
     transition: 0.5s;
-    overflow: hidden;
     margin-bottom: 1rem;
     border: 0;
     h3 {

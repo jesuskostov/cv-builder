@@ -8,7 +8,12 @@
         </div>
         <div class="col-md-4 offset-md-1">
           <div class="preview">
-            <templates style="zoom: 0.5;" :onBuilder="true" :selected="selectedCv" />
+            <svg width="100%" viewBox="0 0 750 1000" xmlns="http://www.w3.org/2000/svg">
+              <!-- Common use case: embed HTML text into SVG -->
+              <foreignObject x="20" y="20" width="3200" height="3200">
+                 <templates :onBuilder="true" :selected="selectedCv" />
+              </foreignObject>
+            </svg>
           </div>
         </div>
       </div>

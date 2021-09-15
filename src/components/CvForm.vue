@@ -43,13 +43,13 @@ export default {
             let lang = JSON.parse(localStorage.getItem('spokenLanguages'))
             let interests = JSON.parse(localStorage.getItem('interests'));
             let accomp = JSON.parse(localStorage.getItem('accomplishments'));
-            if (lang.length != 0) {
+            if (lang != null && lang.length != 0) {
                 this.$store.dispatch('saveLanguages', {lang});
             }
-            if (interests.length != 0) {
+            if (interests != null && interests.length != 0) {
                 this.$store.dispatch('saveInterests', {interests});
             }
-            if (accomp.length != '') {
+            if (accomp != '') {
                 this.$store.dispatch('saveAccomp', {accomp});
             }
             let step = toStep

@@ -9,7 +9,6 @@
             <p class="text mt-0">Employers quickly scan the education section. We’ll take care of the formatting so it’s easy to find. Include every school, even if you’re still there or didn’t graduate.</p>
         </div>
         <draggable v-model="education" @end="dragSchool">
-            <transition-group>
                 <div v-for="(school, i) in education" :key="i" class="accordion">
                     <div class="job-label">
                         <h2 class="d-flex align-items-center">
@@ -74,7 +73,6 @@
                         </b-card>
                     </b-collapse>
                 </div>
-            </transition-group>
         </draggable>
         <div class="text-left mb-5">
             <button class="add-more-btn" @click="addNewSchool">
@@ -92,10 +90,11 @@
             <p class="text mt-0">Employers scan skills for relevant keywords. We’ll help you choose the best ones.</p>
         </div>
         <div class="accordion px-4 py-4">
-            <select class="opt-dropdown" @change="addPredefinedSkill(selected)" v-model="selected">
+            <!-- <select class="opt-dropdown" @change="addPredefinedSkill(selected)" v-model="selected">
                 <option disabled value="">Please select one</option>
                 <option v-for="(skill, i) in options" :key="i" :value="skill.title">{{skill.title}}</option>
-            </select>
+            </select> -->
+            <multiselect v-model="skills" class="w-100" :options="options" :multiple="true" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some" label="title" track-by="title" />
             <draggable v-model="skills" @end="dragSkill">
                 <div v-for="(skill, i) in skills" :key="i" class="box-row">
                     <h4 class="mb-0">
@@ -172,6 +171,7 @@
 
 <script>
 import draggable from 'vuedraggable'
+import Multiselect from 'vue-multiselect'
 
 export default {
     data() {
@@ -179,6 +179,7 @@ export default {
             education: [],
             skills: [],
             selected: '',
+            value: [],
             options: [
                 { title: 'Vue.js', rating: 0 },
                 { title: 'Adonis', rating: 0 },
@@ -191,6 +192,7 @@ export default {
     },
     components: {
         draggable,
+        Multiselect
     },
     methods: {
         addNewSchool() {
