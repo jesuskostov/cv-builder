@@ -183,6 +183,9 @@ label {
     font-weight: bold;
 }
 
+.template-preview {
+  width: 400px;
+}
 </style>
 
 <script>

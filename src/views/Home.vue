@@ -111,7 +111,10 @@
           </div>
         </div>
       </div>
-      <templates />
+      <!-- <div>
+        <img src="../assets/images/cv-templates/cv-template-2.png" alt="">
+      </div> -->
+      <templates :preview="true" />
     </div>
     <div id="why-section">
       <div class="section-title">

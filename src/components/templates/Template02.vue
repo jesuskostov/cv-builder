@@ -1,79 +1,68 @@
 <template>
   <div class="template">
-    <div v-if="personal" class="text-left">
-      <h1>{{personal.firstName}} <br>{{personal.lastName}}</h1>
-      <p class="profession">{{personal.profession}}</p>
-    </div>
-    <div v-if="personal" class="info">
-      <!-- LEFT SIDE -->
-      <div class="text-left pt-3 border-right pr-5">
-        <h2 class="mb-3">DETAILS</h2>
-        <div class="box">
-          <h3>Address</h3>
-          <p>{{personal.city}}, {{personal.zipCode}}</p>
-        </div>
-        <div class="box">
-          <h3>Phone</h3>
+    <div v-if="!preview">
+      <div v-if="personal" class="header">
+        <h1>{{personal.firstName}} {{personal.lastName}}</h1>
+        <p class="profession">{{personal.profession}}</p>
+      </div>
+      <div v-if="personal" class="info">
+        <!-- LEFT SIDE -->
+        <div class="mb-5">
+          <h3>Details</h3>
+          <p>{{personal.zipCode}}, {{personal.city}},</p>
+          <p>{{personal.email}}</p>
           <p>{{personal.phoneNumber}}</p>
         </div>
-        <div class="box mb-5">
-          <h3>Email</h3>
-          <p>{{personal.email}}</p>
-        </div>
-        <div v-if="skills" class="box mb-5">
-          <h2 class="mb-3">Skills</h2>
-          <div v-for="(skill, i) in skills" :key="i">
-            {{skill.title}}
-            <div class="progress mb-2">
-              <div class="progress-bar" role="progressbar" :style="{'width': (skill.rating / 5) * 100 + '%'}">
-                <span class="sr-only">70% Complete</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div v-if="languages" class="box">
-          <h2 class="mb-3">Languages</h2>
-          <div v-for="(lang, i) in languages" :key="i">
-            {{lang.title}}
-            <div class="progress mb-2">
-              <div class="progress-bar" role="progressbar" :style="{'width': (lang.rating / 5) * 100 + '%'}">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- RIGHT SIDE -->
-      <div class="text-left pt-3 pl-5 flex-grow-1">
-        <div class="border-bottom mb-4">
-          <h2 class="mb-3">Profile</h2>
+        <div class="mb-5">
+          <h3>Profile</h3>
           <p>{{accomp}}</p>
         </div>
-        <div class="border-bottom mb-4 right-side">
-          <h2 class="mb-3">Employment History</h2>
-          <div class="mb-5">
-            <div v-for="(work, i) in workHistory" :key="i" class="mb-4">
-              <div class="d-flex justify-content-between">
-                <h3>{{work.jobTitle}}</h3>
-                <p class="mb-1">At {{work.employer}}</p>
+        <div class="mb-5">
+          <h3>Education</h3>
+          <div v-for="(school, i) in education" :key="i">
+            <h4>{{school.schoolName}}, {{school.schoolLocation}}</h4>
+            <p class="mb-0">{{school.startDate}} - {{school.endDate}}</p>
+            <p>{{school.description}}</p>
+          </div>
+        </div>
+        <div class="mb-5">
+          <h3>Employment History</h3>
+          <div v-for="(work, i) in workHistory" :key="i" class="mb-4">
+            <h4>{{work.jobTitle}}, {{work.employer}}</h4>
+            <p class="mb-0">{{work.startDate}} - <span v-if="work.currentlyWork == true">Working here now</span> <span v-else>{{work.endDate}}</span></p>
+            <p>{{work.description}}</p>
+          </div>
+        </div>
+        <div class="text-left">
+          <div v-if="skills" class="box mb-5">
+            <h2 class="mb-3">Skills</h2>
+            <div class="row">
+              <div v-for="(skill, i) in skills" :key="i" class="col-md-6">
+                <p>{{skill.title}}</p>
+                <div class="progress mb-2">
+                  <div class="progress-bar" role="progressbar" :style="{'width': (skill.rating / 5) * 100 + '%'}">
+                    <span class="sr-only">70% Complete</span>
+                  </div>
+                </div>
               </div>
-              <p class="mb-0">{{work.startDate}} - <span v-if="work.currentlyWork == true">Working here now</span> <span v-else>{{work.endDate}}</span></p>
-              <p>{{work.description}}</p>
             </div>
           </div>
-          <div class="mb-5">
-            <h2 class="mb-3">Education</h2>
-            <div v-for="(school, i) in education" :key="i">
-              <div class="d-flex justify-content-between">
-                <h3>{{school.schoolName}}</h3>
-                <p>At {{school.schoolLocation}}</p>
+          <div v-if="languages" class="box">
+            <h2 class="mb-3">Languages</h2>
+            <div class="row">
+              <div v-for="(lang, i) in languages" :key="i" class="col-md-6">
+                <p>{{lang.title}}</p>
+                <div class="progress mb-2">
+                  <div class="progress-bar" role="progressbar" :style="{'width': (lang.rating / 5) * 100 + '%'}">
+                  </div>
+                </div>
               </div>
-              <p class="mb-0">{{school.startDate}} - {{school.endDate}}</p>
-              <p>{{school.description}}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <img v-else class="template-preview" src="../../assets/images/cv-templates/cv-template-2.png" alt="">
   </div>
 </template>
 
@@ -81,6 +70,7 @@
 export default {
   name: "Template02",
   props: {
+    preview: {},
     personal: {
       type: Object,
       default: () => {},
@@ -114,58 +104,66 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .template {
-  width: 1024px;
-  padding: 50px;
+  width: 100%;
   background-color: #fff;
-  color: red;
-  margin: 30px;
+  color: #000;
+  margin: 0 30px;
 }
+
+.header {
+  text-align: left;
+  padding: 30px 30px 10px 30px;
+  background-color: #FEE14B;
+  width: 100%;
+}
+
+.profession {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
 h1 {
-  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 5rem;
   margin-bottom: 1rem;
   line-height: 1;
 }
-span {
-  font-weight: 400;
-}
+
 .info {
-  display: flex;
+  text-align: left;
+  padding: 40px 50px 40px 50px;
   border-top: 1px solid gray;
   h2 {
     font-size: 1.7rem;
     font-weight: bold;
     text-transform: uppercase;
+  }  
+  h3 {
+    padding: 5px 20px;
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
   }
-  .box {
-    text-align: left;
-    h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.2rem;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-    p {
-      font-size: 0.9rem;
-      color: gray;
-      font-weight: bold;
-    }
+  h4 {
+    font-weight: bold; 
   }
-}
-.profession {
-  color: gray;
-  font-weight: bold;
-  font-size: 1.2rem;
+  p {
+    font-size: 1.3rem;
+    color: #000;
+    margin-bottom: 0;
+  }  
 }
 .progress {
   border-radius: 0;
   height: 6px;
   .progress-bar {
     background-color: #000;
-  }
-}
-.right-side {
-  h3 {
-    font-size: 1.4rem;
   }
 }
 </style>

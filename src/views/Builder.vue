@@ -8,9 +8,9 @@
         </div>
         <div class="col-md-4 offset-md-1">
           <div class="preview">
-            <svg width="100%" viewBox="0 0 750 1000" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 780 1000" xmlns="http://www.w3.org/2000/svg">
               <!-- Common use case: embed HTML text into SVG -->
-              <foreignObject x="20" y="20" width="3200" height="3200">
+              <foreignObject x="0" y="0" width="100%" height="3000">
                  <templates :onBuilder="true" :selected="selectedCv" />
               </foreignObject>
             </svg>

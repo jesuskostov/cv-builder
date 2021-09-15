@@ -3,8 +3,8 @@
     <templates v-if="onBuilder" :template-name="selected" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :interests="interests" :accomp="accomp" />
     <div v-if="!onBuilder"  class="template">
       <div v-for="item in list" :key="item">
-        <templates :template-name="item" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :interests="interests" :accomp="accomp" />
-        <button @click="onClick(item)">Use template</button>
+        <templates :preview="preview" :template-name="item" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :interests="interests" :accomp="accomp" />
+        <button class="custom-btn mt-3" @click="onClick(item)">Use template</button>
       </div>
     </div>
   </div>
@@ -18,7 +18,7 @@ export default {
   components: {
     Templates,
   },
-  props: ['onBuilder','selected'],
+  props: ['onBuilder','selected', 'preview'],
   data() {
     return {
       list: Array(templatesCount)
@@ -102,7 +102,5 @@ export default {
 .template {
   width: 100%;
   display: flex;
-  zoom: 0.65;
-  overflow-x: scroll;
 }
 </style>

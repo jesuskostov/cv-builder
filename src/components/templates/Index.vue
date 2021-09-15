@@ -1,13 +1,10 @@
 <template>
   <div class="template">
     <keep-alive>
-      <component :is="templateComponent" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :interests="interests" :accomp="accomp" />
+      <component :preview="preview" :is="templateComponent" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :interests="interests" :accomp="accomp" />
     </keep-alive>
   </div>
 </template>
-
-<style scoped>
-</style>
 
 <script>
 // import all templates
@@ -23,6 +20,7 @@ export const templatesCount = Object.keys(templates).length;
 export default {
   name: "Templates",
   props: {
+    preview: {},
     personal: {
       type: Object,
       default: () => {},
