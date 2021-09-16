@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex align-items-center">
+  <div class="d-none d-md-flex align-items-center">
     <div @click="goTo(1)" :class="{'active': step == 1, 'passed': step > 1}" class="steps"><span class="number"><span v-if="step == 1" >1</span><img v-else src="../assets/images/step-ok.svg" alt="ok icon"></span> PERSONAL <span class="line"></span></div>
     <div @click="goTo(2)" :class="{'active': step == 2, 'passed': step > 2}" class="steps"><span class="number"><span v-if="step <= 2" >2</span><img v-else src="../assets/images/step-ok.svg" alt="ok icon"></span> WORK HISTORY <span class="line"></span></div>
     <div @click="goTo(3)" :class="{'active': step == 3, 'passed': step > 3}" class="steps"><span class="number"><span v-if="step <= 3" >3</span><img v-else src="../assets/images/step-ok.svg" alt="ok icon"></span> EDUCATION AND SKILLS <span class="line"></span></div>
@@ -44,6 +44,7 @@ export default {
     height: 40px;
     margin-right: 9px;
     font-size: 16px;
+    flex-shrink: 0;
   }
 
   .line {

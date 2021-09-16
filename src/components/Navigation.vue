@@ -8,7 +8,7 @@
         </div>
         <steps v-if="steps" />
         <ul v-if="!steps" class="nav__menu">
-            <router-link to="/">Browse Templates</router-link>
+            <router-link to="/" class="d-none d-md-block">Browse Templates</router-link>
             <button @click="start" class="btn">Get Started</button>
         </ul>
       </div>
@@ -41,9 +41,19 @@ export default {
 <style lang="scss" scoped>
 
 .nav {
+    display: flex;
+    align-items: center;
     background-color: #fff;
     padding: 1.2rem 0;
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.16);
+
+    &__logo {
+        img {
+            @media (max-width: 575.98px) {
+                width: 100%;
+            }
+        }
+    }
 
     &__menu {
         margin: 0;

@@ -102,5 +102,6 @@ export default {
 .template {
   width: 100%;
   display: flex;
+  overflow-x: scroll;
 }
 </style>

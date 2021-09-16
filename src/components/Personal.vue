@@ -68,9 +68,9 @@
                 <input type="text" name="socialProfiles" id="socialProfiles" v-model="personal.socialProfiles" v-validate="'required'">
                 <span>{{ errors.first('socialProfiles') }}</span> -->
         </div>
-        <div class="d-flex align-items-center justify-content-between">
+        <div class="d-flex flex-column-reverse flex-md-row align-items-center justify-content-between">
             <router-link class="go-back" to="/">Go Back</router-link>
-            <button type="submit" class="custom-btn">Next: Work History</button>
+            <button type="submit" class="custom-btn mb-3 mb-md-0">Next: Work History</button>
         </div>
     </form>  
   </div>

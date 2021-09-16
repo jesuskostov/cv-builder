@@ -27,7 +27,10 @@ html, body {
 .steps-title {
   text-align: left;
   h1 {
-    font-weight: bold;
+    font-weight: bold;    
+    @media (max-width: 575.98px) {
+      font-size: 1.8rem;
+    }
   }
   .line {
     display: block;
@@ -53,6 +56,9 @@ html, body {
   h2 {
     font-weight: bold;
     font-size: 2.4rem;
+    @media (max-width: 575.98px) {
+      font-size: 1.8rem;
+    }
   }
   .line {
     display: block;
@@ -65,6 +71,9 @@ html, body {
 .form {
   background-color: #fff;
   padding: 2.3rem 2rem;
+  @media (max-width: 767.98px) {
+    padding: 1.3rem 1rem;
+  }
   border-radius: 4px;
   box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.16);
 }
@@ -97,6 +106,10 @@ html, body {
     align-items: center;
     border-bottom: 1px solid #D2D4D6;
     padding: 1.3rem 0;
+    // @media (max-width: 767.98px) {
+    //   flex-direction: column;
+    //   align-items: flex-start;
+    // }
     h4 {
         font-size: 1rem;
         font-weight: bold;
@@ -190,6 +203,17 @@ label {
 
 .template-preview {
   width: 400px;
+}
+
+.star {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    @media (max-width: 767.98px) {
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
+    }
 }
 </style>
 

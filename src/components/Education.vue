@@ -102,8 +102,8 @@
                         {{skill.title}}
                     </h4>
                     <div class="d-flex align-items-center">
-                        <div class="mr-4">
-                            <svg :class="{'active': skill.rating > 0}" @click="skill.rating = 1" style="enable-background:new 0 0 512.002 512.002; width: 20px; height: 20px; margin-right: 10px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
+                        <div class="mr-0 mr-md-4">
+                            <svg :class="{'active': skill.rating > 0}" class="star" @click="skill.rating = 1" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
                                 <g>
                                     <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
                                         c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
@@ -113,7 +113,7 @@
                                         C511.56,208.649,513.033,202.688,511.267,197.258z"/>
                                 </g>
                             </svg>
-                            <svg :class="{'active': skill.rating > 1}" @click="skill.rating = 2" style="enable-background:new 0 0 512.002 512.002; width: 20px; height: 20px; margin-right: 10px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
+                            <svg :class="{'active': skill.rating > 1}" class="star" @click="skill.rating = 2" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
                                 <g>
                                     <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
                                         c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
@@ -123,7 +123,7 @@
                                         C511.56,208.649,513.033,202.688,511.267,197.258z"/>
                                 </g>
                             </svg>
-                            <svg :class="{'active': skill.rating > 2}" @click="skill.rating = 3" style="enable-background:new 0 0 512.002 512.002; width: 20px; height: 20px; margin-right: 10px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
+                            <svg :class="{'active': skill.rating > 2}" class="star" @click="skill.rating = 3" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
                                 <g>
                                     <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
                                         c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
@@ -133,7 +133,7 @@
                                         C511.56,208.649,513.033,202.688,511.267,197.258z"/>
                                 </g>
                             </svg>
-                            <svg :class="{'active': skill.rating > 3}" @click="skill.rating = 4" style="enable-background:new 0 0 512.002 512.002; width: 20px; height: 20px; margin-right: 10px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
+                            <svg :class="{'active': skill.rating > 3}" class="star" @click="skill.rating = 4" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
                                 <g>
                                     <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
                                         c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
@@ -143,7 +143,7 @@
                                         C511.56,208.649,513.033,202.688,511.267,197.258z"/>
                                 </g>
                             </svg>
-                            <svg :class="{'active': skill.rating > 4}" @click="skill.rating = 5" style="enable-background:new 0 0 512.002 512.002; width: 20px; height: 20px; margin-right: 10px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
+                            <svg :class="{'active': skill.rating > 4}" class="star" @click="skill.rating = 5" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
                                 <g>
                                     <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
                                         c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065

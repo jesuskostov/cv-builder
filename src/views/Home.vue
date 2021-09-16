@@ -5,7 +5,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-left">
-            <h1 class="mb-5">Create a CV that Recruiters will Love</h1>
+            <h1 class="mb-4 mb-md-5">Create a CV that Recruiters will Love</h1>
             <div class="benefits mb-4">
               <div class="benefits__box">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20">
@@ -38,6 +38,7 @@
                 <h4>Download in PDF</h4>
               </div>
             </div>
+            <!-- <img class="d-block d-md-none intro-cv-image" src="../assets/images/intro-cv-image.svg" alt="intro cv image"> -->
             <div class="price-box">
               <div class="text-left mr-4">
                 <p class="price">1,99 EUR</p>
@@ -46,7 +47,7 @@
               <button @click="start" class="btn">Get Started Now</button>
             </div>
           </div>
-          <div class="col-md-6 position-relative">
+          <div class="col-md-6 position-relative d-none d-md-block">
             <img class="circles-svg" src="../assets/images/circles-behind-cv-image.svg" alt="circle images">
             <img class="intro-cv-image" src="../assets/images/intro-cv-image.svg" alt="intro cv image">
           </div>
@@ -57,8 +58,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class="d-flex align-items-center">
-              <img class="mr-5" src="../assets/images/optimized-career.png" alt="optimized career">
+            <div class="d-flex flex-column flex-md-row align-items-center">
+              <img class="mr-0 mb-4 mb-md-0 mr-md-5" src="../assets/images/optimized-career.png" alt="optimized career">
               <div class="text-left">
                 <h3>Only 2% of resumes make it past the first round.<br>Be in the top 2%</h3>
                 <p>Our CV Online Generator can help you take your career search to new heights with a stylish and <br><router-link to="/">optimized career summary document.</router-link></p>
@@ -166,6 +167,13 @@ export default {
 #intro-section {
   background-color: var(--secondary-color);
   padding: 5.6rem 0 3.2rem 0;
+  @media (max-width: 575.98px) {
+    padding-top: 1rem;
+  }
+  @media (max-width: 1199.98px) {
+    overflow: hidden;
+  }
+  
 }
 
 h1 {
@@ -173,6 +181,9 @@ h1 {
   font-size: 2.7rem;
   font-weight: bold;
   color: #fff;
+  @media (max-width: 575.98px) {
+    font-size: 1.7rem;
+  }
 }
 
 .benefits {
@@ -184,7 +195,6 @@ h1 {
     display: flex;
     align-items: center;
     margin-bottom: 0.7rem;
-
     svg {
       position: relative;
       top: -5px;
@@ -202,12 +212,22 @@ h1 {
   border-radius: 4px;
   background-color: #1E3C5F;
   padding: 1.2rem 2rem;
+  @media (max-width: 991.98px) {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
   .btn {
     background-color: var(--primary-color);
     color: #fff;
     font-weight: bold;
     font-size: 1.2rem;
     padding: 10px 12px;
+    @media (max-width: 991.98px) {
+      margin-top: 1rem;
+      width: 100%;
+    }
   }
   .price {
     font-size: 1.2rem;
@@ -233,6 +253,13 @@ h1 {
   position: absolute;
   top: -45px;
   left: 0;
+  width: 100%;
+  @media (max-width: 575.98px) {
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 100%;
+  }
 }
 // INTRO SECTION END
 
@@ -263,12 +290,21 @@ h1 {
 #step-section {
   padding: 8rem 0;
   background-color: #fff;
+  @media (max-width: 991.98px) {
+    padding: 3rem 0 1rem 0;
+  }
   .section-title {
     margin-bottom: 8rem;
+    @media (max-width: 575.98px) {
+      margin-bottom: 3rem;
+    }
   }
   .step-box {
     text-align: center;
     color:#23263B;
+    @media (max-width: 991.98px) {
+      margin-bottom: 4rem;
+    }
     img {
       margin-bottom: 1rem;
     }
@@ -288,6 +324,9 @@ h1 {
 #templates-carousel {
   padding: 5rem 0;
   background-color: var(--gray-color);
+  @media (max-width: 575.98px) {
+    padding: 3rem 0 1rem 0;
+  }
   .text {
     margin-top: 2.3rem;
     font-weight: bold;
@@ -300,6 +339,9 @@ h1 {
 #why-section {
   padding: 5rem 0 0 0;
   background-color: #fff;
+  @media (max-width: 575.98px) {
+    padding: 3rem 0 1rem 0;
+  }
   .text {
     margin-top: 2.3rem;
     font-weight: bold;
@@ -308,6 +350,9 @@ h1 {
   .why-cv-image {
     position: relative;
     bottom: -40px;
+    img {
+      width: 100%;
+    }
   }
 }
 // WHY SECTION END
@@ -328,6 +373,9 @@ h1 {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1.8rem;
+    @media (max-width: 575.98px) {
+      font-size: 1.5rem;
+    }
   }
   a {
     margin: 0 auto;

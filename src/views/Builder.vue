@@ -3,10 +3,10 @@
     <navbar :steps="true" />
     <div v-if="step < 5" class="container pt-5 pb-5">
       <div class="row">
-        <div class="col-md-7">
+        <div class="col-12 col-md-7">
           <cv-form />
         </div>
-        <div class="col-md-4 offset-md-1">
+        <div class="col-md-4 offset-md-1 d-none d-md-block">
           <div class="preview">
             <svg viewBox="0 0 780 2000" xmlns="http://www.w3.org/2000/svg">
               <!-- Common use case: embed HTML text into SVG -->
@@ -19,9 +19,14 @@
       </div>
     </div>
     <div v-if="step == 5" class="container pt-5 pb-5">
-      <div class="row">
+      <div class="row flex-column-reverse flex-md-row">
         <div class="col-md-8">
-          <templates :onBuilder="true" :selected="selectedCv" />
+          <svg viewBox="0 0 780 2000" xmlns="http://www.w3.org/2000/svg">
+              <!-- Common use case: embed HTML text into SVG -->
+              <foreignObject x="0" y="0" width="100%" height="2000">
+                 <templates :onBuilder="true" :selected="selectedCv" />
+              </foreignObject>
+          </svg>
           <vue-html2pdf 
               :show-layout="false" 
               :float-layout="true" 
@@ -42,7 +47,7 @@
             </section> 
           </vue-html2pdf> 
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 mb-5 mb-md-0">
           <div class="preview px-3 py-3">
             <div class="steps-title mb-4">
               <h3>Summary Section</h3>
