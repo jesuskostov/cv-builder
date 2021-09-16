@@ -8,7 +8,7 @@
         </div>
         <div class="col-md-4 offset-md-1">
           <div class="preview">
-            <svg viewBox="0 0 780 1000" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 780 2000" xmlns="http://www.w3.org/2000/svg">
               <!-- Common use case: embed HTML text into SVG -->
               <foreignObject x="0" y="0" width="100%" height="3000">
                  <templates :onBuilder="true" :selected="selectedCv" />
@@ -20,10 +20,30 @@
     </div>
     <div v-if="step == 5" class="container pt-5 pb-5">
       <div class="row">
-        <div class="col-md-7">
-          <templates :onBuilder="true" :selected="selectedCv" />
+        <div class="col-md-8">
+          <vue-html2pdf 
+              :show-layout="false" 
+              :float-layout="true" 
+              :enable-download="true" 
+              :preview-modal="true" 
+              :paginate-elements-by-height="1400" 
+              filename="hee hee" 
+              :pdf-quality="2" 
+              :manual-pagination="false" 
+              pdf-format="a4" 
+              pdf-orientation="portrait" 
+              pdf-content-width="100%" 
+             
+              ref="html2Pdf" 
+          > 
+
+            <section slot="pdf-content"> 
+              <templates :onBuilder="true" :selected="selectedCv" />
+            </section> 
+
+          </vue-html2pdf> 
         </div>
-        <div class="col-md-4 offset-md-1">
+        <div class="col-md-4">
           <div class="preview px-3 py-3">
             <div class="steps-title mb-4">
               <h3>Summary Section</h3>
@@ -36,7 +56,7 @@
                 <button class="edit" @click="goTo(3)">Education and skills <img src="../assets/images/pencil.svg" alt=""></button>
                 <button class="edit" @click="goTo(4)">Other <img src="../assets/images/pencil.svg" alt=""></button>
               </div>
-              <button class="custom-btn mt-auto">Download PDF</button>
+              <button class="custom-btn download mt-auto" @click="generateReport">Download PDF</button>
             </div>
           </div>
         </div>
@@ -49,12 +69,14 @@
 import CvForm from '../components/CvForm.vue'
 import Templates from '../components/Template.vue'
 import Navbar from '../components/Navigation.vue'
+import VueHtml2pdf from 'vue-html2pdf'
 
 export default {
   components: {
     CvForm,
     Templates,
     Navbar,
+    VueHtml2pdf,
   },
   computed: {
     selectedCv() {
@@ -67,7 +89,13 @@ export default {
   methods: {
     goTo(step) {
       this.$store.dispatch('step', {step})
+    },
+    generateReport () {
+      this.$refs.html2Pdf.generatePdf()
     }
+  },
+  mounted() {
+    
   }
 }
 </script>

@@ -19,7 +19,7 @@
         </div>
         <div class="mb-5">
           <h3>Education</h3>
-          <div v-for="(school, i) in education" :key="i">
+          <div v-for="(school, i) in education" :key="i" class="mb-4">
             <h4>{{school.schoolName}}, {{school.schoolLocation}}</h4>
             <p class="mb-0">{{school.startDate}} - {{school.endDate}}</p>
             <p>{{school.description}}</p>
@@ -107,7 +107,7 @@ export default {
   width: 100%;
   background-color: #fff;
   color: #000;
-  margin: 0 30px;
+  // margin: 0 30px;
 }
 
 .header {
@@ -120,20 +120,20 @@ export default {
 .profession {
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 h1 {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 5rem;
-  margin-bottom: 1rem;
+  font-size: 4rem;
+  margin-bottom: 0;
   line-height: 1;
 }
 
 .info {
   text-align: left;
-  padding: 40px 50px 40px 50px;
+  padding: 30px 20px 40px 20px;
   border-top: 1px solid gray;
   h2 {
     font-size: 1.7rem;
@@ -154,7 +154,7 @@ h1 {
     font-weight: bold; 
   }
   p {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     color: #000;
     margin-bottom: 0;
   }  

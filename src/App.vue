@@ -70,13 +70,18 @@ html, body {
 }
 
 .custom-btn {
-    height: 48px;
-    color: #fff;
-    font-weight: bold;
-    background-color: var(--primary-color);
-    border:0; 
-    border-radius: 4px;
-    padding: 4px 18px;
+  height: 48px;
+  color: #fff;
+  font-weight: bold;
+  background-color: var(--primary-color);
+  border:0; 
+  border-radius: 4px;
+  padding: 4px 18px;
+  &.download {
+    position: fixed;
+    width: 320px;
+    bottom: 70px;
+  }
 }
 
 .opt-dropdown {

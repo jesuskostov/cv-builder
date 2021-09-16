@@ -100,7 +100,7 @@
       </div>
     </div>
     <div id="templates-carousel">
-      <div class="container">
+      <div class="container mb-5">
         <div class="section-title">
           <h2>Make a CV that stands out</h2>
           <span class="line"></span>
