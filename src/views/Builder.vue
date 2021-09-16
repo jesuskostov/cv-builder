@@ -21,6 +21,7 @@
     <div v-if="step == 5" class="container pt-5 pb-5">
       <div class="row">
         <div class="col-md-8">
+          <templates :onBuilder="true" :selected="selectedCv" />
           <vue-html2pdf 
               :show-layout="false" 
               :float-layout="true" 
@@ -36,11 +37,9 @@
              
               ref="html2Pdf" 
           > 
-
             <section slot="pdf-content"> 
               <templates :onBuilder="true" :selected="selectedCv" />
             </section> 
-
           </vue-html2pdf> 
         </div>
         <div class="col-md-4">

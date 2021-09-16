@@ -13,7 +13,7 @@
               <p>{{accomp}}</p>
             </div>
           </div>
-          <div class="col-md-10">
+          <div class="col-md-12">
             <div class="box">
               <h2>Employment History</h2>
               <div v-for="(work, i) in workHistory" :key="i" class="education">
@@ -25,8 +25,9 @@
               </div>
             </div>
           </div>
-          <div class="col-md-10">
-            <div class="box">
+          <div class="col-md-12">
+            <div class="html2pdf__page-break"/>
+            <div class="box mt-5">
               <h2>Education</h2>
               <div v-for="(school, i) in education" :key="i" class="education">
                 <p class="year">{{school.startDate}} - {{school.endDate}}</p>
@@ -37,7 +38,6 @@
               </div>
             </div>
           </div>
-          
         </div>
       </div>
     </div>

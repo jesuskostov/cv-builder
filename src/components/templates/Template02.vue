@@ -33,6 +33,7 @@
             <p>{{work.description}}</p>
           </div>
         </div>
+        <div class="html2pdf__page-break"/>
         <div class="text-left">
           <div v-if="skills" class="box mb-5">
             <h2 class="mb-3">Skills</h2>
