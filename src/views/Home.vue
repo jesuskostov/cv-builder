@@ -49,7 +49,7 @@
           </div>
           <div class="col-md-6 position-relative d-none d-md-block">
             <img class="circles-svg" src="../assets/images/circles-behind-cv-image.svg" alt="circle images">
-            <img class="intro-cv-image" src="../assets/images/intro-cv-image.svg" alt="intro cv image">
+            <img class="intro-cv-image" src="../assets/images/intro-cv-image.png" alt="intro cv image">
           </div>
         </div>
       </div>
@@ -59,7 +59,9 @@
         <div class="row">
           <div class="col-md-12">
             <div class="d-flex flex-column flex-md-row align-items-center">
-              <img class="mr-0 mb-4 mb-md-0 mr-md-5" src="../assets/images/optimized-career.png" alt="optimized career">
+              <div class="img-box mr-0 mb-4 mb-md-0 mr-md-5">
+                <img src="../assets/images/optimized-career@2x.png" alt="optimized career">
+              </div>
               <div class="text-left">
                 <h3>Only 2% of resumes make it past the first round.<br>Be in the top 2%</h3>
                 <p>Our CV Online Generator can help you take your career search to new heights with a stylish and <br><router-link to="/">optimized career summary document.</router-link></p>
@@ -128,7 +130,7 @@
             <p class="text">With the help of CV Generator, your CV will stand out from the crowd. Easily personalise the resume design and your CV will be ready and exported in PDF under 5 minutes.</p>
           </div>
           <div class="why-cv-image w-100 text-center">
-            <img src="../assets/images/why-quickcv-image.png" alt="Why QuickCV Generator?">
+            <img src="../assets/images/why-quickcv-image@2x.png" alt="Why QuickCV Generator?">
           </div>
         </div>
       </div>
@@ -267,6 +269,12 @@ h1 {
 #optimized-career {
   padding: 3.2rem 0;
   background-color: var(--gray-color);
+  .img-box {
+    width: 230px;
+    img {
+      width: 100%;
+    }
+  }
   h3 {
     text-align: left;
     font-size: 1.2rem;

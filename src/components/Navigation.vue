@@ -41,8 +41,6 @@ export default {
 <style lang="scss" scoped>
 
 .nav {
-    display: flex;
-    align-items: center;
     background-color: #fff;
     padding: 1.2rem 0;
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.16);
@@ -56,6 +54,8 @@ export default {
     }
 
     &__menu {
+        display: flex;
+        align-items: center;
         margin: 0;
         a {
             font-weight: bold;
