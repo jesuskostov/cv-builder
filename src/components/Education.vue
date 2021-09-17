@@ -10,12 +10,12 @@
         </div>
         <draggable v-model="education" @end="dragSchool">
                 <div v-for="(school, i) in education" :key="i" class="accordion">
-                    <div class="job-label">
+                    <div class="box-label">
                         <h2 class="d-flex align-items-center">
                             <img class="mr-3" src="../assets/images/lines.svg" alt="lines">
                             <span v-if="school.schoolName">{{school.schoolName}}</span><span v-else>School name</span>
                         </h2>
-                        <div>
+                        <div class="d-flex">
                             <button class="action-btn mr-3" @click="deleteSchool(i)">
                                 <img src="../assets/images/bin.svg" alt="bin icon">
                             </button>
@@ -94,7 +94,7 @@
                 <option disabled value="">Please select one</option>
                 <option v-for="(skill, i) in options" :key="i" :value="skill.title">{{skill.title}}</option>
             </select> -->
-            <multiselect v-model="skills" class="w-100" :options="options" :multiple="true" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some" label="title" track-by="title" />
+            <multiselect v-model="skills" class="w-100" :options="options" :multiple="true" :taggable="true" @tag="addSkill" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some" label="title" track-by="title" />
             <draggable v-model="skills" @end="dragSkill">
                 <div v-for="(skill, i) in skills" :key="i" class="box-row">
                     <h4 class="mb-0">
@@ -217,6 +217,12 @@ export default {
         deleteSkill(i) {
             this.skills.splice(i, 1);
         },
+        addSkill(skill) {
+            this.skills.push({
+                'title': skill,
+                'rating': 0
+            })
+        },
         async step(step) {
             let education = this.education
             let skills = this.skills
@@ -268,31 +274,8 @@ export default {
         if (JSON.parse(localStorage.getItem('skills')) != null) {
             this.skills = JSON.parse(localStorage.getItem('skills'));
         }
+        this.addNewSchool()
     }
 }
 </script>
-
-<style lang="scss" scoped>
-
-.job-label {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 70px;
-    background-color: #fff;
-    h2 {
-        font-weight: bold;
-        font-size: 1.2rem;
-        margin: 0;
-        img {
-            cursor: move;
-            position: relative;
-            top: -1px;
-        }
-    }
-}
-
-</style>
 

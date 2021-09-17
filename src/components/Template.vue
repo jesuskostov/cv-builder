@@ -1,26 +1,52 @@
 <template>
   <div>
-    <templates v-if="onBuilder" :template-name="selected" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :interests="interests" :accomp="accomp" />
+   
+    <templates v-if="onBuilder" :template-name="selected" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLanguages" :interests="interests" :accomp="accomp" />
     <div v-if="!onBuilder"  class="template">
-      <div v-for="item in list" :key="item">
-        <templates :preview="preview" :template-name="item" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :interests="interests" :accomp="accomp" />
-        <button class="custom-btn mt-3" @click="onClick(item)">Use template</button>
-      </div>
+      <swiper :options="swiperOption">
+        <swiper-slide v-for="item in list" :key="item" :virtualIndex="item">
+          <templates :preview="preview" :template-name="item" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLanguages" :interests="interests" :accomp="accomp" />
+          <button class="custom-btn mt-3" @click="onClick(item)">Use template</button>
+        </swiper-slide>
+      </swiper>
     </div>
   </div>
 </template>
 
 <script>
 import Templates, { templatesCount } from "./templates/Index";
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import '../../node_modules/swiper/dist/css/swiper.css'
+
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "./style.css";
+// import SwiperCore, { Pagination } from "swiper";
+// SwiperCore.use([Pagination]);
 
 export default {
   name: "HelloWorld",
   components: {
     Templates,
+    Swiper,
+    SwiperSlide,
   },
   props: ['onBuilder','selected', 'preview'],
   data() {
     return {
+      swiperOption: {
+          effect: 'coverflow',
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: '3',
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 0,
+            modifier: 0,
+            slideShadows : false
+          }
+      },
       list: Array(templatesCount)
         .fill(0)
         .map((e, i) => i + 1),
@@ -51,6 +77,9 @@ export default {
     languages() {
       return this.$store.state.languages
     },
+    motherLanguages() {
+      return this.$store.state.motherLang
+    },
     interests() {
       return this.$store.state.interests
     },
@@ -68,6 +97,7 @@ export default {
     let interests = JSON.parse(localStorage.getItem('interests'));
     let accomp = JSON.parse(localStorage.getItem('accomplishments'));
     let cv_variant = JSON.parse(localStorage.getItem('cv_variant'));
+    let motherLanguages = JSON.parse(localStorage.getItem('motherLanguages'));
     if (cv_variant != null) {
       let payload = cv_variant
       this.$store.dispatch('selectCv', {payload});
@@ -90,6 +120,10 @@ export default {
     if (interests != null && interests.length != 0) {
       this.$store.dispatch('saveInterests', {interests})
     }
+    if (motherLanguages != null && motherLanguages.length != 0) {
+      let lang = motherLanguages
+      this.$store.dispatch('saveMotherLanguages', {lang})
+    }
     if (accomp != '') {
       this.$store.dispatch('saveAccomp', {accomp})
     }
@@ -102,6 +136,10 @@ export default {
 .template {
   width: 100%;
   display: flex;
-  overflow-x: scroll;
 }
+
+.carousel {
+  width: 100%;
+}
+
 </style>

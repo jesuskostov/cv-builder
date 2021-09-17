@@ -100,6 +100,45 @@ html, body {
     padding: 5px;
 }
 
+.go-back {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    padding: 4px 2rem;
+    height: 48px;
+    border-radius: 4px;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    background-color: transparent;
+}
+
+.box-label {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    background-color: #fff;
+    h2 {        
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin: 0;
+        span {
+          max-width: 400px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        img {
+            cursor: move;
+            position: relative;
+            top: -1px;
+        }
+    }
+}
+
 .box-row {
     display: flex;
     justify-content: space-between;
@@ -214,6 +253,11 @@ label {
         height: 16px;
         margin-right: 6px;
     }
+}
+
+.error {
+    color: red;
+    font-size: 0.8rem;
 }
 </style>
 

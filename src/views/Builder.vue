@@ -32,7 +32,7 @@
               :float-layout="true" 
               :enable-download="true" 
               :preview-modal="true" 
-              :paginate-elements-by-height="1400" 
+              :paginate-elements-by-height="1800" 
               filename="hee hee" 
               :pdf-quality="2" 
               :manual-pagination="false" 

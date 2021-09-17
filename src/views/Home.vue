@@ -136,10 +136,15 @@
       </div>
     </div>
     <div id="change-cv">
-      <img src="../assets/images/squares.svg" alt="squares icons">
-      <h2>Change Your CV. Change your life.</h2>
-      <router-link to="/">Get Started Now</router-link>
+      <div class="container">
+        <img src="../assets/images/squares.svg" alt="squares icons">
+        <div class="content">
+          <h2>Change Your CV. Change your life.</h2>
+          <router-link to="/">Get Started Now</router-link>
+        </div>
+      </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -147,12 +152,14 @@
 // @ is an alias to /src
 import Navbar from '../components/Navigation.vue'
 import Templates from '../components/Template.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
   name: 'Home',
   components: {
     Navbar,
-    Templates
+    Templates,
+    Footer
   },
   methods: {
     async start() {
@@ -395,6 +402,11 @@ h1 {
     color: #fff;
     border-radius: 4px;
     border: 2px solid #fff;
+    font-weight: bold;
+  }
+  .content {
+    position: relative;
+    z-index: 1;
   }
 }
 </style>

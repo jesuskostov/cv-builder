@@ -7,12 +7,12 @@
     </div>
     <draggable v-model="workHistory" @end="drag">
         <div v-for="(work, i) in workHistory" :key="i" class="accordion">
-            <div class="job-label">
+            <div class="box-label">
                 <h2 class="d-flex align-items-center">
                     <img class="mr-3" src="../assets/images/lines.svg" alt="lines">
                     <span v-if="work.jobTitle">{{work.jobTitle}}</span><span v-else>Job title</span>
                 </h2>
-                <div>
+                <div class="d-flex">
                     <button class="action-btn mr-3" @click="deleteJob(i)">
                         <img src="../assets/images/bin.svg" alt="bin icon">
                     </button>
@@ -24,7 +24,7 @@
             <b-collapse visible :id="'collapse-' + i">
                 <b-card class="no-border">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 mb-3">
                             <div class="text-left">
                                 <!-- <p>Job Title: {{work.jobTitle}}</p> -->
                                 <label for="jobTitle">Job title</label>
@@ -32,21 +32,21 @@
                                 <input type="text" class="w-100" id="jobTitle" v-model="work.jobTitle">
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 mb-3">
                             <div class="text-left">
                                 <label for="employer">Employer</label>
                                 <br>
                                 <input type="text" class="w-100" id="employer" v-model="work.employer">
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 mb-3">
                             <div class="text-left">
                                 <label for="startDate">Start date</label>
                                 <br>
                                 <input type="date" class="w-100" id="startDate" v-model="work.startDate">
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 mb-3">
                             <div class="text-left">
                                 <label for="endDate">End date</label>
                                 <input type="date" class="w-100" id="endDate" v-model="work.endDate">
@@ -106,6 +106,7 @@ export default {
                 'currentlyWork': false,
                 'description': '',
             })
+            console.log(123);
         },
         deleteJob(i) {
             this.workHistory.splice(i, 1);
@@ -139,31 +140,14 @@ export default {
         if (JSON.parse(localStorage.getItem('workHistory')) != null) {
             this.workHistory = JSON.parse(localStorage.getItem('workHistory'));
         }
+        this.addNewJob()
+
     }
 }
 </script>
 
 <style lang="scss" scoped>
 
-.job-label {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 70px;
-    background-color: #fff;
-    h2 {
-        font-weight: bold;
-        font-size: 1.2rem;
-        margin: 0;
-        img {
-            cursor: move;
-            position: relative;
-            top: -1px;
-        }
-    }
-}
 
 .add-job-btn {
     display: flex;

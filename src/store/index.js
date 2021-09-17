@@ -12,6 +12,7 @@ export default new Vuex.Store({
     education: [],
     skills: [],
     languages: [],
+    motherLang: [],
     interests: [],
     accomplishments: ''
   },
@@ -37,6 +38,9 @@ export default new Vuex.Store({
     },
     SET_LANGUAGES: (state, {lang}) => {
       state.languages = lang
+    },
+    SET_MOTHER_LANGUAGES: (state, {lang}) => {
+      state.motherLang = lang
     },
     SET_INTERESTS: (state, {interests}) => {
       state.interests = interests
@@ -66,6 +70,9 @@ export default new Vuex.Store({
     },
     saveLanguages: ({commit}, {lang}) => {
       commit('SET_LANGUAGES', {lang})
+    },
+    saveMotherLanguages: ({commit}, {lang}) => {
+      commit('SET_MOTHER_LANGUAGES', {lang})
     },
     saveInterests: ({commit}, {interests}) => {
       commit('SET_INTERESTS', {interests})

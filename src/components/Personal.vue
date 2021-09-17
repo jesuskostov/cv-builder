@@ -13,7 +13,7 @@
                         <label for="firstName"><span class="red">*</span> Name</label>
                         <br>
                         <input type="text" class="w-100" name="firstName" id="firstName" v-model="personal.firstName" v-validate="'required'">
-                        <span>{{ errors.first('firstName') }}</span>
+                        <span class="error">{{ errors.first('firstName') }}</span>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
@@ -21,7 +21,7 @@
                         <label for="lastName"><span class="red">*</span> Last Name</label>
                         <br>
                         <input type="text" class="w-100" name="lastName" id="lastName" v-model="personal.lastName" v-validate="'required'">
-                        <span>{{ errors.first('lastName') }}</span>
+                        <span class="error">{{ errors.first('lastName') }}</span>
                     </div>
                 </div>
                 <div class="col-md-12 mb-4">
@@ -29,14 +29,14 @@
                         <label for="profession">Profession</label>
                         <br>
                         <input type="text" class="w-100" name="profession" id="profession" v-model="personal.profession" v-validate="'required'">
-                        <span>{{ errors.first('profession') }}</span>
+                        <span class="error">{{ errors.first('profession') }}</span>
                     </div>
                 </div>
                 <div class="col-md-8 mb-4">
                     <div class="text-left">
                         <label for="city"><span class="red">*</span> City</label>
                         <input type="text" class="w-100" name="city" id="city" v-model="personal.city" v-validate="'required'">
-                        <span>{{ errors.first('city') }}</span>
+                        <span class="error">{{ errors.first('city') }}</span>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
@@ -44,7 +44,7 @@
                         <label for="zipCode"><span class="red">*</span> Zip code</label>
                         <br>
                         <input type="text" class="w-100" name="zipCode" id="zipCode" v-model="personal.zipCode" v-validate="'required'">
-                        <span>{{ errors.first('zipCode') }}</span>
+                        <span class="error">{{ errors.first('zipCode') }}</span>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -52,7 +52,7 @@
                         <label for="phoneNumber">Phone number</label>
                         <br>
                         <input type="text" class="w-100" name="phoneNumber" id="phoneNumber" v-model="personal.phoneNumber" v-validate="'required'">
-                        <span>{{ errors.first('phoneNumber') }}</span>
+                        <span class="error">{{ errors.first('phoneNumber') }}</span>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -60,7 +60,7 @@
                         <label for="email">Email</label>
                         <br>
                         <input type="text" class="w-100" name="email" id="email" v-model="personal.email" v-validate="'required'">
-                        <span>{{ errors.first('email') }}</span>
+                        <span class="error">{{ errors.first('email') }}</span>
                     </div>
                 </div>
             </div>
@@ -68,8 +68,7 @@
                 <input type="text" name="socialProfiles" id="socialProfiles" v-model="personal.socialProfiles" v-validate="'required'">
                 <span>{{ errors.first('socialProfiles') }}</span> -->
         </div>
-        <div class="d-flex flex-column-reverse flex-md-row align-items-center justify-content-between">
-            <router-link class="go-back" to="/">Go Back</router-link>
+        <div class="d-flex flex-column-reverse flex-md-row align-items-center justify-content-end">
             <button type="submit" class="custom-btn mb-3 mb-md-0">Next: Work History</button>
         </div>
     </form>  
@@ -121,19 +120,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-.go-back {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    padding: 4px 2rem;
-    height: 48px;
-    border-radius: 4px;
-    color: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
-}
-</style>
-
