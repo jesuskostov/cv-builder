@@ -8,8 +8,8 @@
         </div>
         <steps v-if="steps" />
         <ul v-if="!steps" class="nav__menu">
-            <router-link to="/" class="d-none d-md-block">Browse Templates</router-link>
-            <button @click="start" class="btn">Get Started</button>
+            <router-link to="/browse-templates" class="d-none d-md-block">Browse Templates</router-link>
+            <router-link to="/browse-templates" class="btn">Get Started</router-link>
         </ul>
       </div>
   </div>
@@ -69,11 +69,12 @@ export default {
             &.router-link-exact-active {
             color: #2c3e50;
             }
-        }
-        .btn {
-            font-weight: bold;
-            color: #fff;
-            background-color: var(--primary-color);
+            
+            &.btn {
+                font-weight: bold;
+                color: #fff;
+                background-color: var(--primary-color);
+            }
         }
     }
 }

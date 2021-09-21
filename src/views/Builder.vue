@@ -111,6 +111,7 @@ export default {
   border-radius: 4px;
   background-color: #E9ECF0;
   height: 100%;
+  padding: 20px;
   .edit {
     display: flex;
     align-items: center;

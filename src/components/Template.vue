@@ -1,15 +1,32 @@
 <template>
   <div>
-   
+    <!-- Preview on builder -->
     <templates v-if="onBuilder" :template-name="selected" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLanguages" :interests="interests" :accomp="accomp" />
-    <div v-if="!onBuilder"  class="template">
+    <!-- /Preview on builder -->
+
+    <!-- Carousel with templates -->
+    <div v-if="!onBuilder && !onBrowse" class="template">
       <swiper :options="swiperOption">
-        <swiper-slide v-for="item in list" :key="item" :virtualIndex="item">
-          <templates :preview="preview" :template-name="item" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLanguages" :interests="interests" :accomp="accomp" />
-          <button class="custom-btn mt-3" @click="onClick(item)">Use template</button>
+        <swiper-slide v-for="(item, i) in templates" :key="i" :virtualIndex="item" class="carouselItem">
+          <img :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
+          <button class="custom-btn mt-3" @click="onClick(i)">Use template</button>
         </swiper-slide>
       </swiper>
     </div>
+    <!-- /Carousel with templates -->
+
+    <!-- Browsing templates -->
+    <div v-if="onBrowse" class="container browse-template">
+      <div class="row">
+        <div class="col-md-3 mb-5" v-for="(item, i) in templates" :key="i">
+          <div class="item">
+            <img :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
+            <button class="custom-btn mt-3" @click="onClick(i)">Use template</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Browsing templates -->
   </div>
 </template>
 
@@ -31,20 +48,35 @@ export default {
     Swiper,
     SwiperSlide,
   },
-  props: ['onBuilder','selected', 'preview'],
+  props: ['onBuilder','selected', 'preview', 'onBrowse'],
   data() {
     return {
       swiperOption: {
-          effect: 'coverflow',
+          //effect: 'normal',
           grabCursor: true,
-          centeredSlides: true,
-          slidesPerView: '3',
-          coverflowEffect: {
-            rotate: 0,
-            stretch: 0,
-            depth: 0,
-            modifier: 0,
-            slideShadows : false
+          //centeredSlides: false,
+          spaceBetween: 30,
+          slidesPerView: '4',
+          loop: true,
+
+          //loopFillGroupWithBlank: false,
+          autoplay: 2000,
+          breakpoints: {
+            // when window width is >= 320px
+            320: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            // when window width is >= 480px
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 3,
+              spaceBetween: 30
+            }
           }
       },
       list: Array(templatesCount)
@@ -62,6 +94,9 @@ export default {
     },
   },
   computed: {
+    templates() {
+      return this.$store.state.templates
+    },
     personal() {
       return this.$store.state.personal 
     },
@@ -132,7 +167,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 .template {
   width: 100%;
   display: flex;
@@ -140,6 +175,50 @@ export default {
 
 .carousel {
   width: 100%;
+}
+
+.browse-template {
+  .item {
+    padding: 20px;
+    background-color: #E9ECF0;
+    border-radius: 4px;
+    img {
+      width: 100%;
+    }
+    .custom-btn {
+      height: 30px;
+      width: 100%;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.swiper-slide {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.5s;
+  .custom-btn {
+    opacity: 0;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 120px;
+    visibility: hidden;
+    transition: 0.5s;
+    position: absolute;
+  }
+  &:hover {
+    z-index: 9999;
+    transform: scale(1.2);
+    transition: 0.5s;
+    .custom-btn {
+      opacity: 1;
+      visibility: visible;
+      transition: 0.5s;
+    }
+  }
 }
 
 </style>

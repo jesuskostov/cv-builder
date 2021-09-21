@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Builder from '../views/Builder.vue'
+import BrowseTemplates from '../views/BrowseTemplates.vue'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/builder',
     name: 'Builder',
     component: Builder
+  },
+  {
+    path: '/browse-templates',
+    name: 'BrowseTemplates',
+    component: BrowseTemplates
   },
 ]
 

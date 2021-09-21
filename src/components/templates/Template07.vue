@@ -122,7 +122,6 @@ export default {
 .template {
   background-color: #fff;
   color: rgb(17, 17, 17);
-  margin: 0 30px;
   width: 100%;
   word-break: break-all;
   position: relative;

@@ -219,17 +219,24 @@ span {
   }
 }
 
-svg {
-    fill: #D2D4D6;
+.star {
+  fill: #D2D4D6;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  @media (max-width: 767.98px) {
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+  }
+  &:hover {
+    fill: var(--primary-color);
+  }
+  &.active {
+    fill: var(--primary-color);
+  }
 }
 
-svg:hover {
-    fill: var(--primary-color);
-}
-
-svg.active {
-    fill: var(--primary-color);
-}
 
 .card.no-border {
   border: 0;
@@ -241,23 +248,13 @@ label {
 }
 
 .template-preview {
-  width: 400px;
-}
-
-.star {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    @media (max-width: 767.98px) {
-        width: 16px;
-        height: 16px;
-        margin-right: 6px;
-    }
+  width: 100%;
+  box-shadow: 0 3px 6px 0 rgb(0 0 0 / 20%);
 }
 
 .error {
-    color: red;
-    font-size: 0.8rem;
+  color: red;
+  font-size: 0.8rem;
 }
 </style>
 

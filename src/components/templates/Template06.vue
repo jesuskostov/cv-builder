@@ -83,7 +83,6 @@ export default {
   width: 100%;
   background-color: #fff;
   font-family: roboto;
-  margin: 0 30px;
   word-break: break-all;
 }
 

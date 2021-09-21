@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import { templates } from './templates'
 
 Vue.use(Vuex)
 
@@ -14,7 +15,8 @@ export default new Vuex.Store({
     languages: [],
     motherLang: [],
     interests: [],
-    accomplishments: ''
+    accomplishments: '',
+    templates:templates
   },
   mutations: {
     SET_CV_TEMPLATE: (state, payload) => {

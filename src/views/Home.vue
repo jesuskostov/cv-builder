@@ -44,7 +44,7 @@
                 <p class="price">1,99 EUR</p>
                 <p class="text">* Then automatically renewed by subscription,<br>for an indefinite period, at 39 € per month.</p>
               </div>
-              <button @click="start" class="btn">Get Started Now</button>
+              <router-link to="/browse-templates" class="btn">Get Started Now</router-link>
             </div>
           </div>
           <div class="col-md-6 position-relative d-none d-md-block">
@@ -114,10 +114,7 @@
           </div>
         </div>
       </div>
-      <!-- <div>
-        <img src="../assets/images/cv-templates/cv-template-2.png" alt="">
-      </div> -->
-      <templates :preview="true" />
+      <templates style="margin-top: -100px" :preview="true" />
     </div>
     <div id="why-section">
       <div class="section-title">
@@ -337,7 +334,7 @@ h1 {
 
 // TEMPLATE CAROUSEL START
 #templates-carousel {
-  padding: 5rem 0;
+  padding: 5rem 0 0 0;
   background-color: var(--gray-color);
   @media (max-width: 575.98px) {
     padding: 3rem 0 1rem 0;

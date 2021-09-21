@@ -102,7 +102,7 @@
                         {{skill.title}}
                     </h4>
                     <div class="d-flex align-items-center">
-                        <div class="mr-0 mr-md-4">
+                        <div ref="rating" class="rating-box mr-0 mr-md-4">
                             <svg :class="{'active': skill.rating > 0}" class="star" @click="skill.rating = 1" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
                                 <g>
                                     <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
