@@ -1,6 +1,13 @@
 <template>
   <div>
     <navbar />
+    <div class="container">
+      <div class="steps-title pt-4">
+        <h1>Not happy with the final result?</h1>         
+        <span class="line"></span>
+        <p class="text">No problem! Switch templates seamlessly</p>
+      </div>
+    </div>
     <templates class="pt-5" :onBrowse="true" :preview="true" />
   </div>
 </template>

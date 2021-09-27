@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Builder from '../views/Builder.vue'
 import BrowseTemplates from '../views/BrowseTemplates.vue'
+import Payment from '../views/Payment.vue'
+import ErrorPage from '../views/Error.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +23,16 @@ const routes = [
     path: '/browse-templates',
     name: 'BrowseTemplates',
     component: BrowseTemplates
+  },
+  {
+    path: '/payment',
+    name: 'Payment',
+    component: Payment
+  },
+  {
+    path: '/error',
+    name: 'Error',
+    component: ErrorPage
   },
 ]
 

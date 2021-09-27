@@ -84,7 +84,7 @@
 
 <script>
 export default {
-  name: "Template01",
+  name: "Template04",
   props: {
     preview: {},
     personal: {

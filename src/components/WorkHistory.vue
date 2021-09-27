@@ -59,7 +59,7 @@
                         <div class="col-md-12">
                             <div class="text-left">
                                 <label for="workDescription">Work description</label>
-                                <textarea type="text" class="w-100" id="workDescription" v-model="work.description"></textarea>
+                                <vue-editor name="workDescription" id="workDescription" v-model="work.description" :editorToolbar="customToolbar"></vue-editor>
                             </div>                        
                         </div>
                     </div>
@@ -85,16 +85,21 @@
 <script>
 
 import draggable from 'vuedraggable'
+import { VueEditor } from "vue2-editor";
 
 export default {
     data() {
         return {
             workHistory: [],
-            divId: 2
+            divId: 2,
+            customToolbar: [
+                ["bold", "italic", "underline"],
+            ]
         }
     },
     components: {
-        draggable
+        draggable,
+        VueEditor
     },
     methods: {
         addNewJob() {
@@ -137,10 +142,11 @@ export default {
     },
     mounted() {
         // Retrieving data from localStorage
-        if (JSON.parse(localStorage.getItem('workHistory')) != null) {
+        if (JSON.parse(localStorage.getItem('workHistory')) != null && JSON.parse(localStorage.getItem('workHistory')).length != 0) {
             this.workHistory = JSON.parse(localStorage.getItem('workHistory'));
+        } else {
+            this.addNewJob()
         }
-        this.addNewJob()
 
     }
 }

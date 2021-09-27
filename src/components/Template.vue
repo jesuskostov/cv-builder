@@ -19,7 +19,7 @@
     <div v-if="onBrowse" class="container browse-template">
       <div class="row">
         <div class="col-md-3 mb-5" v-for="(item, i) in templates" :key="i">
-          <div class="item">
+          <div @click="onClick(i)" class="item">
             <img :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
             <button class="custom-btn mt-3" @click="onClick(i)">Use template</button>
           </div>
@@ -52,27 +52,20 @@ export default {
   data() {
     return {
       swiperOption: {
-          //effect: 'normal',
           grabCursor: true,
-          //centeredSlides: false,
           spaceBetween: 30,
-          slidesPerView: '4',
+          slidesPerView: '6',
           loop: true,
-
-          //loopFillGroupWithBlank: false,
           autoplay: 2000,
           breakpoints: {
-            // when window width is >= 320px
             320: {
               slidesPerView: 2,
               spaceBetween: 20
             },
-            // when window width is >= 480px
             480: {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-            // when window width is >= 640px
             640: {
               slidesPerView: 3,
               spaceBetween: 30
@@ -179,11 +172,22 @@ export default {
 
 .browse-template {
   .item {
+    cursor: pointer;
     padding: 20px;
     background-color: #E9ECF0;
+    transition: 0.4s;
     border-radius: 4px;
     img {
       width: 100%;
+      transition: 0.4s;
+    }
+    &:hover {
+      background-color: #e2e4e7;
+      transition: 0.4s;
+      img {
+        transform: translateY(-10px);
+        transition: 0.4s;
+      }
     }
     .custom-btn {
       height: 30px;

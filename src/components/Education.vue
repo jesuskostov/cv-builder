@@ -48,25 +48,18 @@
                                         <input type="text" class="w-100" v-model="school.degree">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="text-left">
-                                        <label for="startDate">Start date</label>
+                                        <label for="startDate">Start date and End date</label>
                                         <br>
-                                        <input type="date" class="w-100" v-model="school.startDate">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="text-left">
-                                        <label for="endDate">End date</label>
-                                        <br>
-                                        <input type="date" class="w-100" v-model="school.endDate">
+                                        <date-picker class="w-100" :value-type="'format'" :format="'YYYY'" v-model="school.date" :range="true" type="year" />
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="text-left">
                                         <label for="description">Description</label>
                                         <br>
-                                        <textarea type="text" class="w-100" v-model="school.description"></textarea>
+                                        <vue-editor name="description" id="description" v-model="school.description" :editorToolbar="customToolbar"></vue-editor>
                                     </div>
                                 </div>
                             </div>
@@ -172,6 +165,10 @@
 <script>
 import draggable from 'vuedraggable'
 import Multiselect from 'vue-multiselect'
+import DatePicker from 'vue2-datepicker';
+import 'vue2-datepicker/index.css';
+import { VueEditor } from "vue2-editor";
+
 
 export default {
     data() {
@@ -187,12 +184,17 @@ export default {
                 { title: 'Sinatra', rating: 0 },
                 { title: 'Laravel', rating: 0 },
                 { title: 'Phoenix', rating: 0 }
+            ],
+            customToolbar: [
+                ["bold", "italic", "underline"],
             ]
         }
     },
     components: {
         draggable,
-        Multiselect
+        Multiselect,
+        DatePicker,
+        VueEditor
     },
     methods: {
         addNewSchool() {
@@ -200,8 +202,7 @@ export default {
                 'schoolName': '',
                 'schoolLocation': '',
                 'degree': '',
-                'startDate': '',
-                'endDate': '',
+                'date': '',
                 'description': ''
             })
         },
@@ -268,13 +269,14 @@ export default {
     },
     mounted() {
         // Retrieving data from localStorage
-        if (JSON.parse(localStorage.getItem('education')) != null) {
+        if (JSON.parse(localStorage.getItem('education')) != null && JSON.parse(localStorage.getItem('education')).length != 0) {
             this.education = JSON.parse(localStorage.getItem('education'));
+        } else {
+            this.addNewSchool()
         }
         if (JSON.parse(localStorage.getItem('skills')) != null) {
             this.skills = JSON.parse(localStorage.getItem('skills'));
         }
-        this.addNewSchool()
     }
 }
 </script>

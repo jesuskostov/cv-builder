@@ -8,7 +8,8 @@ import { BootstrapVue } from 'bootstrap-vue'
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import '../node_modules/vue-multiselect/dist/vue-multiselect.min.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 Vue.config.productionTip = false
 
@@ -19,5 +20,8 @@ Vue.use(BootstrapVue)
 new Vue({
   router,
   store,
-  render: h => h(App)
+  render: h => h(App),
+  mounted() {
+    AOS.init()
+  },
 }).$mount('#app')

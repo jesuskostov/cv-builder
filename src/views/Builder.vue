@@ -10,10 +10,11 @@
           <div class="preview">
             <svg viewBox="0 0 780 2000" xmlns="http://www.w3.org/2000/svg">
               <!-- Common use case: embed HTML text into SVG -->
-              <foreignObject x="0" y="0" width="100%" height="3000">
+              <foreignObject x="0" y="0" width="100%" height="2000">
                  <templates :onBuilder="true" :selected="selectedCv" />
               </foreignObject>
             </svg>
+            <button @click="bigPreview = true">View large</button>
           </div>
         </div>
       </div>
@@ -39,12 +40,9 @@
               pdf-format="a4" 
               pdf-orientation="portrait" 
               pdf-content-width="100%" 
-             
               ref="html2Pdf" 
           > 
-            <section slot="pdf-content"> 
-              <templates :onBuilder="true" :selected="selectedCv" />
-            </section> 
+              <templates slot="pdf-content" :onBuilder="true" :selected="selectedCv" />
           </vue-html2pdf> 
         </div>
         <div class="col-md-4 mb-5 mb-md-0">
@@ -66,6 +64,20 @@
         </div>
       </div>
     </div>
+    <div v-if="bigPreview" class="big-preview">
+      <button @click="bigPreview = false">CLOSE</button>
+      <svg viewBox="0 0 780 1000" xmlns="http://www.w3.org/2000/svg">
+          <!-- Common use case: embed HTML text into SVG -->
+          <foreignObject x="0" y="0" width="100%" height="3000">
+              <templates :onBuilder="true" :selected="selectedCv" />
+          </foreignObject>
+      </svg>
+      <div class="carousel">
+        <div v-for="(item, i) in templates" :key="i" >
+          <img @click="onClick(i)" class="carousel-img" :class="{'active': selectedCv == i}" :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -74,13 +86,43 @@ import CvForm from '../components/CvForm.vue'
 import Templates from '../components/Template.vue'
 import Navbar from '../components/Navigation.vue'
 import VueHtml2pdf from 'vue-html2pdf'
+// import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+// import '../../node_modules/swiper/dist/css/swiper.css'
 
 export default {
+  data() {
+    return {
+      bigPreview: false,
+      swiperOption: {
+        grabCursor: true,
+        spaceBetween: 30,
+        slidesPerView: '8',
+        loop: true,
+        autoplay: 2000,
+        breakpoints: {
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          640: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          }
+        }
+      },
+    }    
+  },
   components: {
     CvForm,
     Templates,
     Navbar,
     VueHtml2pdf,
+    // Swiper,
+    // SwiperSlide,
   },
   computed: {
     selectedCv() {
@@ -88,6 +130,9 @@ export default {
     },
     step() {
       return this.$store.state.step
+    },
+    templates() {
+      return this.$store.state.templates
     }
   },
   methods: {
@@ -96,10 +141,19 @@ export default {
     },
     generateReport () {
       this.$refs.html2Pdf.generatePdf()
-    }
+    },
+    onClick(i) {
+      let payload = i
+      localStorage.setItem('cv_variant', payload);
+      this.$store.dispatch('selectCv', {payload});
+    },
   },
   mounted() {
-    
+    let cv_variant = JSON.parse(localStorage.getItem('cv_variant'));
+    if (cv_variant != null) {
+      let payload = cv_variant
+      this.$store.dispatch('selectCv', {payload});
+    }
   }
 }
 </script>
@@ -129,4 +183,33 @@ export default {
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.16);  
   }
 }
+
+.big-preview {
+  position: fixed;
+  inset: 0;
+  background-color: #fff;
+  svg {
+    margin-top: 30px;
+    width: 320px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,0.16);
+  }
+}
+
+.carousel {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: #F2F5F7;
+  display: flex;
+  overflow-x: scroll;
+  .carousel-img {
+    width: 200px;
+    &.active {
+      outline: 2px solid red;
+    }
+  }
+}
+
 </style>

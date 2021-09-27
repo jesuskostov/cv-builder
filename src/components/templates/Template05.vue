@@ -70,7 +70,7 @@
 
 <script>
 export default {
-  name: "Template02",
+  name: "Template05",
   props: {
     preview: {},
     personal: {

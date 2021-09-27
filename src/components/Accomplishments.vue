@@ -1,17 +1,25 @@
 <template>
-  <div class="accordion text-left px-4 pt-4">
+  <div class="accordion text-left px-4 py-4">
     <label for="accomplishments">Accomplishments:</label>
     <br>
-    <textarea name="accomplishments w-100" id="accomplishments" v-model="accomplishments"></textarea>
+    <vue-editor name="accomplishments" id="accomplishments" v-model="accomplishments" :editorToolbar="customToolbar"></vue-editor>
   </div>
 </template>
 
 <script>
+import { VueEditor } from "vue2-editor";
+
 export default {
     data() {
         return {
-            accomplishments: ''
+            accomplishments: '',
+            customToolbar: [
+                ["bold", "italic", "underline"],
+            ]
         }
+    },
+    components: {
+        VueEditor
     },
     watch: {
         accomplishments: {

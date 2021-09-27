@@ -5,11 +5,12 @@
     <education v-if="step == 3" />
     <div v-if="step == 4">
         <languages  />
+        <driving-license />
         <interests />
         <accomplishments />
         <div class="d-flex justify-content-between mt-5">
             <button class="go-back" @click="goTo(3)">Go Back</button>
-            <button class="custom-btn" @click="goTo(5)">Next: Summary</button>
+            <button class="custom-btn" @click="goTo()">Next: Summary</button>
         </div>
     </div>
     
@@ -21,6 +22,7 @@ import Personal from './Personal.vue'
 import WorkHistory from './WorkHistory.vue'
 import Education from './Education.vue'
 import Languages from './Languages.vue'
+import DrivingLicense from './DrivingLicense.vue'
 import Interests from './Interests.vue'
 import Accomplishments from './Accomplishments.vue'
 
@@ -30,6 +32,7 @@ export default {
         WorkHistory,
         Education,
         Languages,
+        DrivingLicense,
         Interests,
         Accomplishments,
     },
@@ -39,7 +42,7 @@ export default {
         }
     },
     methods: {
-        goTo(toStep) {
+        goTo() {
             let lang = JSON.parse(localStorage.getItem('spokenLanguages'))
             let interests = JSON.parse(localStorage.getItem('interests'));
             let accomp = JSON.parse(localStorage.getItem('accomplishments'));
@@ -52,8 +55,9 @@ export default {
             if (accomp != '') {
                 this.$store.dispatch('saveAccomp', {accomp});
             }
-            let step = toStep
-            this.$store.dispatch('step', {step})
+            // let step = toStep
+            // this.$store.dispatch('step', {step})
+            this.$router.push('/payment')
         },        
     }
 }

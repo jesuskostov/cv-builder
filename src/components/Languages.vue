@@ -6,7 +6,7 @@
     </div>
     <div class="accordion px-4 py-4">
         <h3>Mother Languages:</h3>
-        <multiselect v-model="motherLanguages" class="w-100" :options="languages" :multiple="true" :taggable="true" @tag="addMotherLang" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some" label="title" track-by="title" />
+        <multiselect v-model="motherLanguages" class="w-100" :options="languages" :multiple="true" :taggable="true" @tag="addMotherLang" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some or you can also write and press Enter" label="title" track-by="title" />
         <draggable v-model="motherLanguages" @end="dragMotherLang">
             <div v-for="(lang, i) in motherLanguages" :key="i" class="box-row">
                 <div class="d-flex align-items-center">
@@ -23,70 +23,17 @@
     </div>
     <div class="accordion px-4 py-4">
         <h3>Spoken Languages:</h3>
-        <multiselect v-model="spokenLanguages" class="w-100" :options="languages" :multiple="true" :taggable="true" @tag="addLang" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some" label="title" track-by="title" />
+        <multiselect v-model="spokenLanguages" class="w-100" :options="languages" :multiple="true" :taggable="true" @tag="addLang" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Write some and press Enter" label="title" track-by="title" />
         <draggable v-model="spokenLanguages" @end="drag">
             <div v-for="(lang, i) in spokenLanguages" :key="i" class="box-row">
                 <div class="d-flex align-items-center">
                     <img class="mr-3" src="../assets/images/lines.svg" alt="lines">
-                    <h4 class="mb-0">{{lang.title}}</h4>
+                    <h4 class="mb-0">{{lang.title}}, {{lang.langLevel}}</h4>
                 </div>
-                <div class="d-flex align-items-center">
-                    <div>
-                        <svg :class="{'active': lang.rating > 0}" @click="lang.rating = 1" class="star" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
-                            <g>
-                                <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
-                                    c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
-                                    c-5.649,0.82-10.344,4.778-12.108,10.208c-1.765,5.431-0.293,11.392,3.796,15.377l114.848,111.954L92.271,482.671
-                                    c-0.966,5.628,1.348,11.314,5.967,14.671c2.613,1.898,5.708,2.864,8.818,2.864c2.388,0,4.784-0.569,6.978-1.723l141.967-74.638
-                                    l141.961,74.637c5.055,2.657,11.178,2.215,15.797-1.141c4.619-3.356,6.934-9.044,5.969-14.672l-27.117-158.081l114.861-111.955
-                                    C511.56,208.649,513.033,202.688,511.267,197.258z"/>
-                            </g>
-                        </svg>
-                        <svg :class="{'active': lang.rating > 1}" @click="lang.rating = 2" class="star" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
-                            <g>
-                                <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
-                                    c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
-                                    c-5.649,0.82-10.344,4.778-12.108,10.208c-1.765,5.431-0.293,11.392,3.796,15.377l114.848,111.954L92.271,482.671
-                                    c-0.966,5.628,1.348,11.314,5.967,14.671c2.613,1.898,5.708,2.864,8.818,2.864c2.388,0,4.784-0.569,6.978-1.723l141.967-74.638
-                                    l141.961,74.637c5.055,2.657,11.178,2.215,15.797-1.141c4.619-3.356,6.934-9.044,5.969-14.672l-27.117-158.081l114.861-111.955
-                                    C511.56,208.649,513.033,202.688,511.267,197.258z"/>
-                            </g>
-                        </svg>
-                        <svg :class="{'active': lang.rating > 2}" @click="lang.rating = 3" class="star" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
-                            <g>
-                                <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
-                                    c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
-                                    c-5.649,0.82-10.344,4.778-12.108,10.208c-1.765,5.431-0.293,11.392,3.796,15.377l114.848,111.954L92.271,482.671
-                                    c-0.966,5.628,1.348,11.314,5.967,14.671c2.613,1.898,5.708,2.864,8.818,2.864c2.388,0,4.784-0.569,6.978-1.723l141.967-74.638
-                                    l141.961,74.637c5.055,2.657,11.178,2.215,15.797-1.141c4.619-3.356,6.934-9.044,5.969-14.672l-27.117-158.081l114.861-111.955
-                                    C511.56,208.649,513.033,202.688,511.267,197.258z"/>
-                            </g>
-                        </svg>
-                        <svg :class="{'active': lang.rating > 3}" @click="lang.rating = 4" class="star" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
-                            <g>
-                                <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
-                                    c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
-                                    c-5.649,0.82-10.344,4.778-12.108,10.208c-1.765,5.431-0.293,11.392,3.796,15.377l114.848,111.954L92.271,482.671
-                                    c-0.966,5.628,1.348,11.314,5.967,14.671c2.613,1.898,5.708,2.864,8.818,2.864c2.388,0,4.784-0.569,6.978-1.723l141.967-74.638
-                                    l141.961,74.637c5.055,2.657,11.178,2.215,15.797-1.141c4.619-3.356,6.934-9.044,5.969-14.672l-27.117-158.081l114.861-111.955
-                                    C511.56,208.649,513.033,202.688,511.267,197.258z"/>
-                            </g>
-                        </svg>
-                        <svg :class="{'active': lang.rating > 4}" @click="lang.rating = 5" class="star" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
-                            <g>
-                                <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
-                                    c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
-                                    c-5.649,0.82-10.344,4.778-12.108,10.208c-1.765,5.431-0.293,11.392,3.796,15.377l114.848,111.954L92.271,482.671
-                                    c-0.966,5.628,1.348,11.314,5.967,14.671c2.613,1.898,5.708,2.864,8.818,2.864c2.388,0,4.784-0.569,6.978-1.723l141.967-74.638
-                                    l141.961,74.637c5.055,2.657,11.178,2.215,15.797-1.141c4.619-3.356,6.934-9.044,5.969-14.672l-27.117-158.081l114.861-111.955
-                                    C511.56,208.649,513.033,202.688,511.267,197.258z"/>
-                            </g>
-                        </svg>
-                    </div>
-                    <button class="action-btn mr-3" @click="deleteLanguage(i)">
-                        <img src="../assets/images/bin.svg" alt="bin icon">
-                    </button>
-                </div>
+                <select class="lang-level" v-model="lang.langLevel" @change="selectLangLevel(lang.langLevel, i)">
+                    <option disabled value="">Select level</option>
+                    <option v-for="(lang, i) in langLevel" :key="i" :value="lang.title">{{lang.title}}</option>
+                </select>
             </div>
         </draggable>
     </div>
@@ -100,14 +47,20 @@ import Multiselect from 'vue-multiselect'
 export default {
     data() {
         return {
+            level: '',
             motherLanguages: [],
             spokenLanguages: [],
             languages: [
-                { title: 'English', rating: 0 },
-                { title: 'Italian', rating: 0 },
-                { title: 'Chinese', rating: 0 },
-                { title: 'Bulgarian', rating: 0 },
-                { title: 'France', rating: 0 },
+                { title: 'English', langLevel: '' },
+                { title: 'France', langLevel: '' },
+            ],
+            langLevel: [
+                { 'title': 'A1 - Beginner	' },
+                { 'title': 'A2 - Elementary	' },
+                { 'title': 'B1 - Intermediate	' },
+                { 'title': 'B2 - Upper Intermediate	' },
+                { 'title': 'C1 - Advanced' },
+                { 'title': 'C2 - Proficient' },
             ],
         }
     },
@@ -116,6 +69,9 @@ export default {
         Multiselect
     },
     methods: {
+        selectLangLevel(level, i) {
+            this.spokenLanguages[i].langLevel = level
+        },
         deleteLanguage(i) {
             this.spokenLanguages.splice(i, 1);
         },
@@ -137,7 +93,7 @@ export default {
         addLang(lang) {
             this.spokenLanguages.push({
                 'title': lang,
-                'rating': 0
+                'langLevel': ''
             })
         },
         addMotherLang(lang) {
@@ -177,3 +133,12 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+.lang-level {
+    padding: 4px;
+    height: 38px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+</style>

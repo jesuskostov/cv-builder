@@ -8,26 +8,25 @@
       <div v-if="personal" class="info">
         
         <!-- LEFT SIDE -->
-        <div class="mb-5">
+        <div class="test mb-5">
           <h3>Details</h3>
           <p>{{personal.zipCode}}, {{personal.city}},</p>
           <p>{{personal.email}}</p>
           <p>{{personal.phoneNumber}}</p>
         </div>
-        <div class="mb-5">
+        <div class="test mb-5">
           <h3>Profile</h3>
-          <p>{{accomp}}</p>
+          <p v-html="accomp" />
         </div>
-        <div class="mb-5">
+        <div class="test mb-5">
           <h3>Education</h3>
           <div v-for="(school, i) in education" :key="i" class="mb-4">
             <h4>{{school.schoolName}}, {{school.schoolLocation}}</h4>
             <p class="mb-0">{{school.startDate}} - {{school.endDate}}</p>
-            <p>{{school.description}}</p>
+            <p class="">{{school.description}}</p>
           </div>
         </div>
-        <div v-if="education.length >= 2 && workHistory.length > 1" class="html2pdf__page-break"/>
-        <div class="mb-5">
+        <div class="test mb-5">
           <h3 class="mt-4">Employment History</h3>
           <div v-for="(work, i) in workHistory" :key="i" class="mb-4">
             <h4>{{work.jobTitle}}, {{work.employer}}</h4>
@@ -70,7 +69,7 @@
 
 <script>
 export default {
-  name: "Template02",
+  name: "Template05",
   props: {
     preview: {},
     personal: {
@@ -108,6 +107,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+
+.test {
+  break-inside: avoid;
+}
+
 .template {
   width: 100%;
   background-color: #fff;

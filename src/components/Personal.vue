@@ -24,12 +24,45 @@
                         <span class="error">{{ errors.first('lastName') }}</span>
                     </div>
                 </div>
-                <div class="col-md-12 mb-4">
+                <div class="col-md-6 mb-4">
+                    <div class="text-left">
+                        <label for="profession"><span class="red">*</span> Birthday</label>
+                        <br>
+                        <date-picker class="w-100" :value-type="'format'" :format="'DD-MM-YYYY'" v-model="personal.birthday" type="date" />
+                        <span class="error">{{ errors.first('profession') }}</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
                     <div class="text-left">
                         <label for="profession">Profession</label>
                         <br>
                         <input type="text" class="w-100" name="profession" id="profession" v-model="personal.profession" v-validate="'required'">
                         <span class="error">{{ errors.first('profession') }}</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="text-left">
+                        <label for="family"><span class="red">*</span> Family</label>
+                        <br>
+                        <select class="w-100" name="family" id="family" v-model="personal.family" v-validate="'required'">
+                            <option disable value="">Select your family status</option>
+                            <option value="married">Married</option>
+                            <option value="single">Single</option>
+                        </select>
+                        <span class="error">{{ errors.first('family') }}</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="text-left">
+                        <label for="sex"><span class="red">*</span> Sex</label>
+                        <br>
+                        <select class="w-100" name="sex" id="sex" v-model="personal.sex" v-validate="'required'">
+                            <option disable value="">Select your sex</option>
+                            <option value="married">Male</option>
+                            <option value="single">Female</option>
+                            <option value="Prefer not to say">Prefer not to say</option>
+                        </select>
+                        <span class="error">{{ errors.first('sex') }}</span>
                     </div>
                 </div>
                 <div class="col-md-8 mb-4">
@@ -45,6 +78,30 @@
                         <br>
                         <input type="text" class="w-100" name="zipCode" id="zipCode" v-model="personal.zipCode" v-validate="'required'">
                         <span class="error">{{ errors.first('zipCode') }}</span>
+                    </div>
+                </div>
+                <div class="col-md-8 mb-4">
+                    <div class="text-left">
+                        <label for="country"><span class="red">*</span> Country</label>
+                        <br>
+                        <input type="text" class="w-100" name="country" id="country" v-model="personal.country" v-validate="'required'">
+                        <span class="error">{{ errors.first('country') }}</span>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="text-left">
+                        <label for="nationality"><span class="red">*</span> Nationality</label>
+                        <br>
+                        <input type="text" class="w-100" name="nationality" id="nationality" v-model="personal.nationality" v-validate="'required'">
+                        <span class="error">{{ errors.first('nationality') }}</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="text-left">
+                        <label for="fullAddress"><span class="red">*</span> Full Address</label>
+                        <br>
+                        <input type="text" class="w-100" name="fullAddress" id="fullAddress" v-model="personal.fullAddress" v-validate="'required'">
+                        <span class="error">{{ errors.first('fullAddress') }}</span>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -76,20 +133,32 @@
 </template>
 
 <script>
+import DatePicker from 'vue2-datepicker';
+import 'vue2-datepicker/index.css';
+
 export default {
     data() {
         return {
             personal: {
                 firstName: '',
                 lastName: '',
+                birthday: '',
                 email: '',
                 phoneNumber: '',
                 city: '',
+                country: '',
+                nationality: '',
+                fullAddress: '',
                 zipCode: '',
                 profession: '',
+                family: '',
+                sex: '',
                 socialProfiles: ''
             },
         }
+    },
+    components: {
+        DatePicker
     },
     methods: {
         async goToFormStep(step) {

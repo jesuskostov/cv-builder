@@ -15,6 +15,7 @@ export default new Vuex.Store({
     languages: [],
     motherLang: [],
     interests: [],
+    licenses: [],
     accomplishments: '',
     templates:templates
   },
@@ -47,6 +48,9 @@ export default new Vuex.Store({
     SET_INTERESTS: (state, {interests}) => {
       state.interests = interests
     },
+    SET_LICENSES: (state, {licenses}) => {
+      state.licenses = licenses
+    },
     SET_ACCOMP: (state, {accomp}) => {
       state.accomplishments = accomp
     }
@@ -78,6 +82,9 @@ export default new Vuex.Store({
     },
     saveInterests: ({commit}, {interests}) => {
       commit('SET_INTERESTS', {interests})
+    },
+    saveLicenses: ({commit}, {licenses}) => {
+      commit('SET_LICENSES', {licenses})
     },
     saveAccomp: ({commit}, {accomp}) => {
       commit('SET_ACCOMP', {accomp})

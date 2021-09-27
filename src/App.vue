@@ -200,12 +200,19 @@ html, body {
     }
 }
 
-input, textarea {
+input, textarea, select {
     padding: 5px;
     border: 1px solid #D2D4D6;
     border-radius: 4px;
     height: 44px;
     margin-bottom: 0.7rem !important;
+}
+
+.mx-input-wrapper {
+  input {
+    height: 44px;
+    font-weight: bold;
+  }
 }
 
 textarea {
@@ -237,7 +244,6 @@ span {
   }
 }
 
-
 .card.no-border {
   border: 0;
 }
@@ -255,6 +261,36 @@ label {
 .error {
   color: red;
   font-size: 0.8rem;
+}
+// Generate Duration && Delay
+[data-aos] {
+  @for $i from 1 through 150 {
+    body[data-aos-duration='#{$i * 50}'] &,
+    &[data-aos][data-aos-duration='#{$i * 50}'] {
+      transition-duration: #{$i * 50}ms;
+    }
+
+    body[data-aos-delay='#{$i * 50}'] &,
+    &[data-aos][data-aos-delay='#{$i * 50}'] {
+      transition-delay: 0;
+
+      &.aos-animate {
+        transition-delay: #{$i * 50}ms;
+      }
+    }
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 </style>
 

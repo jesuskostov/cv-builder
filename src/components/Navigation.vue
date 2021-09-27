@@ -9,6 +9,9 @@
         <steps v-if="steps" />
         <ul v-if="!steps" class="nav__menu">
             <router-link to="/browse-templates" class="d-none d-md-block">Browse Templates</router-link>
+            <a @click="goToFaq">Feedbacks</a>
+            <router-link to="/browse-templates">FAQ</router-link>
+            <router-link to="/browse-templates">Contact</router-link>
             <router-link to="/browse-templates" class="btn">Get Started</router-link>
         </ul>
       </div>
@@ -33,6 +36,9 @@ export default {
             let step = 1;
             await this.$store.dispatch('step', {step});
             this.$router.push('/builder');
+        },
+        goToFaq() {
+            this.$parent.$refs.faq.scrollIntoView()
         }
     }
 }

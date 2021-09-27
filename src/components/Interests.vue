@@ -6,7 +6,7 @@
             <option disabled value="">Please select one</option>
             <option v-for="(int, i) in interestsPredefined" :key="i" :value="int.title">{{int.title}}</option>
         </select> -->
-        <multiselect v-model="interests" class="w-100" :options="interestsPredefined" :multiple="true" :taggable="true" @tag="addInterest" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some" label="title" track-by="title" />
+        <multiselect v-model="interests" class="w-100" :options="interestsPredefined" :multiple="true" :taggable="true" @tag="addInterest" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Write some and press Enter" label="title" track-by="title" />
         <draggable v-model="interests" @end="drag">
             <div v-for="(interes, i) in interests" :key="i" class="box-row">
                 <div class="d-flex align-items-center">
