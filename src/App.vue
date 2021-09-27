@@ -301,6 +301,7 @@ export default {
       let step = localStorage.step
       this.$store.dispatch('step', {step})
     }
+    console.log('');
   }
 }
 </script>
