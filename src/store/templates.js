@@ -3,7 +3,7 @@ export const templates = [
 
     {
         name: 'Template01',
-        thumb: 'cv-template-1.png'
+        thumb: 'europass-cv.png'
     },
     {
         name: 'Template02',

@@ -1,7 +1,7 @@
 <template>
   <div class="template">
      
-      <component :preview="preview" :is="templateComponent" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLang" :interests="interests" :accomp="accomp" />
+      <component :preview="preview" :is="templateComponent" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLang" :interests="interests" :licenses="licenses" :accomp="accomp" />
     <!-- {{templateComponent}} -->
   </div>
 </template>
@@ -58,6 +58,9 @@ export default {
     accomp: {
       type: String
     },
+    licenses: {
+      type: Array
+    },  
     templateName: {
       type: Number,
       default: 1,

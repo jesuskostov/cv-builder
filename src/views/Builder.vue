@@ -140,8 +140,8 @@ export default {
       this.$store.dispatch('step', {step})
     },
     generateReport () {
-      this.$router.push('/payment');
-      // this.$refs.html2Pdf.generatePdf()
+      // this.$router.push('/payment');
+      this.$refs.html2Pdf.generatePdf()
     },
     onClick(i) {
       let payload = i

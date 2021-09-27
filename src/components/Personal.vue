@@ -8,6 +8,19 @@
     <form @submit.prevent="goToFormStep(2)">
         <div class="form mb-5">
             <div class="row">
+                <div class="col-md-12 mb-4">
+                    <div class="d-flex justify-content-center align-items-end">
+                        <input type="file" class="image-input" ref="imageInput" accept="image/*" @change="onFileChange">
+                        <div @click="pickImage" class="add-photo-container">
+                            <img v-if="this.personal.image != null" class="personal-img" :src="this.personal.image" alt="">
+                            <div v-else>
+                                <img src="../assets/images/user.svg" alt="user">
+                                <p>Add Photo</p>
+                            </div>
+                        </div>
+                        <img v-if="this.personal.image != null" @click="deletePhoto" class="img-bin-icon ml-3" src="../assets/images/bin.svg" alt="bin icon">
+                    </div>
+                </div>
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
                         <label for="firstName"><span class="red">*</span> Name</label>
@@ -58,8 +71,8 @@
                         <br>
                         <select class="w-100" name="sex" id="sex" v-model="personal.sex" v-validate="'required'">
                             <option disable value="">Select your sex</option>
-                            <option value="married">Male</option>
-                            <option value="single">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
                             <option value="Prefer not to say">Prefer not to say</option>
                         </select>
                         <span class="error">{{ errors.first('sex') }}</span>
@@ -140,6 +153,7 @@ export default {
     data() {
         return {
             personal: {
+                image: null,
                 firstName: '',
                 lastName: '',
                 birthday: '',
@@ -169,6 +183,23 @@ export default {
                 this.$store.dispatch('step', {step})
             }
         },
+        onFileChange(e) {
+            let image = e.target.files[0]
+            this.createImage(image)
+        },
+        pickImage() {
+            this.$refs.imageInput.click()
+        },
+        createImage(image) {
+            const reader = new FileReader()
+            reader.onloadend = () => {
+                this.personal.image  = reader.result;
+            }
+            reader.readAsDataURL(image);
+        },
+        deletePhoto() {
+            this.personal.image = null
+        }
     },
     watch: {
         personal: {
@@ -189,3 +220,40 @@ export default {
     }
 }
 </script>
+
+
+<style lang="scss" scoped>
+.add-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 194px;
+    height: 208px;
+    border: 1px dashed #B4B8BE;
+    border-radius: 4px;
+    cursor: pointer;
+    p {
+        font-size: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        color: #000;
+        font-weight: bold;
+    }
+}
+
+.image-input {
+    display: none;
+}
+
+.personal-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-bin-icon {
+    cursor: pointer;
+}
+
+</style>

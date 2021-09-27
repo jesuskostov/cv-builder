@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Preview on builder -->
-    <templates v-if="onBuilder" :template-name="selected" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLanguages" :interests="interests" :accomp="accomp" />
+    <templates v-if="onBuilder" :template-name="selected" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLanguages" :interests="interests" :licenses="licenses" :accomp="accomp" />
     <!-- /Preview on builder -->
 
     <!-- Carousel with templates -->
@@ -111,6 +111,9 @@ export default {
     interests() {
       return this.$store.state.interests
     },
+    licenses() {
+      return this.$store.state.licenses
+    },
     accomp() {
       return this.$store.state.accomplishments
     }
@@ -126,6 +129,7 @@ export default {
     let accomp = JSON.parse(localStorage.getItem('accomplishments'));
     let cv_variant = JSON.parse(localStorage.getItem('cv_variant'));
     let motherLanguages = JSON.parse(localStorage.getItem('motherLanguages'));
+    let licenses = JSON.parse(localStorage.getItem('licenses'));
     if (cv_variant != null) {
       let payload = cv_variant
       this.$store.dispatch('selectCv', {payload});
@@ -151,6 +155,9 @@ export default {
     if (motherLanguages != null && motherLanguages.length != 0) {
       let lang = motherLanguages
       this.$store.dispatch('saveMotherLanguages', {lang})
+    }
+    if (licenses != null && licenses.length != 0) {
+      this.$store.dispatch('saveLicenses', {licenses});
     }
     if (accomp != '') {
       this.$store.dispatch('saveAccomp', {accomp})
