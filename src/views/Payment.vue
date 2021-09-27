@@ -49,8 +49,10 @@
                    <div class="text-center">
                        <button class="pay-btn">Complete Payment</button>
                    </div>
-                   <div class="text-center">
-                       <img src="../assets/images/cards.png" alt="cards" class="cards">
+                   <div class="row">
+                       <div class="col-12 col-md-8 mx-auto">
+                            <img src="../assets/images/cards.png" alt="cards" class="w-100">
+                       </div>
                    </div>
                </div>
             </div>
@@ -124,6 +126,9 @@ export default {
         font-size: 2.4rem;
         font-weight: bold;
         margin-bottom: 2.5rem;
+        @media (max-width: 575.98px) {
+            font-size: 1.4rem;
+        }
         .line {
             margin-top: 1rem;
             display: block;

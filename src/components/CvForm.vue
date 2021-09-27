@@ -10,7 +10,7 @@
         <accomplishments />
         <div class="d-flex justify-content-between mt-5">
             <button class="go-back" @click="goTo(3)">Go Back</button>
-            <button class="custom-btn" @click="goTo()">Next: Summary</button>
+            <button class="custom-btn" @click="goTo(5)">Next: Summary</button>
         </div>
     </div>
     
@@ -42,7 +42,7 @@ export default {
         }
     },
     methods: {
-        goTo() {
+        goTo(toStep) {
             let lang = JSON.parse(localStorage.getItem('spokenLanguages'))
             let interests = JSON.parse(localStorage.getItem('interests'));
             let accomp = JSON.parse(localStorage.getItem('accomplishments'));
@@ -55,9 +55,8 @@ export default {
             if (accomp != '') {
                 this.$store.dispatch('saveAccomp', {accomp});
             }
-            // let step = toStep
-            // this.$store.dispatch('step', {step})
-            this.$router.push('/payment')
+            let step = toStep
+            this.$store.dispatch('step', {step})
         },        
     }
 }
