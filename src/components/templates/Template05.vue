@@ -1,70 +1,76 @@
 <template>
   <div class="template">
-    <div v-if="!preview">
-      <div v-if="personal" class="header">
-        <h1>{{personal.firstName}} {{personal.lastName}}</h1>
-        <p class="profession">{{personal.profession}}</p>
+    <div ref="inner" class="w-100 inner">
+      <div class="header">
+        <div v-if="personal && personal.image" class="img-box">
+          <img :src="personal.image" alt="square image">
+        </div>
+        <div class="info">
+          <h1 class="text-capitalize"><span v-if="personal && personal.firstName">{{personal.firstName}} {{personal.lastName}}</span> <span v-else>Your Name</span></h1>
+          <p class="profession"><span v-if="personal && personal.profession">{{personal.profession}}</span><span v-else>Profession</span></p>
+          <p class="address"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}, {{personal.city}} {{personal.zipCode}}, {{personal.country}}</span> <span v-else>Full address</span> <br> <span v-if="personal.phoneNumber">{{personal.phoneNumber}} |</span><span v-else>Phone number</span> <span v-if="personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
+        </div>
       </div>
-      <div v-if="personal" class="info">
-        
-        <!-- LEFT SIDE -->
-        <div class="mb-5">
-          <h3>Details</h3>
-          <p>{{personal.zipCode}}, {{personal.city}},</p>
-          <p>{{personal.email}}</p>
-          <p>{{personal.phoneNumber}}</p>
-        </div>
-        <div class="mb-5">
-          <h3>Profile</h3>
-          <p>{{accomp}}</p>
-        </div>
-        <div class="mb-5">
-          <h3>Education</h3>
-          <div v-for="(school, i) in education" :key="i" class="mb-4">
-            <h4>{{school.schoolName}}, {{school.schoolLocation}}</h4>
-            <p class="mb-0">{{school.startDate}} - {{school.endDate}}</p>
-            <p>{{school.description}}</p>
+      <div class="body">
+        <div class="col-right">
+          <div v-if="accomp" class="profile text-left mb-5">
+            <h2 class="title">Profile</h2>
+            <p class="description" v-html="accomp" />
+          </div>
+          <div v-if="workHistory" class="work text-left mb-5">
+            <h2 class="title">Employment History</h2>
+            <div v-for="(work, i) in workHistory" :key="i">
+              <h3 class="subtitle">
+                {{work.jobTitle}} - {{work.employer}}
+                <br>
+                <span>{{work.startDate}} - {{work.endDate}}</span>
+              </h3>
+              <p class="description" v-html="work.description" />
+            </div>
+          </div>
+          <div v-if="education" class="education text-left">
+            <h2 class="title">Education</h2>
+            <div v-for="(school, i) in education" :key="i">
+              <h3 class="subtitle">
+                {{school.degree}}, {{school.schoolName}} - {{school.schoolLocation}}
+                <br>
+                <span>{{school.date[0]}} - {{school.date[1]}}</span>
+              </h3>
+            </div>
           </div>
         </div>
-        <div v-if="education.length >= 2 && workHistory.length > 1" class="html2pdf__page-break"/>
-        <div class="mb-5">
-          <h3 class="mt-4">Employment History</h3>
-          <div v-for="(work, i) in workHistory" :key="i" class="mb-4">
-            <h4>{{work.jobTitle}}, {{work.employer}}</h4>
-            <p class="mb-0">{{work.startDate}} - <span v-if="work.currentlyWork == true">Working here now</span> <span v-else>{{work.endDate}}</span></p>
-            <p>{{work.description}}</p>
-          </div>
-        </div>
-        <div class="text-left">
-          <div v-if="skills" class="box mb-5">
-            <h2 class="mb-3">Skills</h2>
-            <div class="row">
-              <div v-for="(skill, i) in skills" :key="i" class="col-md-6">
-                <p>{{skill.title}}</p>
-                <div class="progress mb-2">
-                  <div class="progress-bar" role="progressbar" :style="{'width': (skill.rating / 5) * 100 + '%'}">
-                    <span class="sr-only">70% Complete</span>
-                  </div>
-                </div>
+        <div class="col-left">
+          <div v-if="skills" class="skills text-left mb-5">
+            <h2 class="title small">Skills</h2>
+            <div v-for="(skill, i) in skills" :key="i" class="mb-2">
+              <p class="skill-name">{{skill.title}}</p>
+              <div ref="rating" class="rating" :rating="skill.rating">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
             </div>
           </div>
-          <div v-if="languages" class="box">
-            <h2 class="mb-3">Languages</h2>
-            <div class="row">
-              <div v-for="(lang, i) in languages" :key="i" class="col-md-6">
-                <p>{{lang.title}}</p>
-                <div class="progress mb-2">
-                  <div class="progress-bar" role="progressbar" :style="{'width': (lang.rating / 5) * 100 + '%'}">
-                  </div>
-                </div>
-              </div>
+          <div class="languages text-left mb-5">
+            <h2 class="title small">Languages</h2>
+            <div>
+              <p class="description"><span v-for="(lang, i) in languages" :key="i">{{lang.title}} {{lang.langLevel}}</span></p>
+            </div>
+          </div>
+           <div class="languages text-left">
+            <h2 class="title small">Personal</h2>
+            <div>
+              <p class="description mb-1"><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
+              <p class="description mb-1"><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
+              <p class="description mb-1"><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
+              <p class="description mb-1"><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <img v-else class="template-preview" src="../../assets/images/cv-templates/cv-template-2.png" alt="">
   </div>
 </template>
 
@@ -89,87 +95,206 @@ export default {
     languages: {
       type: Array
     },
-    motherLang: {
+    interests: {
       type: Array
     },
-    // interests: {
-    //   type: Array
-    // },
     accomp: {
       type: String
     },
     templateName: {
       type: Number,
-      default: 2,
+      default: 1,
     },
   },
+  methods: {
+    getPreviewHeight() {
+      setTimeout(() => {
+        let height = this.$refs.inner.clientHeight
+        this.$store.dispatch('setPreviewHeight', {height})
+      }, 200)
+    }
+  },
+  watch: {
+    personal: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    workHistory: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    education: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    skills: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    languages: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    motherLanguages: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    interests: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    licenses: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    accomp() {
+      this.getPreviewHeight()
+    },
+  },
+  mounted() {
+
+    this.getPreviewHeight()
+
+    this.$refs.rating.map( div => {
+      let ratingSlot = Array.from(div.children)
+      let rating = div.getAttribute('rating')
+      for (let i = 0; i < rating; i++) {
+        ratingSlot[i].classList.add('active')
+      }
+    })
+      
+  }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .template {
-  width: 100%;
   background-color: #fff;
-  color: #000;
+  color: rgb(17, 17, 17);
+  width: 100%;
   word-break: break-all;
-  // margin: 0 30px;
+  position: relative;
+  min-height: 29.6cm;
+}
+
+.inner {
+  padding: 30px;
 }
 
 .header {
-  text-align: left;
-  padding: 30px 30px 10px 30px;
-  background-color: #FEE14B;
-  width: 100%;
+  display: flex;
+  height: 200px;
+  background-color: #49FBB9;
 }
 
-.profession {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-}
-
-h1 {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 4rem;
-  margin-bottom: 0;
-  line-height: 1;
+.img-box {
+  width: 200px;
+  height: 100%;
+  flex-shrink: 0;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: left;
-  padding: 30px 20px 40px 20px;
-  border-top: 1px solid gray;
-  h2 {
-    font-size: 1.7rem;
+  padding-left: 40px;
+  h1 {
     font-weight: bold;
-    text-transform: uppercase;
-  }  
-  h3 {
-    padding: 5px 20px;
-    display: inline-block;
-    background-color: #000;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-  }
-  h4 {
-    font-weight: bold; 
-  }
-  p {
-    font-size: 0.9rem;
-    color: #000;
+    font-size: 28px;
     margin-bottom: 0;
-  }  
-}
-.progress {
-  border-radius: 0;
-  height: 6px;
-  .progress-bar {
-    background-color: #000;
   }
 }
+
+.profession {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.address {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.body {
+  display: flex;
+}
+
+.col-left {
+  padding-top: 20px;
+  flex-shrink: 0;
+}
+
+.col-right {
+  padding-top: 20px;
+  padding-right: 20px;
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  &.small {
+    font-size: 14px;
+  }
+}
+
+.description {
+  font-size: 11px;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  span {
+    font-weight: 500;
+    font-size: 11px;
+  }
+}
+
+.rating {
+  display: flex;
+  span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin-right: 3px;
+    background-color: rgb(174, 174, 174);
+    &.active {
+      background-color: #000;
+    }
+  }
+}
+
+.skill-name {
+  font-size: 11px;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
 </style>

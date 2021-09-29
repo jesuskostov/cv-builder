@@ -85,6 +85,14 @@ export default {
       await this.$store.dispatch('step', {step});
       this.$router.push('/builder');
     },
+    getPreviewHeight() {
+      setTimeout(() => {
+        if (this.$refs.templateHeight != undefined) {
+          var height = this.$refs.templateHeight.$el.clientHeight
+          this.$store.dispatch('setPreviewHeight', {height})
+        }
+      }, 500)
+    }
   },
   computed: {
     templates() {
@@ -118,7 +126,60 @@ export default {
       return this.$store.state.accomplishments
     }
   },
-  mounted() {
+  watch: {
+    personal: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    workHistory: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    education: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    skills: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    languages: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    motherLanguages: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    interests: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    licenses: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    accomp() {
+      this.getPreviewHeight()
+    },
+  },
+  mounted() {    
     // Get them back on refresh from the local storage
     let personal = JSON.parse(localStorage.getItem('user'));
     let workHistory = JSON.parse(localStorage.getItem('workHistory'));
@@ -170,6 +231,7 @@ export default {
 <style lang="scss" scoped>
 .template {
   width: 100%;
+  height: 100%;
   display: flex;
 }
 

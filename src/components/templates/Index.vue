@@ -1,23 +1,10 @@
 <template>
   <div class="template">
-     
-      <component :preview="preview" :is="templateComponent" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLang" :interests="interests" :licenses="licenses" :accomp="accomp" />
-    <!-- {{templateComponent}} -->
+    <component :preview="preview" :is="templateComponent" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLang" :interests="interests" :licenses="licenses" :accomp="accomp" />
   </div>
 </template>
 
 <script>
-// import all templates
-// const templates = {
-//   1: () => import("./Template01"),
-//   2: () => import("./Template02"),
-//   3: () => import("./Template03"),
-//   4: () => import("./Template04"),
-//   5: () => import("./Template05"),
-//   6: () => import("./Template06"),
-//   7: () => import("./Template07"),
-// };
-
 import {templates} from '../../store/templates'
 
 const t = {};
@@ -72,7 +59,7 @@ export default {
     },
     templateFromStore() {
       return this.$store.state.templates
-    }
-  },
+    },
+  },  
 };
 </script>

@@ -16,6 +16,7 @@
 
 html, body {
   background-color: #F2F5F7;
+  scroll-behavior: smooth;
 }
 
 :root {

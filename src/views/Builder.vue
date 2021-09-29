@@ -8,41 +8,40 @@
         </div>
         <div class="col-md-4 offset-md-1 d-none d-md-block">
           <div class="preview">
-            <svg viewBox="0 0 780 2000" xmlns="http://www.w3.org/2000/svg">
+
+            <svg :viewBox="`0 0 700 ${previewHeight}`" xmlns="http://www.w3.org/2000/svg">
               <!-- Common use case: embed HTML text into SVG -->
-              <foreignObject x="0" y="0" width="100%" height="2000">
-                 <templates :onBuilder="true" :selected="selectedCv" />
+              <foreignObject x="0" y="0" width="100%" :height="previewHeight">
+                <templates :onBuilder="true" :selected="selectedCv" />
               </foreignObject>
             </svg>
-            <button @click="bigPreview = true">View large</button>
+            <button @click="bigPreview = true" class="view-large-btn">
+              <img src="../assets/images/view-icon.png" alt="view icon">
+              View large
+            </button>
           </div>
         </div>
       </div>
     </div>
     <div v-if="step == 5" class="container pt-5 pb-5">
       <div class="row flex-column-reverse flex-md-row">
-        <div class="col-md-8">
-          <svg viewBox="0 0 780 2000" xmlns="http://www.w3.org/2000/svg">
-              <!-- Common use case: embed HTML text into SVG -->
-              <foreignObject x="0" y="0" width="100%" height="2000">
-                 <templates :onBuilder="true" :selected="selectedCv" />
-              </foreignObject>
-          </svg>
+        <div ref="template" class="col-md-8">
+          <templates class="mb-5" :onBuilder="true" :selected="selectedCv" />
           <vue-html2pdf 
-              :show-layout="false" 
-              :float-layout="true" 
-              :enable-download="true" 
-              :preview-modal="true" 
-              :paginate-elements-by-height="1800" 
-              filename="hee hee" 
-              :pdf-quality="2" 
-              :manual-pagination="false" 
-              pdf-format="a4" 
-              pdf-orientation="portrait" 
-              pdf-content-width="100%" 
-              ref="html2Pdf" 
+            :show-layout="false" 
+            :float-layout="true" 
+            :enable-download="true" 
+            :preview-modal="true" 
+            :paginate-elements-by-height="1800" 
+            filename="hee hee" 
+            :pdf-quality="2" 
+            :manual-pagination="false" 
+            pdf-format="a4" 
+            pdf-orientation="portrait" 
+            pdf-content-width="100%" 
+            ref="html2Pdf" 
           > 
-              <templates slot="pdf-content" :onBuilder="true" :selected="selectedCv" />
+            <templates slot="pdf-content" :onBuilder="true" :selected="selectedCv" />
           </vue-html2pdf> 
         </div>
         <div class="col-md-4 mb-5 mb-md-0">
@@ -65,10 +64,10 @@
       </div>
     </div>
     <div v-if="bigPreview" class="big-preview">
-      <button @click="bigPreview = false">CLOSE</button>
-      <svg viewBox="0 0 780 1000" xmlns="http://www.w3.org/2000/svg">
+      <button @click="bigPreview = false" class="close-btn">CLOSE</button>
+      <svg :viewBox="`0 0 700 ${previewHeight}`" xmlns="http://www.w3.org/2000/svg">
           <!-- Common use case: embed HTML text into SVG -->
-          <foreignObject x="0" y="0" width="100%" height="3000">
+          <foreignObject x="0" y="0" width="100%" :height="previewHeight">
               <templates :onBuilder="true" :selected="selectedCv" />
           </foreignObject>
       </svg>
@@ -133,6 +132,9 @@ export default {
     },
     templates() {
       return this.$store.state.templates
+    },
+    previewHeight() {
+      return this.$store.state.previewHeight
     }
   },
   methods: {
@@ -154,7 +156,14 @@ export default {
     if (cv_variant != null) {
       let payload = cv_variant
       this.$store.dispatch('selectCv', {payload});
-    }
+    }   
+    setTimeout(() => {
+      if(this.$refs.template) {
+        let height = this.$refs.template.clientHeight
+        console.log(123);
+        this.$store.dispatch('setPreviewHeight', {height})
+      }
+    }, 1000)
   }
 }
 </script>
@@ -189,10 +198,33 @@ export default {
   position: fixed;
   inset: 0;
   background-color: #fff;
+  overflow: scroll;
   svg {
     margin-top: 30px;
-    width: 320px;
+    width: 400px;
     box-shadow: 0 0 8px 0 rgba(0,0,0,0.16);
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.cv-preview-shadow {
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
+}
+
+.view-large-btn {
+  margin-top: 1rem;
+  color: #000;
+  font-weight: bold;
+  border: 0;
+  background-color: transparent;
+  img {
+    position: relative;
+    top: -2px;
   }
 }
 
@@ -200,6 +232,7 @@ export default {
   position: absolute;
   bottom: 0;
   width: 100%;
+  height: 220px;
   padding-top: 20px;
   padding-bottom: 40px;
   background-color: #F2F5F7;
@@ -207,6 +240,8 @@ export default {
   overflow-x: scroll;
   .carousel-img {
     width: 200px;
+    height: 100%;
+    object-fit: contain;
     &.active {
       outline: 2px solid red;
     }

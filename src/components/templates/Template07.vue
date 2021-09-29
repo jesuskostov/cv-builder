@@ -1,84 +1,78 @@
 <template>
-  <div class="template" :class="{'padding': !preview}">
-    <div v-if="!preview" class="inner">
-      <div v-if="personal" class="name">
-        <h1>{{personal.firstName}} {{personal.lastName}}</h1>
-        <p class="profession">{{personal.profession}}</p>
+  <div class="template">
+    <div ref="inner" class="w-100 h-100 padding">
+      <div class="header">
+        <h1><span v-if="personal && personal.firstName">{{personal.firstName}} <br> {{personal.lastName}}</span><span v-else>Taylor <br> Cook</span></h1>
+        <p class="profession" v-if="personal && personal.profession">{{personal.profession}}</p>
       </div>
-      <div class="info">
-        <div class="row">
-          <div class="col-md-8 mb-5">
-            <div class="box">
-              <h2>Profile</h2>
-              <p>{{accomp}}</p>
+      <div class="body d-flex h-100">
+        <div class="col-right">
+          <div v-if="accomp" class="text-left">
+            <h2 class="title mb-4">Profile</h2>
+            <p class="description" v-html="accomp" />
+          </div>
+          <hr>
+          <div class="text-left">
+            <h2 class="title mb-4">Employment History</h2>
+            <div v-for="(work, i) in workHistory" :key="i" class="mb-3">
+              <h3 class="subtitle text-capitalize">{{work.jobTitle}}, {{work.employer}}</h3>
+              <p class="date">{{work.startDate}} - {{work.endDate}}</p>
+              <p class="description" v-html="work.description" />
             </div>
           </div>
-          <div class="col-md-4 mb-5">
-            <div class="box">
-              <h2>Contact</h2>
-              <p>{{personal.email}}</p>
-              <p>{{personal.phoneNumber}}</p>
-              <p>{{personal.city}}, {{personal.zipCode}}</p>
+          <hr>
+          <div class="text-left">
+            <h2 class="title mb-4">Education</h2>
+            <div v-for="(school, i) in education" :key="i" class="mb-3">
+              <h3 class="subtitle text-capitalize">{{school.degree}}, {{school.schoolName}}</h3>
+              <p class="date">{{school.date[0]}} - {{school.date[1]}} <br> {{school.schoolLocation}}</p>
+              <p class="description" v-html="school.description" />
             </div>
           </div>
-          <div class="col-md-12">
-            <div class="box">
-              <h2>Employment History</h2>
-              <div v-for="(work, i) in workHistory" :key="i" class="education">
-                <p class="year">{{work.startDate}} - {{work.endDate}}</p>
-                <div class="text">
-                  <h3>{{work.jobTitle}}, {{work.eployer}}</h3>
-                  <p>{{work.description}}</p>
+        </div>
+        <div class="col-left">
+          <!-- Details -->
+          <div class="text-left mb-5">
+            <h2 class="title mb-4">Details</h2>
+            <div class="mb-3">
+              <h3 class="subtitle">Personal</h3>
+              <p class="description"><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
+              <p class="description"><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
+              <p class="description"><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
+              <p class="description"><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
+            </div>
+            <div class="mb-3">
+              <h3 class="subtitle">Address</h3>
+              <p class="description mb-1"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}, <br> {{personal.city}} {{personal.zipCode}}, <br> {{personal.country}}</span></p>
+            </div>
+            <div class="mb-3">
+              <h3 class="subtitle">Phone</h3>
+              <p class="description mb-1"><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span></p>
+            </div>
+            <div class="mb-3">
+              <h3 class="subtitle">Email</h3>
+              <p class="description mb-1"><span v-if="personal && personal.email">{{personal.email}}</span></p>
+            </div>
+          </div>
+          <!-- Skills -->
+          <div class="skills text-left mb-5">
+            <h2 class="title mb-4">Skills</h2>
+            <div v-for="(skill, i) in skills" :key="i">
+              <p class="skill-name">{{skill.title}}</p>
+              <div class="progress mb-2">
+                <div class="progress-bar" role="progressbar" :style="{'width': (skill.rating / 5) * 100 + '%'}">
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-md-12">
-            <div v-if="workHistory.length <= 3" class="html2pdf__page-break"/>
-            <div class="box mt-5">
-              <h2>Education</h2>
-              <div v-for="(school, i) in education" :key="i" class="education">
-                <p class="year">{{school.startDate}} - {{school.endDate}}</p>
-                <div class="text">
-                  <h3>{{school.schoolName}}, {{school.schoolLocation}}</h3>
-                  <p>{{school.description}}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="text-left">
-              <div v-if="skills" class="box mb-5">
-                <h2 class="mb-3">Skills</h2>
-                <div class="row">
-                  <div v-for="(skill, i) in skills" :key="i" class="col-md-6">
-                    <p>{{skill.title}}</p>
-                    <div class="progress mb-2">
-                      <div class="progress-bar" role="progressbar" :style="{'width': (skill.rating / 5) * 100 + '%'}">
-                        <span class="sr-only">70% Complete</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div v-if="languages" class="box">
-                <h2 class="mb-3">Languages</h2>
-                <div class="row">
-                  <div v-for="(lang, i) in languages" :key="i" class="col-md-6">
-                    <p>{{lang.title}}</p>
-                    <div class="progress mb-2">
-                      <div class="progress-bar" role="progressbar" :style="{'width': (lang.rating / 5) * 100 + '%'}">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <!-- Languages -->
+          <div class="languages text-left">
+            <h2 class="title mb-4">Languages</h2>
+            <p v-for="(lang, i) in languages" :key="i">{{lang.title}} {{lang.langLevel}}</p>
           </div>
         </div>
       </div>
     </div>
-    <img v-else class="template-preview" src="../../assets/images/cv-templates/cv-template-1.png" alt="">
   </div>
 </template>
 
@@ -103,17 +97,87 @@ export default {
     languages: {
       type: Array
     },
+    motherLang: {
+      type: Array
+    },
     interests: {
       type: Array
     },
     accomp: {
       type: String
     },
+    licenses: {
+      type: Array
+    },
     templateName: {
       type: Number,
       default: 1,
     },
   },
+  methods: {
+    getPreviewHeight() {
+      setTimeout(() => {
+        let height = this.$refs.inner.clientHeight
+        this.$store.dispatch('setPreviewHeight', {height})
+      }, 200)
+    }
+  },
+  watch: {
+    personal: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    workHistory: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    education: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    skills: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    languages: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    motherLanguages: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    interests: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    licenses: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    accomp() {
+      this.getPreviewHeight()
+    },
+  },
+  mounted() {
+    this.getPreviewHeight()
+  }
 };
 </script>
 
@@ -123,129 +187,107 @@ export default {
   background-color: #fff;
   color: rgb(17, 17, 17);
   width: 100%;
+  min-height: 29.6cm;
   word-break: break-all;
   position: relative;
-  &.padding {
+  overflow: hidden;
+}
+  .padding {
     padding: 40px;
   }
+
+.logo {
+  width: 70%;
 }
 
-.inner {
-  padding: 30px;
-  border: 2px solid #B0672A;
-}
-
-.name {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding: 20px;
-  background-color: #000;
-  color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 300px;
+.header {
+  text-align: left;
+  border-bottom: 1px solid rgb(177, 177, 177);
   h1 {
-    font-size: 4rem;
-    font-weight: 100;
-    line-height: 1;
     text-transform: uppercase;
-    text-align: right;
+    font-size: 38px;
+    font-weight: bold;
+  }
+  p {
+    font-weight: 500;
+    color: rgb(143, 143, 143);
+    font-size: 0.975rem;
+    margin-bottom: 1rem;
   }
 }
 
-.profession {
+.col-left {
+  padding-top: 20px;
+  padding-left: 30px;
+  flex-shrink: 0;
+  width: 200px;
+  height: 100%;
+  border-left: 1px solid rgb(177, 177, 177);
+}
+
+.col-right {
+  flex-grow: 1;
+  padding: 30px;
+  padding-left: 0;
+}
+
+.title {
+  position: relative;
   text-transform: uppercase;
-  font-size: 2rem;
-  text-align: right;
-  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    left: 0;
+    bottom: -3px;
+  }
+}
+
+.subtitle {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgb(114, 114, 114);
   margin-bottom: 0;
 }
 
-span {
-  font-weight: 400;
+.date {
+  font-size: 10px;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.skill-name {
+  font-size: 13px;
+  color: #000;
+  margin-bottom: 0.1rem;
 }
 
 .progress {
   border-radius: 0;
-  height: 6px;
+  height: 4px;
+  background-color: rgb(181, 181, 181);
   .progress-bar {
-    background-color: #B0672A;
+    background-color: #000;
   }
 }
 
-.info {
-  padding-top: 270px;
-}
-
-.box {
-  text-align: left;
-  h2 {
-    text-transform: uppercase;
-    font-size: 1.7rem;
-    color: #B0672A;
-    margin-bottom: 1rem;
-    font-weight: 100;
-    letter-spacing: 4px;
-  }
-}
-
-.education {
-  display: flex;
-  min-height: 80px;
-  &:last-child {
-    min-height: auto;
-    .year {
-      &::before {
-        display: none;
-      }
-    }
-  }
-  .year {
-    position: relative;
-    flex-shrink: 0;
-    padding-right: 20px;
-    font-size: 1.1rem;
+.languages {
+  p {
+    font-size: 12px;
     margin-bottom: 0;
-    font-weight: bold;
-    &::after {
-      content: '';
-      position: absolute;
-      display: block;
-      width: 14px;
-      height: 14px;
-      top: 5px;
-      right: -8px;
-      background-color: #B0672A;
-      border-radius: 9999px;
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      display: block;
-      width: 2px;
-      margin-top: 10px;
-      left: 100%;
-      min-height: 100%;
-      background-color: #B0672A;
-    }
-  }
-  .text {
-    padding-left: 20px;
-    padding-bottom: 20px;
-    h3 {
-      font-size: 1.1rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      font-size: 0.7rem;
-      margin-bottom: 0;
-    }
+    font-weight: 500;
   }
 }
-
 </style>

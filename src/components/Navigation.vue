@@ -9,8 +9,8 @@
         <steps v-if="steps" />
         <ul v-if="!steps" class="nav__menu">
             <router-link to="/browse-templates" class="d-none d-md-block">Browse Templates</router-link>
-            <a @click="goToFaq">Feedbacks</a>
-            <router-link to="/browse-templates">FAQ</router-link>
+            <router-link to="/feedback">Feedback</router-link>
+            <button @click="goToFaq">FAQ</button>
             <router-link to="/browse-templates">Contact</router-link>
             <router-link to="/browse-templates" class="btn">Get Started</router-link>
         </ul>
@@ -63,7 +63,9 @@ export default {
         display: flex;
         align-items: center;
         margin: 0;
-        a {
+        a, button {
+            border: 0;
+            background-color: transparent;
             font-weight: bold;
             color: #2c3e50;
             margin-right: 2.3rem;

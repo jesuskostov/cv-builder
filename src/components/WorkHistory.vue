@@ -111,7 +111,6 @@ export default {
                 'currentlyWork': false,
                 'description': '',
             })
-            console.log(123);
         },
         deleteJob(i) {
             this.workHistory.splice(i, 1);

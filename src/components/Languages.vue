@@ -25,10 +25,10 @@
         <h3>Spoken Languages:</h3>
         <multiselect v-model="spokenLanguages" class="w-100" :options="languages" :multiple="true" :taggable="true" @tag="addLang" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Write some and press Enter" label="title" track-by="title" />
         <draggable v-model="spokenLanguages" @end="drag">
-            <div v-for="(lang, i) in spokenLanguages" :key="i" class="box-row">
-                <div class="d-flex align-items-center">
+            <div v-for="(lang, i) in spokenLanguages" :key="i" class="box-row flex-column flex-sm-row align-items-start align-items-sm-center">
+                <div class="d-flex align-items-center mb-3 mb-md-0">
                     <img class="mr-3" src="../assets/images/lines.svg" alt="lines">
-                    <h4 class="mb-0">{{lang.title}}, {{lang.langLevel}}</h4>
+                    <h4 class="mb-0">{{lang.title}}</h4>
                 </div>
                 <select class="lang-level" v-model="lang.langLevel" @change="selectLangLevel(lang.langLevel, i)">
                     <option disabled value="">Select level</option>

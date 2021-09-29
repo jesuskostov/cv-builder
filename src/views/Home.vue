@@ -290,6 +290,9 @@
             </div>
           </div>
         </div>
+        <div class="text-center mt-5">
+          <router-link to="/feedback" class="custom-btn">View all</router-link>
+        </div>
         <!-- <swiper  class="mySwiper" :options="swiperOption">
           <swiper-slide>
             <div class="testimonies">
@@ -614,7 +617,7 @@
         <div class="row">
           <div class="col-md-8 mx-auto">
             <p class="text">With the help of CV Generator, your CV will stand out from the crowd. Easily personalise the resume design and your CV will be ready and exported in PDF under 5 minutes.</p>
-            <div class="faq-box">
+            <div ref="faq" class="faq-box">
               <div class="accordion" role="tablist">
                 <b-card no-body class="mb-1">
                   <b-card-header header-tag="header" class="h4" role="tab">

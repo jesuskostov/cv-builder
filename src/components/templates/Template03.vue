@@ -1,50 +1,81 @@
 <template>
   <div class="template">
-    <div v-if="!preview">
-      <div class="header">
-        <h1>{{personal.firstName}} {{personal.lastName}}</h1>
-        <p class="profession">{{personal.profession}}</p>
-        <div class="row">
-          <div class="col-md-4">
-            <p><b>Phone</b>: {{personal.phoneNumber}}</p>
-            <p><b>Email</b>: {{personal.email}}</p>
+    <div ref="inner" class="w-100 d-flex">
+      <div class="col-right">
+        <!-- Profile -->
+        <div>
+          <h2 class="black">Profile</h2>
+          <p v-if="accomp" v-html="accomp" />
+        </div>
+        <!-- Work history -->
+        <div>
+          <h2 class="black">Employment History</h2>
+          <div v-for="(work, i) in workHistory" :key="i">
+            <h3 class="subtitle">{{work.jobTitle}} - {{work.employer}} <br> <span>{{work.startDate}} - {{work.endDate}}</span></h3>
+            <p class="description" v-html="work.description" />
           </div>
-           <div class="col-md-6">
-            <p><b>Location</b>: {{personal.city}}, {{personal.zipCode}}</p>
+          
+        </div>
+        <!-- Education -->
+        <div>
+          <h2 class="black">Education</h2>
+          <div v-for="(school, i) in education" :key="i">
+            <h3 class="subtitle">{{school.degree}} - {{school.schoolName}} <br> <span class="black">{{school.schoolLocation}}</span> <br><span>September 2012 - December 2021</span> </h3>
           </div>
+        </div>
+        <!-- Languages -->
+        <div>
+          <h2 class="black">Languages</h2>
+          <h4 v-for="(lang, i) in languages" :key="i">{{lang.title}} {{lang.langLevel}} </h4>
         </div>
       </div>
-      <div class="inner">
-        <p class="profile-text">{{accomp}}</p>
-        <div class="box text-left">
-          <h2>Experience</h2>
-          <div v-for="(work, i) in workHistory" :key="i" class="d-flex mb-3">
-            <div class="year"><b>{{work.startDate}} - {{work.endDate}}</b></div>
-            <div class="work-info">
-              <h3>{{work.jobTitle}} - {{work.employer}}</h3>
-              <p>{{work.description}}</p>
-            </div>
+      <div class="col-left">
+        <div class="profile mb-4">
+          <div class="img">
+            <img v-if="personal && personal.image" :src="personal.image" alt="question img">
+            <img v-else src="../../assets/images/question-img.png" alt="question img">
           </div>
+          <h1 class="name"><span v-if="personal">{{personal.firstName}} {{personal.lastName}}</span><span v-else>Your Name</span></h1>
+          <span class="line"></span>
+          <p class="profession"><span v-if="personal && personal.profession">{{personal.profession}}</span><span v-else>customer service</span></p>
         </div>
-        <div class="box text-left">
-          <h2>Education</h2>
-          <div v-for="(school, i) in education" :key="i" class="d-flex mb-3">
-            <div class="year"><b>{{school.startDate}} - {{school.endDate}}</b></div>
-            <div class="work-info">
-              <h3>{{school.schoolName}} - {{school.schoolLocation}}</h3>
-              <p>{{school.description}}</p>
+        <div class="details mb-4 text-left">
+          <h2>Personal</h2>
+          <p><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
+          <p><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
+          <p><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
+          <p><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
+          <p v-if="motherLang">
+            Mother language: <span v-for="(lang, i) in motherLang" :key="i">{{lang.title}}<span v-if="i != motherLang.length - 1">, </span></span>
+          </p>
+        </div>
+        <div class="details mb-4 text-left">
+          <h2>Details</h2>
+          <p><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}</span><span v-else>Number of street</span></p>
+          <p><span v-if="personal && personal.zipCode">{{personal.zipCode}}</span> <span v-else>zip code</span></p>
+          <p><span v-if="personal && personal.country">{{personal.country}}</span> <span v-else>Country</span></p>
+          <p><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span> <span v-else>Phone number</span></p>
+          <p><span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
+        </div>
+        <div class="skills text-left">
+          <h2 class="mb-2">Skills</h2>
+          <div v-for="(skill, i) in skills" :key="i">
+            <p class="skill-name">{{skill.title}}</p>
+            <div class="progress mb-2">
+              <div class="progress-bar" role="progressbar" :style="{'width': (skill.rating / 5) * 100 + '%'}">
+              </div>
             </div>
           </div>
+        
         </div>
       </div>
     </div>
-    <img v-else class="template-preview" src="../../assets/images/cv-templates/cv-template-3.png" alt="">
   </div>
 </template>
 
 <script>
 export default {
-  name: "Template03",
+  name: "Template02",
   props: {
     preview: {},
     personal: {
@@ -63,78 +94,218 @@ export default {
     languages: {
       type: Array
     },
-    // interests: {
-    //   type: Array
-    // },
+    motherLang: {
+      type: Array
+    },
+    interests: {
+      type: Array
+    },
     accomp: {
       type: String
     },
+    licenses: {
+      type: Array
+    },
     templateName: {
       type: Number,
-      default: 3,
+      default: 1,
     },
   },
+  methods: {
+    getPreviewHeight() {
+      setTimeout(() => {
+        let height = this.$refs.inner.clientHeight
+        this.$store.dispatch('setPreviewHeight', {height})
+      }, 200)
+    }
+  },
+  watch: {
+    personal: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    workHistory: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    education: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    skills: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    languages: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    motherLanguages: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    interests: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    licenses: {
+      handler(){
+        this.getPreviewHeight()
+      },
+      deep: true
+    },
+    accomp() {
+      this.getPreviewHeight()
+    },
+  },
+  mounted() {
+    this.getPreviewHeight()
+  }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+
+.black {
+  color: #000 !important;
+}
+
 .template {
-  width: 100%;
+  display: flex;
   background-color: #fff;
-  font-family: roboto;
+  color: rgb(17, 17, 17);
+  width: 100%;
   word-break: break-all;
+  position: relative;
+  min-height: 29.6cm;
 }
 
-.inner {
-  padding: 20px;
+.col-left {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  height: 100%;
+  flex-shrink: 0;  
+  padding: 40px 30px 30px 30px;
+  background-color: #084B41;
 }
 
-.profile-text {
-  text-align: left;
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .img {
+    width: 90px;
+    height: 90px;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin-bottom: 0.7rem;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .name {
+    font-size: 19px;
+    margin-bottom: 0.8rem;
+    color: #fff;
+    text-transform: capitalize;
+  }
+
+  .line {
+    width: 20px;    
+    height: 1px;
+    margin-bottom: 0.8rem;
+    background-color: #fff;
+  }
+
+  .profession {
+    letter-spacing: .07rem;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 }
 
-.header { 
-  text-align: left;
-  background-color: #373D48;
-  padding: 30px 30px 10px 30px;
+h2 {
+  font-size: 16px;
   color: #fff;
-  h1 {
-    font-size: 4rem;
+  margin-bottom: 0.3rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-family: serif;
+  &.black {
+    font-size: 18px;
+    color: #000;
+  }
+}
+
+h4 {
+  font-size: 12px;
+}
+
+.details {
+  p {
+    color: #fff;
+    font-size: 13px;
     margin-bottom: 0;
   }
-  .profession {
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
 }
 
-.box {
-  h2 {
-    border-bottom: 1px solid gray;
-    padding-bottom: 0.6rem;
-  }
-  .year {
-    padding-top: 3px;
-    margin-right: 30px;
-    flex-shrink: 0;
-  }
-  .work-info {
-    h3 {
-      font-size: 1.3rem;
-    }
-    p {
-      font-size: 0.7rem;
-    }
-  }
+.skill-name {
+  font-size: 13px;
+  color: #fff;
+  margin-bottom: 0.1rem;
 }
 
 .progress {
   border-radius: 0;
-  height: 6px;
+  height: 2px;
+  background-color: rgba(255,255,255,0.2);
   .progress-bar {
-    background-color: #000;
+    background-color: #fff;
   }
 }
 
+.col-right {
+  text-align: left;
+  flex-grow: 1;
+  padding: 40px 40px 20px 30px;
+  p {
+    font-size: 10px;
+  }
+}
+
+.subtitle {
+  font-size: 14px;
+  span {
+    font-size: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(167, 167, 167);
+  }
+}
+
+p.description {
+  font-size: 10px;
+  word-break: break-all;
+}
 </style>

@@ -208,6 +208,7 @@ export default {
                 localStorage.setItem('user', JSON.stringify(val))
                 let personal = this.personal
                 this.$store.dispatch('savePersonal', {personal})
+                // Template Preview Height
             },
             deep: true
         },

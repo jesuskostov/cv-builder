@@ -17,6 +17,7 @@ export default new Vuex.Store({
     interests: [],
     licenses: [],
     accomplishments: '',
+    previewHeight: 500,
     templates:templates
   },
   mutations: {
@@ -53,6 +54,9 @@ export default new Vuex.Store({
     },
     SET_ACCOMP: (state, {accomp}) => {
       state.accomplishments = accomp
+    },
+    SET_PREVIEW_HEIGHT: (state, {height}) => {
+      state.previewHeight = height
     }
   },
   actions: {
@@ -88,6 +92,9 @@ export default new Vuex.Store({
     },
     saveAccomp: ({commit}, {accomp}) => {
       commit('SET_ACCOMP', {accomp})
+    },
+    setPreviewHeight: ({commit}, {height}) => {
+      commit('SET_PREVIEW_HEIGHT', {height})
     }
   },
   modules: {
