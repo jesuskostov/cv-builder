@@ -1,5 +1,6 @@
 <template>
   <div id="app">    
+    <navbar />
     <router-view/>
   </div>
 </template>
@@ -87,10 +88,24 @@ html, body {
   border:0; 
   border-radius: 4px;
   padding: 4px 18px;
+  transition: 0.3s;
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ff616b;
+    transition: 0.3s;
+  }
   &.download {
     position: fixed;
     width: 320px;
     bottom: 70px;
+  }
+  &.big {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 50px;
   }
 }
 
@@ -202,16 +217,15 @@ html, body {
 }
 
 input, textarea, select {
-    padding: 5px;
-    border: 1px solid #D2D4D6;
-    border-radius: 4px;
-    height: 44px;
-    margin-bottom: 0.7rem !important;
+  padding: 5px;
+  border: 1px solid #D2D4D6;
+  border-radius: 4px;
+  margin-bottom: 0.7rem !important;
 }
 
 .mx-input-wrapper {
   input {
-    height: 44px;
+    height: 38px;
     font-weight: bold;
   }
 }
@@ -296,7 +310,12 @@ input[type=number] {
 </style>
 
 <script>
+import Navbar from './components/Navigation.vue'
+
 export default {
+  components: {
+    Navbar
+  },
   mounted() {
     if (localStorage.step) {
       let step = localStorage.step

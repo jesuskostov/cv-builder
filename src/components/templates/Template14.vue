@@ -1,12 +1,18 @@
 <template>
   <div class="template">
-    <div ref="inner" class="w-100 d-flex">
+    <div ref="inner" class="w-100 h-100 d-flex">
+     
       <div class="col-right">
         <!-- Profile -->
+        <div class="text-left">
+            <h1 class="name"><span v-if="personal">{{personal.firstName}} {{personal.lastName}}</span><span v-else>Your Name</span></h1>
+        </div>
+        <hr>
         <div>
           <h2 class="black">Profile</h2>
           <p v-if="accomp" v-html="accomp" />
         </div>
+        <hr>
         <!-- Work history -->
         <div>
           <h2 class="black">Employment History</h2>
@@ -14,8 +20,8 @@
             <h3 class="subtitle">{{work.jobTitle}} - {{work.employer}} <br> <span>{{work.startDate}} - {{work.endDate}}</span></h3>
             <p class="description" v-html="work.description" />
           </div>
-          
         </div>
+        <hr>
         <!-- Education -->
         <div>
           <h2 class="black">Education</h2>
@@ -23,50 +29,63 @@
             <h3 class="subtitle">{{school.degree}} - {{school.schoolName}} <br> <span class="black">{{school.schoolLocation}}</span> <br><span>September 2012 - December 2021</span> </h3>
           </div>
         </div>
+        <hr>
         <!-- Languages -->
         <div>
-          <h2 class="black">Languages</h2>
-          <h4 v-for="(lang, i) in languages" :key="i">{{lang.title}} {{lang.langLevel}} </h4>
+          <h2 class="black mb-3">Languages</h2>
+          <h3 class="lang-title" v-for="(lang, i) in languages" :key="i">{{lang.title}} {{lang.langLevel}} </h3>
         </div>
       </div>
-      <div class="col-left">
+       <div class="col-left">
         <div class="profile mb-4">
           <div class="img">
             <img v-if="personal && personal.image" :src="personal.image" alt="question img">
             <img v-else src="../../assets/images/question-img.png" alt="question img">
           </div>
-          <h1 class="name"><span v-if="personal">{{personal.firstName}} {{personal.lastName}}</span><span v-else>Your Name</span></h1>
+          <!-- <h1 class="name"><span v-if="personal">{{personal.firstName}} {{personal.lastName}}</span><span v-else>Your Name</span></h1>
           <span class="line"></span>
-          <p class="profession"><span v-if="personal && personal.profession">{{personal.profession}}</span><span v-else>customer service</span></p>
-        </div>
-        <div class="details mb-4 text-left">
-          <h2>Personal</h2>
-          <p><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
-          <p><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
-          <p><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
-          <p><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
-          <p v-if="motherLang">
-            Mother language: {{motherLang.title}}
-          </p>
+          <p class="profession"><span v-if="personal && personal.profession">{{personal.profession}}</span><span v-else>customer service</span></p> -->
         </div>
         <div class="details mb-4 text-left">
           <h2>Details</h2>
-          <p><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}</span><span v-else>Number of street</span></p>
-          <p><span v-if="personal && personal.zipCode">{{personal.zipCode}}</span> <span v-else>zip code</span></p>
-          <p><span v-if="personal && personal.country">{{personal.country}}</span> <span v-else>Country</span></p>
-          <p><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span> <span v-else>Phone number</span></p>
-          <p><span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
+          <div class="mb-4">
+            <h4 class="mb-0">Address</h4>
+            <p><span v-if="personal && personal.fullAddress">{{personal.fullAddress}},<br> {{personal.city}} {{personal.zipCode}},<br> {{personal.country}}</span><span v-else>Number of street</span></p>
+          </div>
+          <div class="mb-4">
+            <h4 class="mb-0">Phone number</h4>
+            <p><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span> <span v-else>Phone number</span></p>
+          </div>
+          <div class="mb-4">
+            <h4 class="mb-0">Email</h4>
+            <p><span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
+          </div>
+          <div>
+            <h4 class="mb-0">Personal</h4>
+            <p><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
+            <p><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
+            <p><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
+            <p><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
+          </div>
         </div>
-        <div class="skills text-left">
+        <div class="details mb-4 text-left">
+          <h2>Languages</h2>
+          <div>
+            <h4 class="mb-0">Mother languages</h4>
+            <p v-if="motherLang">
+                Mother language: {{motherLang.title}}
+            </p>
+          </div>
+        </div>
+        <div class="details skills text-left">
           <h2 class="mb-2">Skills</h2>
-          <div v-for="(skill, i) in skills" :key="i">
+          <div v-for="(skill, i) in skills" :key="i" class="pr-4">
             <p class="skill-name">{{skill.title}}</p>
             <div class="progress mb-2">
               <div class="progress-bar" role="progressbar" :style="{'width': (skill.rating / 5) * 100 + '%'}">
               </div>
             </div>
           </div>
-        
         </div>
       </div>
     </div>
@@ -75,7 +94,7 @@
 
 <script>
 export default {
-  name: "Template02",
+  name: "Template13",
   props: {
     preview: {},
     personal: {
@@ -95,7 +114,7 @@ export default {
       type: Array
     },
     motherLang: {
-      type: String
+      type: Array
     },
     interests: {
       type: Array
@@ -150,7 +169,7 @@ export default {
       },
       deep: true
     },
-    motherLang: {
+    motherLanguages: {
       handler(){
         this.getPreviewHeight()
       },
@@ -180,6 +199,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+h4 {
+    color: #fff;
+    font-weight: bold;
+}
+
+.lang-title {
+    color: #000;
+    font-size: 12px;
+}
 
 .black {
   color: #000 !important;
@@ -192,17 +220,17 @@ export default {
   width: 100%;
   word-break: break-all;
   position: relative;
-  min-height: 29.6cm;
+  font-family:sans-serif;
 }
 
 .col-left {
   display: flex;
   flex-direction: column;
   width: 35%;
-  height: 100%;
+  min-height: 29.6cm;
   flex-shrink: 0;  
-  padding: 40px 30px 30px 30px;
-  background-color: #084B41;
+  padding: 40px 0 30px 20px;
+  background-color: #424953;
 }
 
 .profile {
@@ -211,8 +239,8 @@ export default {
   align-items: center;
 
   .img {
-    width: 90px;
-    height: 90px;
+    width: 140px;
+    height: 140px;
     border-radius: 9999px;
     overflow: hidden;
     margin-bottom: 0.7rem;
@@ -263,11 +291,16 @@ h4 {
 }
 
 .details {
-  p {
-    color: #fff;
-    font-size: 13px;
-    margin-bottom: 0;
-  }
+    h2 {
+        border-bottom: 2px solid #fff;
+        padding-bottom: 4px;
+        margin-bottom: 15px;
+    }
+    p {
+        color: #fff;
+        font-size: 13px;
+        margin-bottom: 0;
+    }
 }
 
 .skill-name {
@@ -288,7 +321,7 @@ h4 {
 .col-right {
   text-align: left;
   flex-grow: 1;
-  padding: 40px 40px 20px 30px;
+  padding: 15px 40px 20px 30px;
   p {
     font-size: 10px;
   }

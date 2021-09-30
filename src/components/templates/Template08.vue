@@ -6,7 +6,7 @@
                 <img :src="personal.image" alt="image">
             </div>
             <div class="d-flex flex-column justify-content-center h-100">
-                <h1><span v-if="personal && personal.firstName">{{personal.firstName}} {{personal.lastName}}</span><span v-else>Taylor <br> Cook</span></h1>
+                <h1><span v-if="personal && personal.firstName">{{personal.firstName}} {{personal.lastName}}</span><span v-else>Your <br> Name</span></h1>
                 <p class="profession" v-if="personal && personal.profession">{{personal.profession}}</p>
             </div>
         </div>

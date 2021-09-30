@@ -1,6 +1,6 @@
 <template>
   <div class="template">
-    <div ref="inner" class="w-100 d-flex">
+    <div ref="inner" class="w-100 h-100 d-flex">
       <div class="col-left">
         <div class="profile mb-4">
           <div class="img">
@@ -18,7 +18,7 @@
           <p><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
           <p><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
           <p v-if="motherLang">
-            Mother language: <span v-for="(lang, i) in motherLang" :key="i">{{lang.title}}<span v-if="i != motherLang.length - 1">, </span></span>
+            Mother language: {{motherLang.title}}
           </p>
         </div>
         <div class="details mb-4 text-left">
@@ -94,7 +94,7 @@ export default {
       type: Array
     },
     motherLang: {
-      type: Array
+      type: String
     },
     interests: {
       type: Array
@@ -149,7 +149,7 @@ export default {
       },
       deep: true
     },
-    motherLanguages: {
+    motherLang: {
       handler(){
         this.getPreviewHeight()
       },
@@ -179,16 +179,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-@media print {
-  * { margin: 0 !important; padding: 0 !important; }
-  #controls, .footer, .footerarea{ display: none; }
-  html, body {
-    /*changing width to 100% causes huge overflow and wrap*/
-    height:100%; 
-    overflow: hidden;
-    background: #FFF; 
-  }
-}
 
 .black {
   color: #000 !important;
@@ -207,7 +197,7 @@ export default {
   display: flex;
   flex-direction: column;
   width: 35%;
-  height: 29.6cm;
+  min-height: 29.6cm;
   flex-shrink: 0;  
   padding: 40px 30px 30px 30px;
   background-color: #084B41;

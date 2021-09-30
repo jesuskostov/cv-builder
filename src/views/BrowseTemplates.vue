@@ -1,6 +1,5 @@
 <template>
   <div>
-    <navbar />
     <div class="container">
       <div class="steps-title pt-4">
         <h1>Not happy with the final result?</h1>         
@@ -13,14 +12,12 @@
 </template>
 
 <script>
-import Navbar from '../components/Navigation.vue'
 import Templates from '../components/Template.vue'
 
 export default {
-    components: {
-        Navbar,
-        Templates
-    }
+  components: {
+    Templates
+  }
 }
 </script>
 

@@ -1,16 +1,38 @@
 <template>
   <div class="template">
     <div ref="inner" class="d-flex w-100 h-100">
+      <div class="col-right">
+        <div v-if="accomp" class="text-left mb-5">
+            <h2 class="title mb-2">Profile</h2>
+            <p class="description" v-html="accomp" />
+        </div>
+        <div class="text-left mb-5">
+            <h2 class="title mb-2">Employment History</h2>
+            <div v-for="(work, i) in workHistory" :key="i" class="mb-3">
+                <h3 class="subtitle text-capitalize">{{work.jobTitle}}, {{work.employer}}</h3>
+                <p class="date">{{work.startDate}} - {{work.endDate}}</p>
+                <p class="description" v-html="work.description" />
+            </div>
+        </div>
+        <div class="text-left">
+            <h2 class="title mb-2">Education</h2>
+            <div v-for="(school, i) in education" :key="i" class="mb-3">
+            <h3 class="subtitle text-capitalize">{{school.degree}}, {{school.schoolName}}</h3>
+            <p class="date">{{school.date[0]}} - {{school.date[1]}} <br> {{school.schoolLocation}}</p>
+            <p class="description" v-html="school.description" />
+            </div>
+        </div>
+      </div>
       <div class="col-left">
         <div class="header">
           <div class="d-flex flex-column align-items-center justify-content-center">
             <h1><span v-if="personal && personal.firstName">{{personal.firstName}} {{personal.lastName}}</span><span v-else>Your <br> Name</span></h1>
             <span class="circle"></span>
             <div v-if="personal && personal.image" class="img-box">
-                <img :src="personal.image" alt="image">
+              <img :src="personal.image" alt="image">
             </div>
             <div v-else class="img-box">
-                <img src="../../assets/images/question-img.png" alt="image">
+              <img src="../../assets/images/question-img.png" alt="image">
             </div>
           </div>
           <div class="px-4 pt-5">
@@ -41,35 +63,13 @@
           </div>
         </div>  
       </div>
-      <div class="col-right">
-        <div v-if="accomp" class="text-left mb-5">
-            <h2 class="title mb-2">Profile</h2>
-            <p class="description" v-html="accomp" />
-        </div>
-        <div class="text-left mb-5">
-            <h2 class="title mb-2">Employment History</h2>
-            <div v-for="(work, i) in workHistory" :key="i" class="mb-3">
-                <h3 class="subtitle text-capitalize">{{work.jobTitle}}, {{work.employer}}</h3>
-                <p class="date">{{work.startDate}} - {{work.endDate}}</p>
-                <p class="description" v-html="work.description" />
-            </div>
-        </div>
-        <div class="text-left">
-            <h2 class="title mb-2">Education</h2>
-            <div v-for="(school, i) in education" :key="i" class="mb-3">
-            <h3 class="subtitle text-capitalize">{{school.degree}}, {{school.schoolName}}</h3>
-            <p class="date">{{school.date[0]}} - {{school.date[1]}} <br> {{school.schoolLocation}}</p>
-            <p class="description" v-html="school.description" />
-            </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Template10",
+  name: "Template11",
   props: {
     preview: {},
     personal: {

@@ -1,6 +1,6 @@
 <template>
   <div class="template">
-    <div ref="inner" class="w-100 padding">
+    <div ref="inner" class="w-100 h-100 padding">
       <div class="row header">
         <div class="col-md-2 text-left">
           <img class="logo" src="../../assets/images/europass.png" alt="europass logo">
@@ -64,8 +64,7 @@
           <p class="title dark-blue mb-0">EDUCATION AND TRAINING</p>
           <div class="blue-line"></div>
         </div>
-
-        <div v-if="!education" class="d-flex">
+        <div v-if="education.length == 0" class="d-flex">
           <p class="subtitle dark-blue">Replace with dates (from - to)</p>
           <div>
             <h4 class="dark-blue">Replace with occupation or position held</h4>
@@ -81,7 +80,6 @@
             <p class="work-info__text" v-html="school.description" />
           </div>
         </div>
-
       </div>
       <div class="work-info">
         <div class="d-flex align-items-center mb-3">
@@ -91,26 +89,66 @@
         <div class="d-flex">
           <p class="subtitle dark-blue">Mother tongues(s)</p>
           <div>
-            <p v-if="motherLang" class="work-info__info"><span v-for="(lang, i) in motherLang" :key="i">{{lang.title}}<span v-if="i != motherLang.length - 1">, </span> </span></p>
+            <p v-if="motherLang" class="work-info__info">{{motherLang.title}}</p>
             <p v-else class="work-info__info">Replace with mother tongue(s)</p>
           </div>
         </div>
-        <!-- <div class="d-flex">
-          <p class="subtitle dark-blue">Other tongues(s)</p>
-          <div>
-            <table>
-              <tr>
-                <td>Listening</td>
-                <td>Reading</td>
-                <td>Writing</td>
-                <td>Speaking</td>
-              </tr>
-            </table>
-            <p v-if="motherLang" class="work-info__info"><span v-for="(lang, i) in motherLang" :key="i">{{lang.title}}<span v-if="i != motherLang.length - 1">, </span> </span></p>
-            <p v-else class="work-info__info">Replace with mother tongue(s)</p>
+
+        <div class="language d-flex w-100">
+          <h2 class="subtitle dark-blue">Other tongues(s)</h2>
+          <div class="w-100">
+            <div class="row border-top">
+              <div class="col-md-4 border-right text-center">
+                <p class="mb-0">Understanding</p>
+              </div>
+              <div class="col-md-6 border-right text-center">
+                <p class="mb-0">Speaking</p>
+              </div>
+              <div class="col-md-2 text-center">
+                <p class="mb-0">Writing</p>
+              </div>
+            </div>
+            <div class="row border-top border-bottom">
+              <div class="col-md-2 border-right">
+                <p class="small">Listening</p>
+              </div>
+              <div class="col-md-2 border-right">
+                <p class="small">Reading</p>
+              </div>
+              <div class="col-md-3 border-right">
+                <p class="small">Spoken Interaction</p>
+              </div>
+              <div class="col-md-3 border-right">
+                <p class="small">Spoken Production</p>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
           </div>
-        </div> -->
-        <div v-if="skills" class="d-flex">
+        </div>
+        <div v-for="(lang, i) in languages" :key="i" class="language d-flex w-100">
+         <h2 class="subtitle dark-blue mb-0">{{lang.title}}</h2>
+          <div class="w-100">
+            <div class="row border-bottom">
+              <div class="col-md-2 border-right">
+                <p class="small">{{lang.langLevel}}</p>
+              </div>
+              <div class="col-md-2 border-right">
+                <p class="small">{{lang.langLevel}}</p>
+              </div>
+              <div class="col-md-3 border-right">
+                <p class="small">{{lang.langLevel}}</p>
+              </div>
+              <div class="col-md-3 border-right">
+                <p class="small">{{lang.langLevel}}</p>
+              </div>
+              <div class="col-md-2">
+                <p class="small">{{lang.langLevel}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div v-if="skills" class="d-flex mt-4">
           <p class="subtitle dark-blue">Skills</p>
           <p class="work-info__info"><span v-for="(skill, i) in skills" :key="i">{{skill.title}}<span v-if="i != skills.length - 1">, </span> </span></p>
         </div>
@@ -145,7 +183,7 @@ export default {
       type: Array
     },
     motherLang: {
-      type: Array
+      type: String
     },
     interests: {
       type: Array
@@ -200,7 +238,7 @@ export default {
       },
       deep: true
     },
-    motherLanguages: {
+    motherLang: {
       handler(){
         this.getPreviewHeight()
       },
@@ -234,12 +272,14 @@ export default {
   background-color: #fff;
   color: rgb(17, 17, 17);
   width: 100%;
+  min-height: 29.6cm;
   word-break: break-all;
   position: relative;
 }
-  .padding {
-    padding: 40px;
-  }
+
+.padding {
+  padding: 40px;
+}
 
 .logo {
   width: 70%;
@@ -250,6 +290,9 @@ export default {
   p {
     font-size: 0.875rem;
     margin-bottom: 0;
+    &.small {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -323,6 +366,17 @@ h4 {
       width: 2px;
       height: 2px;
       background-color: black;
+    }
+  }
+}
+
+.language {
+  p {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 0;
+    &.small {
+      font-size: 9px;
     }
   }
 }

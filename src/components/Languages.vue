@@ -6,15 +6,15 @@
     </div>
     <div class="accordion px-4 py-4">
         <h3>Mother Languages:</h3>
-        <multiselect v-model="motherLanguages" class="w-100" :options="languages" :multiple="true" :taggable="true" @tag="addMotherLang" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some or you can also write and press Enter" label="title" track-by="title" />
+        <multiselect v-model="motherLanguages" class="w-100" :options="languages" :multiple="false" :taggable="true" @tag="addMotherLang" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some or you can also write and press Enter" label="title" :track-by="'title'" />
         <draggable v-model="motherLanguages" @end="dragMotherLang">
-            <div v-for="(lang, i) in motherLanguages" :key="i" class="box-row">
+            <div v-if="motherLanguages" class="box-row">
                 <div class="d-flex align-items-center">
                     <img class="mr-3" src="../assets/images/lines.svg" alt="lines">
-                    <h4 class="mb-0">{{lang.title}}</h4>
+                    <h4 class="mb-0">{{motherLanguages.title}}</h4>
                 </div>
                 <div>
-                    <button class="action-btn mr-3" @click="deleteMotherLanguage(i)">
+                    <button class="action-btn mr-3" @click="deleteMotherLanguage">
                         <img src="../assets/images/bin.svg" alt="bin icon">
                     </button>
                 </div>
@@ -30,10 +30,15 @@
                     <img class="mr-3" src="../assets/images/lines.svg" alt="lines">
                     <h4 class="mb-0">{{lang.title}}</h4>
                 </div>
-                <select class="lang-level" v-model="lang.langLevel" @change="selectLangLevel(lang.langLevel, i)">
-                    <option disabled value="">Select level</option>
-                    <option v-for="(lang, i) in langLevel" :key="i" :value="lang.title">{{lang.title}}</option>
-                </select>
+                <div>
+                    <select class="lang-level mr-2" v-model="lang.langLevel" @change="selectLangLevel(lang.langLevel, i)">
+                        <option disabled value="">Select level</option>
+                        <option v-for="(lang, i) in langLevel" :key="i" :value="lang.title">{{lang.title}}</option>
+                    </select>
+                    <button class="action-btn" @click="deleteLanguage(i)">
+                        <img src="../assets/images/bin.svg" alt="bin icon">
+                    </button>
+                </div>
             </div>
         </draggable>
     </div>
@@ -48,19 +53,19 @@ export default {
     data() {
         return {
             level: '',
-            motherLanguages: [],
+            motherLanguages: null,
             spokenLanguages: [],
             languages: [
                 { title: 'English', langLevel: '' },
                 { title: 'France', langLevel: '' },
             ],
             langLevel: [
-                { 'title': 'A1 - Beginner	' },
-                { 'title': 'A2 - Elementary	' },
-                { 'title': 'B1 - Intermediate	' },
-                { 'title': 'B2 - Upper Intermediate	' },
-                { 'title': 'C1 - Advanced' },
-                { 'title': 'C2 - Proficient' },
+                { 'title': 'A1' },
+                { 'title': 'A2' },
+                { 'title': 'B1' },
+                { 'title': 'B2' },
+                { 'title': 'C1' },
+                { 'title': 'C2' },
             ],
         }
     },
@@ -75,8 +80,8 @@ export default {
         deleteLanguage(i) {
             this.spokenLanguages.splice(i, 1);
         },
-        deleteMotherLanguage(i) {
-            this.motherLanguages.splice(i, 1);
+        deleteMotherLanguage() {
+            this.motherLanguages = null
         },
         drag() {
             let lang = this.spokenLanguages

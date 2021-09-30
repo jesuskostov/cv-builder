@@ -6,11 +6,34 @@
                 <img :src="personal.image" alt="image">
             </div>
             <div class="d-flex flex-column justify-content-center h-100">
-                <h1><span v-if="personal && personal.firstName">{{personal.firstName}} {{personal.lastName}}</span><span v-else>Your <br> Name</span></h1>
-                <p class="profession" v-if="personal && personal.profession">{{personal.profession}}</p>
+                <h1 class="mb-2"><span v-if="personal && personal.firstName">{{personal.firstName}} {{personal.lastName}}</span><span v-else>Your Name</span>, <br><span v-if="personal && personal.profession">{{personal.profession}}</span></h1>                
+                <p class="profession"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}, {{personal.city}} {{personal.zipCode}}, {{personal.country}}</span> <span v-else>FUll Address</span></p>
+                <p class="profession"><span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
             </div>
         </div>
         <div class="body d-flex">
+            <div class="col-left">
+                <div class="text-left mb-5">
+                    <h2 class="title mb-2">Profile</h2>
+                    <p v-if="accomp" class="description" v-html="accomp" />
+                </div>
+                <div class="text-left mb-5">
+                    <h2 class="title mb-2">Employment History</h2>
+                    <div v-for="(work, i) in workHistory" :key="i" class="mb-3">
+                        <h3 class="subtitle text-capitalize">{{work.jobTitle}}, {{work.employer}}</h3>
+                        <p class="date">{{work.startDate}} - {{work.endDate}}</p>
+                        <p class="description" v-html="work.description" />
+                    </div>
+                </div>
+                <div class="text-left">
+                    <h2 class="title mb-2">Education</h2>
+                    <div v-for="(school, i) in education" :key="i" class="mb-3">
+                    <h3 class="subtitle text-capitalize">{{school.degree}}, {{school.schoolName}}</h3>
+                    <p class="date">{{school.date[0]}} - {{school.date[1]}} <br> {{school.schoolLocation}}</p>
+                    <p class="description" v-html="school.description" />
+                    </div>
+                </div>
+            </div>
             <div class="col-right">
                 <div class="text-left mb-5">
                     <h3 class="subtitle mb-2">Personal</h3>
@@ -36,28 +59,6 @@
                     <p v-for="(lang, i) in languages" :key="i">{{lang.title}} {{lang.langLevel}}</p>
                 </div>
             </div>
-            <div class="col-left">
-                <div v-if="accomp" class="text-left mb-5">
-                    <h2 class="title mb-2">Profile</h2>
-                    <p class="description" v-html="accomp" />
-                </div>
-                <div class="text-left mb-5">
-                    <h2 class="title mb-2">Employment History</h2>
-                    <div v-for="(work, i) in workHistory" :key="i" class="mb-3">
-                        <h3 class="subtitle text-capitalize">{{work.jobTitle}}, {{work.employer}}</h3>
-                        <p class="date">{{work.startDate}} - {{work.endDate}}</p>
-                        <p class="description" v-html="work.description" />
-                    </div>
-                </div>
-                <div class="text-left">
-                    <h2 class="title mb-2">Education</h2>
-                    <div v-for="(school, i) in education" :key="i" class="mb-3">
-                    <h3 class="subtitle text-capitalize">{{school.degree}}, {{school.schoolName}}</h3>
-                    <p class="date">{{school.date[0]}} - {{school.date[1]}} <br> {{school.schoolLocation}}</p>
-                    <p class="description" v-html="school.description" />
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
   </div>
@@ -65,7 +66,7 @@
 
 <script>
 export default {
-  name: "Template09",
+  name: "Template08",
   props: {
     preview: {},
     personal: {
@@ -178,6 +179,7 @@ export default {
   word-break: break-all;
   position: relative;
   overflow: hidden;
+  font-family: serif;
 }
 .padding {
   padding: 40px;
@@ -209,6 +211,7 @@ export default {
     font-weight: bold;
     margin-bottom: 0;
     line-height: 26px;
+    color: rgb(199, 61, 61);
   }
   p {
     font-weight: 500;
@@ -250,20 +253,10 @@ export default {
   margin-bottom: 0.1rem;
 }
 
-
 .skill-name {
   font-size: 13px;
   color: #000;
   margin-bottom: 0.1rem;
-}
-
-.progress {
-  border-radius: 0;
-  height: 4px;
-  background-color: rgb(181, 181, 181);
-  .progress-bar {
-    background-color: rgb(51, 219, 248);
-  }
 }
 
 .col-left {
@@ -271,7 +264,9 @@ export default {
 }
 
 .col-right {
-    padding-right: 40px;
+    position: relative;
+    top: -85px;
+    padding-left: 30px;
     flex-shrink: 0;
     width: 200px;
 }

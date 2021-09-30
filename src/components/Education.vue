@@ -31,21 +31,21 @@
                                     <div class="text-left">
                                         <label for="schoolName">School name</label>
                                         <br>
-                                        <input type="text" class="w-100" id="schoolName" v-model="school.schoolName">
+                                        <input type="text" class="w-100 form-control" id="schoolName" v-model="school.schoolName">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="text-left">
                                         <label for="schoolLocation">School location</label>
                                         <br>
-                                        <input type="text" class="w-100" v-model="school.schoolLocation">
+                                        <input type="text" class="w-100 form-control" v-model="school.schoolLocation">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="text-left">
                                         <label for="degree">Degree</label>
                                         <br>
-                                        <input type="text" class="w-100" v-model="school.degree">
+                                        <input type="text" class="w-100 form-control" v-model="school.degree">
                                     </div>
                                 </div>
                                 <div class="col-md-12">

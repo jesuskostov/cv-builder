@@ -29,27 +29,27 @@
                                 <!-- <p>Job Title: {{work.jobTitle}}</p> -->
                                 <label for="jobTitle">Job title</label>
                                 <br>
-                                <input type="text" class="w-100" id="jobTitle" v-model="work.jobTitle">
+                                <input type="text" class="w-100 form-control" id="jobTitle" v-model="work.jobTitle">
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="text-left">
                                 <label for="employer">Employer</label>
                                 <br>
-                                <input type="text" class="w-100" id="employer" v-model="work.employer">
+                                <input type="text" class="w-100 form-control" id="employer" v-model="work.employer">
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="text-left">
                                 <label for="startDate">Start date</label>
                                 <br>
-                                <input type="date" class="w-100" id="startDate" v-model="work.startDate">
+                                <input type="date" class="w-100 form-control" id="startDate" v-model="work.startDate">
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="text-left">
                                 <label for="endDate">End date</label>
-                                <input type="date" class="w-100" id="endDate" v-model="work.endDate">
+                                <input type="date" class="w-100 form-control" id="endDate" v-model="work.endDate">
                                 <div class="d-flex align-items-center">
                                     <input type="checkbox" class="mb-0" id="currentWork" name="work" :checked="work.currentlyWork" v-model="work.currentlyWork">
                                     <label for="currentWork" style="margin: 0 0 0 10px">I currently work here</label>

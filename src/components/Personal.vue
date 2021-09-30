@@ -25,7 +25,7 @@
                     <div class="text-left">
                         <label for="firstName"><span class="red">*</span> Name</label>
                         <br>
-                        <input type="text" class="w-100" name="firstName" id="firstName" v-model="personal.firstName" v-validate="'required'">
+                        <input type="text" class="w-100 form-control" name="firstName" id="firstName" v-model="personal.firstName" v-validate="'required'">
                         <span class="error">{{ errors.first('firstName') }}</span>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                     <div class="text-left">
                         <label for="lastName"><span class="red">*</span> Last Name</label>
                         <br>
-                        <input type="text" class="w-100" name="lastName" id="lastName" v-model="personal.lastName" v-validate="'required'">
+                        <input type="text" class="w-100 form-control" name="lastName" id="lastName" v-model="personal.lastName" v-validate="'required'">
                         <span class="error">{{ errors.first('lastName') }}</span>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                     <div class="text-left">
                         <label for="profession"><span class="red">*</span> Birthday</label>
                         <br>
-                        <date-picker class="w-100" :value-type="'format'" :format="'DD-MM-YYYY'" v-model="personal.birthday" type="date" />
+                        <date-picker class="w-100 custom-h" :value-type="'format'" :format="'DD-MM-YYYY'" v-model="personal.birthday" type="date" />
                         <span class="error">{{ errors.first('profession') }}</span>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                     <div class="text-left">
                         <label for="profession">Profession</label>
                         <br>
-                        <input type="text" class="w-100" name="profession" id="profession" v-model="personal.profession" v-validate="'required'">
+                        <input type="text" class="w-100 form-control" name="profession" id="profession" v-model="personal.profession" v-validate="'required'">
                         <span class="error">{{ errors.first('profession') }}</span>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                     <div class="text-left">
                         <label for="family"><span class="red">*</span> Family</label>
                         <br>
-                        <select class="w-100" name="family" id="family" v-model="personal.family" v-validate="'required'">
+                        <select class="w-100 form-control" name="family" id="family" v-model="personal.family" v-validate="'required'">
                             <option disable value="">Select your family status</option>
                             <option value="married">Married</option>
                             <option value="single">Single</option>
@@ -69,7 +69,7 @@
                     <div class="text-left">
                         <label for="sex"><span class="red">*</span> Sex</label>
                         <br>
-                        <select class="w-100" name="sex" id="sex" v-model="personal.sex" v-validate="'required'">
+                        <select class="w-100 form-control" name="sex" id="sex" v-model="personal.sex" v-validate="'required'">
                             <option disable value="">Select your sex</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
@@ -81,7 +81,7 @@
                 <div class="col-md-8 mb-4">
                     <div class="text-left">
                         <label for="city"><span class="red">*</span> City</label>
-                        <input type="text" class="w-100" name="city" id="city" v-model="personal.city" v-validate="'required'">
+                        <input type="text" class="w-100 form-control" name="city" id="city" v-model="personal.city" v-validate="'required'">
                         <span class="error">{{ errors.first('city') }}</span>
                     </div>
                 </div>
@@ -89,23 +89,23 @@
                     <div class="text-left">
                         <label for="zipCode"><span class="red">*</span> Zip code</label>
                         <br>
-                        <input type="text" class="w-100" name="zipCode" id="zipCode" v-model="personal.zipCode" v-validate="'required'">
+                        <input type="text" class="w-100 form-control" name="zipCode" id="zipCode" v-model="personal.zipCode" v-validate="'required'">
                         <span class="error">{{ errors.first('zipCode') }}</span>
                     </div>
                 </div>
-                <div class="col-md-8 mb-4">
+                <div class="col-md-7 col-lg-8 mb-4">
                     <div class="text-left">
                         <label for="country"><span class="red">*</span> Country</label>
                         <br>
-                        <input type="text" class="w-100" name="country" id="country" v-model="personal.country" v-validate="'required'">
+                        <input type="text" class="w-100 form-control" name="country" id="country" v-model="personal.country" v-validate="'required'">
                         <span class="error">{{ errors.first('country') }}</span>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-5 col-lg-4 mb-4">
                     <div class="text-left">
                         <label for="nationality"><span class="red">*</span> Nationality</label>
                         <br>
-                        <input type="text" class="w-100" name="nationality" id="nationality" v-model="personal.nationality" v-validate="'required'">
+                        <input type="text" class="w-100 form-control" name="nationality" id="nationality" v-model="personal.nationality" v-validate="'required'">
                         <span class="error">{{ errors.first('nationality') }}</span>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                     <div class="text-left">
                         <label for="fullAddress"><span class="red">*</span> Full Address</label>
                         <br>
-                        <input type="text" class="w-100" name="fullAddress" id="fullAddress" v-model="personal.fullAddress" v-validate="'required'">
+                        <input type="text" class="w-100 form-control" name="fullAddress" id="fullAddress" v-model="personal.fullAddress" v-validate="'required'">
                         <span class="error">{{ errors.first('fullAddress') }}</span>
                     </div>
                 </div>
@@ -121,7 +121,7 @@
                     <div class="text-left">
                         <label for="phoneNumber">Phone number</label>
                         <br>
-                        <input type="text" class="w-100" name="phoneNumber" id="phoneNumber" v-model="personal.phoneNumber" v-validate="'required'">
+                        <input type="text" class="w-100 form-control" name="phoneNumber" id="phoneNumber" v-model="personal.phoneNumber" v-validate="'required'">
                         <span class="error">{{ errors.first('phoneNumber') }}</span>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                     <div class="text-left">
                         <label for="email">Email</label>
                         <br>
-                        <input type="text" class="w-100" name="email" id="email" v-model="personal.email" v-validate="'required'">
+                        <input type="text" class="w-100 form-control" name="email" id="email" v-model="personal.email" v-validate="'required'">
                         <span class="error">{{ errors.first('email') }}</span>
                     </div>
                 </div>

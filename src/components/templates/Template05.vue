@@ -1,6 +1,6 @@
 <template>
   <div class="template">
-    <div ref="inner" class="w-100 inner">
+    <div ref="inner" class="w-100 h-100 inner">
       <div class="header">
         <div v-if="personal && personal.image" class="img-box">
           <img :src="personal.image" alt="square image">
@@ -8,7 +8,7 @@
         <div class="info">
           <h1 class="text-capitalize"><span v-if="personal && personal.firstName">{{personal.firstName}} {{personal.lastName}}</span> <span v-else>Your Name</span></h1>
           <p class="profession"><span v-if="personal && personal.profession">{{personal.profession}}</span><span v-else>Profession</span></p>
-          <p class="address"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}, {{personal.city}} {{personal.zipCode}}, {{personal.country}}</span> <span v-else>Full address</span> <br> <span v-if="personal.phoneNumber">{{personal.phoneNumber}} |</span><span v-else>Phone number</span> <span v-if="personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
+          <p class="address"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}, {{personal.city}} {{personal.zipCode}}, {{personal.country}}</span> <span v-else>Full address</span> <br> <span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}} |</span><span v-else>Phone number</span> <span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
         </div>
       </div>
       <div class="body">
@@ -56,16 +56,17 @@
           <div class="languages text-left mb-5">
             <h2 class="title small">Languages</h2>
             <div>
-              <p class="description"><span v-for="(lang, i) in languages" :key="i">{{lang.title}} {{lang.langLevel}}</span></p>
+              <p class="description mb-0" v-for="(lang, i) in languages" :key="i">{{lang.title}} <b>{{lang.langLevel}}</b></p>
             </div>
           </div>
-           <div class="languages text-left">
+          <div class="languages text-left">
             <h2 class="title small">Personal</h2>
             <div>
               <p class="description mb-1"><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
               <p class="description mb-1"><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
               <p class="description mb-1"><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
               <p class="description mb-1"><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
+              <p class="description mb-1"><span v-if="motherLang">Mother language: {{motherLang.title}}</span></p>
             </div>
           </div>
         </div>
@@ -94,6 +95,9 @@ export default {
     },
     languages: {
       type: Array
+    },
+    motherLang: {
+      type: String
     },
     interests: {
       type: Array
@@ -145,7 +149,7 @@ export default {
       },
       deep: true
     },
-    motherLanguages: {
+    motherLang: {
       handler(){
         this.getPreviewHeight()
       },
@@ -170,15 +174,15 @@ export default {
   mounted() {
 
     this.getPreviewHeight()
-
-    this.$refs.rating.map( div => {
-      let ratingSlot = Array.from(div.children)
-      let rating = div.getAttribute('rating')
-      for (let i = 0; i < rating; i++) {
-        ratingSlot[i].classList.add('active')
-      }
-    })
-      
+    if (this.$refs.rating != undefined) {
+      this.$refs.rating.map( div => {
+        let ratingSlot = Array.from(div.children)
+        let rating = div.getAttribute('rating')
+        for (let i = 0; i < rating; i++) {
+          ratingSlot[i].classList.add('active')
+        }
+      })
+    }
   }
 };
 </script>

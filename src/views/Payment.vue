@@ -1,6 +1,5 @@
 <template>
   <div>
-    <navbar />
     <div class="container pt-5">
         <div class="row">
             <div class="col-12 col-md-7">
@@ -69,19 +68,15 @@
             </div>
         </div>
     </div>
-
-
   </div>
 </template>
 
 <script>
-import Navbar from '../components/Navigation.vue'
 import Templates from '../components/Template.vue'
 
 export default {
     name: 'Payment',
     components: {
-        Navbar,
         Templates
     },
     data() {

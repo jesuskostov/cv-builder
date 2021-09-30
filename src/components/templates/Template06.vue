@@ -2,7 +2,7 @@
   <div class="template">
     <div ref="inner" class="w-100 h-100 padding">
       <div class="header">
-        <h1><span v-if="personal && personal.firstName">{{personal.firstName}} <br> {{personal.lastName}}</span><span v-else>Taylor <br> Cook</span></h1>
+        <h1><span v-if="personal && personal.firstName">{{personal.firstName}} <br> {{personal.lastName}}</span><span v-else>Your <br> Name</span></h1>
         <p class="profession" v-if="personal && personal.profession">{{personal.profession}}</p>
       </div>
       <div class="body d-flex h-100">
@@ -98,7 +98,7 @@ export default {
       type: Array
     },
     motherLang: {
-      type: Array
+      type: String
     },
     interests: {
       type: Array
@@ -153,7 +153,7 @@ export default {
       },
       deep: true
     },
-    motherLanguages: {
+    motherLang: {
       handler(){
         this.getPreviewHeight()
       },

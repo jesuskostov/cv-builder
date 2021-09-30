@@ -1,6 +1,5 @@
 <template>
   <div>
-    <navbar :steps="true" />
     <div v-if="step < 5" class="container pt-5 pb-5">
       <div class="row">
         <div class="col-12 col-md-7">
@@ -64,16 +63,31 @@
       </div>
     </div>
     <div v-if="bigPreview" class="big-preview">
-      <button @click="bigPreview = false" class="close-btn">CLOSE</button>
-      <svg :viewBox="`0 0 700 ${previewHeight}`" xmlns="http://www.w3.org/2000/svg">
-          <!-- Common use case: embed HTML text into SVG -->
-          <foreignObject x="0" y="0" width="100%" :height="previewHeight">
-              <templates :onBuilder="true" :selected="selectedCv" />
-          </foreignObject>
-      </svg>
-      <div class="carousel">
-        <div v-for="(item, i) in templates" :key="i" >
-          <img @click="onClick(i)" class="carousel-img" :class="{'active': selectedCv == i}" :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
+      <button @click="bigPreview = false" class="close-btn">
+        <svg viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
+            <path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/>
+        </svg>
+      </button>
+      <div class="row h-100">
+        <div class="col-md-6 h-100">
+          <div class="cv-list">
+            <div class="row">
+              <div v-for="(item, i) in templates" :key="i" class="col-md-4">
+                <img @click="onClick(i)" class="cv-list-img" :class="{'active': selectedCv == i}" :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 h-100">
+          <div class="d-flex align-items-center justify-content-center w-100 h-100">
+            <div class="scene">
+              <svg :viewBox="`0 0 700 ${previewHeight}`" xmlns="http://www.w3.org/2000/svg">
+                <foreignObject x="0" y="0" width="100%" :height="previewHeight">
+                    <templates :onBuilder="true" :selected="selectedCv" />
+                </foreignObject>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -83,7 +97,6 @@
 <script>
 import CvForm from '../components/CvForm.vue'
 import Templates from '../components/Template.vue'
-import Navbar from '../components/Navigation.vue'
 import VueHtml2pdf from 'vue-html2pdf'
 // import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 // import '../../node_modules/swiper/dist/css/swiper.css'
@@ -118,7 +131,6 @@ export default {
   components: {
     CvForm,
     Templates,
-    Navbar,
     VueHtml2pdf,
     // Swiper,
     // SwiperSlide,
@@ -160,10 +172,18 @@ export default {
     setTimeout(() => {
       if(this.$refs.template) {
         let height = this.$refs.template.clientHeight
-        console.log(123);
         this.$store.dispatch('setPreviewHeight', {height})
       }
     }, 1000)
+  },
+  beforeRouteLeave (to, from, next) {
+    console.log(to, from);
+    const answer = window.confirm('Do you really want to leave?')
+    if (answer) {
+      next()
+    } else {
+      next(false)
+    }
   }
 }
 </script>
@@ -194,17 +214,53 @@ export default {
   }
 }
 
+.scene {
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.16);
+  width: 400px;
+  overflow: scroll;
+  svg {
+    width: 100%;
+  }
+}
+
 .big-preview {
   position: fixed;
   inset: 0;
   background-color: #fff;
-  overflow: scroll;
+  max-height: 100vh;
+}
+
+.close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background-color: transparent;
+  border: 0;
+  z-index: 9999;
   svg {
-    margin-top: 30px;
-    width: 400px;
-    box-shadow: 0 0 8px 0 rgba(0,0,0,0.16);
+      width: 25px;
+      height: 25px;
   }
 }
+
+.cv-list {
+  padding: 20px;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 4px 0 8px 0 rgba(0,0,0,0.16);
+  height: 100%;
+  overflow: scroll;
+}
+
+.cv-list-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-bottom: 40px;
+  &.active {
+    outline: 2px solid red;
+  }
+}
+
 
 .close-btn {
   position: absolute;
@@ -225,26 +281,6 @@ export default {
   img {
     position: relative;
     top: -2px;
-  }
-}
-
-.carousel {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 220px;
-  padding-top: 20px;
-  padding-bottom: 40px;
-  background-color: #F2F5F7;
-  display: flex;
-  overflow-x: scroll;
-  .carousel-img {
-    width: 200px;
-    height: 100%;
-    object-fit: contain;
-    &.active {
-      outline: 2px solid red;
-    }
   }
 }
 

@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <navbar />
     <div id="intro-section">
       <div class="container">
         <div class="row">
@@ -27,7 +26,7 @@
         </div>
         <div class="row pt-5">
           <div v-for="i in 10" :key="i" class="col-md-4 mb-4">            
-            <div class="testimonies" data-aos="slide-left" data-aos-ease="ease" data-aos-duration="1500">
+            <div class="testimonies">
                 <div class="testimonies__header">
                 <div class="testimonies__header__profile">
                     <div class="img">
@@ -313,13 +312,11 @@
 
 <script>
 // @ is an alias to /src
-import Navbar from '../components/Navigation.vue'
 import Footer from '../components/Footer.vue'
 
 export default {
   name: 'Home',
   components: {
-    Navbar,
     Footer,
   },
 }
