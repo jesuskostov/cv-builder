@@ -11,7 +11,7 @@
         <div>
           <h2 class="black">Employment History</h2>
           <div v-for="(work, i) in workHistory" :key="i">
-            <h3 class="subtitle">{{work.jobTitle}} - {{work.employer}} <br> <span>{{work.startDate}} - {{work.endDate}}</span></h3>
+            <h3 class="subtitle">{{work.jobTitle}} - {{work.employer}} <br> <span>{{work.date[0]}} - {{work.date[1]}}</span></h3>
             <p class="description" v-html="work.description" />
           </div>
           

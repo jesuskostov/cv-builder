@@ -57,7 +57,7 @@
             <h2 class="title mb-4">Employment History</h2>
             <div v-for="(work, i) in workHistory" :key="i" class="mb-3">
               <h3 class="subtitle text-capitalize">{{work.jobTitle}}, {{work.employer}}</h3>
-              <p class="date">{{work.startDate}} - {{work.endDate}}</p>
+              <p class="date">{{work.date[0]}} - {{work.date[1]}}</p>
               <p class="description" v-html="work.description" />
             </div>
           </div>

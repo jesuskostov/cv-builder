@@ -54,7 +54,7 @@ export default {
         return {
             level: '',
             motherLanguages: null,
-            spokenLanguages: [],
+            spokenLanguages: null,
             languages: [
                 { title: 'English', langLevel: '' },
                 { title: 'France', langLevel: '' },

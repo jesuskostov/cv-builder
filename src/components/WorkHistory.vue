@@ -39,21 +39,11 @@
                                 <input type="text" class="w-100 form-control" id="employer" v-model="work.employer">
                             </div>
                         </div>
-                        <div class="col-md-6 mb-3">
+                        <div class="col-md-12 mb-3">
                             <div class="text-left">
-                                <label for="startDate">Start date</label>
+                                <label for="startDate">Date</label>
                                 <br>
-                                <input type="date" class="w-100 form-control" id="startDate" v-model="work.startDate">
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <div class="text-left">
-                                <label for="endDate">End date</label>
-                                <input type="date" class="w-100 form-control" id="endDate" v-model="work.endDate">
-                                <div class="d-flex align-items-center">
-                                    <input type="checkbox" class="mb-0" id="currentWork" name="work" :checked="work.currentlyWork" v-model="work.currentlyWork">
-                                    <label for="currentWork" style="margin: 0 0 0 10px">I currently work here</label>
-                                </div>
+                                <date-picker class="w-100" :value-type="'format'" :format="'MM-YYYY'" v-model="work.date" :range="true" type="month" />
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -83,7 +73,7 @@
 </template>
 
 <script>
-
+import DatePicker from 'vue2-datepicker';
 import draggable from 'vuedraggable'
 import { VueEditor } from "vue2-editor";
 
@@ -99,15 +89,15 @@ export default {
     },
     components: {
         draggable,
-        VueEditor
+        VueEditor,
+        DatePicker
     },
     methods: {
         addNewJob() {
             this.workHistory.push({
                 'jobTitle': '',
                 'employer': '',
-                'startDate': '',
-                'endDate': '',
+                'date': '',
                 'currentlyWork': false,
                 'description': '',
             })

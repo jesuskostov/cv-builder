@@ -49,7 +49,7 @@
           </div>
           <div v-else v-for="(work, i) in workHistory" :key="i">
             <div class="d-flex">
-              <p class="subtitle dark-blue">{{work.startDate}} - {{work.endDate}}</p>
+              <p class="subtitle dark-blue">{{work.date[0]}} - {{work.date[1]}}</p>
               <div class="text-left">
                 <h4 class="dark-blue">{{work.jobTitle}}</h4>
                 <p class="work-info__info">{{work.employer}}</p>

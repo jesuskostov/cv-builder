@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Preview on builder -->
-    <templates v-if="onBuilder" :template-name="selected" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLanguages" :interests="interests" :licenses="licenses" :accomp="accomp" />
+    <templates v-if="onBuilder" :template-name="selected" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLang" :interests="interests" :licenses="licenses" :accomp="accomp" />
     <!-- /Preview on builder -->
 
     <!-- Carousel with templates -->
@@ -105,7 +105,7 @@ export default {
     languages() {
       return this.$store.state.languages
     },
-    motherLanguages() {
+    motherLang() {
       return this.$store.state.motherLang
     },
     interests() {

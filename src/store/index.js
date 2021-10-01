@@ -13,7 +13,7 @@ export default new Vuex.Store({
     education: [],
     skills: [],
     languages: [],
-    motherLang: [],
+    motherLang: null,
     interests: [],
     licenses: [],
     accomplishments: '',

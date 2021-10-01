@@ -23,7 +23,7 @@
               <h3 class="subtitle">
                 {{work.jobTitle}} - {{work.employer}}
                 <br>
-                <span>{{work.startDate}} - {{work.endDate}}</span>
+                <span>{{work.date[0]}} - {{work.date[1]}}</span>
               </h3>
               <p class="description" v-html="work.description" />
             </div>
