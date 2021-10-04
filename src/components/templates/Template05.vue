@@ -66,7 +66,7 @@
               <p class="description mb-1"><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
               <p class="description mb-1"><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
               <p class="description mb-1"><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
-              <p class="description mb-1"><span v-if="motherLang">Mother language: {{motherLang.title}}</span></p>
+              <p class="description mb-1"><span v-if="motherLang.title">Mother language: {{motherLang.title}}</span></p>
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@ export default {
       type: Array
     },
     motherLang: {
-      type: String
+      type: Object
     },
     interests: {
       type: Array
@@ -205,7 +205,7 @@ export default {
 .header {
   display: flex;
   height: 200px;
-  background-color: #49FBB9;
+  background-color: #6fc0a4;
 }
 
 .img-box {

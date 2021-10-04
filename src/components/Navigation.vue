@@ -9,10 +9,10 @@
         <steps v-if="$route.name == 'Builder'" />
         <ul v-if="$route.name != 'Builder'" class="nav__menu" :class="{'show-nav': showNav}">
             <router-link to="/browse-templates" class="d-none d-md-block">Browse Templates</router-link>
+            <router-link to="/how-to-write-cv">How to write CV</router-link>
             <router-link to="/feedback">Feedback</router-link>
-            <router-link :to="{name: 'Home', hash: '#faq'}">FAQ</router-link>
-            <!-- <button @click="goToFaq">FAQ</button> -->
-            <router-link to="/browse-templates">Contact</router-link>
+            <router-link to="/faq">FAQ</router-link>
+            <router-link to="/contact">Contact</router-link>
             <router-link to="/browse-templates" class="btn">Get Started</router-link>
             <button v-if="showNav" @click="showNav = false" class="close-btn d-block d-lg-none">
                 <svg viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
@@ -55,9 +55,6 @@ export default {
             await this.$store.dispatch('step', {step});
             this.$router.push('/builder');
         },
-        goToFaq() {
-            console.log(this.$parent);
-        }
     }
 }
 </script>

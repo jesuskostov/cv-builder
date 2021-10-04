@@ -89,7 +89,7 @@ export default {
       type: Array
     },
     motherLang: {
-      type: Array
+      type: Object
     },
     interests: {
       type: Array
@@ -225,8 +225,8 @@ export default {
     width: 200px;
     height: 200px;
     transform: scale(1.8) translateY(-34%);
-    background-color: #505374;
-    border: 6px solid #2B3067;
+    background-color: #8a75aa;
+    border: 6px solid #49295c;
   }
   h1 {
     position: relative;

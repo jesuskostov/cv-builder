@@ -2,7 +2,7 @@
   <div class="template">
     <div ref="inner" class="w-100 h-100 padding">
       <div class="header">
-        <h1><span v-if="personal && personal.firstName">{{personal.firstName}} <br> {{personal.lastName}}</span><span v-else>Your <br> Name</span></h1>
+        <h1><span v-if="personal && personal.firstName">{{personal.firstName}} {{personal.lastName}}</span><span v-else>Your <br> Name</span></h1>
         <p class="profession" v-if="personal && personal.profession">{{personal.profession}}</p>
       </div>
       <div class="body d-flex h-100">
@@ -16,6 +16,7 @@
               <p class="description"><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
               <p class="description"><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
               <p class="description"><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
+              <p class="description"><span v-if="motherLang.title">Mother language: {{motherLang.title}}</span></p>
             </div>
             <div class="mb-3">
               <h3 class="subtitle">Address</h3>
@@ -98,7 +99,7 @@ export default {
       type: Array
     },
     motherLang: {
-      type: String
+      type: Object
     },
     interests: {
       type: Array

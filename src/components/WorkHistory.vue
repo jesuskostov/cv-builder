@@ -84,6 +84,7 @@ export default {
             divId: 2,
             customToolbar: [
                 ["bold", "italic", "underline"],
+                [{list: 'bullet'}, {list: 'order'}]
             ]
         }
     },

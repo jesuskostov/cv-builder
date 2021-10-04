@@ -17,7 +17,7 @@
           <p><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
           <p><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
           <p><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
-          <p v-if="motherLang">
+          <p v-if="motherLang.title">
             Mother language: {{motherLang.title}}
           </p>
         </div>
@@ -42,27 +42,27 @@
       </div>
       <div class="col-right">
         <!-- Profile -->
-        <div>
+        <div class="mb-5">
           <h2 class="black">Profile</h2>
           <p v-if="accomp" v-html="accomp" />
         </div>
         <!-- Work history -->
-        <div>
-          <h2 class="black">Employment History</h2>
+        <div class="mb-5">
+          <h2 class="black mb-3">Employment History</h2>
           <div v-for="(work, i) in workHistory" :key="i">
             <h3 class="subtitle">{{work.jobTitle}} - {{work.employer}} <br> <span>{{work.date[0]}} - {{work.date[1]}}</span></h3>
             <p class="description" v-html="work.description" />
           </div>
         </div>
         <!-- Education -->
-        <div>
-          <h2 class="black">Education</h2>
-          <div v-for="(school, i) in education" :key="i">
-            <h3 class="subtitle">{{school.degree}} - {{school.schoolName}} <br> <span class="black">{{school.schoolLocation}}</span> <br><span>September 2012 - December 2021</span> </h3>
+        <div class="mb-5">
+          <h2 class="black mb-3">Education</h2>
+          <div v-for="(school, i) in education" :key="i" class="mb-2">
+            <h3 class="subtitle">{{school.degree}} - {{school.schoolName}} <br> <span class="black">{{school.schoolLocation}}</span> <br v-if="school.schoolLocation"><span>{{school.date[0]}} - {{school.date[1]}}</span></h3>
           </div>
         </div>
         <!-- Languages -->
-        <div>
+        <div v-if="languages.length != 0">
           <h2 class="black">Languages</h2>
           <h4 v-for="(lang, i) in languages" :key="i">{{lang.title}} {{lang.langLevel}} </h4>
         </div>
@@ -73,7 +73,7 @@
 
 <script>
 export default {
-  name: "Template02",
+  name: "Titan",
   props: {
     preview: {},
     personal: {
@@ -93,7 +93,7 @@ export default {
       type: Array
     },
     motherLang: {
-      type: String
+      type: Object
     },
     interests: {
       type: Array
@@ -199,7 +199,7 @@ export default {
   min-height: 29.6cm;
   flex-shrink: 0;  
   padding: 40px 30px 30px 30px;
-  background-color: #084B41;
+  background-color: #204f38;
 }
 
 .profile {
@@ -293,6 +293,7 @@ h4 {
 
 .subtitle {
   font-size: 14px;
+  margin-bottom: 0;
   span {
     font-size: 8px;
     font-weight: bold;

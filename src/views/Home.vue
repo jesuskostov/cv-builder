@@ -338,64 +338,8 @@
         </div>
       </div>
       <templates style="margin-top: -100px" :preview="true" />
-    </div>
-    <div id="how-to-write-cv">
-      <div class="container">
-        <div class="section-title mb-5">
-          <h2>How to write your CV well</h2>
-          <span class="line"></span>
-        </div>
-        <div class="row pt-4">
-            <div class="col-md-6 mb-4">
-              <div class="box text-left">
-                <div class="inner displayBox" data-aos="fade-right" data-aos-ease="ease" data-aos-duration="1500" data-aos-delay="500">
-                  <h4>Pick the right resume template</h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 mb-4">
-              <div class="box text-left">
-                <div class="inner displayBox" data-aos="fade-left" data-aos-ease="ease" data-aos-duration="1500" data-aos-delay="1000">
-                  <h4>Write down your contact information correctly</h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-5 mb-4">
-              <div class="box text-left">
-                <div class="inner displayBox" data-aos="fade-right" data-aos-ease="ease" data-aos-duration="1500" data-aos-delay="1500">
-                  <h4>Include a resume objective</h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-7 mb-4">
-              <div class="box text-left">
-                <div class="inner displayBox" data-aos="fade-left" data-aos-ease="ease" data-aos-duration="1500" data-aos-delay="2000">
-                  <h4>List your education in detail</h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-7 mb-4">
-              <div class="box text-left">
-                <div class="inner displayBox" data-aos="fade-right" data-aos-ease="ease" data-aos-duration="1500" data-aos-delay="2500">
-                  <h4>Highlight your skills, languages, iterests and ect...</h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-5 mb-4">
-              <div class="box text-left">
-                <div class="inner displayBox" data-aos="fade-left" data-aos-ease="ease" data-aos-duration="1500" data-aos-delay="3000">
-                  <h4>Stick to the one-page limit</h4>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-12 mb-4">
-              <div class="box text-left">
-                <div class="inner displayBox" data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" data-aos-delay="3500">
-                  <h4>Get inspired by a first-job resume example</h4>
-                </div>
-              </div>
-            </div>
-        </div>
+      <div class="text-center mb-5">
+        <router-link to="/browse-templates" class="custom-btn big">View all</router-link>
       </div>
     </div>
     <div id="why-section">
@@ -406,91 +350,96 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 mx-auto">
-            <p class="text">With the help of CV Generator, your CV will stand out from the crowd. Easily personalise the resume design and your CV will be ready and exported in PDF under 5 minutes.</p>
-            <div ref="faq" id="faq" class="faq-box">
+            <p class="text">With the help of CV Generator, your CV will stand out from the crowd. Easily personalise the resume design and your CV will be ready and exported in PDF under 5 minutes.</p>            
+          </div>
+          <div class="col-md-10 mx-auto">
+            <div class="faq-box">
               <div class="accordion" role="tablist">
-                <b-card no-body class="mb-1">
+                  <b-card no-body class="mb-3">
                   <b-card-header header-tag="header" class="h4" role="tab">
-                    <h4 block v-b-toggle.accordion-1 >Question #1</h4>
+                      <h4 block v-b-toggle.accordion-1 >Question #1</h4>
                   </b-card-header>
-                  <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
-                    <b-card-body>
+                  <b-collapse visible id="accordion-1" accordion="my-accordion" role="tabpanel">
+                      <b-card-body>
                       <b-card-text class="text-left">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam repellendus, reiciendis voluptatibus atque temporibus ea alias distinctio unde eaque incidunt blanditiis, sed nulla itaque neque minus facere ipsa at.
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam repellendus, reiciendis voluptatibus atque temporibus ea alias distinctio unde eaque incidunt blanditiis, sed nulla itaque neque minus facere ipsa at.
                       </b-card-text>
-                    </b-card-body>
+                      </b-card-body>
                   </b-collapse>
-                </b-card>
+                  </b-card>
 
-                <b-card no-body class="mb-1">
+                  <b-card no-body class="mb-3">
                   <b-card-header header-tag="header" class="h4" role="tab">
-                    <h4 block v-b-toggle.accordion-2>Question #2</h4>
+                      <h4 block v-b-toggle.accordion-2>Question #2</h4>
                   </b-card-header>
                   <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
-                    <b-card-body>
+                      <b-card-body>
                       <b-card-text class="text-left">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam repellendus, reiciendis voluptatibus atque temporibus ea alias distinctio unde eaque incidunt blanditiis, sed nulla itaque neque minus facere ipsa at.
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam repellendus, reiciendis voluptatibus atque temporibus ea alias distinctio unde eaque incidunt blanditiis, sed nulla itaque neque minus facere ipsa at.
                       </b-card-text>
-                    </b-card-body>
+                      </b-card-body>
                   </b-collapse>
-                </b-card>
+                  </b-card>
 
-                <b-card no-body class="mb-1">
+                  <b-card no-body class="mb-3">
                   <b-card-header header-tag="header" class="h4" role="tab">
-                    <h4 block v-b-toggle.accordion-3>Question #3</h4>
+                      <h4 block v-b-toggle.accordion-3>Question #3</h4>
                   </b-card-header>
                   <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
-                    <b-card-body>
+                      <b-card-body>
                       <b-card-text class="text-left">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam repellendus, reiciendis voluptatibus atque temporibus ea alias distinctio unde eaque incidunt blanditiis, sed nulla itaque neque minus facere ipsa at.
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam repellendus, reiciendis voluptatibus atque temporibus ea alias distinctio unde eaque incidunt blanditiis, sed nulla itaque neque minus facere ipsa at.
                       </b-card-text>
-                    </b-card-body>
+                      </b-card-body>
                   </b-collapse>
-                </b-card>
+                  </b-card>
 
-                <b-card no-body class="mb-1">
+                  <b-card no-body class="mb-3">
                   <b-card-header header-tag="header" class="h4" role="tab">
-                    <h4 block v-b-toggle.accordion-4>Question #4</h4>
+                      <h4 block v-b-toggle.accordion-4>Question #4</h4>
                   </b-card-header>
                   <b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
-                    <b-card-body>
+                      <b-card-body>
                       <b-card-text class="text-left">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam repellendus, reiciendis voluptatibus atque temporibus ea alias distinctio unde eaque incidunt blanditiis, sed nulla itaque neque minus facere ipsa at.
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam repellendus, reiciendis voluptatibus atque temporibus ea alias distinctio unde eaque incidunt blanditiis, sed nulla itaque neque minus facere ipsa at.
                       </b-card-text>
-                    </b-card-body>
+                      </b-card-body>
                   </b-collapse>
-                </b-card>
+                  </b-card>
 
-                <b-card no-body class="mb-1">
+                  <b-card no-body class="mb-3">
                   <b-card-header header-tag="header" class="h4" role="tab">
-                    <h4 block v-b-toggle.accordion-5>Question #5</h4>
+                      <h4 block v-b-toggle.accordion-5>Question #5</h4>
                   </b-card-header>
                   <b-collapse id="accordion-5" accordion="my-accordion" role="tabpanel">
-                    <b-card-body>
+                      <b-card-body>
                       <b-card-text class="text-left">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam repellendus, reiciendis voluptatibus atque temporibus ea alias distinctio unde eaque incidunt blanditiis, sed nulla itaque neque minus facere ipsa at.
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam repellendus, reiciendis voluptatibus atque temporibus ea alias distinctio unde eaque incidunt blanditiis, sed nulla itaque neque minus facere ipsa at.
                       </b-card-text>
-                    </b-card-body>
+                      </b-card-body>
                   </b-collapse>
-                </b-card>
+                  </b-card>
 
-                <b-card no-body>
+                  <b-card no-body>
                   <b-card-header header-tag="header" class="h4" role="tab">
-                    <h4 block v-b-toggle.accordion-6>Question #6</h4>
+                      <h4 block v-b-toggle.accordion-6>Question #6</h4>
                   </b-card-header>
                   <b-collapse id="accordion-6" accordion="my-accordion" role="tabpanel">
-                    <b-card-body class="text-left">
+                      <b-card-body class="text-left">
                       <b-card-text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam repellendus, reiciendis voluptatibus atque temporibus ea alias distinctio unde eaque incidunt blanditiis, sed nulla itaque neque minus facere ipsa at.
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam repellendus, reiciendis voluptatibus atque temporibus ea alias distinctio unde eaque incidunt blanditiis, sed nulla itaque neque minus facere ipsa at.
                       </b-card-text>
-                    </b-card-body>
+                      </b-card-body>
                   </b-collapse>
-                </b-card>
+                  </b-card>
               </div>
+            </div>
+            <div class="text-center mt-5">
+              <router-link to="/faq" class="custom-btn big">Go to FAQ page</router-link>
             </div>
           </div>
           <div class="why-cv-image w-100 text-center">
-            <img src="../assets/images/why-quickcv-image@2x.png" alt="Why QuickCV Generator?" data-aos="slide-up" data-aos-ease="ease" data-aos-duration="1500">
+            <img src="../assets/images/why-quickcv-image@2x.png" alt="Why QuickCV Generator?" >
           </div>
         </div>
       </div>
@@ -500,7 +449,7 @@
         <img src="../assets/images/squares.svg" alt="squares icons">
         <div class="content">
           <h2>Change Your CV. Change your life.</h2>
-          <router-link to="/">Get Started Now</router-link>
+          <router-link to="/browse-templates">Get Started Now</router-link>
         </div>
       </div>
     </div>
@@ -517,44 +466,9 @@ import Footer from '../components/Footer.vue'
 
 export default {
   name: 'Home',
-  data() {
-    return {
-      // swiperOption: {
-      //   effect: 'coverflow',
-      //   grabCursor: true,
-      //   loop: true,
-      //   autoplay: 2000,
-      //   centeredSlides: true,
-      //   loopFillGroupWithBlank: false,
-      //   slidesPerView: '3',
-      //   breakpoints: {
-      //     320: {
-      //       slidesPerView: 2,
-      //       spaceBetween: 20
-      //     },
-      //     480: {
-      //       slidesPerView: 2,
-      //       spaceBetween: 20,
-      //     },
-      //     640: {
-      //       slidesPerView: 3,
-      //       spaceBetween: 30
-      //     }
-      //   }
-      // },
-    }
-  },
   components: {
     Templates,
     Footer,
-    // Swiper,
-    // SwiperSlide
-  },
-  watch: {
-    $route(to, from) {
-      console.log(to);
-      console.log(from);
-    }
   },
   methods: {
     async start() {
@@ -615,54 +529,6 @@ export default {
 
 .swiper-container-3d {
   padding: 30px 0;
-}
-
-#how-to-write-cv {
-  overflow: hidden;
-  background-color: #fff;
-  padding: 3rem 0;
-}
-
-.box {
-  border-radius: 8px;
-  border: 1px dashed rgb(154, 225, 154);
-  .inner {
-    border-radius: 8px;
-    padding: 15px;
-    background-color: #fff;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    height: 100%;
-    h4, p {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.accordion {
-  margin-bottom: 0;
-  .card {
-    overflow: inherit;
-    border: 0;
-    border-radius: 0;
-  }
-}
-
-.faq-box {
-  overflow: hidden;
-  border-radius: 8px;
-  padding-top: 4rem;
-  .h4 {
-    text-align: left;
-    border: 0;
-    padding: 1rem;
-    padding-left: 0;
-    border-bottom: 1px solid rgb(196, 196, 196);
-    background-color: transparent;
-    h4 {
-      font-size: 1.1rem;
-      margin-bottom: 0;
-    }
-  }
 }
 
 #intro-section {
@@ -901,6 +767,33 @@ h1 {
   .content {
     position: relative;
     z-index: 1;
+  }
+}
+
+
+.accordion {
+  margin-bottom: 0;
+  .card {
+    overflow: inherit;
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+.faq-box {
+  border-radius: 8px;
+  padding-top: 4rem;
+  .h4 {
+    border-radius: 8px;
+    background-color: #fff;
+    text-align: left;
+    border: 0;
+    padding: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0;
+    }
   }
 }
 </style>

@@ -94,9 +94,9 @@
           </div>
         </div>
 
-        <div class="language d-flex w-100">
+        <div v-if="languages.length != 0" class="language d-flex w-100">
           <h2 class="subtitle dark-blue">Other tongues(s)</h2>
-          <div class="w-100">
+          <div class="w-100 pl-3">
             <div class="row border-top">
               <div class="col-md-4 border-right text-center">
                 <p class="mb-0">Understanding</p>
@@ -183,7 +183,7 @@ export default {
       type: Array
     },
     motherLang: {
-      type: String
+      type: Object
     },
     interests: {
       type: Array

@@ -19,6 +19,7 @@
     <div v-if="onBrowse" class="container browse-template">
       <div class="row">
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5" v-for="(item, i) in templates" :key="i">
+          <p class="text-left mb-2">{{item.nickname}}</p>
           <div @click="onClick(i)" class="item">
             <img :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
             <button class="custom-btn mt-3" @click="onClick(i)">Use template</button>

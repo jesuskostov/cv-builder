@@ -3,9 +3,12 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Builder from '../views/Builder.vue'
 import BrowseTemplates from '../views/BrowseTemplates.vue'
+import HowToWriteCv from '../views/HowToWriteCv.vue'
 import Payment from '../views/Payment.vue'
 import ErrorPage from '../views/Error.vue'
 import Feedbacks from '../views/Feedbacks.vue'
+import Faq from '../views/Faq.vue'
+import Contact from '../views/Contact.vue'
 
 Vue.use(VueRouter)
 
@@ -26,6 +29,11 @@ const routes = [
     component: BrowseTemplates
   },
   {
+    path: '/how-to-write-cv',
+    name: 'HowToWriteCv',
+    component: HowToWriteCv
+  },
+  {
     path: '/payment',
     name: 'Payment',
     component: Payment
@@ -40,17 +48,30 @@ const routes = [
     name: 'Feedbacks',
     component: Feedbacks
   },
+  {
+    path: '/faq',
+    name: 'Faq',
+    component: Faq
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact
+  },
 ]
 
 const router = new VueRouter({
   mode: 'history',
   routes,
-  scrollBehavior (to) {
-    if (to.hash) {
+  scrollBehavior: (to, from, savedPosition) => {
+    if (savedPosition) {
+      return savedPosition;
+    } else if (to.hash) {
       return {
         selector: to.hash
-        // , offset: { x: 0, y: 10 }
-      }
+      };
+    } else {
+      return { x: 0, y: 0 };
     }
   }
 })

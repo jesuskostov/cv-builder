@@ -37,7 +37,7 @@ export default {
       type: Array,
     },
     motherLang: {
-      type: String,
+      type: Object,
     },
     interests: {
       type: Array

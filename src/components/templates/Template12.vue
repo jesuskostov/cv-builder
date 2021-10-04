@@ -5,7 +5,7 @@
             <div v-if="personal && personal.image" class="img-box">
                 <img :src="personal.image" alt="image">
             </div>
-            <div class="d-flex flex-column justify-content-center h-100">
+            <div class="d-flex flex-column justify-content-center h-100 pr-3">
                 <h1 class="mb-2"><span v-if="personal && personal.firstName">{{personal.firstName}} {{personal.lastName}}</span><span v-else>Your Name</span>, <br><span v-if="personal && personal.profession">{{personal.profession}}</span></h1>                
                 <p class="profession"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}, {{personal.city}} {{personal.zipCode}}, {{personal.country}}</span> <span v-else>FUll Address</span></p>
                 <p class="profession"><span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>

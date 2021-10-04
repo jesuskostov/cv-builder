@@ -7,19 +7,17 @@
     <div class="accordion px-4 py-4">
         <h3>Mother Languages:</h3>
         <multiselect v-model="motherLanguages" class="w-100" :options="languages" :multiple="false" :taggable="true" @tag="addMotherLang" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some or you can also write and press Enter" label="title" :track-by="'title'" />
-        <draggable v-model="motherLanguages" @end="dragMotherLang">
-            <div v-if="motherLanguages" class="box-row">
-                <div class="d-flex align-items-center">
-                    <img class="mr-3" src="../assets/images/lines.svg" alt="lines">
-                    <h4 class="mb-0">{{motherLanguages.title}}</h4>
-                </div>
-                <div>
-                    <button class="action-btn mr-3" @click="deleteMotherLanguage">
-                        <img src="../assets/images/bin.svg" alt="bin icon">
-                    </button>
-                </div>
+        <div v-if="motherLanguages.title" class="box-row">
+            <div class="d-flex align-items-center">
+                <img class="mr-3" src="../assets/images/lines.svg" alt="lines">
+                <h4 class="mb-0">{{motherLanguages.title}}</h4>
             </div>
-        </draggable>
+            <div>
+                <button class="action-btn mr-3" @click="deleteMotherLanguage">
+                    <img src="../assets/images/bin.svg" alt="bin icon">
+                </button>
+            </div>
+        </div>
     </div>
     <div class="accordion px-4 py-4">
         <h3>Spoken Languages:</h3>
@@ -53,8 +51,8 @@ export default {
     data() {
         return {
             level: '',
-            motherLanguages: null,
-            spokenLanguages: null,
+            motherLanguages: {},
+            spokenLanguages: [],
             languages: [
                 { title: 'English', langLevel: '' },
                 { title: 'France', langLevel: '' },
@@ -81,7 +79,7 @@ export default {
             this.spokenLanguages.splice(i, 1);
         },
         deleteMotherLanguage() {
-            this.motherLanguages = null
+            this.motherLanguages = {}
         },
         drag() {
             let lang = this.spokenLanguages
@@ -102,9 +100,8 @@ export default {
             })
         },
         addMotherLang(lang) {
-            this.motherLanguages.push({
-                'title': lang
-            })
+            this.motherLanguages = null
+            this.motherLanguages = {'title': lang}
         }
     },
     watch: {

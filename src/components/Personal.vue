@@ -49,15 +49,15 @@
                     <div class="text-left">
                         <label for="profession">Profession</label>
                         <br>
-                        <input type="text" class="w-100 form-control" name="profession" id="profession" v-model="personal.profession" v-validate="'required'">
+                        <input type="text" class="w-100 form-control" name="profession" id="profession" v-model="personal.profession">
                         <span class="error">{{ errors.first('profession') }}</span>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
-                        <label for="family"><span class="red">*</span> Family</label>
+                        <label for="family">Family</label>
                         <br>
-                        <select class="w-100 form-control" name="family" id="family" v-model="personal.family" v-validate="'required'">
+                        <select class="w-100 form-control" name="family" id="family" v-model="personal.family">
                             <option disable value="">Select your family status</option>
                             <option value="married">Married</option>
                             <option value="single">Single</option>
@@ -67,9 +67,9 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
-                        <label for="sex"><span class="red">*</span> Sex</label>
+                        <label for="sex">Sex</label>
                         <br>
-                        <select class="w-100 form-control" name="sex" id="sex" v-model="personal.sex" v-validate="'required'">
+                        <select class="w-100 form-control" name="sex" id="sex" v-model="personal.sex">
                             <option disable value="">Select your sex</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>

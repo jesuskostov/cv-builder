@@ -17,7 +17,7 @@ import Templates from '../components/Template.vue'
 export default {
   components: {
     Templates
-  }
+  },
 }
 </script>
 

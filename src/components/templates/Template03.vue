@@ -45,7 +45,7 @@
           <p><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
           <p><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
           <p><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
-          <p v-if="motherLang">
+          <p v-if="motherLang.title">
             Mother language: {{motherLang.title}}
           </p>
         </div>
@@ -95,7 +95,7 @@ export default {
       type: Array
     },
     motherLang: {
-      type: String
+      type: Object
     },
     interests: {
       type: Array
@@ -202,7 +202,7 @@ export default {
   height: 100%;
   flex-shrink: 0;  
   padding: 40px 30px 30px 30px;
-  background-color: #084B41;
+  background-color: #006379;
 }
 
 .profile {
