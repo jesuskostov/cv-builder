@@ -39,7 +39,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
-                        <label for="profession"><span class="red">*</span> Birthday</label>
+                        <label for="profession">Birthday</label>
                         <br>
                         <date-picker class="w-100 custom-h" :value-type="'format'" :format="'DD-MM-YYYY'" v-model="personal.birthday" type="date" />
                         <span class="error">{{ errors.first('profession') }}</span>
@@ -103,10 +103,9 @@
                 </div>
                 <div class="col-md-5 col-lg-4 mb-4">
                     <div class="text-left">
-                        <label for="nationality"><span class="red">*</span> Nationality</label>
+                        <label for="nationality">Nationality</label>
                         <br>
-                        <input type="text" class="w-100 form-control" name="nationality" id="nationality" v-model="personal.nationality" v-validate="'required'">
-                        <span class="error">{{ errors.first('nationality') }}</span>
+                        <input type="text" class="w-100 form-control" name="nationality" id="nationality" v-model="personal.nationality">
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">

@@ -11,7 +11,7 @@
         <div>
           <h2 class="black">Employment History</h2>
           <div v-for="(work, i) in workHistory" :key="i">
-            <h3 class="subtitle">{{work.jobTitle}} - {{work.employer}} <br> <span>{{work.date[0]}} - {{work.date[1]}}</span></h3>
+            <h3 class="subtitle">{{work.jobTitle}} - {{work.employer}} <br> <span>{{work.date[0]}} - <span v-if="work.currentlyWork">Present</span><span v-else>{{work.date[1]}}</span></span></h3>
             <p class="description" v-html="work.description" />
           </div>
           
@@ -116,7 +116,7 @@ export default {
       setTimeout(() => {
         let height = this.$refs.inner.clientHeight
         this.$store.dispatch('setPreviewHeight', {height})
-      }, 200)
+      }, 1500)
     }
   },
   watch: {

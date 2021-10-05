@@ -174,7 +174,7 @@ export default {
         let height = this.$refs.template.clientHeight
         this.$store.dispatch('setPreviewHeight', {height})
       }
-    }, 1000)
+    }, 1500)
   },
   beforeRouteLeave (to, from, next) {
     console.log(to, from);

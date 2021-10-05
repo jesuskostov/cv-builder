@@ -44,6 +44,10 @@
                                 <label for="startDate">Date</label>
                                 <br>
                                 <date-picker class="w-100" :value-type="'format'" :format="'MM-YYYY'" v-model="work.date" :range="true" type="month" />
+                                <div>
+                                    <input type="checkbox" id="scales" name="scales" class="mr-2" v-model="work.currentlyWork">
+                                    <label for="scales">Current work</label>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-12">
