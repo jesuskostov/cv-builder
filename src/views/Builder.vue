@@ -25,7 +25,11 @@
     <div v-if="step == 5" class="container pt-5 pb-5">
       <div class="row flex-column-reverse flex-md-row">
         <div ref="template" class="col-md-8">
-          <templates class="mb-5" :onBuilder="true" :selected="selectedCv" />
+          <svg :viewBox="`0 0 700 ${previewHeight}`" xmlns="http://www.w3.org/2000/svg">
+            <foreignObject x="0" y="0" width="100%" :height="previewHeight">
+              <templates class="mb-5" :onBuilder="true" :selected="selectedCv" />
+            </foreignObject>
+          </svg>
           <vue-html2pdf 
             :show-layout="false" 
             :float-layout="true" 
@@ -55,6 +59,7 @@
                 <button class="edit" @click="goTo(2)">Work history <img src="../assets/images/pencil.svg" alt=""></button>
                 <button class="edit" @click="goTo(3)">Education and skills <img src="../assets/images/pencil.svg" alt=""></button>
                 <button class="edit" @click="goTo(4)">Other <img src="../assets/images/pencil.svg" alt=""></button>
+                <button class="edit" @click="bigPreview = true">Change CV template <img src="../assets/images/pencil.svg" alt=""></button>
               </div>
               <button class="custom-btn download mt-auto" @click="generateReport">Download PDF</button>
             </div>

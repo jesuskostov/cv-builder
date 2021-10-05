@@ -6,7 +6,7 @@
     </div>
     <div class="accordion px-4 py-4">
         <h3>Mother Languages:</h3>
-        <multiselect v-model="motherLanguages" class="w-100" :options="languages" :multiple="false" :taggable="true" @tag="addMotherLang" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some or you can also write and press Enter" label="title" :track-by="'title'" />
+        <multiselect v-model="motherLanguages" class="w-100" :options="languages" :multiple="false" :taggable="true" @tag="addMotherLang" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick some or you can also write and press Enter" label="title" :track-by="'title'" />
         <div v-if="motherLanguages.title" class="box-row">
             <div class="d-flex align-items-center">
                 <img class="mr-3" src="../assets/images/lines.svg" alt="lines">
@@ -21,7 +21,7 @@
     </div>
     <div class="accordion px-4 py-4">
         <h3>Spoken Languages:</h3>
-        <multiselect v-model="spokenLanguages" class="w-100" :options="languages" :multiple="true" :taggable="true" @tag="addLang" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Write some and press Enter" label="title" track-by="title" />
+        <multiselect v-model="spokenLanguages" class="w-100" :options="languages" :multiple="true" :taggable="true" @tag="addLang" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Write some and press Enter" label="title" track-by="title" />
         <draggable v-model="spokenLanguages" @end="drag">
             <div v-for="(lang, i) in spokenLanguages" :key="i" class="box-row flex-column flex-sm-row align-items-start align-items-sm-center">
                 <div class="d-flex align-items-center mb-3 mb-md-0">

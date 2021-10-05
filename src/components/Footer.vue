@@ -2,17 +2,43 @@
   <div>
       <footer>
           <div class="container">
-              <div class="d-flex flex-column flex-md-row justify-content-between align-items-center align-items-md-start">
-                  <div class="text-center text-md-left">
-                      <p>© QuickCV.com 2021. All Rights Reserved.</p>
-                      <p>Lanonium B.V. ; Veembroederhof 281, <br>1019HD Amsterdam, Netherlands</p>
-                  </div>
-                  <div>
-                      <router-link to="/">Terms of Service</router-link>
-                      <router-link to="/">Privacy Policy</router-link>
-                      <router-link to="/">Cookie Policy</router-link>
-                  </div>
-              </div>
+            <div class="custom-border">
+                <div class="row py-4">
+                    <div class="col-6 col-md-3 mb-3 mb-md-0">
+                    <div class="d-flex flex-column align-items-start">
+                        <router-link to="/browse-templates">Browse Templates</router-link>
+                        <router-link to="/how-to-write-cv">How to write CV</router-link>
+                        <router-link to="/feedback">Feedback</router-link>
+                        <router-link to="/faq">FAQ</router-link>
+                        <router-link to="/contact">Contacts</router-link>
+                    </div>
+                    </div>
+                    <div class="col-6 col-md-3 mb-3 mb-md-0">
+                    <div class="d-flex flex-column align-items-start">
+                        <router-link to="/">Terms of Service</router-link>
+                        <router-link to="/">Privacy Policy</router-link>
+                        <router-link to="/">Cookie Policy</router-link>
+                    </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="d-flex flex-column align-items-start">
+                            <router-link to="/">Partnership</router-link>
+                            <router-link to="/">Secure Payment</router-link>
+                            <router-link to="/">Terms of use</router-link>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                    <div class="d-flex flex-column align-items-start">
+                        <router-link to="/">Premium</router-link>
+                        <router-link to="/">My subscription</router-link>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between flex-column flex-md-row py-4">
+                <p>© QuickCV.com 2021. All Rights Reserved.</p>
+                <p>Lanonium B.V. ; Veembroederhof 281, <br>1019HD Amsterdam, Netherlands</p>
+            </div>
           </div>
       </footer>
   </div>
@@ -21,21 +47,21 @@
 <style lang="scss" scoped>
 footer {
     padding-top: 2.5rem;
-    padding-bottom: 3.5rem;
-    background-color: #fff;
+    background-color: #374151;
     p {
-        font-size: 0.8rem;
-        color: #707070;
+        font-size: 0.9rem;
+        color: #fff;
         font-weight: bold;
     }
     a {
-        font-size: 0.8rem;
-        color: #707070;
+        font-size: 0.9rem;
+        margin-bottom: 0.3rem;
+        color: #fff;
         font-weight: bold;
-        margin-right: 1.8rem;
-        &:last-child {
-            margin-right: 0;
-        }
     }
+}
+
+.custom-border {
+    border-bottom: 1px solid #6a6a6a;
 }
 </style>

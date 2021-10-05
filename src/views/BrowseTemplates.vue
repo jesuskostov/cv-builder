@@ -8,15 +8,18 @@
       </div>
     </div>
     <templates class="pt-5" :onBrowse="true" :preview="true" />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Templates from '../components/Template.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
   components: {
-    Templates
+    Templates,
+    Footer
   },
 }
 </script>
