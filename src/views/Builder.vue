@@ -167,6 +167,9 @@ export default {
       localStorage.setItem('cv_variant', payload);
       this.$store.dispatch('selectCv', {payload});
     },
+    toPayment() {
+      this.$router.push('/Payment')
+    }
   },
   mounted() {
     let cv_variant = JSON.parse(localStorage.getItem('cv_variant'));
@@ -182,12 +185,15 @@ export default {
     }, 1500)
   },
   beforeRouteLeave (to, from, next) {
-    console.log(to, from);
-    const answer = window.confirm('Do you really want to leave?')
-    if (answer) {
+    if (to.name == 'Payment') {
       next()
     } else {
-      next(false)
+      const answer = window.confirm('Do you really want to leave?')
+      if (answer) {
+        next()
+      } else {
+        next(false)
+      }
     }
   }
 }

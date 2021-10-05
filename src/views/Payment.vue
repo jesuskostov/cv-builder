@@ -63,10 +63,42 @@
                         <templates :onBuilder="true" :selected="selectedCv" />
                     </foreignObject>
                     </svg>
-                    <button @click="bigPreview = true">View large</button>
                 </div>
+                <button @click="bigPreview = true" class="view-large-btn">
+                    <img src="../assets/images/view-icon.png" alt="view icon">
+                    View large
+                </button>
             </div>
         </div>
+    </div>
+    <div v-if="bigPreview" class="big-preview">
+      <button @click="bigPreview = false" class="close-btn">
+        <svg viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
+            <path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/>
+        </svg>
+      </button>
+      <div class="row h-100">
+        <div class="col-md-6 h-100">
+          <div class="cv-list">
+            <div class="row">
+              <div v-for="(item, i) in templates" :key="i" class="col-md-4">
+                <img @click="onClick(i)" class="cv-list-img" :class="{'active': selectedCv == i}" :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 h-100">
+          <div class="d-flex align-items-center justify-content-center w-100 h-100">
+            <div class="scene">
+              <svg :viewBox="`0 0 700 ${previewHeight}`" xmlns="http://www.w3.org/2000/svg">
+                <foreignObject x="0" y="0" width="100%" :height="previewHeight">
+                    <templates :onBuilder="true" :selected="selectedCv" />
+                </foreignObject>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -81,13 +113,20 @@ export default {
     },
     data() {
         return {
+            bigPreview: false,
             cardNumber: ''
         }
     },
     computed: {
         selectedCv() {
             return this.$store.state.selectedCv
-        }
+        },
+        templates() {
+            return this.$store.state.templates
+        },
+        previewHeight() {
+            return this.$store.state.previewHeight
+        },        
     },
     filters: {
         formatCardNumber(value){
@@ -102,7 +141,12 @@ export default {
             if (this.cardNumber.length == 8) {
                 this.$router.push('/error')
             }
-        }
+        },
+        onClick(i) {
+            let payload = i
+            localStorage.setItem('cv_variant', payload);
+            this.$store.dispatch('selectCv', {payload});
+        },
     }
 }
 </script>
@@ -181,6 +225,102 @@ export default {
     border: 0;    
     background-color: #fff;
     box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.16);  
+  }
+}
+
+
+.big-preview {
+  position: fixed;
+  inset: 0;
+  background-color: #fff;
+  max-height: 100vh;
+}
+
+.close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background-color: transparent;
+  border: 0;
+  z-index: 9999;
+  svg {
+      width: 25px;
+      height: 25px;
+  }
+}
+
+.cv-list {
+  padding: 20px;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 4px 0 8px 0 rgba(0,0,0,0.16);
+  height: 100%;
+  overflow: scroll;
+}
+
+.cv-list-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-bottom: 40px;
+  &.active {
+    outline: 2px solid red;
+  }
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.cv-preview-shadow {
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.16);
+}
+
+.view-large-btn {
+  margin-top: 1rem;
+  color: #000;
+  font-weight: bold;
+  border: 0;
+  background-color: transparent;
+  img {
+    position: relative;
+    top: -2px;
+  }
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  background-color: #E9ECF0;
+  height: 100%;
+  padding: 20px;
+  .edit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 43px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 9px;
+    border: 0;    
+    background-color: #fff;
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.16);  
+  }
+}
+
+.scene {
+  box-shadow: 0 0 8px 0 rgba(0,0,0,0.16);
+  width: 400px;
+  overflow: scroll;
+  svg {
+    width: 100%;
   }
 }
 </style>

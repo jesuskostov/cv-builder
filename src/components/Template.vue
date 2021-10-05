@@ -8,7 +8,7 @@
     <div v-if="!onBuilder && !onBrowse" class="template">
       <swiper :options="swiperOption">
         <swiper-slide v-for="(item, i) in templates" :key="i" :virtualIndex="item" class="carouselItem">
-          <p class="text-left pl-4 pl-md-3 mb-1">{{item.nickname}}</p>
+          <p class="text-center h5 mb-2">{{item.nickname}}</p>
           <img :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
           <button class="custom-btn mt-3" @click="onClick(i)">Use template</button>
         </swiper-slide>
