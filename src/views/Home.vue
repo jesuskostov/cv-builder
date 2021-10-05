@@ -76,12 +76,12 @@
     </div>
     <div id="testimonies">
       <div class="container">
-        <div class="section-title mb-5">
+        <div class="section-title mb-3 mb-md-5">
           <h2>What our clients say</h2>
           <span class="line"></span>
         </div>
         <div class="row pt-5">
-          <div class="col-md-4">            
+          <div class="col-md-4 mb-3">            
             <div class="testimonies" data-aos="slide-left" data-aos-ease="ease" data-aos-duration="1500">
                   <div class="testimonies__header">
                     <div class="testimonies__header__profile">
@@ -150,7 +150,7 @@
                   </div>
             </div>
           </div>
-          <div class="col-md-4">            
+          <div class="col-md-4 mb-3">            
             <div class="testimonies" data-aos="slide-left" data-aos-ease="ease" data-aos-duration="1500" data-aos-delay="500">
                   <div class="testimonies__header">
                     <div class="testimonies__header__profile">
@@ -219,7 +219,7 @@
                   </div>
             </div>
           </div>
-          <div class="col-md-4">            
+          <div class="col-md-4 mb-3">            
             <div class="testimonies" data-aos="slide-left" data-aos-ease="ease" data-aos-duration="1500" data-aos-delay="1000">
                   <div class="testimonies__header">
                     <div class="testimonies__header__profile">
@@ -579,7 +579,7 @@ h1 {
   border-radius: 4px;
   background-color: #1E3C5F;
   padding: 1.2rem 2rem;
-  @media (max-width: 991.98px) {
+  @media (max-width: 1199.98px) {
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
@@ -591,7 +591,7 @@ h1 {
     font-weight: bold;
     font-size: 1.2rem;
     padding: 10px 12px;
-    @media (max-width: 991.98px) {
+    @media (max-width: 1199.98px) {
       margin-top: 1rem;
       width: 100%;
     }
@@ -621,6 +621,9 @@ h1 {
   top: -45px;
   left: 0;
   width: 100%;
+  @media (max-width: 991.98px) {
+    top: 85px;
+  }
   @media (max-width: 575.98px) {
     top: 0;
     left: 0;

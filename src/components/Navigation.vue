@@ -8,12 +8,12 @@
         </div>
         <steps v-if="$route.name == 'Builder'" />
         <ul v-if="$route.name != 'Builder'" class="nav__menu" :class="{'show-nav': showNav}">
-            <router-link to="/browse-templates" class="d-none d-md-block">Browse Templates</router-link>
-            <router-link to="/how-to-write-cv">How to write CV</router-link>
-            <router-link to="/feedback">Feedback</router-link>
-            <router-link to="/faq">FAQ</router-link>
-            <router-link to="/contact">Contact</router-link>
-            <router-link to="/browse-templates" class="btn">Get Started</router-link>
+            <button @click="routeTo('/browse-templates')">Browse Templates</button>
+            <button @click="routeTo('/how-to-write-cv')">How to write CV</button>
+            <button @click="routeTo('/feedback')">Feedback</button>
+            <button @click="routeTo('/faq')">FAQ</button>
+            <button @click="routeTo('/contact')">Contact</button>
+            <button @click="routeTo('/browse-templates')" class="btn">Get Started</button>
             <button v-if="showNav" @click="showNav = false" class="close-btn d-block d-lg-none">
                 <svg viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
                     <path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/>
@@ -55,6 +55,10 @@ export default {
             await this.$store.dispatch('step', {step});
             this.$router.push('/builder');
         },
+        routeTo(link) {
+            this.$router.push(link)
+            this.showNav = false
+        }
     }
 }
 </script>
@@ -85,6 +89,10 @@ export default {
             font-weight: bold;
             color: #2c3e50;
             margin-right: 2.3rem;
+
+            @media (max-width: 1199.98px) { 
+                margin-right: 1.3rem;
+            }
 
             &:last-child {
                 margin-right: 0;

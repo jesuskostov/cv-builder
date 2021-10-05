@@ -144,7 +144,7 @@ export default {
       },
       deep: true
     },
-    motherLanguages: {
+    motherLang: {
       handler(){
         this.getPreviewHeight()
       },

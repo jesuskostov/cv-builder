@@ -114,7 +114,7 @@ export default {
       type: Array
     },
     motherLang: {
-      type: Array
+      type: Object
     },
     interests: {
       type: Array
@@ -169,7 +169,7 @@ export default {
       },
       deep: true
     },
-    motherLanguages: {
+    motherLang: {
       handler(){
         this.getPreviewHeight()
       },

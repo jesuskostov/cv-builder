@@ -8,6 +8,7 @@
     <div v-if="!onBuilder && !onBrowse" class="template">
       <swiper :options="swiperOption">
         <swiper-slide v-for="(item, i) in templates" :key="i" :virtualIndex="item" class="carouselItem">
+          <p class="text-left pl-4 pl-md-3 mb-1">{{item.nickname}}</p>
           <img :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
           <button class="custom-btn mt-3" @click="onClick(i)">Use template</button>
         </swiper-slide>
@@ -20,8 +21,8 @@
       <div class="row">
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5" v-for="(item, i) in templates" :key="i">
           <p class="text-left mb-2">{{item.nickname}}</p>
-          <div @click="onClick(i)" class="item">
-            <img :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
+          <div class="item">
+            <img @click="onClick(i)" :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
             <button class="custom-btn mt-3" @click="onClick(i)">Use template</button>
           </div>
         </div>
@@ -58,17 +59,14 @@ export default {
           slidesPerView: '6',
           loop: true,
           autoplay: 2000,
+          height: '50px',
           breakpoints: {
-            320: {
-              slidesPerView: 2,
-              spaceBetween: 20
-            },
             480: {
-              slidesPerView: 2,
-              spaceBetween: 20,
+              slidesPerView: 1,
+              spaceBetween: 10,
             },
             640: {
-              slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 30
             }
           }
@@ -226,6 +224,9 @@ export default {
     z-index: 9999;
     transform: scale(1.2);
     transition: 0.5s;
+    @media (max-width: 575.98px) {
+      transform: scale(1);
+    }
     .custom-btn {
       opacity: 1;
       visibility: visible;

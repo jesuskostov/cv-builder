@@ -85,7 +85,7 @@ export default {
       type: Array
     },
     motherLang: {
-      type: Array
+      type: Object
     },
     interests: {
       type: Array
