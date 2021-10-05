@@ -204,7 +204,7 @@ export default {
       setTimeout(() => {
         let height = this.$refs.inner.clientHeight
         this.$store.dispatch('setPreviewHeight', {height})
-      }, 200)
+      }, 2000)
     }
   },
   watch: {
