@@ -52,7 +52,7 @@
                                     <div class="text-left">
                                         <label for="startDate">Start date and End date</label>
                                         <br>
-                                        <date-picker class="w-100" :value-type="'format'" :format="'YYYY'" v-model="school.date" :range="true" type="year" />
+                                        <date-picker :disabled-date="disabledDates" class="w-100" :value-type="'format'" :format="'YYYY'" v-model="school.date" :range="true" type="year" />
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -245,6 +245,9 @@ export default {
         dragSkill() {
             let skills = this.skills
             this.$store.dispatch('saveSkills', {skills});
+        },
+        disabledDates(date) {
+            return (date < new Date(new Date().setFullYear(new Date().getFullYear() - 100)) || (date > new Date() ))
         }
     },
     watch: {

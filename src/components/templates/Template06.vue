@@ -9,30 +9,32 @@
         <div class="col-left">
           <!-- Details -->
           <div class="text-left mb-5">
-            <h2 class="title mb-4">Details</h2>
-            <div class="mb-3">
-              <h3 class="subtitle">Personal</h3>
-              <p class="description"><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
-              <p class="description"><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
-              <p class="description"><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
-              <p class="description"><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
-              <p class="description"><span v-if="motherLang.title">Mother language: {{motherLang.title}}</span></p>
+            <div v-if="personal">
+              <h2 class="title mb-4">Details</h2>
+              <div v-if="personal.birthday || personal.nationality || personal.family || personal.sex || motherLang.title" class="mb-3">
+                <h3 class="subtitle">Personal</h3>
+                <p class="description"><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
+                <p class="description"><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
+                <p class="description"><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
+                <p class="description"><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
+                <p class="description"><span v-if="motherLang.title">Mother language: {{motherLang.title}}</span></p>
+              </div>
             </div>
-            <div class="mb-3">
+            <div v-if="personal && personal.fullAddress" class="mb-3">
               <h3 class="subtitle">Address</h3>
-              <p class="description mb-1"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}, <br> {{personal.city}} {{personal.zipCode}}, <br> {{personal.country}}</span></p>
+              <p class="description mb-1"><span>{{personal.fullAddress}}, <br> {{personal.city}} {{personal.zipCode}}, <br> {{personal.country}}</span></p>
             </div>
-            <div class="mb-3">
+            <div v-if="personal && personal.phoneNumber" class="mb-3">
               <h3 class="subtitle">Phone</h3>
-              <p class="description mb-1"><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span></p>
+              <p class="description mb-1"><span>{{personal.phoneNumber}}</span></p>
             </div>
-            <div class="mb-3">
+            <div v-if="personal && personal.email" class="mb-3">
               <h3 class="subtitle">Email</h3>
-              <p class="description mb-1"><span v-if="personal && personal.email">{{personal.email}}</span></p>
+              <p class="description mb-1"><span>{{personal.email}}</span></p>
             </div>
           </div>
           <!-- Skills -->
-          <div class="skills text-left mb-5">
+          <div v-if="skills.length !== 0" class="skills text-left mb-5">
             <h2 class="title mb-4">Skills</h2>
             <div v-for="(skill, i) in skills" :key="i">
               <p class="skill-name">{{skill.title}}</p>
@@ -43,7 +45,7 @@
             </div>
           </div>
           <!-- Languages -->
-          <div class="languages text-left">
+          <div v-if="languages.length !== 0" class="languages text-left">
             <h2 class="title mb-4">Languages</h2>
             <p v-for="(lang, i) in languages" :key="i">{{lang.title}} {{lang.langLevel}}</p>
           </div>
@@ -53,8 +55,8 @@
             <h2 class="title mb-4">Profile</h2>
             <p class="description" v-html="accomp" />
           </div>
-          <hr>
-          <div class="text-left">
+          <hr v-if="accomp">
+          <div v-if="workHistory.length && workHistory[0].jobTitle" class="text-left">
             <h2 class="title mb-4">Employment History</h2>
             <div v-for="(work, i) in workHistory" :key="i" class="mb-3">
               <h3 class="subtitle text-capitalize">{{work.jobTitle}}, {{work.employer}}</h3>
@@ -62,8 +64,8 @@
               <p class="description" v-html="work.description" />
             </div>
           </div>
-          <hr>
-          <div class="text-left">
+          <hr v-if="workHistory.length && workHistory[0].jobTitle"> 
+          <div v-if="education.length && education[0].schoolName" class="text-left">
             <h2 class="title mb-4">Education</h2>
             <div v-for="(school, i) in education" :key="i" class="mb-3">
               <h3 class="subtitle text-capitalize">{{school.degree}}, {{school.schoolName}}</h3>

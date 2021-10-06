@@ -7,17 +7,17 @@
             </div>
             <div class="d-flex flex-column justify-content-center h-100 pr-3">
                 <h1 class="mb-2"><span v-if="personal && personal.firstName">{{personal.firstName}} {{personal.lastName}}</span><span v-else>Your Name</span>, <br><span v-if="personal && personal.profession">{{personal.profession}}</span></h1>                
-                <p class="profession"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}, {{personal.city}} {{personal.zipCode}}, {{personal.country}}</span> <span v-else>FUll Address</span></p>
-                <p class="profession"><span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
+                <p v-if="personal && personal.fullAddress" class="profession"><span>{{personal.fullAddress}}, {{personal.city}} {{personal.zipCode}}, {{personal.country}}</span></p>
+                <p v-if="personal && personal.email" class="profession"><span>{{personal.email}}</span></p>
             </div>
         </div>
         <div class="body d-flex">
             <div class="col-left">
-                <div class="text-left mb-5">
+                <div v-if="accomp" class="text-left mb-5">
                     <h2 class="title mb-2">Profile</h2>
-                    <p v-if="accomp" class="description" v-html="accomp" />
+                    <p class="description" v-html="accomp" />
                 </div>
-                <div class="text-left mb-5">
+                <div v-if="workHistory.length && workHistory[0].jobTitle" class="text-left mb-5">
                     <h2 class="title mb-2">Employment History</h2>
                     <div v-for="(work, i) in workHistory" :key="i" class="mb-3">
                         <h3 class="subtitle text-capitalize">{{work.jobTitle}}, {{work.employer}}</h3>
@@ -35,15 +35,18 @@
                 </div>
             </div>
             <div class="col-right">
-                <div class="text-left mb-5">
+              <div v-if="personal" class="mb-5">
+                <div v-if="personal.birthday || personal.nationality || personal.family || personal.sex || motherLang.title" class="text-left">
                     <h3 class="subtitle mb-2">Personal</h3>
                     <p class="description mb-0"><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
                     <p class="description mb-0"><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
                     <p class="description mb-0"><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
                     <p class="description mb-0"><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
+                    <p class="description mb-0"><span v-if="motherLang.title">Sex: {{motherLang.title}}</span></p>
                 </div>
+              </div>
                 <!-- Skills -->
-                <div class="skills text-left mb-5">
+                <div v-if="skills.length !== 0" class="skills text-left mb-5">
                     <h2 class="title mb-2">Skills</h2>
                     <div v-for="(skill, i) in skills" :key="i">
                     <p class="skill-name">{{skill.title}}</p>
@@ -54,7 +57,7 @@
                     </div>
                 </div>
                 <!-- Languages -->
-                <div class="languages text-left">
+                <div v-if="languages.length" class="languages text-left">
                     <h2 class="title mb-2">Languages</h2>
                     <p v-for="(lang, i) in languages" :key="i">{{lang.title}} {{lang.langLevel}}</p>
                 </div>
@@ -141,7 +144,7 @@ export default {
       },
       deep: true
     },
-    motherLanguages: {
+    motherLang: {
       handler(){
         this.getPreviewHeight()
       },

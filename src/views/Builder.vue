@@ -96,6 +96,7 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -103,6 +104,7 @@
 import CvForm from '../components/CvForm.vue'
 import Templates from '../components/Template.vue'
 import VueHtml2pdf from 'vue-html2pdf'
+import Footer from '../components/Footer.vue'
 // import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 // import '../../node_modules/swiper/dist/css/swiper.css'
 
@@ -137,6 +139,7 @@ export default {
     CvForm,
     Templates,
     VueHtml2pdf,
+    Footer,
     // Swiper,
     // SwiperSlide,
   },
@@ -159,8 +162,8 @@ export default {
       this.$store.dispatch('step', {step})
     },
     generateReport () {
-      // this.$router.push('/payment');
-      this.$refs.html2Pdf.generatePdf()
+      this.$router.push('/payment');
+      // this.$refs.html2Pdf.generatePdf()
     },
     onClick(i) {
       let payload = i

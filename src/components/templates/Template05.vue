@@ -7,8 +7,8 @@
         </div>
         <div class="info">
           <h1 class="text-capitalize"><span v-if="personal && personal.firstName">{{personal.firstName}} {{personal.lastName}}</span> <span v-else>Your Name</span></h1>
-          <p class="profession"><span v-if="personal && personal.profession">{{personal.profession}}</span><span v-else>Profession</span></p>
-          <p class="address"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}, {{personal.city}} {{personal.zipCode}}, {{personal.country}}</span> <span v-else>Full address</span> <br> <span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}} |</span><span v-else>Phone number</span> <span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
+          <p v-if="personal && personal.profession" class="profession"><span v-if="personal && personal.profession">{{personal.profession}}</span><span v-else>Profession</span></p>
+          <p v-if="personal && personal.fullAddress" class="address"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}, {{personal.city}} {{personal.zipCode}}, {{personal.country}}</span> <span v-else>Full address</span> <br> <span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}} |</span><span v-else>Phone number</span> <span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
         </div>
       </div>
       <div class="body">
@@ -17,7 +17,7 @@
             <h2 class="title">Profile</h2>
             <p class="description" v-html="accomp" />
           </div>
-          <div v-if="workHistory" class="work text-left mb-5">
+          <div v-if="workHistory.length && workHistory[0].jobTitle" class="work text-left mb-5">
             <h2 class="title">Employment History</h2>
             <div v-for="(work, i) in workHistory" :key="i">
               <h3 class="subtitle">
@@ -28,7 +28,7 @@
               <p class="description" v-html="work.description" />
             </div>
           </div>
-          <div v-if="education" class="education text-left">
+          <div v-if="education.length && education[0].schoolName" class="education text-left">
             <h2 class="title">Education</h2>
             <div v-for="(school, i) in education" :key="i">
               <h3 class="subtitle">
@@ -40,7 +40,7 @@
           </div>
         </div>
         <div class="col-left">
-          <div v-if="skills" class="skills text-left mb-5">
+          <div v-if="skills.length !== 0" class="skills text-left mb-5">
             <h2 class="title small">Skills</h2>
             <div v-for="(skill, i) in skills" :key="i" class="mb-2">
               <p class="skill-name">{{skill.title}}</p>
@@ -53,20 +53,22 @@
               </div>
             </div>
           </div>
-          <div class="languages text-left mb-5">
+          <div v-if="languages.length !== 0" class="text-left mb-5">
             <h2 class="title small">Languages</h2>
             <div>
               <p class="description mb-0" v-for="(lang, i) in languages" :key="i">{{lang.title}} <b>{{lang.langLevel}}</b></p>
             </div>
           </div>
-          <div class="languages text-left">
-            <h2 class="title small">Personal</h2>
-            <div>
-              <p class="description mb-1"><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
-              <p class="description mb-1"><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
-              <p class="description mb-1"><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
-              <p class="description mb-1"><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
-              <p class="description mb-1"><span v-if="motherLang.title">Mother language: {{motherLang.title}}</span></p>
+          <div v-if="personal">
+            <div v-if="personal.birthday || personal.nationality || personal.family || personal.sex || motherLang.title" class="text-left">
+              <h2 class="title small">Personal</h2>
+              <div>
+                <p class="description mb-1"><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
+                <p class="description mb-1"><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
+                <p class="description mb-1"><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
+                <p class="description mb-1"><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
+                <p class="description mb-1"><span v-if="motherLang.title">Mother language: {{motherLang.title}}</span></p>
+              </div>
             </div>
           </div>
         </div>

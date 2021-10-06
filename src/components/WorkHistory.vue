@@ -41,9 +41,9 @@
                         </div>
                         <div class="col-md-12 mb-3">
                             <div class="text-left">
-                                <label for="startDate">Date</label>
+                                <label for="date">Date</label>
                                 <br>
-                                <date-picker class="w-100" :value-type="'format'" :format="'MM-YYYY'" v-model="work.date" :range="true" type="month" />
+                                <date-picker :disabled-date="disabledDates" class="w-100" name="date" :value-type="'format'" :format="'MM-YYYY'" v-model="work.date" :range="true" type="month" />
                                 <div>
                                     <input type="checkbox" id="scales" name="scales" class="mr-2" v-model="work.currentlyWork">
                                     <label for="scales">Current work</label>
@@ -89,7 +89,7 @@ export default {
             customToolbar: [
                 ["bold", "italic", "underline"],
                 [{list: 'bullet'}, {list: 'order'}]
-            ]
+            ],
         }
     },
     components: {
@@ -122,6 +122,9 @@ export default {
             let workHistory = this.workHistory;
             await this.$store.dispatch('saveWorkHistory', {workHistory});
         },
+        disabledDates(date) {
+            return (date < new Date(new Date().setFullYear(new Date().getFullYear() - 10)) || (date > new Date() ))
+        }
     },
     watch: {
         workHistory: {

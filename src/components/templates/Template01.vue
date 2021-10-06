@@ -39,40 +39,25 @@
           <div class="blue-line"></div>
         </div>
 
-          <div v-if="!workHistory" class="d-flex">
-            <p class="subtitle dark-blue">Replace with dates (from - to)</p>
-            <div>
-              <h4 class="dark-blue">Replace with occupation or position held</h4>
-              <p class="work-info__info">Replace with occupation or position held</p>
-              <p class="work-info__text"><span class="dot"></span> Replace with occupation or position held</p>
-            </div>        
-          </div>
-          <div v-else v-for="(work, i) in workHistory" :key="i">
-            <div class="d-flex">
-              <p class="subtitle dark-blue">{{work.date[0]}} - <span v-if="work.currentlyWork">Present</span><span v-else>{{work.date[1]}}</span></p>
-              <div class="text-left">
-                <h4 class="dark-blue">{{work.jobTitle}}</h4>
-                <p class="work-info__info">{{work.employer}}</p>
-                <p class="work-info__text" v-html="work.description" />
-              </div>
+        <div v-for="(work, i) in workHistory" :key="i">
+          <div class="d-flex">
+            <p class="subtitle dark-blue">{{work.date[0]}} - <span v-if="work.currentlyWork">Present</span><span v-else>{{work.date[1]}}</span></p>
+            <div class="text-left">
+              <h4 class="dark-blue">{{work.jobTitle}}</h4>
+              <p class="work-info__info">{{work.employer}}</p>
+              <p class="work-info__text" v-html="work.description" />
             </div>
           </div>
+        </div>
 
       </div>
+
       <div class="work-info">
         <div class="d-flex align-items-center mb-3">
           <p class="title dark-blue mb-0">EDUCATION AND TRAINING</p>
           <div class="blue-line"></div>
         </div>
-        <div v-if="education.length == 0" class="d-flex">
-          <p class="subtitle dark-blue">Replace with dates (from - to)</p>
-          <div>
-            <h4 class="dark-blue">Replace with occupation or position held</h4>
-            <p class="work-info__info">Replace with occupation or position held</p>
-            <p class="work-info__text"><span class="dot"></span> Replace with occupation or position held</p>
-          </div>
-        </div>
-        <div v-else v-for="(school, i) in education" :key="i" class="d-flex">
+        <div v-for="(school, i) in education" :key="i" class="d-flex">
           <p class="subtitle dark-blue">{{school.date[0]}} - {{school.date[1]}}</p>
           <div class="text-left">
             <h4 class="dark-blue">{{school.degree}}</h4>
@@ -81,12 +66,15 @@
           </div>
         </div>
       </div>
+
       <div class="work-info">
+
         <div class="d-flex align-items-center mb-3">
           <p class="title dark-blue mb-0">PERSONAL SKILLS</p>
           <div class="blue-line"></div>
         </div>
-        <div class="d-flex">
+
+        <div v-if="Object.keys(motherLang).length !== 0" class="d-flex">
           <p class="subtitle dark-blue">Mother tongues(s)</p>
           <div>
             <p v-if="motherLang" class="work-info__info">{{motherLang.title}}</p>
@@ -125,6 +113,7 @@
             </div>
           </div>
         </div>
+
         <div v-for="(lang, i) in languages" :key="i" class="language d-flex w-100">
          <h2 class="subtitle dark-blue mb-0">{{lang.title}}</h2>
           <div class="w-100">
@@ -148,11 +137,12 @@
           </div>
         </div>
 
-        <div v-if="skills" class="d-flex mt-4">
+        <div v-if="skills.length !== 0" class="d-flex mt-4">
           <p class="subtitle dark-blue">Skills</p>
           <p class="work-info__info"><span v-for="(skill, i) in skills" :key="i">{{skill.title}}<span v-if="i != skills.length - 1">, </span> </span></p>
         </div>
-        <div v-if="licenses" class="d-flex">
+
+        <div v-if="licenses.length !== 0" class="d-flex">
           <p class="subtitle dark-blue">Driving licenses</p>
           <p class="work-info__info"><span v-for="(license, i) in licenses" :key="i">{{license.title}}<span v-if="i != licenses.length - 1">, </span> </span></p>
         </div>

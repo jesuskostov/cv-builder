@@ -23,26 +23,26 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
-                        <label for="firstName"><span class="red">*</span> Name</label>
+                        <label for="name"><span class="red">*</span> Name</label>
                         <br>
-                        <input type="text" class="w-100 form-control" name="firstName" id="firstName" v-model="personal.firstName" v-validate="'required'">
-                        <span class="error">{{ errors.first('firstName') }}</span>
+                        <input type="text" class="w-100 form-control" name="name" id="firstName" v-model="personal.firstName" v-validate="'required'">
+                        <span class="error">{{ errors.first('name') }}</span>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
-                        <label for="lastName"><span class="red">*</span> Last Name</label>
+                        <label for="surname"><span class="red">*</span> Last Name</label>
                         <br>
-                        <input type="text" class="w-100 form-control" name="lastName" id="lastName" v-model="personal.lastName" v-validate="'required'">
-                        <span class="error">{{ errors.first('lastName') }}</span>
+                        <input type="text" class="w-100 form-control" name="surname" id="surname" v-model="personal.lastName" v-validate="'required'">
+                        <span class="error">{{ errors.first('surname') }}</span>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
-                        <label for="profession">Birthday</label>
+                        <label for="birthday">Birthday</label>
                         <br>
-                        <date-picker class="w-100 custom-h" :value-type="'format'" :format="'DD-MM-YYYY'" v-model="personal.birthday" type="date" />
-                        <span class="error">{{ errors.first('profession') }}</span>
+                        <date-picker v-validate="`date_format:dd-MM-yyyy|date_between:01-01-1920,01-01-${new Date().getFullYear() - 10}`" name="birthday" id="birthday" class="w-100 custom-h" :value-type="'format'" :format="'DD-MM-YYYY'" v-model="personal.birthday" type="date" />
+                        <span class="error">{{ errors.first('birthday') }}</span>
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
@@ -89,7 +89,7 @@
                     <div class="text-left">
                         <label for="zipCode"><span class="red">*</span> Zip code</label>
                         <br>
-                        <input type="text" class="w-100 form-control" name="zipCode" id="zipCode" v-model="personal.zipCode" v-validate="'required'">
+                        <input type="number" minlength="2" class="w-100 form-control" name="zipCode" id="zipCode" v-model="personal.zipCode" v-validate="'required'">
                         <span class="error">{{ errors.first('zipCode') }}</span>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                     <div class="text-left">
                         <label for="phoneNumber">Phone number</label>
                         <br>
-                        <input type="text" class="w-100 form-control" name="phoneNumber" id="phoneNumber" v-model="personal.phoneNumber" v-validate="'required'">
+                        <input type="tel" class="w-100 form-control" name="phoneNumber" id="phoneNumber" v-model="personal.phoneNumber" minlength="5" v-validate="'required'">
                         <span class="error">{{ errors.first('phoneNumber') }}</span>
                     </div>
                 </div>
@@ -128,7 +128,7 @@
                     <div class="text-left">
                         <label for="email">Email</label>
                         <br>
-                        <input type="text" class="w-100 form-control" name="email" id="email" v-model="personal.email" v-validate="'required'">
+                        <input type="email" class="w-100 form-control" name="email" id="email" v-model="personal.email" v-validate="'email'" required>
                         <span class="error">{{ errors.first('email') }}</span>
                     </div>
                 </div>
@@ -168,6 +168,8 @@ export default {
                 sex: '',
                 socialProfiles: ''
             },
+            disabledBefore: new Date(2019, 10, 2),
+            disabledAfter: new Date(2019, 10, 6)
         }
     },
     components: {
@@ -207,7 +209,6 @@ export default {
                 localStorage.setItem('user', JSON.stringify(val))
                 let personal = this.personal
                 this.$store.dispatch('savePersonal', {personal})
-                // Template Preview Height
             },
             deep: true
         },

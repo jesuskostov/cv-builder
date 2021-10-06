@@ -57,17 +57,17 @@
             </div>
             <div class="col-md-4 offset-md-1">
                 <div class="preview">
-                    <svg viewBox="0 0 780 2000" xmlns="http://www.w3.org/2000/svg">
+                  <svg :viewBox="`0 0 780 ${previewHeight}`" xmlns="http://www.w3.org/2000/svg">
                     <!-- Common use case: embed HTML text into SVG -->
-                    <foreignObject x="0" y="0" width="100%" height="2000">
+                    <foreignObject x="0" y="0" width="100%" :height="previewHeight">
                         <templates :onBuilder="true" :selected="selectedCv" />
                     </foreignObject>
-                    </svg>
+                  </svg>
+                  <button @click="bigPreview = true" class="view-large-btn">
+                      <img src="../assets/images/view-icon.png" alt="view icon">
+                      View large
+                  </button>
                 </div>
-                <button @click="bigPreview = true" class="view-large-btn">
-                    <img src="../assets/images/view-icon.png" alt="view icon">
-                    View large
-                </button>
             </div>
         </div>
     </div>

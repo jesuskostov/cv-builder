@@ -10,7 +10,7 @@
         <accomplishments />
         <div class="d-flex justify-content-between mt-5">
             <button class="go-back" @click="goTo(3)">Go Back</button>
-            <button class="custom-btn" @click="$router.push('/payment')">Next: Summary</button>
+            <button class="custom-btn" @click="goTo(5)">Next: Summary</button>
         </div>
     </div>
     

@@ -11,7 +11,7 @@
         </div>
       </div>
     </div>
-    <section class="faq-section">
+    <section class="faq-section pb-4 pb-md-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 mx-auto">
