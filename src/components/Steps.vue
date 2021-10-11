@@ -34,6 +34,13 @@ export default {
   font-weight: bold;
   color: #B4B8BE;
   font-size: 0.8rem;
+
+  @media (max-width: 1199.98px) { 
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+  }
+
   .number {
     display: flex;
     align-items: center;
@@ -45,6 +52,10 @@ export default {
     margin-right: 9px;
     font-size: 16px;
     flex-shrink: 0;
+    @media (max-width: 1199.98px) { 
+      margin-right: 0;
+      margin-bottom: 6px;
+    }
   }
 
   .line {
@@ -52,6 +63,9 @@ export default {
     width: 20px;
     height: 2px;
     background-color: #E9ECF0;
+    @media (max-width: 1199.98px) { 
+      display: none;
+    }
   }
 
   &.active {

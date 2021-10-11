@@ -3,7 +3,7 @@
     <div class="d-flex align-items-center justify-content-between container">
         <div class="nav__logo">
             <router-link to="/">
-                <img src="../assets/images/logo.png" alt="logo">
+                <img src="../assets/images/logo.svg" alt="logo">
             </router-link>
         </div>
         <steps v-if="$route.name == 'Builder'" />
@@ -56,7 +56,7 @@ export default {
             this.$router.push('/builder');
         },
         routeTo(link) {
-            this.$router.push(link)
+            this.$router.push(link).catch(() => {})
             this.showNav = false
         }
     }

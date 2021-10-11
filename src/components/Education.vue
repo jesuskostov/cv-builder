@@ -48,11 +48,32 @@
                                         <input type="text" class="w-100 form-control" v-model="school.degree">
                                     </div>
                                 </div>
-                                <div class="col-md-12">
+                                <div class="col-md-6">
                                     <div class="text-left">
-                                        <label for="startDate">Start date and End date</label>
+                                        <label for="startDate">From</label>
                                         <br>
-                                        <date-picker :disabled-date="disabledDates" class="w-100" :value-type="'format'" :format="'YYYY'" v-model="school.date" :range="true" type="year" />
+                                        <date-picker
+                                            :disabled-date="disabledRangeStartDate"
+                                            class="w-100"
+                                            :value-type="'format'"
+                                            :format="'YYYY'"
+                                            v-model="school.date.from"
+                                            type="year"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="text-left">
+                                        <label for="startDate">To</label>
+                                        <br>
+                                        <date-picker
+                                            :disabled-date="startDate"
+                                            class="w-100"
+                                            :value-type="'format'"
+                                            :format="'YYYY'"
+                                            v-model="school.date.to"
+                                            type="year"
+                                        />
                                     </div>
                                 </div>
                                 <div class="col-md-12">
@@ -187,7 +208,11 @@ export default {
             ],
             customToolbar: [
                 ["bold", "italic", "underline"],
-            ]
+            ],
+            startDate: null,
+            endDate: null,
+            ageMin: 14,
+            ageMax: 80,
         }
     },
     components: {
@@ -202,7 +227,10 @@ export default {
                 'schoolName': '',
                 'schoolLocation': '',
                 'degree': '',
-                'date': '',
+                'date': {
+                    'from': '',
+                    'to': ''
+                },
                 'description': ''
             })
         },
@@ -246,9 +274,31 @@ export default {
             let skills = this.skills
             this.$store.dispatch('saveSkills', {skills});
         },
-        disabledDates(date) {
-            return (date < new Date(new Date().setFullYear(new Date().getFullYear() - 100)) || (date > new Date() ))
-        }
+        // disabledDates(date) {
+        //     return (date < new Date(new Date().setFullYear(new Date().getFullYear() - 100)) || (date > new Date() ))
+        // },
+        dateLimit(limit) {
+            return new Date(new Date().setFullYear(new Date().getFullYear() - limit));
+        },
+        disabledRangeStartDate: function (date) {
+            const limitStart = date < this.dateLimit(this.ageMax);
+
+            const limitEnd = this.endDate
+                ? date > this.endDate
+                : date > this.dateLimit(this.ageMin);
+
+            let limit = limitStart || limitEnd;
+            return limit;
+        },
+        disabledRangeEndDate: function (date) {
+            const limitStart = this.startDate
+                ? date < this.startDate
+                : date > this.dateLimit(this.ageMin);
+            const limitEnd = date > this.dateLimit(this.ageMin);
+
+            let limit = limitStart || limitEnd;
+            return limit;
+        },
     },
     watch: {
         education: {
@@ -268,6 +318,9 @@ export default {
                 this.$store.dispatch('saveSkills', {skills});
             },
             deep: true
+        },
+        startDate(newVal, oldVal) {
+            newVal !== oldVal && this.$refs.endDate.focus();
         },
     },
     mounted() {

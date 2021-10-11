@@ -39,16 +39,8 @@
                                 <input type="text" class="w-100 form-control" id="employer" v-model="work.employer">
                             </div>
                         </div>
-                        <div class="col-md-12 mb-3">
-                            <div class="text-left">
-                                <label for="date">Date</label>
-                                <br>
-                                <date-picker :disabled-date="disabledDates" class="w-100" name="date" :value-type="'format'" :format="'MM-YYYY'" v-model="work.date" :range="true" type="month" />
-                                <div>
-                                    <input type="checkbox" id="scales" name="scales" class="mr-2" v-model="work.currentlyWork">
-                                    <label for="scales">Current work</label>
-                                </div>
-                            </div>
+                        <div class="col-md-12">
+                            <Dates :dates="work.date" @update-job-date="updateJobDate(i, ...arguments)" />
                         </div>
                         <div class="col-md-12">
                             <div class="text-left">
@@ -77,7 +69,7 @@
 </template>
 
 <script>
-import DatePicker from 'vue2-datepicker';
+import Dates from '../components/Dates.vue'
 import draggable from 'vuedraggable'
 import { VueEditor } from "vue2-editor";
 
@@ -89,20 +81,29 @@ export default {
             customToolbar: [
                 ["bold", "italic", "underline"],
                 [{list: 'bullet'}, {list: 'order'}]
-            ],
+            ],            
         }
     },
     components: {
         draggable,
         VueEditor,
-        DatePicker
+        Dates
     },
     methods: {
+        updateJobDate(id, payload) {
+            // let startDate = this.$options.filters.toYear(payload[0])
+            // let endDate = this.$options.filters.toYear(payload[1])
+            this.workHistory[id].date.from = payload[0]
+            this.workHistory[id].date.to = payload[1]
+        },
         addNewJob() {
             this.workHistory.push({
                 'jobTitle': '',
                 'employer': '',
-                'date': '',
+                'date': {
+                    'from': '',
+                    'to': ''
+                },
                 'currentlyWork': false,
                 'description': '',
             })
@@ -122,9 +123,6 @@ export default {
             let workHistory = this.workHistory;
             await this.$store.dispatch('saveWorkHistory', {workHistory});
         },
-        disabledDates(date) {
-            return (date < new Date(new Date().setFullYear(new Date().getFullYear() - 10)) || (date > new Date() ))
-        }
     },
     watch: {
         workHistory: {
@@ -145,7 +143,12 @@ export default {
             this.addNewJob()
         }
 
-    }
+    },
+    filters: {
+        toYear(val) {
+            return val ? val.toLocaleDateString("en-GB", {year: "numeric", month: "2-digit"}) : null;
+        },
+    },
 }
 </script>
 

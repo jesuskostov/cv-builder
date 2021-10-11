@@ -17,13 +17,13 @@
                 <div class="form contact-form">
                     <div class="row">
                         <div class="col-md-6">
-                            <input type="text" class="w-100" placeholder="Your name">
+                            <input type="text" class="w-100 form-control" placeholder="Your name">
                         </div>
                         <div class="col-md-6">
-                            <input type="email" class="w-100" placeholder="Email">
+                            <input type="email" class="w-100 form-control" placeholder="Email">
                         </div>
                         <div class="col-md-12 mt-3">
-                            <textarea cols="10" rows="5" placeholder="Your message..."></textarea>
+                            <textarea cols="10" rows="5" class="form-control" placeholder="Your message..."></textarea>
                             <div class="text-center">
                                 <button class="custom-btn big">Send</button>
                             </div>

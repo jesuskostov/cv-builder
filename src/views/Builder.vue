@@ -14,8 +14,8 @@
                 <templates :onBuilder="true" :selected="selectedCv" />
               </foreignObject>
             </svg>
-            <button @click="bigPreview = true" class="view-large-btn">
-              <img src="../assets/images/view-icon.png" alt="view icon">
+            <button @click="showBigPreview" class="view-large-btn">
+              <img src="../assets/images/zoom.svg" alt="view icon">
               View large
             </button>
           </div>
@@ -48,7 +48,7 @@
           </vue-html2pdf> 
         </div>
         <div class="col-md-4 mb-5 mb-md-0">
-          <div class="preview px-3 py-3">
+          <div class="preview p-4">
             <div class="steps-title mb-4">
               <h3>Summary Section</h3>
               <span class="line"></span>
@@ -59,7 +59,7 @@
                 <button class="edit" @click="goTo(2)">Work history <img src="../assets/images/pencil.svg" alt=""></button>
                 <button class="edit" @click="goTo(3)">Education and skills <img src="../assets/images/pencil.svg" alt=""></button>
                 <button class="edit" @click="goTo(4)">Other <img src="../assets/images/pencil.svg" alt=""></button>
-                <button class="edit" @click="bigPreview = true">Change CV template <img src="../assets/images/pencil.svg" alt=""></button>
+                <button class="edit" @click="showBigPreview">Change CV template <img src="../assets/images/pencil.svg" alt=""></button>
               </div>
               <button class="custom-btn download mt-auto" @click="generateReport">Download PDF</button>
             </div>
@@ -68,7 +68,7 @@
       </div>
     </div>
     <div v-if="bigPreview" class="big-preview">
-      <button @click="bigPreview = false" class="close-btn">
+      <button @click="hideBigPreview" class="close-btn">
         <svg viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
             <path d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"/>
         </svg>
@@ -78,19 +78,23 @@
           <div class="cv-list">
             <div class="row">
               <div v-for="(item, i) in templates" :key="i" class="col-md-4">
-                <img @click="onClick(i)" class="cv-list-img" :class="{'active': selectedCv == i}" :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
+                <div class="img-holder" :class="{'active': selectedCv == i}" >
+                  <img @click="onClick(i)" class="cv-list-img" :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
+                </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-md-6 h-100">
-          <div class="d-flex align-items-center justify-content-center w-100 h-100">
-            <div class="scene">
-              <svg :viewBox="`0 0 700 ${previewHeight}`" xmlns="http://www.w3.org/2000/svg">
-                <foreignObject x="0" y="0" width="100%" :height="previewHeight">
-                    <templates :onBuilder="true" :selected="selectedCv" />
-                </foreignObject>
-              </svg>
+          <div class="overflow-auto h-100">
+            <div class="scene-holder">
+              <div class="scene">
+                <svg :viewBox="`0 0 700 ${previewHeight}`" xmlns="http://www.w3.org/2000/svg">
+                  <foreignObject x="0" y="0" width="100%" :height="previewHeight">
+                      <templates :onBuilder="true" :selected="selectedCv" />
+                  </foreignObject>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -155,7 +159,7 @@ export default {
     },
     previewHeight() {
       return this.$store.state.previewHeight
-    }
+    }    
   },
   methods: {
     goTo(step) {
@@ -172,6 +176,14 @@ export default {
     },
     toPayment() {
       this.$router.push('/Payment')
+    },
+    showBigPreview() {
+      this.bigPreview = true
+      document.body.style.overflow = 'hidden'
+    },
+    hideBigPreview() {
+      this.bigPreview = false
+      document.body.style.overflow = 'auto'
     }
   },
   mounted() {
@@ -228,10 +240,17 @@ export default {
   }
 }
 
+.scene-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  min-height: 100%;
+}
+
 .scene {
   box-shadow: 0 0 8px 0 rgba(0,0,0,0.16);
   width: 400px;
-  overflow: scroll;
   svg {
     width: 100%;
   }
@@ -265,14 +284,22 @@ export default {
   overflow: scroll;
 }
 
+.img-holder {
+  position: relative;
+  height: 0;
+  padding-top: 144%;
+  &.active {
+    outline: 2px solid var(--primary-color);
+  }
+  margin-bottom: 30px;
+}
+
 .cv-list-img {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  margin-bottom: 40px;
-  &.active {
-    outline: 2px solid red;
-  }
+  object-fit: cover;
 }
 
 

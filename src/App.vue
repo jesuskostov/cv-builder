@@ -96,9 +96,9 @@ html, body {
     transition: 0.3s;
   }
   &.download {
-    position: fixed;
-    width: 320px;
-    bottom: 70px;
+    position: sticky;
+    // width: 100%;
+    bottom: 20px;
   }
   &.big {
     display: inline-flex;
@@ -274,9 +274,12 @@ label {
 }
 
 .error {
+  display: block;
+  line-height: 1.2;
   color: red;
   font-size: 0.8rem;
 }
+
 // Generate Duration && Delay
 [data-aos] {
   @for $i from 1 through 150 {

@@ -12,36 +12,37 @@
                         <div class="col-md-12 mb-3 text-left">
                             <label for="firstName"><span class="red">*</span> Your Name:</label>
                             <br>
-                            <input type="text" class="w-100" name="firstName" id="firstName" v-validate="'required'">
+                            <input type="text" class="w-100 form-control" name="firstName" id="firstName" v-validate="'alpha_spaces'">
                             <span class="error">{{ errors.first('firstName') }}</span>
                         </div>
                         <div class="col-md-12 mb-3 text-left">
-                            <label for="firstName"><span class="red">*</span> Card number:</label>
+                            <label for="creditCard"><span class="red">*</span> Card number:</label>
                             <br>
-                            <input type="text" :value="cardNumber | formatCardNumber" @input="updateValue" class="w-100" name="firstName" id="firstName" v-validate="'required'">
-                            <span class="error">{{ errors.first('firstName') }}</span>
+                            <input type="text" :value="cardNumber | formatCardNumber" @input="updateValue" class="w-100 form-control" name="creditCard" id="firstName" v-validate="'credit_card'">
+                            <span class="error">{{ errors.first('creditCard') }}</span>
                         </div>
                         <div class="col-md-5 text-left">
-                            <label for="firstName"><span class="red">*</span> Expiry Date:</label>
+                            <label for="expiryDay"><span class="red">*</span> Expiry Date:</label>
                             <br>
                             <div class="row">
                                 <div class="col-md-5">
-                                    <input type="text" class="w-100" name="expiryDay" id="expiryDay" v-validate="'required'">
+                                    <input type="text" class="w-100 form-control" name="expiryDay" id="expiryDay" v-validate="'date_format:MM'" required>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" class="w-100" name="expiryYear" id="expiryYear" v-validate="'required'">
+                                    <input type="text" class="w-100 form-control" name="expiryYear" id="expiryYear" v-validate="'digits:4'" required>
                                 </div>
                             </div>
-                            <span class="error">{{ errors.first('firstName') }}</span>
+                            <span class="error">{{ errors.first('expiryDay') }}</span>
+                            <span class="error">{{ errors.first('expiryYear') }}</span>
                         </div>
                         <div class="col-md-7 text-left">
-                            <label for="firstName"><span class="red">*</span> CVV:</label>
+                            <label for="cvv"><span class="red">*</span> CVV:</label>
                             <br>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <input type="text" class="w-100" name="expiryYear" id="expiryYear" v-validate="'required'">
+                                    <input type="text" class="w-100 form-control" name="cvv" id="cvv" v-validate="'digits:3'">
                                 </div>
-                                <span class="error">{{ errors.first('firstName') }}</span>
+                                <span class="error">{{ errors.first('cvv') }}</span>
                             </div>
                         </div>
                    </div>
@@ -64,7 +65,7 @@
                     </foreignObject>
                   </svg>
                   <button @click="bigPreview = true" class="view-large-btn">
-                      <img src="../assets/images/view-icon.png" alt="view icon">
+                      <img src="../assets/images/zoom.svg" alt="view icon">
                       View large
                   </button>
                 </div>
@@ -147,6 +148,12 @@ export default {
             localStorage.setItem('cv_variant', payload);
             this.$store.dispatch('selectCv', {payload});
         },
+    },
+    async created() {
+      let step = await this.$store.state.step
+      if (step === null && step !== 5) {
+        this.$router.push('/builder')
+      }
     }
 }
 </script>
