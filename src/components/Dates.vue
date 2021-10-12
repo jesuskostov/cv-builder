@@ -1,33 +1,33 @@
 <template>
   <div class="row">
     <div class="col-md-6 mb-3">
-        <div class="text-left">
-            <label for="startDate">From</label>
-            <br>
-            <date-picker
-                type="month"
-                :disabled-date="disabledRangeStartDate"
-                :default-value="startDate"
-                v-model="startDate"
-                ref="startDate"
-                class="w-100"   
-            />
-            {{startDate}}
-        </div>
+      <div class="text-left">
+        <label for="startDate">From</label>
+        <br />
+        <date-picker
+          type="month"
+          :disabled-date="disabledRangeStartDate"
+          :default-value="startDate"
+          v-model="startDate"
+          ref="startDate"
+          class="w-100"
+        />
+        {{ startDate }}
+      </div>
     </div>
     <div class="col-md-6 mb-3">
-        <div class="text-left">
-            <label for="startDate">To</label>
-            <br>
-            <date-picker
-                type="month"
-                :disabled-date="disabledRangeEndDate"
-                :default-value="startDate"
-                v-model="endDate"
-                ref="endDate"
-                class="w-100"
-            />
-        </div>
+      <div class="text-left">
+        <label for="startDate">To</label>
+        <br />
+        <date-picker
+          type="month"
+          :disabled-date="disabledRangeEndDate"
+          :default-value="startDate"
+          v-model="endDate"
+          ref="endDate"
+          class="w-100"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -41,7 +41,7 @@ export default {
   components: {
     DatePicker,
   },
-  props: ['dates'],
+  props: ["dates"],
   data() {
     return {
       startDate: null,
@@ -62,7 +62,7 @@ export default {
     dateLimit(limit) {
       return new Date(new Date().setFullYear(new Date().getFullYear() - limit));
     },
-    disabledRangeStartDate: function (date) {
+    disabledRangeStartDate: function(date) {
       const limitStart = date < this.dateLimit(this.ageMax);
 
       const limitEnd = this.endDate
@@ -72,7 +72,7 @@ export default {
       let limit = limitStart || limitEnd;
       return limit;
     },
-    disabledRangeEndDate: function (date) {
+    disabledRangeEndDate: function(date) {
       const limitStart = this.startDate
         ? date < this.startDate
         : date > this.dateLimit(this.ageMin);
@@ -87,18 +87,19 @@ export default {
       newVal !== oldVal && this.$refs.endDate.focus();
     },
     date(val) {
-        this.$emit('update-job-date', val)
-    }
+      this.$emit("update-job-date", val);
+    },
   },
   filters: {
     toYear(val) {
-      return val ? val.toLocaleDateString("en-GB", {year: "numeric", month: "2-digit"}) : null;
+      return val
+        ? val.toLocaleDateString("en-GB", { year: "numeric", month: "2-digit" })
+        : null;
     },
   },
   created() {
-    // this.startDate = this.dates.from
-  }
+    this.startDate = new Date(this.dates.from);
+    this.endDate = new Date(this.dates.to);
+  },
 };
 </script>
- 
- 
