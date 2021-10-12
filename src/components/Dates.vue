@@ -12,7 +12,6 @@
           ref="startDate"
           class="w-100"
         />
-        {{ startDate }}
       </div>
     </div>
     <div class="col-md-6 mb-3">
@@ -87,7 +86,7 @@ export default {
       newVal !== oldVal && this.$refs.endDate.focus();
     },
     date(val) {
-      this.$emit("update-job-date", val);
+      this.$emit("update-date", val);
     },
   },
   filters: {

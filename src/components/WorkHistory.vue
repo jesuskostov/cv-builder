@@ -40,7 +40,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <Dates :dates="work.date" @update-job-date="updateJobDate(i, ...arguments)" />
+                            <Dates :dates="work.date" @update-date="updateJobDate(i, ...arguments)" />
                         </div>
                         <div class="col-md-12">
                             <div class="text-left">
@@ -91,8 +91,6 @@ export default {
     },
     methods: {
         updateJobDate(id, payload) {
-            // let startDate = this.$options.filters.toYear(payload[0])
-            // let endDate = this.$options.filters.toYear(payload[1])
             this.workHistory[id].date.from = payload[0]
             this.workHistory[id].date.to = payload[1]
         },

@@ -48,33 +48,8 @@
                                         <input type="text" class="w-100 form-control" v-model="school.degree">
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="text-left">
-                                        <label for="startDate">From</label>
-                                        <br>
-                                        <date-picker
-                                            :disabled-date="disabledRangeStartDate"
-                                            class="w-100"
-                                            :value-type="'format'"
-                                            :format="'YYYY'"
-                                            v-model="school.date.from"
-                                            type="year"
-                                        />
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="text-left">
-                                        <label for="startDate">To</label>
-                                        <br>
-                                        <date-picker
-                                            :disabled-date="startDate"
-                                            class="w-100"
-                                            :value-type="'format'"
-                                            :format="'YYYY'"
-                                            v-model="school.date.to"
-                                            type="year"
-                                        />
-                                    </div>
+                                <div class="col-md-12">
+                                    <Dates :dates="school.date" @update-date="updateSchoolDate(i, ...arguments)" />
                                 </div>
                                 <div class="col-md-12">
                                     <div class="text-left">
@@ -186,10 +161,9 @@
 <script>
 import draggable from 'vuedraggable'
 import Multiselect from 'vue-multiselect'
-import DatePicker from 'vue2-datepicker';
 import 'vue2-datepicker/index.css';
 import { VueEditor } from "vue2-editor";
-
+import Dates from '../components/Dates.vue'
 
 export default {
     data() {
@@ -218,10 +192,14 @@ export default {
     components: {
         draggable,
         Multiselect,
-        DatePicker,
+        Dates,
         VueEditor
     },
     methods: {
+        updateSchoolDate(id, payload) {
+            this.education[id].date.from = payload[0]
+            this.education[id].date.to = payload[1]
+        },
         addNewSchool() {
             this.education.push({
                 'schoolName': '',

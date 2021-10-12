@@ -35,6 +35,13 @@ export default {
   color: #B4B8BE;
   font-size: 0.8rem;
 
+  @media (max-width: 991.98px) {
+    display: none;
+    &.active {
+      display: flex;
+    }
+  }
+
   @media (max-width: 1199.98px) { 
     flex-direction: column;
     justify-content: center;

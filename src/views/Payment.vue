@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container pt-5">
+    <div class="container py-5">
         <div class="row">
             <div class="col-12 col-md-7">
                <div class="payment">
@@ -47,7 +47,7 @@
                         </div>
                    </div>
                    <div class="text-center">
-                       <button class="pay-btn">Complete Payment</button>
+                       <button class="pay-btn" @click="$router.push('/error')">Complete Payment</button>
                    </div>
                    <div class="row">
                        <div class="col-12 col-md-8 mx-auto">
@@ -101,16 +101,19 @@
         </div>
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Templates from '../components/Template.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
     name: 'Payment',
     components: {
-        Templates
+      Templates,
+      Footer
     },
     data() {
         return {
