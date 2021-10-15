@@ -9,7 +9,7 @@
       <swiper :options="swiperOption">
         <swiper-slide v-for="(item, i) in templates" :key="i" :virtualIndex="item" class="carouselItem">
           <p class="text-center h5 mb-2">{{item.nickname}}</p>
-          <img :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
+          <img :src="require(`@/assets/images/cv-templates/${item.thumb}`)" class="img-fluid" alt="">
           <button class="custom-btn mt-3" @click="onClick(i)">Use template</button>
         </swiper-slide>
       </swiper>
