@@ -29,7 +29,7 @@
                     <h4 class="mb-0">{{lang.title}}</h4>
                 </div>
                 <div>
-                    <select class="lang-level mr-2" v-model="lang.langLevel" @change="selectLangLevel(lang.langLevel, i)">
+                    <select class="w-auto m-0 mr-2 flex-shrink-0 custom-select" v-model="lang.langLevel" @change="selectLangLevel(lang.langLevel, i)">
                         <option disabled value="">Select level</option>
                         <option v-for="(lang, i) in langLevel" :key="i" :value="lang.title">{{lang.title}}</option>
                     </select>
@@ -138,9 +138,6 @@ export default {
 
 <style lang="scss" scoped>
 .lang-level {
-    padding: 4px;
-    height: 38px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+width: auto;
 }
 </style>

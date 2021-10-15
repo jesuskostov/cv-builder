@@ -1,17 +1,30 @@
 <template>
-  <div class="template">
-    <component :color="color" :preview="preview" :is="templateComponent" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLang" :interests="interests" :licenses="licenses" :accomp="accomp" />
+  <div class="template" ref="template">
+    <component
+      :color="color"
+      :preview="preview"
+      :is="templateComponent"
+      :personal="personal"
+      :workHistory="workHistory"
+      :education="education"
+      :skills="skills"
+      :languages="languages"
+      :motherLang="motherLang"
+      :interests="interests"
+      :licenses="licenses"
+      :accomp="accomp"
+    />
   </div>
 </template>
 
 <script>
-import {templates} from '../../store/templates'
+import { templates } from "../../store/templates";
 
 const t = {};
 
 templates.forEach((item, index) => {
-  t[index] = () => import(`./${item.name}`)
-})
+  t[index] = () => import(`./${item.name}`);
+});
 
 // count the imports
 export const templatesCount = Object.keys(t).length;
@@ -20,7 +33,7 @@ export default {
   name: "Templates",
   props: {
     color: {
-      type: String
+      type: String,
     },
     preview: {},
     personal: {
@@ -43,26 +56,27 @@ export default {
       type: Object,
     },
     interests: {
-      type: Array
+      type: Array,
     },
     accomp: {
-      type: String
+      type: String,
     },
     licenses: {
-      type: Array
-    },  
+      type: Array,
+    },
     templateName: {
       type: Number,
       default: 1,
     },
   },
+
   computed: {
     templateComponent() {
       return t[this.templateName];
     },
     templateFromStore() {
-      return this.$store.state.templates
+      return this.$store.state.templates;
     },
-  },  
+  },
 };
 </script>

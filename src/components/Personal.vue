@@ -41,7 +41,7 @@
                     <div class="text-left">
                         <label for="birthday">Birthday</label>
                         <br>
-                        <date-picker v-validate="`date_format:dd-MM-yyyy|date_between:01-01-1920,01-01-${new Date().getFullYear() - 10}`" name="birthday" id="birthday" class="w-100 custom-h" :value-type="'format'" :format="'DD-MM-YYYY'" v-model="personal.birthday" type="date" />
+                        <date-picker v-validate="`date_format:dd-MM-yyyy|date_between:01-01-1920,01-01-${new Date().getFullYear() - 10}`" name="birthday" id="birthday" class="w-100" input-class="form-control m-0" :value-type="'format'" :format="'DD-MM-YYYY'" v-model="personal.birthday" type="date" />
                         <span class="error">{{ errors.first('birthday') }}</span>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                     <div class="text-left">
                         <label for="family">Family</label>
                         <br>
-                        <select class="w-100 form-control" name="family" id="family" v-model="personal.family">
+                        <select class="w-100 custom-select" name="family" id="family" v-model="personal.family">
                             <option disable value="">Select your family status</option>
                             <option value="married">Married</option>
                             <option value="single">Single</option>
@@ -70,7 +70,7 @@
                     <div class="text-left">
                         <label for="sex">Sex</label>
                         <br>
-                        <select class="w-100 form-control" name="sex" id="sex" v-model="personal.sex">
+                        <select class="w-100 custom-select" name="sex" id="sex" v-model="personal.sex">
                             <option disable value="">Select your sex</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>

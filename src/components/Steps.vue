@@ -1,10 +1,60 @@
 <template>
   <div class="d-none d-md-flex align-items-center">
-    <div @click="goTo(1)" :class="{'active': step == 1, 'passed': step > 1}" class="steps"><span class="number"><span v-if="step == 1" >1</span><img v-else src="../assets/images/step-ok.svg" alt="ok icon"></span> PERSONAL <span class="line"></span></div>
-    <div @click="goTo(2)" :class="{'active': step == 2, 'passed': step > 2}" class="steps"><span class="number"><span v-if="step <= 2" >2</span><img v-else src="../assets/images/step-ok.svg" alt="ok icon"></span> WORK HISTORY <span class="line"></span></div>
-    <div @click="goTo(3)" :class="{'active': step == 3, 'passed': step > 3}" class="steps"><span class="number"><span v-if="step <= 3" >3</span><img v-else src="../assets/images/step-ok.svg" alt="ok icon"></span> EDUCATION & SKILLS <span class="line"></span></div>
-    <div @click="goTo(4)" :class="{'active': step == 4, 'passed': step > 4}" class="steps"><span class="number"><span v-if="step <= 4" >4</span><img v-else src="../assets/images/step-ok.svg" alt="ok icon"></span> OTHER <span class="line"></span></div>
-    <div @click="goTo(5)" :class="{'active': step == 5, 'passed': step > 5}" class="steps"><span class="number"><span v-if="step <= 5" >5</span><img v-else src="../assets/images/step-ok.svg" alt="ok icon"></span> SUMMARY</div>
+    <div
+      @click="goTo(1)"
+      :class="{ active: step == 1, passed: step > 1 }"
+      class="steps"
+    >
+      <span class="number"
+        ><span v-if="step == 1">1</span
+        ><img v-else src="../assets/images/step-ok.svg" alt="ok icon"
+      /></span>
+      PERSONAL <span class="line"></span>
+    </div>
+    <div
+      @click="goTo(2)"
+      :class="{ active: step == 2, passed: step > 2 }"
+      class="steps"
+    >
+      <span class="number"
+        ><span v-if="step <= 2">2</span
+        ><img v-else src="../assets/images/step-ok.svg" alt="ok icon"
+      /></span>
+      WORK HISTORY <span class="line"></span>
+    </div>
+    <div
+      @click="goTo(3)"
+      :class="{ active: step == 3, passed: step > 3 }"
+      class="steps"
+    >
+      <span class="number"
+        ><span v-if="step <= 3">3</span
+        ><img v-else src="../assets/images/step-ok.svg" alt="ok icon"
+      /></span>
+      EDUCATION & SKILLS <span class="line"></span>
+    </div>
+    <div
+      @click="goTo(4)"
+      :class="{ active: step == 4, passed: step > 4 }"
+      class="steps"
+    >
+      <span class="number"
+        ><span v-if="step <= 4">4</span
+        ><img v-else src="../assets/images/step-ok.svg" alt="ok icon"
+      /></span>
+      OTHER <span class="line"></span>
+    </div>
+    <div
+      @click="goTo(5)"
+      :class="{ active: step == 5, passed: step > 5 }"
+      class="steps"
+    >
+      <span class="number"
+        ><span v-if="step <= 5">5</span
+        ><img v-else src="../assets/images/step-ok.svg" alt="ok icon"
+      /></span>
+      SUMMARY
+    </div>
   </div>
 </template>
 
@@ -12,27 +62,26 @@
 export default {
   computed: {
     step() {
-      return this.$store.state.step
-    }
+      return this.$store.state.step;
+    },
   },
   methods: {
     goTo(toStep) {
       if (this.step > toStep) {
-        let step = toStep
-        this.$store.dispatch('step', {step})
+        let step = toStep;
+        this.$store.dispatch("step", { step });
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-
 .steps {
   display: flex;
   align-items: center;
   font-weight: bold;
-  color: #B4B8BE;
+  color: #b4b8be;
   font-size: 0.8rem;
 
   @media (max-width: 991.98px) {
@@ -42,7 +91,7 @@ export default {
     }
   }
 
-  @media (max-width: 1199.98px) { 
+  @media (max-width: 1199.98px) {
     flex-direction: column;
     justify-content: center;
     margin-right: 20px;
@@ -53,13 +102,13 @@ export default {
     align-items: center;
     justify-content: center;
     border-radius: 999999px;
-    border: 2px solid #E9ECF0;
-    width: 40px;
-    height: 40px;
+    border: 2px solid #e9ecf0;
+    width: 32px;
+    height: 32px;
     margin-right: 9px;
     font-size: 16px;
     flex-shrink: 0;
-    @media (max-width: 1199.98px) { 
+    @media (max-width: 1199.98px) {
       margin-right: 0;
       margin-bottom: 6px;
     }
@@ -69,8 +118,8 @@ export default {
     margin: 0 12px;
     width: 20px;
     height: 2px;
-    background-color: #E9ECF0;
-    @media (max-width: 1199.98px) { 
+    background-color: #e9ecf0;
+    @media (max-width: 1199.98px) {
       display: none;
     }
   }
@@ -78,7 +127,7 @@ export default {
   &.active {
     color: #279857;
     .number {
-      border: 2px solid #279857;  
+      border: 2px solid #279857;
     }
     .line {
       background-color: #279857;
@@ -90,13 +139,11 @@ export default {
     color: #279857;
     .number {
       background-color: #279857;
-      border: 2px solid #279857;  
+      border: 2px solid #279857;
     }
     .line {
       background-color: #279857;
     }
   }
-
 }
-
 </style>

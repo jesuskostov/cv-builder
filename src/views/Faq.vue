@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-12">
               <div class="d-flex flex-column align-items-center">
-                <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mt-5 mt-md-0">Frequently Asked Questio</h1>
+                <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mt-5 mt-md-0">Frequently Asked Questions</h1>
               </div>
           </div>
         </div>

@@ -4,33 +4,33 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-left">
-            <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mb-4 mb-md-5">Create a CV that Recruiters will Love</h1>
+            <h1 class="mb-4 mb-md-5">Create a CV that Recruiters will Love</h1>
             <div class="benefits mb-4">
-              <div class="benefits__box">
+              <div class="benefits__box" data-aos="fade" data-aos-duration="1000" data-aos-ease="ease" data-aos-delay="0" >
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20">
                   <path id="Path_396" data-name="Path 396" d="M12,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22Zm-1-6,7.07-7.071L16.659,7.515,11,13.172,8.174,10.343,6.76,11.757Z" transform="translate(-2 -2)" fill="#65af2c"/>
                 </svg>
                 <h4>Career Optimised CV Templates</h4>
               </div>
-              <div class="benefits__box">
+              <div class="benefits__box" data-aos="fade" data-aos-duration="1000" data-aos-ease="ease" data-aos-delay="100">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20">
                   <path id="Path_396" data-name="Path 396" d="M12,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22Zm-1-6,7.07-7.071L16.659,7.515,11,13.172,8.174,10.343,6.76,11.757Z" transform="translate(-2 -2)" fill="#65af2c"/>
                 </svg>
                 <h4>Edit your CV on any device</h4>
               </div>
-              <div class="benefits__box">
+              <div class="benefits__box" data-aos="fade" data-aos-duration="1000" data-aos-ease="ease" data-aos-delay="200">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20">
                   <path id="Path_396" data-name="Path 396" d="M12,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22Zm-1-6,7.07-7.071L16.659,7.515,11,13.172,8.174,10.343,6.76,11.757Z" transform="translate(-2 -2)" fill="#65af2c"/>
                 </svg>
                 <h4>No software to download</h4>
               </div>
-              <div class="benefits__box">
+              <div class="benefits__box" data-aos="fade" data-aos-duration="1000" data-aos-ease="ease" data-aos-delay="300">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20">
                   <path id="Path_396" data-name="Path 396" d="M12,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22Zm-1-6,7.07-7.071L16.659,7.515,11,13.172,8.174,10.343,6.76,11.757Z" transform="translate(-2 -2)" fill="#65af2c"/>
                 </svg>
                 <h4>No Hidden Fees</h4>
               </div>
-              <div class="benefits__box">
+              <div class="benefits__box" data-aos="fade" data-aos-duration="1000" data-aos-ease="ease" data-aos-delay="400">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20">
                   <path id="Path_396" data-name="Path 396" d="M12,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22Zm-1-6,7.07-7.071L16.659,7.515,11,13.172,8.174,10.343,6.76,11.757Z" transform="translate(-2 -2)" fill="#65af2c"/>
                 </svg>
@@ -51,7 +51,7 @@
               <img class="circles-svg" src="../assets/images/circles-behind-cv-image.svg" alt="circle images">
             </div>
             <div>
-              <img class="intro-cv-image displayBox" src="../assets/images/intro-cv-image.png" alt="intro cv image" data-aos-duration="1500" data-aos-delay="300" data-aos="fade-up" data-aos-ease="ease">
+              <img class="intro-cv-image displayBox" src="../assets/images/intro-cv-image.png" alt="intro cv image" data-aos-duration="1000" data-aos-delay="500" data-aos="fade-up" data-aos-ease="ease">
             </div>
           </div>
         </div>
@@ -82,7 +82,7 @@
         </div>
         <div class="row pt-5">
           <div v-for="i in 3" :key="i" class="col-md-4 mb-3">            
-            <div class="testimonies" data-aos="slide-left" data-aos-ease="ease" :data-aos-duration="i * 1300">
+            <div class="testimonies" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-ease="ease" :data-aos-delay="i * 50">
                   <div class="testimonies__header">
                     <div class="testimonies__header__profile">
                       <div class="d-flex flex-column">
@@ -121,21 +121,21 @@
         </div>
         <div class="row">
           <div class="col-md-4">
-            <div class="step-box" data-aos="zoom-in" data-aos-ease="ease" data-aos-duration="1500">
+            <div class="step-box" data-aos="fade-up" data-aos-duration="1000" data-aos-ease="ease" data-aos-delay="0">
               <img src="../assets/images/fill-info.svg" alt="fill info icon">
               <h3>Fill Your Information</h3>
               <p>Choose between 20+ professional CV templates, fill in the blanks.</p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="step-box" data-aos="zoom-in" data-aos-ease="ease" data-aos-duration="1500">
+            <div class="step-box" data-aos="fade-up" data-aos-duration="1000" data-aos-ease="ease" data-aos-delay="100">
               <img src="../assets/images/customize-cv.svg" alt="customize cv icon">
               <h3>Customise your CV</h3>
               <p>Changez facilement de modèle pendant sa création. À la fin ? Vous pouvez télécharger tous les modèles en même temps !</p>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="step-box" data-aos="zoom-in" data-aos-ease="ease" data-aos-duration="1500">
+            <div class="step-box" data-aos="fade-up" data-aos-duration="1000" data-aos-ease="ease" data-aos-delay="200">
               <img src="../assets/images/pdf-download.svg" alt="download pdf icon">
               <h3>Done. Download CV</h3>
               <p>Once you’ve perfected your CV you can download the CV in a PDF format.</p>
@@ -145,18 +145,20 @@
       </div>
     </div>
     <div id="templates-carousel">      
-      <div class="container mb-5">
+      <div class="container mb-3 mb-sm-0">
         <div class="section-title">
           <h2>Make a CV that stands out</h2>
           <span class="line"></span>
         </div>
         <div class="row">
-          <div class="col-md-8 mx-auto">
+          <div class="col-md-9 mx-auto">
             <p class="text">Increase your chance of getting a job by creating your CV with our professionally-designed CV templates. Land your dream job by using our templates, which will make your application stand out.</p>
           </div>
         </div>
       </div>
-      <templates style="margin-top: -100px" :preview="true" />
+     
+      <templates :preview="true" />
+     
       <div class="text-center mb-5">
         <router-link to="/browse-templates" class="custom-btn big">View all</router-link>
       </div>

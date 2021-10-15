@@ -11,8 +11,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box text-left left">
-                            <div class="inner" data-aos="fade-right" data-aos-duration="1000">
-                                <h4 class="text-center">What is a CV?</h4>
+                            <div class="inner">
+                                <h4 class="text-center" data-aos="fade" data-aos-duration="1000">What is a CV?</h4>
                             </div>
                         </div>
                     </div>
@@ -27,8 +27,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box left">
-                            <div class="inner" data-aos="fade-right" data-aos-duration="1000">
-                                <h4 class="text-center">How to do a CV?</h4>
+                            <div class="inner">
+                                <h4 class="text-center" data-aos="fade" data-aos-duration="1000">How to do a CV?</h4>
                             </div>
                         </div>
                     </div>
@@ -49,8 +49,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box text-left left">
-                            <div class="inner" data-aos="fade-right" data-aos-duration="1000">
-                                <h4>CV layout</h4>
+                            <div class="inner">
+                                <h4 class="text-center" data-aos="fade" data-aos-duration="1000">CV layout</h4>
                             </div>
                         </div>
                     </div>
@@ -70,8 +70,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box text-left left">
-                            <div class="inner" data-aos="fade-right" data-aos-duration="1000">
-                                <h4>How long should a CV be?</h4>
+                            <div class="inner">
+                                <h4 class="text-center" data-aos="fade" data-aos-duration="1000">How long should aCV be?</h4>
                             </div>
                         </div>
                     </div>
@@ -91,8 +91,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box text-left left">
-                            <div class="inner" data-aos="fade-right" data-aos-duration="1000">
-                                <h4>What not to include on a CV</h4>
+                            <div class="inner">
+                                <h4 class="text-center" data-aos="fade" data-aos-duration="1000">What not to include  on a CV</h4>
                             </div>
                         </div>
                     </div>
@@ -144,8 +144,9 @@ export default {
   border-radius: 8px;
   border: 1px dashed rgb(154, 225, 154);
   position: relative;
-  margin-bottom: 38px;
+  margin-bottom: 4rem;
   &.left {
+       
     &::after {
         content: '';
         position: absolute;
@@ -169,30 +170,7 @@ export default {
     }
   }
 }
-  .text {
-    animation: shadow 2s alternate;
-  }
-
-@keyframes shadow {
-    0% {
-        box-shadow: inset 0 0 200px 0 rgba(74, 221, 55, 0.4)
-    }
-    50% {
-        box-shadow: inset 0 0 0 0 rgba(74, 221, 55, 0.4)
-    }
-    100% {
-        box-shadow: inset 0 0 0 0 rgba(0,0,0,0.0)
-    }
-}
-
-@media (max-width: 767.98px) { 
-    h4 {
-        font-size: 1rem;
-    }
-    p {
-        font-size: .8rem;
-    }
-}
+ 
 
 
 </style>

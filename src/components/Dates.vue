@@ -10,7 +10,8 @@
           :default-value="startDate"
           v-model="startDate"
           ref="startDate"
-          class="w-100"
+          class="w-100" 
+          input-class="form-control m-0"
         />
       </div>
     </div>
@@ -25,6 +26,7 @@
           v-model="endDate"
           ref="endDate"
           class="w-100"
+          input-class="form-control m-0"
         />
       </div>
     </div>
@@ -36,7 +38,7 @@ import DatePicker from "vue2-datepicker";
 import "vue2-datepicker/index.css";
 
 export default {
-  name: "HelloWorld",
+  name: "Dates",
   components: {
     DatePicker,
   },

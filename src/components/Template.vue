@@ -19,7 +19,7 @@
     <!-- Browsing templates -->
     <div v-if="onBrowse" class="container browse-template">
       <div class="row">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5" v-for="(item, i) in templates" :key="i">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5" v-for="(item, i) in templates" :key="i" data-aos="fade-up" data-aos-duration="500" data-aos-ease="ease" :data-aos-delay="i * 100">
           <p class="text-left mb-2">{{item.nickname}}</p>
           <div class="item">
             <img @click="onClick(i)" :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
@@ -44,7 +44,7 @@ import '../../node_modules/swiper/dist/css/swiper.css'
 // SwiperCore.use([Pagination]);
 
 export default {
-  name: "HelloWorld",
+  name: "Template",
   components: {
     Templates,
     Swiper,
@@ -55,8 +55,8 @@ export default {
     return {
       swiperOption: {
           grabCursor: true,
-          spaceBetween: 30,
-          slidesPerView: '6',
+          spaceBetween: 24,
+          slidesPerView: '7',
           loop: true,
           autoplay: 2000,
           breakpoints: {
@@ -66,7 +66,11 @@ export default {
             },
             640: {
               slidesPerView: 2,
-              spaceBetween: 30
+              spaceBetween: 24
+            },
+            768: {
+              slidesPerView: 4,
+              spaceBetween: 24
             }
           }
       },
@@ -213,6 +217,8 @@ export default {
     opacity: 0;
     width: 70%;
     left: 50%;
+    height: auto;
+    font-size: .815rem;
     transform: translateX(-50%);
     bottom: 120px;
     visibility: hidden;
@@ -231,6 +237,7 @@ export default {
       visibility: visible;
       transition: 0.5s;
     }
+    
   }
 }
 
