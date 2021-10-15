@@ -1,35 +1,35 @@
 <template>
-  <div id="app">    
+  <div id="app">
     <navbar />
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  background-color: #F2F5F7;
+
+  background-color: #f2f5f7;
 }
 
-html, body {
-  background-color: #F2F5F7;
+html,
+body {
+  background-color: #f2f5f7;
   scroll-behavior: smooth;
 }
 
 :root {
-  --primary-color: #EE4853;
-  --secondary-color:#20599D;
-  --gray-color:#F2F5F7;
+  --primary-color: #ee4853;
+  --secondary-color: #20599d;
+  --gray-color: #f2f5f7;
 }
 
 .steps-title {
   text-align: left;
   h1 {
-    font-weight: bold;    
+    font-weight: bold;
     @media (max-width: 575.98px) {
       font-size: 1.8rem;
     }
@@ -77,7 +77,7 @@ html, body {
     padding: 1.3rem 1rem;
   }
   border-radius: 4px;
-  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.16);
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.16);
 }
 
 .custom-btn {
@@ -85,7 +85,7 @@ html, body {
   color: #fff;
   font-weight: bold;
   background-color: var(--primary-color);
-  border:0; 
+  border: 0;
   border-radius: 4px;
   padding: 4px 18px;
   transition: 0.3s;
@@ -110,115 +110,117 @@ html, body {
 }
 
 .opt-dropdown {
-    width: 100%;
-    height: 50px;
-    border-radius: 4px;
-    padding: 5px;
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+  padding: 5px;
 }
 
 .go-back {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    padding: 4px 2rem;
-    height: 48px;
-    border-radius: 4px;
-    color: var(--secondary-color);
-    border: 2px solid var(--secondary-color);
-    background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  padding: 4px 2rem;
+  height: 48px;
+  border-radius: 4px;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  background-color: transparent;
 }
 
 .box-label {
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 70px;
-    background-color: #fff;
-    h2 {        
-        font-weight: bold;
-        font-size: 1.2rem;
-        margin: 0;
-        span {
-          max-width: 400px;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-        img {
-            cursor: move;
-            position: relative;
-            top: -1px;
-        }
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  background-color: #fff;
+  h2 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0;
+    span {
+      max-width: 400px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
+    img {
+      cursor: move;
+      position: relative;
+      top: -1px;
+    }
+  }
 }
 
 .box-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #D2D4D6;
-    padding: 1.3rem 0;
-    // @media (max-width: 767.98px) {
-    //   flex-direction: column;
-    //   align-items: flex-start;
-    // }
-    h4 {
-        font-size: 1rem;
-        font-weight: bold;
-        img {
-            position: relative;
-            top: -1px;
-        }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d2d4d6;
+  padding: 1.3rem 0;
+  // @media (max-width: 767.98px) {
+  //   flex-direction: column;
+  //   align-items: flex-start;
+  // }
+  h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    img {
+      position: relative;
+      top: -1px;
     }
+  }
 }
 
 .accordion {
-    width: 100%;
-    background-color: #fff;
-    border-radius: 4px;
-    transition: 0.5s;
-    margin-bottom: 1rem;
-    border: 0;
-    h3 {
-      font-size: 1rem;
-      font-weight: bold;
-      text-align: left;
-      margin-bottom: 1.1rem;
-    }
+  width: 100%;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: 0.5s;
+  margin-bottom: 1rem;
+  border: 0;
+  h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 1.1rem;
+  }
 }
 
 .arrow {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
+  transition: 0.4s;
+  &.is-open {
+    transform: rotate(0);
     transition: 0.4s;
-    &.is-open {
-        transform: rotate(0);
-        transition: 0.4s;
-    }
+  }
 }
 
 .action-btn {
-    background-color: transparent;
-    border: 0;
+  background-color: transparent;
+  border: 0;
 }
 
 .add-more-btn {
-    display: flex;
-    font-weight: bold;
-    border: 0;
-    background-color: transparent;
-    img {
-        position: relative;
-        top: -1px;
-        margin-right: 8px;
-    }
+  display: flex;
+  font-weight: bold;
+  border: 0;
+  background-color: transparent;
+  img {
+    position: relative;
+    top: -1px;
+    margin-right: 8px;
+  }
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
   padding: 5px;
-  border: 1px solid #D2D4D6;
+  border: 1px solid #d2d4d6;
   border-radius: 4px;
   margin-bottom: 0.7rem !important;
 }
@@ -242,14 +244,14 @@ span {
 }
 
 .star {
-  fill: #D2D4D6;
+  fill: #d2d4d6;
   width: 20px;
   height: 20px;
   margin-right: 10px;
   @media (max-width: 767.98px) {
-      width: 16px;
-      height: 16px;
-      margin-right: 6px;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
   }
   &:hover {
     fill: var(--primary-color);
@@ -264,8 +266,8 @@ span {
 }
 
 label {
-    font-size: 1rem;
-    font-weight: bold;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .template-preview {
@@ -283,13 +285,13 @@ label {
 // Generate Duration && Delay
 [data-aos] {
   @for $i from 1 through 150 {
-    body[data-aos-duration='#{$i * 50}'] &,
-    &[data-aos][data-aos-duration='#{$i * 50}'] {
+    body[data-aos-duration="#{$i * 50}"] &,
+    &[data-aos][data-aos-duration="#{$i * 50}"] {
       transition-duration: #{$i * 50}ms;
     }
 
-    body[data-aos-delay='#{$i * 50}'] &,
-    &[data-aos][data-aos-delay='#{$i * 50}'] {
+    body[data-aos-delay="#{$i * 50}"] &,
+    &[data-aos][data-aos-delay="#{$i * 50}"] {
       transition-delay: 0;
 
       &.aos-animate {
@@ -307,23 +309,23 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 </style>
 
 <script>
-import Navbar from './components/Navigation.vue'
+import Navbar from "./components/Navigation.vue";
 
 export default {
   components: {
-    Navbar
+    Navbar,
   },
   mounted() {
     if (localStorage.step) {
-      let step = localStorage.step
-      this.$store.dispatch('step', {step})
+      let step = localStorage.step;
+      this.$store.dispatch("step", { step });
     }
-  }
-}
+  },
+};
 </script>
