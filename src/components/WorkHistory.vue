@@ -63,7 +63,7 @@
     <br>
     <div class="d-flex flex-column-reverse flex-md-row align-items-center justify-content-between mt-5">
         <button class="go-back" @click="step(1)">Go Back</button>
-        <button class="custom-btn mb-3 mb-md-0" @click="step(3)">Next: Education and skills</button>
+        <button class="custom-btn mb-3 mb-md-0" @click="step(3)">Next: Education & skills</button>
     </div>
   </div>
 </template>

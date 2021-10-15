@@ -3,7 +3,7 @@
     <!-- Education -->
     <section>
         <div class="steps-title mb-5">
-            <h1>Education and skills</h1>
+            <h1>Education & skills</h1>
             <span class="line"></span>
             <h3 class="mt-4 mb-2">Education</h3>
             <p class="text mt-0">Employers quickly scan the education section. We’ll take care of the formatting so it’s easy to find. Include every school, even if you’re still there or didn’t graduate.</p>
@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="text-left">
-                                        <label for="schoolLocation">School location</label>
+                                        <label for="schoolLocation">School city</label>
                                         <br>
                                         <input type="text" class="w-100 form-control" v-model="school.schoolLocation">
                                     </div>
@@ -173,12 +173,12 @@ export default {
             selected: '',
             value: [],
             options: [
-                { title: 'Vue.js', rating: 0 },
-                { title: 'Adonis', rating: 0 },
-                { title: 'Rails', rating: 0 },
-                { title: 'Sinatra', rating: 0 },
-                { title: 'Laravel', rating: 0 },
-                { title: 'Phoenix', rating: 0 }
+                { title: 'Vue.js', rating: 5 },
+                { title: 'Adonis', rating: 5 },
+                { title: 'Rails', rating: 5 },
+                { title: 'Sinatra', rating: 5 },
+                { title: 'Laravel', rating: 5 },
+                { title: 'Phoenix', rating: 5 }
             ],
             customToolbar: [
                 ["bold", "italic", "underline"],

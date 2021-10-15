@@ -1,5 +1,5 @@
 <template>
-  <div class="template">
+  <div class="template" :style="`--cv-color: ${color}`">
     <div ref="inner" class="d-flex w-100 h-100">
       <div class="col-left">
         <div class="header">
@@ -74,6 +74,9 @@
 export default {
   name: "Template10",
   props: {
+    color: {
+      type: String
+    },
     preview: {},
     personal: {
       type: Object,
@@ -194,6 +197,7 @@ export default {
   word-break: break-all;
   position: relative;
   overflow: hidden;
+  --cv-color: #8a75aa;
 }
 .padding {
   padding: 40px;
@@ -227,9 +231,8 @@ export default {
     border-radius: 99999px;
     width: 200px;
     height: 200px;
-    transform: scale(1.8) translateY(-34%);
-    background-color: #8a75aa;
-    border: 6px solid #49295c;
+    transform: scale(2) translateY(-34%);
+    background-color: var(--cv-color);
   }
   h1 {
     position: relative;

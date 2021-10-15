@@ -61,6 +61,7 @@
                             <option disable value="">Select your family status</option>
                             <option value="married">Married</option>
                             <option value="single">Single</option>
+                            <option value="">Do not indicate</option>
                         </select>
                         <span class="error">{{ errors.first('family') }}</span>
                     </div>
@@ -73,7 +74,7 @@
                             <option disable value="">Select your sex</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
-                            <option value="Prefer not to say">Prefer not to say</option>
+                            <option value="">Do not indicate</option>
                         </select>
                         <span class="error">{{ errors.first('sex') }}</span>
                     </div>
@@ -109,7 +110,7 @@
                         <span class="error">{{ errors.first('nationality') }}</span>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
+                <div class="col-md-12 mb-4">
                     <div class="text-left">
                         <label for="fullAddress"><span class="red">*</span> Full Address</label>
                         <br>
@@ -117,15 +118,15 @@
                         <span class="error">{{ errors.first('fullAddress') }}</span>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 mb-4">
                     <div class="text-left">
                         <label for="phoneNumber">Phone number</label>
                         <br>
-                        <input type="tel" class="w-100 form-control" name="phoneNumber" id="phoneNumber" v-model="personal.phoneNumber" minlength="8" v-validate="'numeric'">
+                        <input type="tel" class="w-100 form-control" name="phoneNumber" id="phoneNumber" v-model="personal.phoneNumber" v-validate="{required: true, regex: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im }">
                         <span class="error">{{ errors.first('phoneNumber') }}</span>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 mb-4">
                     <div class="text-left">
                         <label for="email"><span class="red">*</span> Email</label>
                         <br>
@@ -133,10 +134,15 @@
                         <span class="error">{{ errors.first('email') }}</span>
                     </div>
                 </div>
+                <div class="col-md-12">
+                    <div class="text-left">
+                        <label for="socialProfiles">Compte LinkedIn</label>
+                        <br>
+                        <input type="url" class="form-control w-100" name="socialProfiles" id="socialProfiles" v-model="personal.socialProfiles" v-validate="'url'">
+                        <span class="error">{{ errors.first('socialProfiles') }}</span>
+                    </div>
+                </div>
             </div>
-                <!-- <label for="socialProfiles">Social profiles</label>
-                <input type="text" name="socialProfiles" id="socialProfiles" v-model="personal.socialProfiles" v-validate="'required'">
-                <span>{{ errors.first('socialProfiles') }}</span> -->
         </div>
         <div class="d-flex flex-column-reverse flex-md-row align-items-center justify-content-end">
             <button type="submit" class="custom-btn mb-3 mb-md-0">Next: Work History</button>

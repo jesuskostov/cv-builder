@@ -1,5 +1,5 @@
 <template>
-  <div class="template">
+  <div class="template" :style="`--cv-color: ${color}`">
     <div ref="inner" class="w-100 h-100 inner">
       <div class="header">
         <div v-if="personal && personal.image" class="img-box">
@@ -10,7 +10,7 @@
           <p v-if="personal && personal.profession" class="profession"><span v-if="personal && personal.profession">{{personal.profession}}</span><span v-else>Profession</span></p>
           <p v-if="personal && personal.fullAddress" class="address"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}, {{personal.city}} {{personal.zipCode}}, {{personal.country}}</span> <span v-else>Full address</span> <br> <span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}} |</span><span v-else>Phone number</span> <span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
         </div>
-      </div>
+      </div>      
       <div class="body">
         <div class="col-left">
           <div v-if="skills.length !== 0" class="skills text-left mb-5">
@@ -81,6 +81,9 @@
 export default {
   name: "Template04",
   props: {
+    color: {
+      type: String
+    },
     preview: {},
     personal: {
       type: Object,
@@ -200,6 +203,7 @@ export default {
   word-break: break-all;
   position: relative;
   min-height: 29.6cm;
+  --cv-color: #91976f;
 }
 
 .inner {
@@ -210,7 +214,7 @@ export default {
   display: flex;
   padding-right: 30px;
   height: 200px;
-  background-color: #5182c2;
+  background-color: var(--cv-color);
 }
 
 .img-box {

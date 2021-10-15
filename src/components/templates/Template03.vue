@@ -1,5 +1,5 @@
 <template>
-  <div class="template">
+  <div class="template" :style="`--cv-color: ${color}`">
     <div ref="inner" class="w-100 d-flex">
       <div class="col-right">
         <!-- Profile -->
@@ -79,6 +79,9 @@
 export default {
   name: "Template02",
   props: {
+    color: {
+      type: String
+    },
     preview: {},
     personal: {
       type: Object,
@@ -195,6 +198,7 @@ export default {
   word-break: break-all;
   position: relative;
   min-height: 29.6cm;
+  --cv-color: #006379;
 }
 
 .col-left {
@@ -204,7 +208,7 @@ export default {
   height: 100%;
   flex-shrink: 0;  
   padding: 40px 30px 30px 30px;
-  background-color: #006379;
+  background-color: var(--cv-color);
 }
 
 .profile {

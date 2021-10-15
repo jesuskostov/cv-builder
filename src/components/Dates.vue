@@ -82,9 +82,9 @@ export default {
     },
   },
   watch: {
-    startDate(newVal, oldVal) {
-      newVal !== oldVal && this.$refs.endDate.focus();
-    },
+    // startDate(newVal, oldVal) {
+    //   newVal !== oldVal && this.$refs.endDate.focus();
+    // },
     date(val) {
       this.$emit("update-date", val);
     },

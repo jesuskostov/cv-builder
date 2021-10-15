@@ -1,5 +1,5 @@
 <template>
-  <div class="template">
+  <div class="template" :style="`--cv-color: ${color}`">
     <div ref="inner" class="w-100 h-100 d-flex">
       <div class="col-left">
         <div class="profile mb-4">
@@ -79,6 +79,9 @@
 export default {
   name: "Titan",
   props: {
+    color: {
+      type: String
+    },
     preview: {},
     personal: {
       type: Object,
@@ -122,6 +125,12 @@ export default {
     }
   },
   watch: {
+    color: {
+      handler(val){
+        console.log(val);
+      },
+      deep: true
+    },
     personal: {
       handler(){
         this.getPreviewHeight()
@@ -176,7 +185,7 @@ export default {
   },
   mounted() {
     this.getPreviewHeight()
-  }
+  },
 };
 </script>
 
@@ -194,6 +203,8 @@ export default {
   width: 100%;
   word-break: break-all;
   position: relative;
+  // --cv-color: rgb(62, 83, 75);
+  --cv-color: #91976f;
 }
 
 .col-left {
@@ -203,7 +214,7 @@ export default {
   min-height: 29.6cm;
   flex-shrink: 0;  
   padding: 40px 30px 30px 30px;
-  background-color: #204f38;
+  background-color: var(--cv-color);
 }
 
 .profile {

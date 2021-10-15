@@ -2,7 +2,7 @@
   <div>
        <div class="accordion px-4 py-4">
         <h3>Driving license:</h3>
-        <multiselect v-model="licenses" class="w-100" :options="predefined" :multiple="true" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Choose driving license" label="title" track-by="title" />
+        <multiselect v-model="licenses" class="w-100" :options="predefined" :multiple="true" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Choose" label="title" track-by="title" />
         <draggable v-model="licenses" @end="drag">
             <div v-for="(license, i) in licenses" :key="i" class="box-row">
                 <div class="d-flex align-items-center">
@@ -29,6 +29,7 @@ export default {
             predefined: [
                 {'title': 'Car'},
                 {'title': 'Moto',},
+                {'title': 'None',},
             ],
             selected: ''
         }

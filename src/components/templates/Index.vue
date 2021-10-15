@@ -1,6 +1,6 @@
 <template>
   <div class="template">
-    <component :preview="preview" :is="templateComponent" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLang" :interests="interests" :licenses="licenses" :accomp="accomp" />
+    <component :color="color" :preview="preview" :is="templateComponent" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLang" :interests="interests" :licenses="licenses" :accomp="accomp" />
   </div>
 </template>
 
@@ -19,6 +19,9 @@ export const templatesCount = Object.keys(t).length;
 export default {
   name: "Templates",
   props: {
+    color: {
+      type: String
+    },
     preview: {},
     personal: {
       type: Object,

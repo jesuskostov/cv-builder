@@ -7,13 +7,16 @@
         </div>
         <div class="col-md-4 offset-md-1 d-none d-md-block">
           <div class="preview">
-
+            <p class="text-left mb-1"><b>{{nickname}}</b></p>
             <svg :viewBox="`0 0 700 ${previewHeight}`" xmlns="http://www.w3.org/2000/svg">
               <!-- Common use case: embed HTML text into SVG -->
               <foreignObject x="0" y="0" width="100%" :height="previewHeight">
-                <templates :onBuilder="true" :selected="selectedCv" />
+                <templates :color="color" :onBuilder="true" :selected="selectedCv" />
               </foreignObject>
             </svg>
+            <div class="colors">
+              <button v-for="(item, i) in colors" :key="i" @click="color = item" :style="`background-color: ${item}`"></button>
+            </div>
             <button @click="showBigPreview" class="view-large-btn">
               <img src="../assets/images/zoom.svg" alt="view icon">
               View large
@@ -27,7 +30,7 @@
         <div ref="template" class="col-md-8">
           <svg :viewBox="`0 0 700 ${previewHeight}`" xmlns="http://www.w3.org/2000/svg">
             <foreignObject x="0" y="0" width="100%" :height="previewHeight">
-              <templates class="mb-5" :onBuilder="true" :selected="selectedCv" />
+              <templates class="mb-5" :color="color" :onBuilder="true" :selected="selectedCv" />
             </foreignObject>
           </svg>
           <vue-html2pdf 
@@ -50,6 +53,19 @@
         <div class="col-md-4 mb-5 mb-md-0">
           <div class="preview p-4">
             <div class="steps-title mb-4">
+              <h3>Template configuration</h3>
+              <span class="line"></span>
+            </div>
+            <div class="d-flex flex-column mb-4" v-if="step == 5">
+              <div>
+                <p class="text-left mb-1">Template name: <b>{{nickname}}</b></p>
+                <div class="colors justify-content-start mb-4">
+                  <button v-for="(item, i) in colors" :key="i" @click="color = item" :style="`background-color: ${item}`"></button>
+                </div>
+                <button class="edit" @click="showBigPreview">Change CV template <img src="../assets/images/pencil.svg" alt=""></button>
+              </div>
+            </div>
+            <div class="steps-title mb-4">
               <h3>Summary Section</h3>
               <span class="line"></span>
             </div>
@@ -57,9 +73,8 @@
               <div>
                 <button class="edit" @click="goTo(1)">Personal <img src="../assets/images/pencil.svg" alt=""></button>
                 <button class="edit" @click="goTo(2)">Work history <img src="../assets/images/pencil.svg" alt=""></button>
-                <button class="edit" @click="goTo(3)">Education and skills <img src="../assets/images/pencil.svg" alt=""></button>
+                <button class="edit" @click="goTo(3)">Education & skills <img src="../assets/images/pencil.svg" alt=""></button>
                 <button class="edit" @click="goTo(4)">Other <img src="../assets/images/pencil.svg" alt=""></button>
-                <button class="edit" @click="showBigPreview">Change CV template <img src="../assets/images/pencil.svg" alt=""></button>
               </div>
               <button class="custom-btn download mt-auto" @click="generateReport">Download PDF</button>
             </div>
@@ -74,7 +89,7 @@
         </svg>
       </button>
       <div class="row h-100">
-        <div class="col-md-6 h-100">
+        <div class="col-md-5 h-100">
           <div class="cv-list">
             <div class="row">
               <div v-for="(item, i) in templates" :key="i" class="col-md-4">
@@ -85,15 +100,18 @@
             </div>
           </div>
         </div>
-        <div class="col-md-6 h-100">
+        <div class="col-md-7 h-100">
           <div class="overflow-auto h-100">
             <div class="scene-holder">
               <div class="scene">
                 <svg :viewBox="`0 0 700 ${previewHeight}`" xmlns="http://www.w3.org/2000/svg">
                   <foreignObject x="0" y="0" width="100%" :height="previewHeight">
-                      <templates :onBuilder="true" :selected="selectedCv" />
+                      <templates :color="color" :onBuilder="true" :selected="selectedCv" />
                   </foreignObject>
                 </svg>
+                <div class="colors in-builder">
+                  <button v-for="(item, i) in colors" :key="i" @click="color = item" :style="`background-color: ${item}`"></button>
+                </div>
               </div>
             </div>
           </div>
@@ -109,12 +127,21 @@ import CvForm from '../components/CvForm.vue'
 import Templates from '../components/Template.vue'
 import VueHtml2pdf from 'vue-html2pdf'
 import Footer from '../components/Footer.vue'
+import { templates } from "../store/templates";
 // import { Swiper, SwiperSlide } from "vue-awesome-swiper";
 // import '../../node_modules/swiper/dist/css/swiper.css'
 
 export default {
   data() {
     return {
+      color: '#91976f',
+      colors: {
+        orange: '#e78738',
+        blue: '#4f51df',
+        green: '#9ba76a',
+        lightBlue: '#5182c2',
+        purple: '#8a75aa'
+      },
       bigPreview: false,
       swiperOption: {
         grabCursor: true,
@@ -137,6 +164,7 @@ export default {
           }
         }
       },
+      nickname: ''
     }    
   },
   components: {
@@ -160,6 +188,13 @@ export default {
     previewHeight() {
       return this.$store.state.previewHeight
     }    
+  },
+  watch: {
+    selectedCv: {
+      handler(val) {
+        this.nickname = templates[val].nickname;
+      }, deep: true
+    }
   },
   methods: {
     goTo(step) {
@@ -198,6 +233,9 @@ export default {
         this.$store.dispatch('setPreviewHeight', {height})
       }
     }, 1500)
+    let cv = this.$store.state.selectedCv
+    this.nickname = templates[cv].nickname;
+
   },
   beforeRouteLeave (to, from, next) {
     if (to.name == 'Payment') {
@@ -215,6 +253,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.colors {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+  &.in-builder {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding: 15px 30px 15px 10px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: 0 0px 15px 10px rgba(0,0,0,0.09);
+    transform: translateY(-50%);
+    flex-direction: column;
+    background-color: #fff
+  }
+  button {
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0;
+    box-shadow: 0 3px 1px rgba(0, 0, 0, 0.3);
+  }
+}
+
 .preview {
   display: flex;
   flex-direction: column;
@@ -282,6 +346,20 @@ export default {
   box-shadow: 4px 0 8px 0 rgba(0,0,0,0.16);
   height: 100%;
   overflow: scroll;
+}
+
+.cv-list::-webkit-scrollbar {
+  width: 0.4em;
+  border-radius: 10px;
+}
+ 
+.cv-list::-webkit-scrollbar-track {
+  // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.cv-list::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
 }
 
 .img-holder {

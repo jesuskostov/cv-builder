@@ -1,9 +1,9 @@
 <template>
   <div>
     <!-- Preview on builder -->
-    <templates v-if="onBuilder" :template-name="selected" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLang" :interests="interests" :licenses="licenses" :accomp="accomp" />
+    <templates v-if="onBuilder" :color="color" :template-name="selected" :personal="personal" :workHistory="workHistory" :education="education" :skills="skills" :languages="languages" :motherLang="motherLang" :interests="interests" :licenses="licenses" :accomp="accomp" />
     <!-- /Preview on builder -->
-
+    
     <!-- Carousel with templates -->
     <div v-if="!onBuilder && !onBrowse" class="template">
       <swiper :options="swiperOption">
@@ -50,7 +50,7 @@ export default {
     Swiper,
     SwiperSlide,
   },
-  props: ['onBuilder','selected', 'preview', 'onBrowse'],
+  props: ['onBuilder','selected', 'preview', 'onBrowse', 'color'],
   data() {
     return {
       swiperOption: {
@@ -59,7 +59,6 @@ export default {
           slidesPerView: '6',
           loop: true,
           autoplay: 2000,
-          height: '50px',
           breakpoints: {
             480: {
               slidesPerView: 1,

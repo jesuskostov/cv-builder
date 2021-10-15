@@ -1,5 +1,5 @@
 <template>
-  <div class="template">
+  <div class="template" :style="`--cv-color: ${color}`">
     <div ref="inner" class="w-100 h-100 inner">
       <div class="header">
         <div v-if="personal && personal.image" class="img-box">
@@ -81,6 +81,9 @@
 export default {
   name: "Template05",
   props: {
+    color: {
+      type: String
+    },
     preview: {},
     personal: {
       type: Object,
@@ -198,6 +201,7 @@ export default {
   word-break: break-all;
   position: relative;
   min-height: 29.6cm;
+  --cv-color: #5182c2;
 }
 
 .inner {
@@ -207,7 +211,7 @@ export default {
 .header {
   display: flex;
   height: 200px;
-  background-color: #6fc0a4;
+  background-color: var(--cv-color);
 }
 
 .img-box {

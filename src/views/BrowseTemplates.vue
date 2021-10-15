@@ -2,9 +2,9 @@
   <div>
     <div class="container">
       <div class="steps-title text-center pt-5">
-        <h1>Not happy with the final result?</h1>         
+        <h1>Le seul site du marché qui vous offre <br> <b>14 CV en même temps</b></h1>         
         <span class="line mx-auto"></span>
-        <p class="text mt-3">No problem! Switch templates seamlessly</p>
+        <p class="text mt-3">Changez facilement de modèle pendant sa création. À la fin ?</p>
       </div>
     </div>
     <templates class="pt-5" :onBrowse="true" :preview="true" />
