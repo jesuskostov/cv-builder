@@ -6,7 +6,11 @@
             <option disabled value="">Please select one</option>
             <option v-for="(int, i) in interestsPredefined" :key="i" :value="int.title">{{int.title}}</option>
         </select> -->
-        <multiselect v-model="interests" class="w-100" :options="interestsPredefined" :multiple="true" :taggable="true" @tag="addInterest" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Write some and press Enter" label="title" track-by="title" />
+        <div class="position-relative">
+            <input type="text" class="form-control w-100" v-model="interes">
+            <button @click="addInt" class="custom-btn add-btn">ADD</button>
+        </div>
+        <!-- <multiselect v-model="interests" class="w-100" :options="interestsPredefined" :multiple="true" :taggable="true" @tag="addInterest" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Write some and press Enter" label="title" track-by="title" /> -->
         <draggable v-model="interests" @end="drag">
             <div v-for="(interes, i) in interests" :key="i" class="box-row">
                 <div class="d-flex align-items-center">
@@ -24,11 +28,12 @@
 
 <script>
 import draggable from 'vuedraggable'
-import Multiselect from 'vue-multiselect'
+// import Multiselect from 'vue-multiselect'
 
 export default {
     data() {
         return {
+            interes: '',
             interests: [],
             interestsPredefined: [
                 {'title': 'Football'},
@@ -41,9 +46,15 @@ export default {
     },
     components: {
         draggable,
-        Multiselect
+        // Multiselect
     },
     methods: {
+        addInt() {
+            this.interests.push({
+                'title': this.interes
+            })
+            this.interes = ''
+        },
         addNewInterests() {
             this.interests.push({
                 'title': ''
@@ -85,3 +96,16 @@ export default {
     }
 }
 </script>
+
+
+
+<style scoped>
+.add-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+</style>

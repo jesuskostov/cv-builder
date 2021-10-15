@@ -83,7 +83,11 @@
                 <option disabled value="">Please select one</option>
                 <option v-for="(skill, i) in options" :key="i" :value="skill.title">{{skill.title}}</option>
             </select> -->
-            <multiselect v-model="skills" class="w-100" :options="options" :multiple="true" :taggable="true" @tag="addSkill" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some" label="title" track-by="title" />
+            <div class="position-relative">
+                <input type="text" class="form-control w-100" v-model="skill">
+                <button @click="addSkill" class="custom-btn add-btn">ADD</button>
+            </div>
+            <!-- <multiselect v-model="skills" class="w-100" :options="options" :multiple="true" :taggable="true" @tag="addSkill" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some" label="title" track-by="title" /> -->
             <draggable v-model="skills" @end="dragSkill">
                 <div v-for="(skill, i) in skills" :key="i" class="box-row">
                     <h4 class="mb-0">
@@ -160,7 +164,7 @@
 
 <script>
 import draggable from 'vuedraggable'
-import Multiselect from 'vue-multiselect'
+// import Multiselect from 'vue-multiselect'
 import 'vue2-datepicker/index.css';
 import { VueEditor } from "vue2-editor";
 import Dates from '../components/Dates.vue'
@@ -168,6 +172,7 @@ import Dates from '../components/Dates.vue'
 export default {
     data() {
         return {
+            skill: '',
             education: [],
             skills: [],
             selected: '',
@@ -191,7 +196,7 @@ export default {
     },
     components: {
         draggable,
-        Multiselect,
+        // Multiselect,
         Dates,
         VueEditor
     },
@@ -224,12 +229,12 @@ export default {
         deleteSkill(i) {
             this.skills.splice(i, 1);
         },
-        addSkill(skill) {
-            this.skills.push({
-                'title': skill,
-                'rating': 0
-            })
-        },
+        // addSkill(skill) {
+        //     this.skills.push({
+        //         'title': skill,
+        //         'rating': 0
+        //     })
+        // },
         async step(step) {
             let education = this.education
             let skills = this.skills
@@ -277,6 +282,14 @@ export default {
             let limit = limitStart || limitEnd;
             return limit;
         },
+        addSkill() {
+            let skill = this.skill
+            this.skills.push({
+                'title': skill,
+                'rating': 5
+            })
+            this.skill = ''
+        }
     },
     watch: {
         education: {
@@ -315,3 +328,13 @@ export default {
 }
 </script>
 
+<style scoped>
+.add-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+</style>

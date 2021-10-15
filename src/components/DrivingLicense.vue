@@ -29,7 +29,6 @@ export default {
             predefined: [
                 {'title': 'Car'},
                 {'title': 'Moto',},
-                {'title': 'None',},
             ],
             selected: ''
         }
