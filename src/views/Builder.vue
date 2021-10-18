@@ -16,11 +16,11 @@
             >
               <!-- Common use case: embed HTML text into SVG -->
               <foreignObject x="0" y="0" width="100%" :height="previewHeight">
-                <templates
-                  :color="color"
-                  :onBuilder="true"
-                  :selected="selectedCv"
-                />
+                  <templates
+                    :color="color"
+                    :onBuilder="true"
+                    :selected="selectedCv"
+                  />
               </foreignObject>
             </svg>
             <div class="colors">

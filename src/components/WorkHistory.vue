@@ -40,7 +40,8 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <Dates :dates="work.date" @update-date="updateJobDate(i, ...arguments)" />
+                            <Dates :dates="work.date" :checked="present" @update-date="updateJobDate(i, ...arguments)" />
+                            <input type="checkbox" :checked="present" @click="present = !present" />
                         </div>
                         <div class="col-md-12">
                             <div class="text-left">
@@ -76,6 +77,7 @@ import { VueEditor } from "vue2-editor";
 export default {
     data() {
         return {
+            present: false,
             workHistory: [],
             divId: 2,
             customToolbar: [
@@ -123,6 +125,12 @@ export default {
         },
     },
     watch: {
+        present: {
+            handler(val) {
+                console.log(val);
+                localStorage.setItem('present', val)
+            }, deep: true
+        },
         workHistory: {
             handler(val){
                 // Saving data to localStorage
@@ -140,7 +148,9 @@ export default {
         } else {
             this.addNewJob()
         }
-
+        if (JSON.parse(localStorage.getItem('present')) === null) {
+            this.present = false
+        }
     },
     filters: {
         toYear(val) {

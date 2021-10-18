@@ -5,6 +5,22 @@
   </div>
 </template>
 
+<script>
+import Navbar from "./components/Navigation.vue";
+
+export default {
+  components: {
+    Navbar,
+  },
+  mounted() {
+    if (localStorage.step) {
+      let step = localStorage.step;
+      this.$store.dispatch("step", { step });
+    }
+  },
+};
+</script>
+
 <style lang="scss">
 #app {
   font-family: "IBM Plex Sans", sans-serif;
@@ -313,19 +329,3 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 </style>
-
-<script>
-import Navbar from "./components/Navigation.vue";
-
-export default {
-  components: {
-    Navbar,
-  },
-  mounted() {
-    if (localStorage.step) {
-      let step = localStorage.step;
-      this.$store.dispatch("step", { step });
-    }
-  },
-};
-</script>

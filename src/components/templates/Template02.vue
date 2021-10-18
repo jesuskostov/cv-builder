@@ -54,7 +54,12 @@
         <div v-if="workHistory.length && workHistory[0].jobTitle" class="mb-5">
           <h2 class="black mb-3">Employment History</h2>
           <div v-for="(work, i) in workHistory" :key="i">
-            <h3 class="subtitle">{{work.jobTitle}} - {{work.employer}} <br> <span>{{work.date[0]}} - <span v-if="work.currentlyWork">Present</span><span v-else>{{work.date[1]}}</span></span></h3>
+            <h3 class="subtitle">
+              {{work.jobTitle}} - {{work.employer}}
+              <br>
+              <span v-if="work.date && work.date.from">{{work.date.from.toString().split('T')[0]}}</span>
+              <span v-if="work.date && work.date.to">{{work.date.to.toString().split('T')[0]}}</span>
+            </h3>
             <p class="description" v-html="work.description" />
           </div>
         </div>

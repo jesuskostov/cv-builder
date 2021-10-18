@@ -19,6 +19,7 @@
       <div class="text-left">
         <label for="startDate">To</label>
         <br />
+        {{checked}}
         <date-picker
           type="month"
           :disabled-date="disabledRangeEndDate"
@@ -27,7 +28,8 @@
           ref="endDate"
           class="w-100"
           input-class="form-control m-0"
-        />
+          :disabled="checked"
+        />        
       </div>
     </div>
   </div>
@@ -42,13 +44,13 @@ export default {
   components: {
     DatePicker,
   },
-  props: ["dates"],
+  props: ["dates", "checked"],
   data() {
     return {
       startDate: null,
       endDate: null,
-      ageMin: 16,
-      ageMax: 64,
+      ageMin: 0,
+      ageMax: 80,
     };
   },
   computed: {
@@ -86,7 +88,7 @@ export default {
   watch: {
     // startDate(newVal, oldVal) {
     //   newVal !== oldVal && this.$refs.endDate.focus();
-    // },
+    // },    
     date(val) {
       this.$emit("update-date", val);
     },
@@ -104,3 +106,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.checkbox-label {
+  position: relative;
+  top: -1px;
+  margin-left: 5px;
+}
+
+</style>
