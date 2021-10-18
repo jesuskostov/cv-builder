@@ -29,9 +29,6 @@
             <div class="testimonies">
                 <div class="testimonies__header">
                 <div class="testimonies__header__profile">
-                    <div class="img">
-                    <img src="../assets/images/guy.jpg" alt="guy">
-                    </div>
                     <div class="d-flex flex-column">
                     <h4 class="text-left">John Doe</h4>
                     <div class="text-left">

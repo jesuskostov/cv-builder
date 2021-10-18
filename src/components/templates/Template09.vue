@@ -58,7 +58,11 @@
                     <h2 class="title mb-2">Employment History</h2>
                     <div v-for="(work, i) in workHistory" :key="i" class="mb-3">
                         <h3 class="subtitle text-capitalize">{{work.jobTitle}}, {{work.employer}}</h3>
-                        <p class="date">{{work.date[0]}} - <span v-if="work.currentlyWork">Present</span><span v-else>{{work.date[1]}}</span></p>
+                        <p class="date">
+                          <span v-if="work.date && work.date.from">{{work.date.from | toDate}} - </span>
+                          <span v-if="work.date && work.date.to && !work.date.present">{{work.date.to | toDate}}</span>
+                          <span v-if="work.date.present">Current work</span>
+                        </p>
                         <p class="description" v-html="work.description" />
                     </div>
                 </div>
@@ -75,6 +79,7 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: "Template09",
@@ -173,6 +178,11 @@ export default {
     accomp() {
       this.getPreviewHeight()
     },
+  },
+  filters: {
+    toDate(val) {
+      return val.toString().split('T')[0]
+    }
   },
   mounted() {
     this.getPreviewHeight()

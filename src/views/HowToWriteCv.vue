@@ -7,7 +7,7 @@
           <span class="line"></span>
         </div>
         <div class="row pt-4">
-            <div class="col-md-10 mx-auto mb-4">
+            <div class="col-md-8 mx-auto mb-4">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box text-left left">
@@ -23,7 +23,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-10 mx-auto mb-4">
+            <div class="col-md-8 mx-auto mb-4">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box left">
@@ -45,7 +45,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-10 mx-auto mb-4">
+            <div class="col-md-8 mx-auto mb-4">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box text-left left">
@@ -66,7 +66,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-10 mx-auto mb-4">
+            <div class="col-md-8 mx-auto mb-4">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box text-left left">
@@ -87,7 +87,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-10 mx-auto mb-4">
+            <div class="col-md-8 mx-auto mb-4">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box text-left left">

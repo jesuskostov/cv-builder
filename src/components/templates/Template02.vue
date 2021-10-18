@@ -57,8 +57,9 @@
             <h3 class="subtitle">
               {{work.jobTitle}} - {{work.employer}}
               <br>
-              <span v-if="work.date && work.date.from">{{work.date.from.toString().split('T')[0]}}</span>
-              <span v-if="work.date && work.date.to">{{work.date.to.toString().split('T')[0]}}</span>
+              <span v-if="work.date && work.date.from">{{work.date.from | toDate}} - </span>
+              <span v-if="work.date && work.date.to && !work.date.present">{{work.date.to | toDate}}</span>
+              <span v-if="work.date.present">Current work</span>
             </h3>
             <p class="description" v-html="work.description" />
           </div>
@@ -129,6 +130,11 @@ export default {
       }, )
     }
   },
+  filters: {
+    toDate(val) {
+      return val.toString().split('T')[0]
+    }
+  },
   watch: {
     color: {
       handler(val){
@@ -190,6 +196,7 @@ export default {
   },
   mounted() {
     this.getPreviewHeight()
+    console.log(this.workHistory);
   },
 };
 </script>

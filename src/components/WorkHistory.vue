@@ -41,7 +41,10 @@
                         </div>
                         <div class="col-md-12">
                             <Dates :dates="work.date" :checked="work.date.present" @update-date="updateJobDate(i, ...arguments)" />
-                            <input type="checkbox" :checked="work.date.present" @click="work.date.present = !work.date.present" />
+                            <span>
+                                <input type="checkbox" id="checkbox" :checked="work.date.present" @click="work.date.present = !work.date.present" />
+                                <label class="checkbox-label" for="checkbox">I am currently work here</label>
+                            </span>
                         </div>
                         <div class="col-md-12">
                             <div class="text-left">
@@ -77,7 +80,6 @@ import { VueEditor } from "vue2-editor";
 export default {
     data() {
         return {
-           
             workHistory: [],
             divId: 2,
             customToolbar: [
@@ -101,11 +103,10 @@ export default {
                 'jobTitle': '',
                 'employer': '',
                 'date': {
-                    'from': '',
-                    'to': '',
+                    'from': new Date(),
+                    'to': new Date(),
                     'present': false
                 },
-                'currentlyWork': false,
                 'description': '',
             })
         },
@@ -128,7 +129,6 @@ export default {
     watch: {
         present: {
             handler(val) {
-                console.log(val);
                 localStorage.setItem('present', val)
             }, deep: true
         },
@@ -163,6 +163,12 @@ export default {
 
 <style lang="scss" scoped>
 
+.checkbox-label {
+    position: relative;
+    top: -2px;
+    margin-left: 4px;
+    font-size: 12px;
+}
 
 .add-job-btn {
     display: flex;

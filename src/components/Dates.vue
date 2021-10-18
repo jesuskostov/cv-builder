@@ -10,7 +10,7 @@
           :default-value="startDate"
           v-model="startDate"
           ref="startDate"
-          class="w-100" 
+          class="w-100"
           input-class="form-control m-0"
         />
       </div>
@@ -19,7 +19,6 @@
       <div class="text-left">
         <label for="startDate">To</label>
         <br />
-        {{checked}}
         <date-picker
           type="month"
           :disabled-date="disabledRangeEndDate"

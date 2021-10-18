@@ -81,30 +81,82 @@
           <span class="line"></span>
         </div>
         <div class="row pt-5">
-          <div v-for="i in 3" :key="i" class="col-md-4 mb-3">            
+          <div class="col-md-4 mb-3">            
             <div class="testimonies" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-ease="ease" :data-aos-delay="i * 50">
-                  <div class="testimonies__header">
-                    <div class="testimonies__header__profile">
-                      <div class="d-flex flex-column">
-                        <h4 class="text-left">John Doe</h4>
-                        <div class="text-left">
-                          <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
-                              <g>
-                                  <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
-                                      c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
-                                      c-5.649,0.82-10.344,4.778-12.108,10.208c-1.765,5.431-0.293,11.392,3.796,15.377l114.848,111.954L92.271,482.671
-                                      c-0.966,5.628,1.348,11.314,5.967,14.671c2.613,1.898,5.708,2.864,8.818,2.864c2.388,0,4.784-0.569,6.978-1.723l141.967-74.638
-                                      l141.961,74.637c5.055,2.657,11.178,2.215,15.797-1.141c4.619-3.356,6.934-9.044,5.969-14.672l-27.117-158.081l114.861-111.955
-                                      C511.56,208.649,513.033,202.688,511.267,197.258z"/>
-                              </g>
-                          </svg>
-                        </div>
+                <div class="testimonies__header">
+                  <div class="testimonies__header__profile">
+                    <div class="d-flex flex-column">
+                      <h4 class="text-left">John Doe</h4>
+                      <div class="text-left">
+                        <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
+                            <g>
+                                <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
+                                    c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
+                                    c-5.649,0.82-10.344,4.778-12.108,10.208c-1.765,5.431-0.293,11.392,3.796,15.377l114.848,111.954L92.271,482.671
+                                    c-0.966,5.628,1.348,11.314,5.967,14.671c2.613,1.898,5.708,2.864,8.818,2.864c2.388,0,4.784-0.569,6.978-1.723l141.967-74.638
+                                    l141.961,74.637c5.055,2.657,11.178,2.215,15.797-1.141c4.619-3.356,6.934-9.044,5.969-14.672l-27.117-158.081l114.861-111.955
+                                    C511.56,208.649,513.033,202.688,511.267,197.258z"/>
+                            </g>
+                        </svg>
                       </div>
                     </div>
                   </div>
-                  <div class="testimonies__body">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut vero animi beatae? Earum pariatur aperiam quam error. Illum sunt temporibus dolor quae voluptatum a reiciendis mollitia! Vel, dolor voluptates. Aspernatur!</p>
+                </div>
+                <div class="testimonies__body">
+                  <p>I’ve never enjoyed the process of writing my CV but this CV tool made the task so much easier than I ever thought it could be.</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">            
+            <div class="testimonies" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-ease="ease" :data-aos-delay="i * 50">
+                <div class="testimonies__header">
+                  <div class="testimonies__header__profile">
+                    <div class="d-flex flex-column">
+                      <h4 class="text-left">Sandra Mills</h4>
+                      <div class="text-left">
+                        <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
+                            <g>
+                                <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
+                                    c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
+                                    c-5.649,0.82-10.344,4.778-12.108,10.208c-1.765,5.431-0.293,11.392,3.796,15.377l114.848,111.954L92.271,482.671
+                                    c-0.966,5.628,1.348,11.314,5.967,14.671c2.613,1.898,5.708,2.864,8.818,2.864c2.388,0,4.784-0.569,6.978-1.723l141.967-74.638
+                                    l141.961,74.637c5.055,2.657,11.178,2.215,15.797-1.141c4.619-3.356,6.934-9.044,5.969-14.672l-27.117-158.081l114.861-111.955
+                                    C511.56,208.649,513.033,202.688,511.267,197.258z"/>
+                            </g>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
+                </div>
+                <div class="testimonies__body">
+                  <p>I was able to create my CV in under 30 minutes using this tools and got contacted by 3 companies less than 14 days after submitting applications. Very impressed!</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">            
+            <div class="testimonies" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-ease="ease" :data-aos-delay="i * 50">
+                <div class="testimonies__header">
+                  <div class="testimonies__header__profile">
+                    <div class="d-flex flex-column">
+                      <h4 class="text-left">Sandra Mills</h4>
+                      <div class="text-left">
+                        <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
+                            <g>
+                                <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
+                                    c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
+                                    c-5.649,0.82-10.344,4.778-12.108,10.208c-1.765,5.431-0.293,11.392,3.796,15.377l114.848,111.954L92.271,482.671
+                                    c-0.966,5.628,1.348,11.314,5.967,14.671c2.613,1.898,5.708,2.864,8.818,2.864c2.388,0,4.784-0.569,6.978-1.723l141.967-74.638
+                                    l141.961,74.637c5.055,2.657,11.178,2.215,15.797-1.141c4.619-3.356,6.934-9.044,5.969-14.672l-27.117-158.081l114.861-111.955
+                                    C511.56,208.649,513.033,202.688,511.267,197.258z"/>
+                            </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonies__body">
+                  <p>I loved the step-by-step process of adding information to my CV. It really helped me figure out the best ways to improve my CV without too much effort</p>
+                </div>
             </div>
           </div>
         </div>
@@ -309,6 +361,7 @@ export default {
   background-color: #fff;
 }
 .testimonies {
+  height: 100%;
   padding: 30px;
   border-radius: 8px;
   background-color: #fff;
