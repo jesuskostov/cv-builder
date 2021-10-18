@@ -40,8 +40,8 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <Dates :dates="work.date" :checked="present" @update-date="updateJobDate(i, ...arguments)" />
-                            <input type="checkbox" :checked="present" @click="present = !present" />
+                            <Dates :dates="work.date" :checked="work.date.present" @update-date="updateJobDate(i, ...arguments)" />
+                            <input type="checkbox" :checked="work.date.present" @click="work.date.present = !work.date.present" />
                         </div>
                         <div class="col-md-12">
                             <div class="text-left">
@@ -77,7 +77,7 @@ import { VueEditor } from "vue2-editor";
 export default {
     data() {
         return {
-            present: false,
+           
             workHistory: [],
             divId: 2,
             customToolbar: [
@@ -102,7 +102,8 @@ export default {
                 'employer': '',
                 'date': {
                     'from': '',
-                    'to': ''
+                    'to': '',
+                    'present': false
                 },
                 'currentlyWork': false,
                 'description': '',
