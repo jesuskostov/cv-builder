@@ -43,7 +43,7 @@
                             <Dates :dates="work.date" :checked="work.date.present" @update-date="updateJobDate(i, ...arguments)" />
                             <span>
                                 <input type="checkbox" id="checkbox" :checked="work.date.present" @click="work.date.present = !work.date.present" />
-                                <label class="checkbox-label" for="checkbox">I am currently work here</label>
+                                <label class="checkbox-label" for="checkbox">I am currently working here</label>
                             </span>
                         </div>
                         <div class="col-md-12">

@@ -81,11 +81,11 @@
                             </b-collapse>
                           </b-card>
 
-                          <b-card no-body>
+                          <b-card no-body class="mb-3">
                             <b-card-header header-tag="header" class="h4" role="tab">
-                                <h4 block v-b-toggle.accordion-6>Can I make a CV for any type of job?</h4>
+                                <h4 block v-b-toggle.accordion-7>Can I make a CV for any type of job?</h4>
                             </b-card-header>
-                            <b-collapse id="accordion-6" accordion="my-accordion" role="tabpanel">
+                            <b-collapse id="accordion-7" accordion="my-accordion" role="tabpanel">
                                 <b-card-body class="text-left">
                                 <b-card-text>
                                     Yes, you can make a CV for any kind of job with our CV Builder and use different CV templates for different sectors or companies if you wish. We have a multitude of CV samples available in our CV editor, which can be personalised to fit your profile and tailored for the vacancy that interests you.Whatever your professional field, Our tool can help you create a winning CV to stand out in your sector and land the interview! 
@@ -94,6 +94,38 @@
                                 </b-card-body>
                             </b-collapse>
                           </b-card>
+
+                          <b-card no-body class="mb-3">
+                            <b-card-header header-tag="header" class="h4" role="tab">
+                                <h4 block v-b-toggle.accordion-8>What plans are available?</h4>
+                            </b-card-header>
+                            <b-collapse id="accordion-8" accordion="my-accordion" role="tabpanel">
+                                <b-card-body class="text-left">
+                                <b-card-text>
+                                  We offers different options in our CV builder for jobseekers creating their CV online allowing access to our expertly designed CV maker with formatting tools, professional advice and practical examples.
+                                  Jobseekers can choose between basic or unlimited options that allow users different levels of access to everything. Check out our CV builder subscription plans and our current deals to find out which promotion suits you best.
+                                  You can upgrade or unsubscribe at any time
+                                </b-card-text>
+                                </b-card-body>
+                            </b-collapse>
+                          </b-card>
+
+                          <b-card no-body class="mb-3">
+                            <b-card-header header-tag="header" class="h4" role="tab">
+                                <h4 block v-b-toggle.accordion-9>If I have a LinkedIn profile, do I still need a CV?</h4>
+                            </b-card-header>
+                            <b-collapse id="accordion-9" accordion="my-accordion" role="tabpanel">
+                                <b-card-body class="text-left">
+                                  <b-card-text>
+                                    Yes! Although LinkedIn is making the job market more accessible for jobseekers as well as allowing recruiters easy access to applicants from all over,
+                                    it is imperative you have an updated, effective CV.Whether applying via LinkedIn or other job vacancy platforms,
+                                    recruiters will still ask for a physical or digital copy of your work history, education, skills etc.
+                                    in one place to be able to refer to it during the selection process or interview.
+                                  </b-card-text>
+                                </b-card-body>
+                            </b-collapse>
+                          </b-card>
+                          
                       </div>
                     </div>
                 </div>

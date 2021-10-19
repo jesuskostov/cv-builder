@@ -138,7 +138,7 @@
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
-                      <h4 class="text-left">Sandra Mills</h4>
+                      <h4 class="text-left">James Mahoney</h4>
                       <div class="text-left">
                         <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
                             <g>
