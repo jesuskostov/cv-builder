@@ -125,7 +125,62 @@
                                 </b-card-body>
                             </b-collapse>
                           </b-card>
+
+                          <b-card no-body class="mb-3">
+                            <b-card-header header-tag="header" class="h4" role="tab">
+                                <h4 block v-b-toggle.accordion-10>Is this tool safe and legit?</h4>
+                            </b-card-header>
+                            <b-collapse id="accordion-10" accordion="my-accordion" role="tabpanel">
+                                <b-card-body class="text-left">
+                                  <b-card-text>
+                                    Yes, the tool is a legit. The application is safe thanks to a secure SSL https encrypted connection. Your personal data is processed according to stri
+                                  </b-card-text>
+                                </b-card-body>
+                            </b-collapse>
+                          </b-card>
+
+                          <b-card no-body class="mb-3">
+                            <b-card-header header-tag="header" class="h4" role="tab">
+                                <h4 block v-b-toggle.accordion-11>What is a CV maker?</h4>
+                            </b-card-header>
+                            <b-collapse id="accordion-11" accordion="my-accordion" role="tabpanel">
+                                <b-card-body class="text-left">
+                                  <b-card-text>
+                                    CV builder is an online app or piece of software that helps users build their CV with interactive forms and templates.
+                                  </b-card-text>
+                                </b-card-body>
+                            </b-collapse>
+                          </b-card>
                           
+                          <b-card no-body class="mb-3">
+                            <b-card-header header-tag="header" class="h4" role="tab">
+                                <h4 block v-b-toggle.accordion-12>How to layout a resume?</h4>
+                            </b-card-header>
+                            <b-collapse id="accordion-12" accordion="my-accordion" role="tabpanel">
+                                <b-card-body class="text-left">
+                                  <b-card-text>
+                                    The most effective resume layouts use professional fonts, single line spacing,
+                                    clear section headings and half-inch margins. It’s best to focus on your most
+                                    relevant and recent experience first. The first page should feature your
+                                    personal summary and contact info at the top.
+                                  </b-card-text>
+                                </b-card-body>
+                            </b-collapse>
+                          </b-card>
+
+                          <b-card no-body class="mb-3">
+                            <b-card-header header-tag="header" class="h4" role="tab">
+                                <h4 block v-b-toggle.accordion-13>Should resumes be one page?</h4>
+                            </b-card-header>
+                            <b-collapse id="accordion-13" accordion="my-accordion" role="tabpanel">
+                                <b-card-body class="text-left">
+                                  <b-card-text>
+                                    It’s a myth that employers prefer one page over two pages. As long as your resume is clear and easy to read, you can include two pages. If your work experience is limited to fewer than ten years, you may want to stick to one page. Otherwise, don’t sell yourself short.
+                                  </b-card-text>
+                                </b-card-body>
+                            </b-collapse>
+                          </b-card>
+
                       </div>
                     </div>
                 </div>

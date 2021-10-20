@@ -447,9 +447,9 @@ export default {
   border-radius: 10px;
 }
 
-.cv-list::-webkit-scrollbar-track {
-  // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
+// .cv-list::-webkit-scrollbar-track {
+//   // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+// }
 
 .cv-list::-webkit-scrollbar-thumb {
   background-color: #9ca0a5;
