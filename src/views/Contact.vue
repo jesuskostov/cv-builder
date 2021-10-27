@@ -52,8 +52,8 @@ export default {
 <style lang="scss" scoped>
 
 .contact-form {
-    position: relative;
-    top: -50px;
+  position: relative;
+  top: -50px;
 }
 
 #intro-section {

@@ -371,7 +371,6 @@ export default {
   @media (max-width: 1199.98px) {
     overflow: hidden;
   }
-  
 }
 
 h1 {
@@ -465,12 +464,12 @@ h1 {
   padding: 3rem 0;
   background-color: #fff;
 }
+
 .testimonies {
-  height: 100%;
   padding: 30px;
+  height: 100%;
   border-radius: 8px;
   background-color: #fff;
-  // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   &__header {
     display: flex;

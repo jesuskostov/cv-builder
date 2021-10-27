@@ -233,9 +233,8 @@ h1 {
 }
 
 .faq-section {
-    background-color: #fff;
+  background-color: #fff;
 }
-
 
 .accordion {
   margin-bottom: 0;

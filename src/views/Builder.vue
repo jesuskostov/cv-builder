@@ -15,7 +15,6 @@
               :viewBox="`0 0 700 ${previewHeight}`"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <!-- Common use case: embed HTML text into SVG -->
               <foreignObject x="0" y="0" width="100%" :height="previewHeight">
                   <templates
                     :color="color"
@@ -85,23 +84,21 @@
               <span class="line"></span>
             </div>
             <div class="d-flex flex-column mb-4" v-if="step == 5">
-              <div>
-                <p class="text-left mb-1">
-                  Template name: <b>{{ nickname }}</b>
-                </p>
-                <div class="colors justify-content-start mb-4">
-                  <button
-                    v-for="(item, i) in colors"
-                    :key="i"
-                    @click="color = item"
-                    :style="`background-color: ${item}`"
-                  ></button>
-                </div>
-                <button class="edit" @click="showBigPreview">
-                  Change CV template
-                  <img src="../assets/images/pencil.svg" alt="" />
-                </button>
+              <p class="text-left mb-1">
+                Template name: <b>{{ nickname }}</b>
+              </p>
+              <div class="colors justify-content-start mb-4">
+                <button
+                  v-for="(item, i) in colors"
+                  :key="i"
+                  @click="color = item"
+                  :style="`background-color: ${item}`"
+                ></button>
               </div>
+              <button class="edit" @click="showBigPreview">
+                Change CV template
+                <img src="../assets/images/pencil.svg" alt="edit icon" />
+              </button>
             </div>
             <div class="steps-title mb-4">
               <h3>Summary Section</h3>
@@ -110,17 +107,17 @@
             <div class="d-flex flex-column flex-grow-1" v-if="step == 5">
               <div>
                 <button class="edit" @click="goTo(1)">
-                  Personal <img src="../assets/images/pencil.svg" alt="" />
+                  Personal <img src="../assets/images/pencil.svg" alt="edit icon" />
                 </button>
                 <button class="edit" @click="goTo(2)">
-                  Work history <img src="../assets/images/pencil.svg" alt="" />
+                  Work history <img src="../assets/images/pencil.svg" alt="edit icon" />
                 </button>
                 <button class="edit" @click="goTo(3)">
                   Education & skills
-                  <img src="../assets/images/pencil.svg" alt="" />
+                  <img src="../assets/images/pencil.svg" alt="edit icon" />
                 </button>
                 <button class="edit" @click="goTo(4)">
-                  Other <img src="../assets/images/pencil.svg" alt="" />
+                  Other <img src="../assets/images/pencil.svg" alt="edit icon" />
                 </button>
               </div>
               <button
@@ -209,8 +206,6 @@ import Templates from "../components/Template.vue";
 import VueHtml2pdf from "vue-html2pdf";
 import Footer from "../components/Footer.vue";
 import { templates } from "../store/templates";
-// import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-// import '../../node_modules/swiper/dist/css/swiper.css'
 
 export default {
   data() {
@@ -224,27 +219,6 @@ export default {
         purple: "#8a75aa",
       },
       bigPreview: false,
-      swiperOption: {
-        grabCursor: true,
-        spaceBetween: 30,
-        slidesPerView: "8",
-        loop: true,
-        autoplay: 2000,
-        breakpoints: {
-          320: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          480: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          640: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        },
-      },
       nickname: "",
     };
   },
@@ -253,8 +227,6 @@ export default {
     Templates,
     VueHtml2pdf,
     Footer,
-    // Swiper,
-    // SwiperSlide,
   },
   computed: {
     selectedCv() {
@@ -423,8 +395,8 @@ export default {
 
 .close-btn {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 15px;
+  right: 15px;
   background-color: transparent;
   border: 0;
   z-index: 9999;
@@ -446,10 +418,6 @@ export default {
   width: 0.4em;
   border-radius: 10px;
 }
-
-// .cv-list::-webkit-scrollbar-track {
-//   // box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-// }
 
 .cv-list::-webkit-scrollbar-thumb {
   background-color: #9ca0a5;
@@ -490,12 +458,6 @@ export default {
   height: 100%;
   object-fit: cover;
   padding: 0.5rem;
-}
-
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
 }
 
 .cv-preview-shadow {

@@ -82,7 +82,7 @@
         </div>
         <div class="row pt-5">
           <div class="col-md-4 mb-3">            
-            <div class="testimonies" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-ease="ease" :data-aos-delay="i * 50">
+            <div class="testimonies" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-ease="ease" :data-aos-delay="50">
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
@@ -108,7 +108,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">            
-            <div class="testimonies" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-ease="ease" :data-aos-delay="i * 50">
+            <div class="testimonies" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-ease="ease" :data-aos-delay="150">
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
@@ -134,7 +134,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">            
-            <div class="testimonies" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-ease="ease" :data-aos-delay="i * 50">
+            <div class="testimonies" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-ease="ease" :data-aos-delay="200">
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
@@ -360,12 +360,12 @@ export default {
   padding: 3rem 0;
   background-color: #fff;
 }
+
 .testimonies {
   height: 100%;
   padding: 30px;
   border-radius: 8px;
   background-color: #fff;
-  // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   &__header {
     display: flex;
@@ -646,7 +646,6 @@ h1 {
     z-index: 1;
   }
 }
-
 
 .accordion {
   margin-bottom: 0;

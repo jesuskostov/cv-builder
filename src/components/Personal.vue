@@ -229,7 +229,6 @@ export default {
 }
 </script>
 
-
 <style lang="scss" scoped>
 .add-photo-container {
     display: flex;
