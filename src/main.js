@@ -14,9 +14,14 @@ import VueGtag from "vue-gtag";
 
 Vue.config.productionTip = false;
 
-Vue.use(VueGtag, {
-  config: { id: process.env.VUE_APP_GOOGLE_ANALITICS_ID }
-});
+Vue.use(
+  VueGtag,
+  {
+    config: { id: process.env.VUE_APP_GOOGLE_ANALITICS_ID },
+  },
+  router
+);
+
 Vue.use(VueAwesomeSwiper);
 Vue.use(VeeValidate);
 Vue.use(BootstrapVue);
