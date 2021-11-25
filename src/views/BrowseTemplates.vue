@@ -2,9 +2,12 @@
   <div>
     <div class="container">
       <div class="steps-title text-center pt-5">
-        <h1>Le seul site du marché qui vous offre <br> <b>14 CV en même temps</b></h1>         
+        <h1>The only website which offers you all CV all at once!</h1>         
         <span class="line mx-auto"></span>
-        <p class="text mt-3">Changez facilement de modèle pendant sa création. À la fin ?</p>
+        <p class="text mt-3">You make your CV and you receive it in PDF format with ALL THESE TEMPLATES!
+          You can alternate your CV template during its creation in one click!
+          Easy. Fast. Efficient. 
+        </p>
       </div>
     </div>
     <templates class="pt-5" :onBrowse="true" :preview="true" />

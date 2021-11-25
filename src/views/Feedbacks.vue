@@ -21,7 +21,7 @@
     <div id="testimonies">
       <div class="container">
         <div class="section-title mb-5">
-          <h2>What our clients say</h2>
+          <h2>What our clients say:</h2>
           <span class="line"></span>
         </div>
         <div class="row pt-5">
@@ -30,7 +30,7 @@
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
-                      <h4 class="text-left">John Doe</h4>
+                      <h4 class="text-left">Roberto Lombardi</h4>
                       <div class="text-left">
                         <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
                             <g>
@@ -47,7 +47,7 @@
                   </div>
                 </div>
                 <div class="testimonies__body">
-                  <p>I’ve never enjoyed the process of writing my CV but this CV tool made the task so much easier than I ever thought it could be.</p>
+                  <p>Good tool with many templates to choose from.</p>
                 </div>
             </div>
           </div>
@@ -56,7 +56,7 @@
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
-                      <h4 class="text-left">Sandra Mills</h4>
+                      <h4 class="text-left">Sarah Bagni</h4>
                       <div class="text-left">
                         <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
                             <g>
@@ -73,7 +73,7 @@
                   </div>
                 </div>
                 <div class="testimonies__body">
-                  <p>I was able to create my CV in under 30 minutes using this tools and got contacted by 3 companies less than 14 days after submitting applications. Very impressed!</p>
+                  <p>Love it! Great interface! Thumbs up for ease of use and great selection of templates and designs. I really liked to pick my own colors.</p>
                 </div>
             </div>
           </div>
@@ -82,7 +82,7 @@
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
-                      <h4 class="text-left">James Mahoney</h4>
+                      <h4 class="text-left">Giovanni L***</h4>
                       <div class="text-left">
                         <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
                             <g>
@@ -99,7 +99,7 @@
                   </div>
                 </div>
                 <div class="testimonies__body">
-                  <p>I loved the step-by-step process of adding information to my CV. It really helped me figure out the best ways to improve my CV without too much effort</p>
+                  <p>Easy to use, affordable and reliable. Great template to get you started with your CV at whatever level you are at your career.</p>
                 </div>
             </div>
           </div>
@@ -108,7 +108,7 @@
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
-                      <h4 class="text-left">Dan Owen</h4>
+                      <h4 class="text-left">Guilia Ricci</h4>
                       <div class="text-left">
                         <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
                             <g>
@@ -126,7 +126,7 @@
                 </div>
                 <div class="testimonies__body">
                   <p>
-                     This tool gave me all the help I needed to make my first CV, that fitted my experience level and gave employers just the incentive to contact me.
+                    Very easy to use and has very good structure that leads you along the way of creating the perfect resume. Was surprised it was already finished!
                   </p>
                 </div>
             </div>
@@ -136,7 +136,7 @@
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
-                      <h4 class="text-left">Laura Thompson</h4>
+                      <h4 class="text-left">Giuseppe P***</h4>
                       <div class="text-left">
                         <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
                             <g>
@@ -153,7 +153,7 @@
                   </div>
                 </div>
                 <div class="testimonies__body">
-                  <p>With my new, better looking CV I quickly got called in for interviews and found my new job about a month later.</p>
+                  <p>Very Seamless, love it!</p>
                 </div>
             </div>
           </div>
@@ -162,7 +162,7 @@
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
-                      <h4 class="text-left">John Doe</h4>
+                      <h4 class="text-left">Raffaello Petri</h4>
                       <div class="text-left">
                         <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
                             <g>
@@ -179,7 +179,7 @@
                   </div>
                 </div>
                 <div class="testimonies__body">
-                  <p>I’ve never enjoyed the process of writing my CV but this CV tool made the task so much easier than I ever thought it could be.</p>
+                  <p>This CV builder is simply brilliant! I was very pleased by how helpful this is. I was able to do it in a short period of time and easily add and make changes whenever I wanted. And the swap template feature is really a super cool feature!</p>
                 </div>
             </div>
           </div>
@@ -188,7 +188,7 @@
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
-                      <h4 class="text-left">Sandra Mills</h4>
+                      <h4 class="text-left">Eva C***</h4>
                       <div class="text-left">
                         <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
                             <g>
@@ -205,7 +205,7 @@
                   </div>
                 </div>
                 <div class="testimonies__body">
-                  <p>I was able to create my CV in under 30 minutes using this tools and got contacted by 3 companies less than 14 days after submitting applications. Very impressed!</p>
+                  <p>Very easy to use service. Multiple options for templates. Fill in the blank in many sections and everything is already pre-formatted. Flawless! I will use this service again.</p>
                 </div>
             </div>
           </div>
@@ -214,7 +214,7 @@
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
-                      <h4 class="text-left">James Mahoney</h4>
+                      <h4 class="text-left">Giulio Parigi</h4>
                       <div class="text-left">
                         <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
                             <g>
@@ -231,7 +231,7 @@
                   </div>
                 </div>
                 <div class="testimonies__body">
-                  <p>I loved the step-by-step process of adding information to my CV. It really helped me figure out the best ways to improve my CV without too much effort</p>
+                  <p>I FINALLY have a professional-looking resume!!!!!! This has saved me so many tears! Effortless. WOW!!!!! MANY THANKS!!!!!!</p>
                 </div>
             </div>
           </div>

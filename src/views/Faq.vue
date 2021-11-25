@@ -19,12 +19,17 @@
                       <div class="accordion" role="tablist">
                           <b-card no-body class="mb-3">
                             <b-card-header header-tag="header" class="h4" role="tab">
-                                <h4 block v-b-toggle.accordion-1 >How our website work?</h4>
+                                <h4 block v-b-toggle.accordion-1 >How does it work?</h4>
                             </b-card-header>
                             <b-collapse visible id="accordion-1" accordion="my-accordion" role="tabpanel">
                                 <b-card-body>
                                 <b-card-text class="text-left">
-                                    <p>It really is as simple as 1, 2, 3&hellip;<br />1. Sign in to your Online-cv account and choose a CV template from our exclusive database.<br />2. Complete all the fields you wish to include, using our practical examples as a guide.<br />3. Finally download your finished CV and start applying!<br />Within minutes you can get your up-to-date, winning CV online to download.</p>
+                                    <ol>
+                                      <li>Choose a template;</li>
+                                      <li>Fill the data;</li>
+                                      <li>Once completed swap between templates to pick the very best one;</li>
+                                      <li>Download the CV in PDF format. As simple as that!</li>
+                                    </ol>
                                 </b-card-text>
                                 </b-card-body>
                             </b-collapse>
@@ -32,25 +37,14 @@
 
                           <b-card no-body class="mb-3">
                             <b-card-header header-tag="header" class="h4" role="tab">
-                                <h4 block v-b-toggle.accordion-2>Where can I find my CV to edit?</h4>
-                            </b-card-header>
-                            <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
-                                <b-card-body>
-                                <b-card-text class="text-left">
-                                    When you log into your account, you will see all your saved CVs on your account home page. By simply clicking on the CV you wish to edit you will be able to modify texts and change what is included on your final CV before downloading.
-                                </b-card-text>
-                                </b-card-body>
-                            </b-collapse>
-                          </b-card>
-
-                          <b-card no-body class="mb-3">
-                            <b-card-header header-tag="header" class="h4" role="tab">
-                                <h4 block v-b-toggle.accordion-3>How long does it take to make my CV?</h4>
+                                <h4 block v-b-toggle.accordion-3>How long does it take?</h4>
                             </b-card-header>
                             <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
                                 <b-card-body>
                                 <b-card-text class="text-left">
-                                    Minutes! With our helpful tips and practical examples, you can create your winning CV on our CV builder easily within half an hour.
+                                    Minutes!<br>
+                                    Really, minutes!<br>
+                                    With our unique tools, you will create your efficient CV in no time!
                                 </b-card-text>
                                 </b-card-body>
                             </b-collapse>
@@ -58,7 +52,22 @@
 
                           <b-card no-body class="mb-3">
                             <b-card-header header-tag="header" class="h4" role="tab">
-                                <h4 block v-b-toggle.accordion-4>Can I change my CV template?</h4>
+                                <h4 block v-b-toggle.accordion-2>Can I make a break during the process?</h4>
+                            </b-card-header>
+                            <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
+                                <b-card-body>
+                                <b-card-text class="text-left">
+                                    Yes, we store your data along the way.<br>
+                                    You can take the time YOU WANT to search for additional data or edit it peacefully.<br>
+                                    You can even start today and finish it tomorrow, all your data will be saved to offer you the best flexibility.
+                                </b-card-text>
+                                </b-card-body>
+                            </b-collapse>
+                          </b-card>
+
+                          <b-card no-body class="mb-3">
+                            <b-card-header header-tag="header" class="h4" role="tab">
+                                <h4 block v-b-toggle.accordion-4>Can I easily change my template?</h4>
                             </b-card-header>
                             <b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
                                 <b-card-body>
@@ -70,12 +79,14 @@
 
                           <b-card no-body class="mb-3">
                             <b-card-header header-tag="header" class="h4" role="tab">
-                                <h4 block v-b-toggle.accordion-5>I made my CV on my laptop, can I access it from another device?</h4>
+                                <h4 block v-b-toggle.accordion-5>Can I make my CV on my mobile phone?</h4>
                             </b-card-header>
                             <b-collapse id="accordion-5" accordion="my-accordion" role="tabpanel">
                                 <b-card-body>
                                 <b-card-text class="text-left">
-                                    Yes, users can use any smartphone, tablet, iPad, desktop or laptop computer to access their account and all their saved CVs. CVs will be saved automatically as you work. Оur tool allows its users to log into their account from any Internet access point in order to edit, download and send their CVs at any time from anywhere.
+                                    Yes! Lots of yesses, we know! ;)
+                                    Our unique tools have been developed for all the available appliances: smartphones, tablets, iPad, Microsoft Surfaces, desktops and laptops.
+                                    Enjoy our global technical approach!
                                 </b-card-text>
                                 </b-card-body>
                             </b-collapse>
@@ -88,8 +99,9 @@
                             <b-collapse id="accordion-7" accordion="my-accordion" role="tabpanel">
                                 <b-card-body class="text-left">
                                 <b-card-text>
-                                    Yes, you can make a CV for any kind of job with our CV Builder and use different CV templates for different sectors or companies if you wish. We have a multitude of CV samples available in our CV editor, which can be personalised to fit your profile and tailored for the vacancy that interests you.Whatever your professional field, Our tool can help you create a winning CV to stand out in your sector and land the interview! 
-                                    We even have CV advice for individual job seekers in different industries catered specifically for your needs, including sectors such as healthcare, HR, Project Management, Accounting, Hospitality and many more.
+                                    Yes!<br>
+                                    At any moment, you can swap for any of our other templates.<br>
+                                    Use our tools to its fullest, try all the templates easily!
                                 </b-card-text>
                                 </b-card-body>
                             </b-collapse>
@@ -97,30 +109,15 @@
 
                           <b-card no-body class="mb-3">
                             <b-card-header header-tag="header" class="h4" role="tab">
-                                <h4 block v-b-toggle.accordion-8>What plans are available?</h4>
-                            </b-card-header>
-                            <b-collapse id="accordion-8" accordion="my-accordion" role="tabpanel">
-                                <b-card-body class="text-left">
-                                <b-card-text>
-                                  We offers different options in our CV builder for jobseekers creating their CV online allowing access to our expertly designed CV maker with formatting tools, professional advice and practical examples.
-                                  Jobseekers can choose between basic or unlimited options that allow users different levels of access to everything. Check out our CV builder subscription plans and our current deals to find out which promotion suits you best.
-                                  You can upgrade or unsubscribe at any time
-                                </b-card-text>
-                                </b-card-body>
-                            </b-collapse>
-                          </b-card>
-
-                          <b-card no-body class="mb-3">
-                            <b-card-header header-tag="header" class="h4" role="tab">
-                                <h4 block v-b-toggle.accordion-9>If I have a LinkedIn profile, do I still need a CV?</h4>
+                                <h4 block v-b-toggle.accordion-9>If I have a LinkedIn profile, do I still need to make a CV?</h4>
                             </b-card-header>
                             <b-collapse id="accordion-9" accordion="my-accordion" role="tabpanel">
                                 <b-card-body class="text-left">
                                   <b-card-text>
-                                    Yes! Although LinkedIn is making the job market more accessible for jobseekers as well as allowing recruiters easy access to applicants from all over,
-                                    it is imperative you have an updated, effective CV.Whether applying via LinkedIn or other job vacancy platforms,
-                                    recruiters will still ask for a physical or digital copy of your work history, education, skills etc.
-                                    in one place to be able to refer to it during the selection process or interview.
+                                    Yes! Unfortunately! ;)
+                                    LinkedIn is a useful tool, but it doesn’t offer the same value during the recruitment process.
+                                    Whether applying via LinkedIn or other job vacancy platforms, recruiters will still ask for a digital copy of your work history, education, skills in one place to be able to refer to it during the selection process.
+                                    LinkedIn is simply a solid plus to add in your CV, this is why all our templates allow you to add your LinkedIn account.
                                   </b-card-text>
                                 </b-card-body>
                             </b-collapse>
@@ -128,12 +125,13 @@
 
                           <b-card no-body class="mb-3">
                             <b-card-header header-tag="header" class="h4" role="tab">
-                                <h4 block v-b-toggle.accordion-10>Is this tool safe and legit?</h4>
+                                <h4 block v-b-toggle.accordion-10>Are your tools safe?</h4>
                             </b-card-header>
                             <b-collapse id="accordion-10" accordion="my-accordion" role="tabpanel">
                                 <b-card-body class="text-left">
                                   <b-card-text>
-                                    Yes, the tool is a legit. The application is safe thanks to a secure SSL https encrypted connection. Your personal data is processed according to stri
+                                    Yes, our tools have been tested on all platforms with success!
+                                    They are secures with the SSL https encrypted protocol.
                                   </b-card-text>
                                 </b-card-body>
                             </b-collapse>
@@ -141,28 +139,14 @@
 
                           <b-card no-body class="mb-3">
                             <b-card-header header-tag="header" class="h4" role="tab">
-                                <h4 block v-b-toggle.accordion-11>What is a CV maker?</h4>
+                                <h4 block v-b-toggle.accordion-11>Are your tools private?</h4>
                             </b-card-header>
                             <b-collapse id="accordion-11" accordion="my-accordion" role="tabpanel">
                                 <b-card-body class="text-left">
                                   <b-card-text>
-                                    CV builder is an online app or piece of software that helps users build their CV with interactive forms and templates.
-                                  </b-card-text>
-                                </b-card-body>
-                            </b-collapse>
-                          </b-card>
-                          
-                          <b-card no-body class="mb-3">
-                            <b-card-header header-tag="header" class="h4" role="tab">
-                                <h4 block v-b-toggle.accordion-12>How to layout a resume?</h4>
-                            </b-card-header>
-                            <b-collapse id="accordion-12" accordion="my-accordion" role="tabpanel">
-                                <b-card-body class="text-left">
-                                  <b-card-text>
-                                    The most effective resume layouts use professional fonts, single line spacing,
-                                    clear section headings and half-inch margins. It’s best to focus on your most
-                                    relevant and recent experience first. The first page should feature your
-                                    personal summary and contact info at the top.
+                                    Yes, our tools are 100% private.<br>
+                                    Your personal data is strictly protected.<br>
+                                    No one can consult them!
                                   </b-card-text>
                                 </b-card-body>
                             </b-collapse>
@@ -170,12 +154,31 @@
 
                           <b-card no-body class="mb-3">
                             <b-card-header header-tag="header" class="h4" role="tab">
-                                <h4 block v-b-toggle.accordion-13>Should resumes be one page?</h4>
+                                <h4 block v-b-toggle.accordion-12>Do I need to layout myself my CV?</h4>
+                            </b-card-header>
+                            <b-collapse id="accordion-12" accordion="my-accordion" role="tabpanel">
+                                <b-card-body class="text-left">
+                                  <b-card-text>
+                                    No! <br>
+                                    We have done all the work for you!<br>
+                                    Our professionally designed CV are following all the latest trends in the recruitment industry!
+                                    Pick the one you prefer, fill your data, and download your PDF.<br>
+                                    Yes, it’s that easy!
+                                  </b-card-text>
+                                </b-card-body>
+                            </b-collapse>
+                          </b-card>
+
+                          <b-card no-body class="mb-3">
+                            <b-card-header header-tag="header" class="h4" role="tab">
+                                <h4 block v-b-toggle.accordion-13>How long should your CV be?</h4>
                             </b-card-header>
                             <b-collapse id="accordion-13" accordion="my-accordion" role="tabpanel">
                                 <b-card-body class="text-left">
                                   <b-card-text>
-                                    It’s a myth that employers prefer one page over two pages. As long as your resume is clear and easy to read, you can include two pages. If your work experience is limited to fewer than ten years, you may want to stick to one page. Otherwise, don’t sell yourself short.
+                                    Usually employers prefer one page over two pages. 
+                                    However, as long as your CV is clear and easy to read, you can include two pages. 
+                                    If your work experience is limited to fewer than 10 years, we would recommend you to use only one page. In this specific case, less is more but only with relevant and efficient info.
                                   </b-card-text>
                                 </b-card-body>
                             </b-collapse>

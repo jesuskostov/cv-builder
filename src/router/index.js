@@ -9,6 +9,9 @@ import ErrorPage from '../views/Error.vue'
 import Feedbacks from '../views/Feedbacks.vue'
 import Faq from '../views/Faq.vue'
 import Contact from '../views/Contact.vue'
+import Partnership from '../views/Partnership.vue'
+import SecurePayment from '../views/SecurePayment.vue'
+
 
 Vue.use(VueRouter)
 
@@ -52,6 +55,16 @@ const routes = [
     path: '/faq',
     name: 'Faq',
     component: Faq
+  },
+  {
+    path: '/partnership',
+    name: 'Partnership',
+    component: Partnership
+  },
+  {
+    path: '/secure-payment',
+    name: 'SecurePayment',
+    component: SecurePayment
   },
   {
     path: '/contact',

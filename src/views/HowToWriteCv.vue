@@ -50,7 +50,7 @@
                     <div class="col-md-12">
                         <div class="box text-left left">
                             <div class="inner">
-                                <h4 class="text-center" data-aos="fade" data-aos-duration="1000">CV layout</h4>
+                                <h4 class="text-center" data-aos="fade" data-aos-duration="1000">CV layout?</h4>
                             </div>
                         </div>
                     </div>
@@ -60,8 +60,8 @@
                             It is <b>essential to make a CV with a well-structured format</b> that is visually pleasing and will attract the reader to the important information.br <br><br>
                             <b>Readability is an element to be considered when structuring a CV.</b> This means maintaining an easy-to-read document which is well constructed and <b>using a layout that is comfortable for the employer to navigate</b> to find the relevant information. <br><br>
                             When considering the <b>CV structure</b>, candidates should be mindful of the <b>margins and white space on the page</b> as well as <b>font sizing and types</b>, never using more than 2 fonts in the whole document. Also <b></b> should not be overused or the CV becomes overcrowded. <br><br>
-                            Another possibility to <b>ensure an HR-approved CV layout</b> is by using an <b>online CV maker</b> or resume templates which are ready-made and save the candidate time and energy. CV templates simply allow the candidate to introduce their information so as to avoid the need to learn about the <b>best designs for your preferred position</b> and in what order you should place each section etc. <br><br>
-                            Take at look at our full guide on how to format a CV for any job application to get the right instructions regarding page layout, alignments, fonts and more.
+                            The possibility we recommend you to <b>ensure an HR-approved CV layout</b> is by  <b>using our unique tools and templates</b> which are ready-made and will save you tremendous time and energy. Our CV templates simply allow you to introduce your information so as to avoid the need to learn about the best designs for your preferred position and in what order you should place each section, etc. <br>
+                            <b>Our unique tools and templates are simply the most efficient available !</b>
                         </p>
                     </div>
                 </div>
@@ -71,18 +71,19 @@
                     <div class="col-md-12">
                         <div class="box text-left left">
                             <div class="inner">
-                                <h4 class="text-center" data-aos="fade" data-aos-duration="1000">How long should aCV be?</h4>
+                                <h4 class="text-center" data-aos="fade" data-aos-duration="1000">How long should my CV be?</h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="text-left text pl-md-3 pl-0">
                             <p>When it comes to deciding on the perfect length for a CV, employers and HR experts differ greatly as it can depend on the applicant, their level of experience and even the industry or role they&rsquo;re applying for.</p>
-                            <p>However, as a general rule in the UK, the ideal length of a CV is 1-2 A4 pages to contain all of the relevant information you need to include in your job application.</p>
+                            <p>However, as a general rule, the ideal length of a CV is 1-2 A4 pages to contain all of the relevant information you need to include in your job application</p>
                             <p>There are those who say that even 3 pages is acceptable in many cases but as relevance is the key to a successful CV, if you find you are padding out sections or adding information that is neither pertinent or useful, you should stick to the universal less is more rule!</p>
                             <p>In certain professions, it is likely that the job application requires extra information such as a portfolio in artistic pursuits or academic occupations however this information can also be added as a separate attachment to the curriculum vitae and need not be an integral part taking up valuable CV space.</p>
                             <p>It is advisable always to maintain each section as brief and clear as possible without missing out vital details or keywords whilst avoiding long paragraphs or endless lists as these often put employers off.</p>
-                            <p>If there is a specific achievement or experience you wish to embellish on, you can use your professional cover letter which should always accompany your job application to do so. In a cover letter the candidate has the opportunity to give further explanations or details which could convince the hiring manager to add your name to the interview list.</p>
+                            <p>If there is a specific achievement or experience you wish to embellish on, you can use your professional cover letter which should always accompany your job application to do so. <br><br>
+                            In a cover letter the candidate has the opportunity to give further explanations or details which could convince the hiring manager to add your name to the interview list.</p>
                         </div>
                     </div>
                 </div>
@@ -92,22 +93,22 @@
                     <div class="col-md-12">
                         <div class="box text-left left">
                             <div class="inner">
-                                <h4 class="text-center" data-aos="fade" data-aos-duration="1000">What not to include  on a CV</h4>
+                                <h4 class="text-center" data-aos="fade" data-aos-duration="1000">What not to include on a CV?</h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="text-left text pl-md-3 pl-0">
-                            <p>Once you&rsquo;ve learnt&nbsp;<strong>how to write a good CV</strong>&nbsp;you still need to make sure you&nbsp;<strong>don&rsquo;t make any critical errors</strong>&nbsp;which is when you must consider&nbsp;<strong>what NOT to include in a CV</strong>&nbsp;before sending off your application.</p>
+                            <p>Once you&rsquo;ve learnt&nbsp;<strong>how to write a good CV</strong> with our unique tools and templates &nbsp;you still need to make sure you&nbsp;<strong>don&rsquo;t make any critical errors</strong>&nbsp;which is when you must consider&nbsp;<strong>what NOT to include in a CV</strong>&nbsp;before sending off your application.</p>
                             <ul>
                                 <li>In a European CV you may find it is common to&nbsp;<strong>include a photo</strong>&nbsp;however this is&nbsp;<strong>strictly a NO-NO in a British, American or Canadian CV.</strong></li>
-                                <li>Also in a<strong>&nbsp;CV for the UK</strong>, there is<strong>&nbsp;no need to include any personal details</strong>&nbsp;such as date of birth, age, marital status etc. as this can be seen as discriminatory.</li>
+                                <li>Also in a<strong>&nbsp;CV for the UK</strong>, there is<strong>&nbsp;no need to include any personal details</strong>&nbsp;such as date of birth, age, marital status etc. as this can be seen as discriminatory. Simply check with your potential employer their internal regulations about this point.</li>
                                 <li>You are&nbsp;<strong>only recommended to include your citizenship if you require a working visa</strong>&nbsp;which is connected to your national ID.</li>
                                 <li>Try to<strong>&nbsp;steer clear of using clich&eacute; phrases</strong>&nbsp;and certain words that have been overdone in applications in the past.</li>
                                 <li>Also due to the importance of maintaining relevant information throughout, it is vital that you<strong>&nbsp;remove any unnecessary details or qualifications, skills or experience</strong>&nbsp;which do not relate to the position or provide evidence of your aptitude for the role.</li>
                                 <li>Finally, as CVs evolve and the HR community changes, you are advised not to include&nbsp;references on your CV&nbsp;at any point unless strictly requested by the job vacancy. In some cases candidates can choose to add a line at the end of the CV to mention that &lsquo;references are available on request&rsquo;.</li>
                             </ul>
-                            <p>Any&nbsp;<strong>additional information</strong>&nbsp;that a candidate sees as&nbsp;<strong>significant to include in a CV</strong>&nbsp;but doesn&rsquo;t fit or it requires further elaboration, can be&nbsp;<strong>added to a cover letter</strong>&nbsp;where applicants can explain in more detail the fundamental reasons why their experience and qualifications make them the ideal candidate.</p>
+                            <p>Any&nbsp;<strong>additional information</strong>&nbsp;that a candidate sees as&nbsp;<strong>significant to include in a CV</strong>&nbsp;but doesn&rsquo;t fit or it requires further elaboration, can be&nbsp;<strong>added to a cover letter</strong>&nbsp;where applicants can explain in more details the fundamental reasons why their experience and qualifications make them the ideal candidate.<br><br><b>We wish you every success in your job search!</b></p>
                         </div>
                     </div>
                 </div>

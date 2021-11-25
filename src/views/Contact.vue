@@ -15,20 +15,28 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <div class="form contact-form">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <input type="text" class="w-100 form-control" placeholder="Your name">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="email" class="w-100 form-control" placeholder="Email">
-                        </div>
-                        <div class="col-md-12 mt-3">
-                            <textarea cols="10" rows="5" class="form-control" placeholder="Your message..."></textarea>
-                            <div class="text-center">
-                                <button class="custom-btn big">Send</button>
-                            </div>
-                        </div>
-                    </div>
+                    <form @submit.prevent="alertDisplay">
+                      <div class="row">
+                          <div class="col-md-6">
+                              <input type="text" v-model="name" class="w-100 form-control" minlength="2" placeholder="Name" required>
+                          </div>
+                          <div class="col-md-6">
+                              <input type="text" v-model="surname" class="w-100 form-control" minlength="2" placeholder="Surname" required>
+                          </div>
+                          <div class="col-md-6">
+                              <input type="email" v-model="email" class="w-100 form-control" placeholder="Email" required>
+                          </div>
+                          <div class="col-md-6">
+                              <input type="text" v-model="subject" class="w-100 form-control" placeholder="Subject" required>
+                          </div>
+                          <div class="col-md-12 mt-3">
+                              <textarea v-model="message" cols="10" rows="5" class="form-control" placeholder="Your message..." required></textarea>
+                              <div class="text-center">
+                                  <button type="submit" class="custom-btn big">Send</button>
+                              </div>
+                          </div>
+                      </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -43,14 +51,37 @@ import Footer from '../components/Footer.vue'
 
 export default {
   name: 'Home',
+  data() {
+    return {
+      name: '',
+      surname: '',
+      subject: '',
+      email: '',
+      message: ''
+    }
+  },
   components: {
     Footer,
   },
+  methods: {
+    alertDisplay() {
+        this.$swal(
+          'Message sent successfully',
+          '',
+          'success'
+        )
+    }
+  }
 }
 </script>
 
-<style lang="scss" scoped>
+<style>
+.swal2-styled.swal2-confirm {
+  background-color: var(--primary-color) !important;
+}
+</style>
 
+<style lang="scss" scoped>
 .contact-form {
   position: relative;
   top: -50px;

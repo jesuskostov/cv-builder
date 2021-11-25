@@ -11,6 +11,8 @@ import VueAwesomeSwiper from "vue-awesome-swiper";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import VueGtag from "vue-gtag";
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 Vue.config.productionTip = false;
 
@@ -27,6 +29,7 @@ Vue.use(
 Vue.use(VueAwesomeSwiper);
 Vue.use(VeeValidate);
 Vue.use(BootstrapVue);
+Vue.use(VueSweetalert2);
 
 new Vue({
   router,

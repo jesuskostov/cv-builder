@@ -5,7 +5,7 @@
         <span class="line"></span>
     </div>
     <div class="accordion px-4 py-4">
-        <h3>Mother Languages:</h3>
+        <h3>Native Languages:</h3>
         <multiselect v-model="motherLanguages" class="w-100" :options="languages" :multiple="false" :taggable="true" @tag="addMotherLang" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick some or you can also write and press Enter" label="title" :track-by="'title'" />
         <div v-if="motherLanguages.title" class="box-row">
             <div class="d-flex align-items-center">
@@ -54,8 +54,11 @@ export default {
             motherLanguages: {},
             spokenLanguages: [],
             languages: [
+                { title: 'Italian', langLevel: '' },
                 { title: 'English', langLevel: '' },
                 { title: 'France', langLevel: '' },
+                { title: 'German', langLevel: '' },
+                { title: 'Spanish', langLevel: '' },
             ],
             langLevel: [
                 { 'title': 'A1' },

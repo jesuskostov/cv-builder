@@ -136,7 +136,7 @@
                 </div>
                 <div class="col-md-12">
                     <div class="text-left">
-                        <label for="socialProfiles">Compte LinkedIn</label>
+                        <label for="socialProfiles">LinkedIn Account</label>
                         <br>
                         <input type="url" class="form-control w-100" name="socialProfiles" id="socialProfiles" v-model="personal.socialProfiles" v-validate="'url'">
                         <span class="error">{{ errors.first('socialProfiles') }}</span>

@@ -19,7 +19,7 @@
     <!-- Browsing templates -->
     <div v-if="onBrowse" class="container browse-template">
       <div class="row">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5" v-for="(item, i) in templates" :key="i" data-aos="fade-up" data-aos-duration="500" data-aos-ease="ease" :data-aos-delay="i * 100">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5" v-for="(item, i) in templates" :key="i" data-aos="fade-up" data-aos-duration="300" data-aos-ease="ease">
           <p class="text-left mb-2">{{item.nickname}}</p>
           <div class="item">
             <img @click="onClick(i)" :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
