@@ -11,6 +11,10 @@ import Faq from '../views/Faq.vue'
 import Contact from '../views/Contact.vue'
 import Partnership from '../views/Partnership.vue'
 import SecurePayment from '../views/SecurePayment.vue'
+import Benefits from '../views/Benefits.vue'
+import Help from '../views/Help.vue'
+import SiteMap from '../views/SiteMap.vue'
+import Login from '../views/Login.vue'
 
 
 Vue.use(VueRouter)
@@ -62,6 +66,21 @@ const routes = [
     component: Partnership
   },
   {
+    path: '/benefits',
+    name: 'Benefits',
+    component: Benefits
+  },
+  {
+    path: '/help',
+    name: 'Help',
+    component: Help
+  },
+  {
+    path: '/site-map',
+    name: 'SiteMap',
+    component: SiteMap
+  },
+  {
     path: '/secure-payment',
     name: 'SecurePayment',
     component: SecurePayment
@@ -70,6 +89,11 @@ const routes = [
     path: '/contact',
     name: 'Contact',
     component: Contact
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: Login
   },
 ]
 

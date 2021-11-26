@@ -59,7 +59,7 @@ export default {
 h1 {
   text-align: left;
   font-size: 2.7rem;
-  font-weight: bold;
+  font-weight: bold;    
   color: #fff;
   @media (max-width: 575.98px) {
     font-size: 1.7rem;

@@ -16,9 +16,10 @@
                     <div class="col-6 col-md-3 mb-3 mb-md-0">
                         <div class="d-flex flex-column align-items-start">
                             <router-link to="/">Homepage</router-link>
-                            <router-link to="/">I nostri valori</router-link>
+                            <router-link to="/benefits">I nostri valori</router-link>
+                            <router-link to="/help">Aiuto</router-link>    
+                            <router-link to="/site-map">Mappa del sito</router-link>                                                        
                             <router-link to="/contact">Contattaci</router-link>
-                            <router-link to="/">Cookie Policy</router-link>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
@@ -28,13 +29,12 @@
                             <router-link to="#">Privacy Policy</router-link>
                             <router-link to="#">Terms of Service</router-link>
                             <router-link to="#">Cookie Policy</router-link>
-                            <router-link to="#">Note Legali</router-link>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                     <div class="d-flex flex-column align-items-start">
-                        <router-link to="/">Premium</router-link>
-                        <router-link to="/">My subscription</router-link>
+                        <router-link to="#">Note Legali</router-link>
+                        <router-link to="/login">Il mio abbonamento</router-link>
                     </div>
                     </div>
                 </div>
