@@ -32,10 +32,10 @@
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
-                    <div class="d-flex flex-column align-items-start">
-                        <router-link to="#">Note Legali</router-link>
-                        <router-link to="/login">Il mio abbonamento</router-link>
-                    </div>
+                        <div class="d-flex flex-column align-items-start">
+                            <router-link to="#">Note Legali</router-link>
+                            <router-link to="/login">Il mio abbonamento</router-link>
+                        </div>
                     </div>
                 </div>
             </div>

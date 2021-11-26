@@ -54,11 +54,11 @@ export default {
             motherLanguages: {},
             spokenLanguages: [],
             languages: [
-                { title: 'Italian', langLevel: '' },
-                { title: 'English', langLevel: '' },
-                { title: 'France', langLevel: '' },
-                { title: 'German', langLevel: '' },
-                { title: 'Spanish', langLevel: '' },
+                { title: 'Italiano', langLevel: '' },
+                { title: 'Inglese', langLevel: '' },
+                { title: 'Francese', langLevel: '' },
+                { title: 'Tedesco', langLevel: '' },
+                { title: 'Spagnolo', langLevel: '' },
             ],
             langLevel: [
                 { 'title': 'A1' },
