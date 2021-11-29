@@ -14,7 +14,7 @@
       <div class="body">
         <div class="col-left">
           <div v-if="skills.length !== 0" class="skills text-left mb-5">
-            <h2 class="title small">Skills</h2>
+            <h2 class="title small">Abilità</h2>
             <div v-for="(skill, i) in skills" :key="i" class="mb-2">
               <p class="skill-name">{{skill.title}}</p>
               <div ref="rating" class="rating" :rating="skill.rating">
@@ -27,14 +27,14 @@
             </div>
           </div>
           <div v-if="languages.length !== 0" class="languages text-left mb-5">
-            <h2 class="title small">Languages</h2>
+            <h2 class="title small">Lingue</h2>
             <div>
               <p class="description mb-0" v-for="(lang, i) in languages" :key="i">{{lang.title}} <b>{{lang.langLevel}}</b></p>
             </div>
           </div>
           <div v-if="personal">
             <div v-if="personal.birthday || personal.nationality || personal.family || personal.sex || motherLang.title" class="text-left">
-              <h2 class="title small">Personal</h2>
+              <h2 class="title small">Info personali</h2>
               <div>
                 <p class="description mb-1"><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
                 <p class="description mb-1"><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
@@ -47,11 +47,11 @@
         </div>
         <div class="col-right">
           <div v-if="accomp" class="profile text-left mb-5">
-            <h2 class="title">Profile</h2>
+            <h2 class="title">Profilo</h2>
             <p class="description" v-html="accomp" />
           </div>
           <div v-if="workHistory.length && workHistory[0].jobTitle" class="work text-left mb-5">
-            <h2 class="title">Employment History</h2>
+            <h2 class="title">Esperienza lavorativa</h2>
             <div v-for="(work, i) in workHistory" :key="i">
               <h3 class="subtitle">
                 {{work.jobTitle}} - {{work.employer}}
@@ -64,7 +64,7 @@
             </div>
           </div>
           <div v-if="education.length && education[0].schoolName" class="education text-left">
-            <h2 class="title">Education</h2>
+            <h2 class="title">Istruzione</h2>
             <div v-for="(school, i) in education" :key="i">
               <h3 class="subtitle">
                 {{school.degree}}, {{school.schoolName}} - {{school.schoolLocation}}
