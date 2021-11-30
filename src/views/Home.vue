@@ -204,7 +204,7 @@
         </div>
         <div class="row">
           <div class="col-md-9 mx-auto">
-            <p class="text">Increase your chance of getting your dream job by creating your best CV ever! <br> Our professional tools have been forged for this only purpose: <br> make your application stand out!</p>
+            <p class="text-center pt-4">Increase your chance of getting your dream job by creating your best CV ever! <br> Our professional tools have been forged for this only purpose: <br> make your application stand out!</p>
           </div>
         </div>
       </div>
@@ -223,7 +223,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 mx-auto">
-            <p class="text">With our uniquely forged set of tools, your CV will uniquely stand out from the crowd!
+            <p class="text-center pt-4">With our uniquely forged set of tools, your CV will uniquely stand out from the crowd!
             Smart features to personalise easily and fastly your CV on desktop and mobile.
             And download your PDF in less than 5 minutes!</p>            
             <div class="text-center mt-5">
