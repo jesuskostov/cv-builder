@@ -16,7 +16,7 @@
             <div class="col-md-8 mx-auto">
                 <div class="text-left">
                     <p><b>Our service allows you to offer your customers a quality service at an affordable price.</b></p>
-                    <p><b>Do you want to offer us a collaboration? Do you want to collaborate only in one of the sectors we deal with? Write to us now!</b></p>
+                    <p><b>Do you want to offer us a collaboration?</b><br>Do you want to collaborate only in one of the sectors we deal with?<br>Write to us now!</p>
                     <div class="text-center mt-5">
                         <router-link to="/contact" class="custom-btn py-3">Contact us</router-link>
                     </div>

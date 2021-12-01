@@ -28,7 +28,7 @@
                                       <li>Choose a template;</li>
                                       <li>Fill the data;</li>
                                       <li>Once completed swap between templates to pick the very best one;</li>
-                                      <li>Download the CV in PDF format. As simple as that!</li>
+                                      <li>Download the CV in PDF format.<br> As simple as that!</li>
                                     </ol>
                                 </b-card-text>
                                 </b-card-body>
@@ -72,7 +72,10 @@
                             <b-collapse id="accordion-4" accordion="my-accordion" role="tabpanel">
                                 <b-card-body>
                                 <b-card-text class="text-left">
-                                    Yes you can. Changing the CV template you use is super simple. When you first register you will be asked to choose a CV template which you can change from the CV editing page. The selection of templates is visible alongside the preview of your CV. You can click on whichever appeals to you and your information will be imported to this new template as seen in the preview.When completing a CV, you will have the opportunity to fill out all the sections relevant for you, with our helpful CV examples and tips.                                </b-card-text>
+                                  Yes!<br>
+                                  At any moment, you can swap for any of our other templates.<br>
+                                  Use our tools to its fullest, try all the templates easily!
+                                </b-card-text>
                                 </b-card-body>
                             </b-collapse>
                           </b-card>
@@ -84,30 +87,15 @@
                             <b-collapse id="accordion-5" accordion="my-accordion" role="tabpanel">
                                 <b-card-body>
                                 <b-card-text class="text-left">
-                                    Yes! Lots of yesses, we know! ;)
-                                    Our unique tools have been developed for all the available appliances: smartphones, tablets, iPad, Microsoft Surfaces, desktops and laptops.
+                                    Yes! Lots of yesses, we know! ;)<br>
+                                    Our unique tools have been developed for all the available appliances: smartphones, tablets,<br>iPad, Microsoft Surfaces, desktops and laptops.<br>
                                     Enjoy our global technical approach!
                                 </b-card-text>
                                 </b-card-body>
                             </b-collapse>
                           </b-card>
 
-                          <b-card no-body class="mb-3">
-                            <b-card-header header-tag="header" class="h4" role="tab">
-                                <h4 block v-b-toggle.accordion-7>Can I make a CV for any type of job?</h4>
-                            </b-card-header>
-                            <b-collapse id="accordion-7" accordion="my-accordion" role="tabpanel">
-                                <b-card-body class="text-left">
-                                <b-card-text>
-                                    Yes!<br>
-                                    At any moment, you can swap for any of our other templates.<br>
-                                    Use our tools to its fullest, try all the templates easily!
-                                </b-card-text>
-                                </b-card-body>
-                            </b-collapse>
-                          </b-card>
-
-                          <b-card no-body class="mb-3">
+                          <!-- <b-card no-body class="mb-3">
                             <b-card-header header-tag="header" class="h4" role="tab">
                                 <h4 block v-b-toggle.accordion-9>If I have a LinkedIn profile, do I still need to make a CV?</h4>
                             </b-card-header>
@@ -121,9 +109,9 @@
                                   </b-card-text>
                                 </b-card-body>
                             </b-collapse>
-                          </b-card>
+                          </b-card> -->
 
-                          <b-card no-body class="mb-3">
+                          <!-- <b-card no-body class="mb-3">
                             <b-card-header header-tag="header" class="h4" role="tab">
                                 <h4 block v-b-toggle.accordion-10>Are your tools safe?</h4>
                             </b-card-header>
@@ -135,7 +123,7 @@
                                   </b-card-text>
                                 </b-card-body>
                             </b-collapse>
-                          </b-card>
+                          </b-card> -->
 
                           <b-card no-body class="mb-3">
                             <b-card-header header-tag="header" class="h4" role="tab">

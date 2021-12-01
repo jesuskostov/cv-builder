@@ -99,7 +99,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="text-left text pl-md-3 pl-0">
-                            <p>Once you&rsquo;ve learnt&nbsp;<strong>how to write a good CV</strong> with our unique tools and templates &nbsp;you still need to make sure you&nbsp;<strong>don&rsquo;t make any critical errors</strong>&nbsp;which is when you must consider&nbsp;<strong>what NOT to include in a CV</strong>&nbsp;before sending off your application.</p>
+                            <p>Once you&rsquo;ve learnt&nbsp;<strong>how to write a good CV</strong> with our unique tools and templates you still need to make sure you&nbsp;<strong>don&rsquo;t make any critical errors</strong>&nbsp;which is when you must consider&nbsp;<strong>what NOT to include in a CV</strong>&nbsp;before sending off your application.</p>
                             <ul>
                                 <li>In a European CV you may find it is common to&nbsp;<strong>include a photo</strong>&nbsp;however this is&nbsp;<strong>strictly a NO-NO in a British, American or Canadian CV.</strong></li>
                                 <li>Also in a<strong>&nbsp;CV for the UK</strong>, there is<strong>&nbsp;no need to include any personal details</strong>&nbsp;such as date of birth, age, marital status etc. as this can be seen as discriminatory. Simply check with your potential employer their internal regulations about this point.</li>

@@ -67,7 +67,7 @@
               </div>
               <div class="text-left">
                 <h3>Only 2% of resumes make it past the first round.<br>Be in the top 2%!</h3>
-                <p>Our Unique CV Tools will help you take your career search to new heights with an efficient, optimized and stylish<br><router-link to="/">CV.</router-link></p>
+                <p>Our Unique CV Tools will help you take your career search to new heights with an efficient, optimized and stylish CV.</p>
               </div>
             </div>
           </div>
@@ -223,8 +223,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 mx-auto">
-            <p class="text-center pt-4">With our uniquely forged set of tools, your CV will uniquely stand out from the crowd!
-            Smart features to personalise easily and fastly your CV on desktop and mobile.
+            <p class="text-center pt-4">With our uniquely forged set of tools, your CV will uniquely stand out from the crowd!<br>
+            Smart features to personalise easily and fastly your CV on desktop and mobile.<br>
             And download your PDF in less than 5 minutes!</p>            
             <div class="text-center mt-5">
               <router-link to="/faq" class="custom-btn big">Go to FAQ page</router-link>
