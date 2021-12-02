@@ -9,7 +9,7 @@
       <swiper :options="swiperOption">
         <swiper-slide v-for="(item, i) in templates" :key="i" :virtualIndex="item" class="carouselItem">
           <p class="text-center h5 mb-2">{{item.nickname}}</p>
-          <img :src="require(`@/assets/images/cv-templates/${item.thumb}`)" class="img-fluid" alt="">
+          <img :src="require(`@/assets/images/cv-templates/it/${item.thumb}`)" class="img-fluid" alt="">
           <button class="custom-btn mt-3" @click="onClick(i)">Use template</button>
         </swiper-slide>
       </swiper>
@@ -22,7 +22,7 @@
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5" v-for="(item, i) in templates" :key="i" data-aos="fade-up" data-aos-duration="300" data-aos-ease="ease">
           <p class="text-left mb-2">{{item.nickname}}</p>
           <div class="item">
-            <img @click="onClick(i)" :src="require(`@/assets/images/cv-templates/${item.thumb}`)" alt="">
+            <img @click="onClick(i)" :src="require(`@/assets/images/cv-templates/it/${item.thumb}`)" alt="">
             <button class="custom-btn mt-3" @click="onClick(i)">Use template</button>
           </div>
         </div>

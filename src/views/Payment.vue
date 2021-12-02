@@ -244,7 +244,7 @@
                   <img
                     @click="onClick(i)"
                     class="cv-list-img"
-                    :src="require(`@/assets/images/cv-templates/${item.thumb}`)"
+                    :src="require(`@/assets/images/cv-templates/it/${item.thumb}`)"
                     alt=""
                   />
                 </div>

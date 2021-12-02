@@ -34,7 +34,7 @@
             </div>
             <button @click="showBigPreview" class="view-large-btn">
               <img src="../assets/images/zoom.svg" alt="view icon" />
-              View large
+              Ingrandisci
             </button>
           </div>
         </div>
@@ -113,7 +113,7 @@
                   Work history <img src="../assets/images/pencil.svg" alt="edit icon" />
                 </button>
                 <button class="edit" @click="goTo(3)">
-                  Education & skills
+                  Education & Skills
                   <img src="../assets/images/pencil.svg" alt="edit icon" />
                 </button>
                 <button class="edit" @click="goTo(4)">
@@ -152,7 +152,7 @@
                   <img
                     @click="onClick(i)"
                     class="cv-list-img"
-                    :src="require(`@/assets/images/cv-templates/${item.thumb}`)"
+                    :src="require(`@/assets/images/cv-templates/it/${item.thumb}`)"
                     alt=""
                   />
                 </div>

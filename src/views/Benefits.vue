@@ -19,10 +19,10 @@
                         <img class="benefit-icon mb-3" src="../assets/images/icon-commitment-01.svg" alt="">
                     </span>
                     <h2 class="mb-4">Qualità</h2>
-                    <div class="text-left">
-                        <p><b>La qualità del servizio è alla base della nostra missione aziendale.</b></p>
-                        <p><b>Ecco perchè scegliamo di collaborare solo con i professionisti più affidabili nel settore.</b></p>
-                        <p><b>Il nostro obiettivo è migliorare il tuo rapporto con l'amministrazione, e permetterti di ottenere i documenti di cui hai bisogno nel modo più efficiente possibile.</b></p>
+                    <div class="text-center">
+                        <p>La qualità del servizio è alla base della nostra missione aziendale.</p>
+                        <p>Ecco perchè scegliamo di collaborare solo con i professionisti più affidabili nel settore.</p>
+                        <p>Il nostro obiettivo è migliorare il tuo rapporto con l'amministrazione, e permetterti di ottenere i documenti di cui hai bisogno nel modo più efficiente possibile.</p>
                     </div>
                 </div>
             </div>
@@ -32,10 +32,10 @@
                         <img class="benefit-icon mb-3" src="../assets/images/icon-commitment-02.svg" alt="">
                     </span>
                     <h2 class="mb-4">Efficienza</h2>
-                    <div class="text-left">
-                        <p><b>Il nostro team di collaboratori efficienti e rigorosi vi consigliano, vi guidano e vi aiutano con efficienza e rapidità.</b></p>
-                        <p><b>L'obiettivo è semplice : essere il riferimento assoluto del supporto amministrativo disponibile in Italia.</b></p>
-                        <p><b>L'efficienza che ci contraddistingue ci permette di offrire i nostri servizi a tutti ad un prezzo accessibile.</b></p>
+                    <div class="text-center">
+                        <p>Il nostro team di collaboratori efficienti e rigorosi vi consigliano, vi guidano e vi aiutano con efficienza e rapidità.</p>
+                        <p>L'obiettivo è semplice : essere il riferimento assoluto del supporto amministrativo disponibile in Italia.</p>
+                        <p>L'efficienza che ci contraddistingue ci permette di offrire i nostri servizi a tutti ad un prezzo accessibile.</p>
                     </div>
                 </div>
             </div>
@@ -45,10 +45,10 @@
                         <img class="benefit-icon mb-3" src="../assets/images/icon-commitment-03.svg" alt="">
                     </span>
                     <h2 class="mb-4">Precisione</h2>
-                    <div class="text-left">
-                        <p><b>Meticolosità e precisione sono alla base del nostro approccio.</b></p>
-                        <p><b>Tutorial e guide da noi realizzati sono un esempio del nostro impegno in questo senso : informazioni precise espresse in modo semplice per ogni tipologia di cliente.</b></p>
-                        <p><b>Grazie alla nostra meticolosità ti offriamo un prodotto sempre ai massimi standard qualitativi.</b></p>
+                    <div class="text-center">
+                        <p>Meticolosità e precisione sono alla base del nostro approccio.</p>
+                        <p>Tutorial e guide da noi realizzati sono un esempio del nostro impegno in questo senso : informazioni precise espresse in modo semplice per ogni tipologia di cliente.</p>
+                        <p>Grazie alla nostra meticolosità ti offriamo un prodotto sempre ai massimi standard qualitativi.</p>
                     </div>
                 </div>
             </div>
@@ -58,10 +58,10 @@
                         <img class="benefit-icon mb-3" src="../assets/images/icon-commitment-04.svg" alt="">
                     </span>
                     <h2 class="mb-4">Sicurezza</h2>
-                    <div class="text-left">
-                        <p><b>Il nostro team di specialisti in sicurezza informatica ci consente di proteggere i vostri dati personali (cognomi, coordinate, email, varie informazioni) grazie ai nostri siti web sicuri al 100% (tecnologia di crittografia SSL a 256 bit).</b></p>
-                        <p><b>Tutti i tuoi dati sono protetti, essendo disposti su server differenti.</b></p>
-                        <p><b>Nessuna interruzione del servizio, 7 giorni su 7, tutti i giorni dell'anno.</b></p>
+                    <div class="text-center">
+                        <p>Il nostro team di specialisti in sicurezza informatica ci consente di proteggere i vostri dati personali (cognomi, coordinate, email, varie informazioni) grazie ai nostri siti web sicuri al 100% (tecnologia di crittografia SSL a 256 bit)</p>
+                        <p>Tutti i tuoi dati sono protetti, essendo disposti su server differenti.</p>
+                        <p>Nessuna interruzione del servizio, 7 giorni su 7, tutti i giorni dell'anno.</p>
                     </div>
                 </div>
             </div>
@@ -71,10 +71,10 @@
                         <img class="benefit-icon mb-3" src="../assets/images/icon-commitment-05.svg" alt="">
                     </span>
                     <h2 class="mb-4">Soddisfazione Cliente</h2>
-                    <div class="text-left">
-                        <p><b>Siamo a tua disposizione, per offrirti un servizio sempre ai massimi livelli.</b></p>
-                        <p><b>Vogliamo offrirti un'esperienza di altissima qualità in tutti gli ambiti.</b></p>
-                        <p><b>Meriti un Servizio Clienti eccellente.</b></p>
+                    <div class="text-center">
+                        <p>Siamo a tua disposizione, per offrirti un servizio sempre ai massimi livelli.</p>
+                        <p>Vogliamo offrirti un'esperienza di altissima qualità in tutti gli ambiti.</p>
+                        <p>Meriti un Servizio Clienti eccellente.</p>
                     </div>
                 </div>
             </div>
@@ -84,10 +84,10 @@
                         <img class="benefit-icon mb-3" src="../assets/images/icon-commitment-06.svg" alt="">
                     </span>
                     <h2 class="mb-4">Riservatezza</h2>
-                    <div class="text-left">
-                        <p><b>La riservatezza assoluta è parte integrante della nostra filosofia.</b></p>
-                        <p><b>La nostra società rispetta il tuo diritto alla riservatezza.</b></p>
-                        <p><b>Inoltre, i tuoi dati non vengono mai utilizzati a fini commerciali.</b></p>
+                    <div class="text-center">
+                        <p>La riservatezza assoluta è parte integrante della nostra filosofia.</p>
+                        <p>La nostra società rispetta il tuo diritto alla riservatezza.</p>
+                        <p>Inoltre, i tuoi dati non vengono mai utilizzati a fini commerciali.</p>
                     </div>
                 </div>
             </div>

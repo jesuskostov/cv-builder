@@ -66,12 +66,12 @@ const routes = [
     component: Partnership
   },
   {
-    path: '/benefits',
+    path: '/i-nostri-valori',
     name: 'Benefits',
     component: Benefits
   },
   {
-    path: '/help',
+    path: '/aiuto',
     name: 'Help',
     component: Help
   },

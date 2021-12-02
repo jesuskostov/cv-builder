@@ -9,7 +9,7 @@
         ><span v-if="step == 1">1</span
         ><img v-else src="../assets/images/step-ok.svg" alt="ok icon"
       /></span>
-      PERSONAL <span class="line"></span>
+      Personali <span class="line"></span>
     </div>
     <div
       @click="goTo(2)"
@@ -20,7 +20,7 @@
         ><span v-if="step <= 2">2</span
         ><img v-else src="../assets/images/step-ok.svg" alt="ok icon"
       /></span>
-      WORK HISTORY <span class="line"></span>
+      Esperienza Lavorativa <span class="line"></span>
     </div>
     <div
       @click="goTo(3)"
@@ -31,7 +31,7 @@
         ><span v-if="step <= 3">3</span
         ><img v-else src="../assets/images/step-ok.svg" alt="ok icon"
       /></span>
-      EDUCATION & SKILLS <span class="line"></span>
+      Istruzione e Competenze <span class="line"></span>
     </div>
     <div
       @click="goTo(4)"
@@ -42,7 +42,7 @@
         ><span v-if="step <= 4">4</span
         ><img v-else src="../assets/images/step-ok.svg" alt="ok icon"
       /></span>
-      OTHER <span class="line"></span>
+      Altre Informazioni <span class="line"></span>
     </div>
     <div
       @click="goTo(5)"
@@ -53,7 +53,7 @@
         ><span v-if="step <= 5">5</span
         ><img v-else src="../assets/images/step-ok.svg" alt="ok icon"
       /></span>
-      SUMMARY
+      Riepilogo
     </div>
   </div>
 </template>

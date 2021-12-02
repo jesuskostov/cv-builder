@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="steps-title mb-5">
-        <h1>Personal information</h1>
+        <h1>Informazioni Personali</h1>
         <span class="line"></span>
-        <p class="text">What’s the best way for employers to contact you? We suggest including an email and phone number. Also a photo will not hurt sometimes.</p>
+        <p class="text">Qual è il miglior modo che un'azienda ha per contattarti? Ti suggeriamo di includere un'e-mail e un numero di telefono. Anche una foto non sarebbe male.</p>
     </div>
     <form @submit.prevent="goToFormStep(2)">
         <div class="form mb-5">
@@ -15,7 +15,7 @@
                             <img v-if="this.personal.image != null" class="personal-img" :src="this.personal.image" alt="">
                             <div v-else>
                                 <img src="../assets/images/user.svg" alt="user">
-                                <p>Add Photo</p>
+                                <p>Aggiungi Foto</p>
                             </div>
                         </div>
                         <img v-if="this.personal.image != null" @click="deletePhoto" class="img-bin-icon ml-3" src="../assets/images/bin.svg" alt="bin icon">
@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
-                        <label for="name"><span class="red">*</span> Name</label>
+                        <label for="name"><span class="red">*</span> Nome</label>
                         <br>
                         <input type="text" class="w-100 form-control" name="name" id="firstName" v-model="personal.firstName" v-validate="'alpha_spaces'">
                         <span class="error">{{ errors.first('name') }}</span>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
-                        <label for="surname"><span class="red">*</span> Last Name</label>
+                        <label for="surname"><span class="red">*</span> Cognome</label>
                         <br>
                         <input type="text" class="w-100 form-control" name="surname" id="surname" v-model="personal.lastName" v-validate="'alpha_spaces'">
                         <span class="error">{{ errors.first('surname') }}</span>
@@ -41,7 +41,7 @@
                     <div class="text-left">
                         <label for="birthday">Birthday</label>
                         <br>
-                        <date-picker v-validate="`date_format:dd-MM-yyyy|date_between:01-01-1920,01-01-${new Date().getFullYear() - 10}`" name="birthday" id="birthday" class="w-100" input-class="form-control m-0" :value-type="'format'" :format="'DD-MM-YYYY'" v-model="personal.birthday" type="date" />
+                        <date-picker :current-value="new Date()" v-validate="`date_format:dd-MM-yyyy|date_between:01-01-1920,01-01-${new Date().getFullYear() - 10}`" name="birthday" id="birthday" class="w-100" input-class="form-control m-0" :value-type="'format'" :format="'DD-MM-YYYY'" v-model="personal.birthday" type="date" />
                         <span class="error">{{ errors.first('birthday') }}</span>
                     </div>
                 </div>
@@ -225,6 +225,12 @@ export default {
         if (JSON.parse(localStorage.getItem('user')) != null) {
             this.personal = JSON.parse(localStorage.getItem('user'));
         }
+         if (this.personal.birthday) return;
+        // get 18 years ago date;
+        let bdate = new Date();
+        bdate.setFullYear(bdate.getFullYear() - 18);
+        const birthDayDefaultDate = bdate.toLocaleDateString().replace(/\//g, "-");
+        this.personal.birthday = birthDayDefaultDate;
     }
 }
 </script>

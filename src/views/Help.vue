@@ -16,20 +16,20 @@
             <div class="col-md-8 mx-auto">
                 <div class="mb-5">
                     <h2><b>Il mio pagamento è sicuro ?</b></h2>
-                    <p><b>La sicurezza è al cuore della nostra offerta commerciale, e lo è ben inteso anche per le transazioni ! La nostra soluzione di pagamento è protetta grazie alla crittografia SSL. I vostri dati sono quindi protetti al 100%.</b></p>
+                    <p>La sicurezza è al cuore della nostra offerta commerciale, e lo è ben inteso anche per le transazioni ! La nostra soluzione di pagamento è protetta grazie alla crittografia SSL. I vostri dati sono quindi protetti al 100%.</p>
                 </div>
                 <div class="mb-5">
                     <h2><b>Come funziona il mio abbonamento ?</b></h2>
-                    <p><b>Permettiamo a tutti i nuovi clienti di usufruire della nostra offerta eccezionale di benvenuto : 3 giorni a soli 3,90€ !</b></p>
-                    <p><b>Al termine del periodo di prova, la continuità del servizio è assicurata grazie al rinnovo automatico dell'abbonamento a 39€ mensili.</b></p>
+                    <p>Permettiamo a tutti i nuovi clienti di usufruire della nostra offerta eccezionale di benvenuto : 3 giorni a soli 3,90€ !</p>
+                    <p>Al termine del periodo di prova, la continuità del servizio è assicurata grazie al rinnovo automatico dell'abbonamento a 39€ mensili.</p>
                 </div>
                 <div class="mb-5">
                     <h2><b>Come cancellare il mio abbonamento ?</b></h2>
-                    <p><b>Semplicissimo : disponi delle seguenti possibilità per cancellare l'abbonamento :</b></p>
+                    <p>Semplicissimo : disponi delle seguenti possibilità per cancellare l'abbonamento :</p>
                     <ol>
-                        <li><b>Navigare all'area utenti Dolcumento Premium : nella sezione " IL MIO ACCOUNT", utilizzate l'opzione di cancellazione. E' automatica e istantanea...</b></li>
-                        <li><b>Tramite email : scrivici a contatti@Dolcumento.com per esprimere la tua volontà. La tua richiesta sarà presa in considerazione nei due giorni lavorativi seguenti la ricezione del tuo messaggio.</b></li>
-                        <li><b>Telefonicamente : puoi chiamarci ogni giorno della settimana dalle 10 alle 17, per farlo ti preghiamo di recarti alla pagina "Contattarci".</b></li>
+                        <li>Navigare all'area utenti Dolcumento Premium : nella sezione " IL MIO ACCOUNT", utilizzate l'opzione di cancellazione. E' automatica e istantanea...</li>
+                        <li>Tramite email : scrivici a contatti@Dolcumento.com per esprimere la tua volontà. La tua richiesta sarà presa in considerazione nei due giorni lavorativi seguenti la ricezione del tuo messaggio.</li>
+                        <li>Telefonicamente : puoi chiamarci ogni giorno della settimana dalle 10 alle 17, per farlo ti preghiamo di recarti alla pagina "Contattarci".</li>
                     </ol>
                 </div>
             </div>

@@ -95,35 +95,35 @@
                             </b-collapse>
                           </b-card>
 
-                          <!-- <b-card no-body class="mb-3">
+                          <b-card no-body class="mb-3">
                             <b-card-header header-tag="header" class="h4" role="tab">
                                 <h4 block v-b-toggle.accordion-9>If I have a LinkedIn profile, do I still need to make a CV?</h4>
                             </b-card-header>
                             <b-collapse id="accordion-9" accordion="my-accordion" role="tabpanel">
                                 <b-card-body class="text-left">
                                   <b-card-text>
-                                    Yes! Unfortunately! ;)
-                                    LinkedIn is a useful tool, but it doesn’t offer the same value during the recruitment process.
-                                    Whether applying via LinkedIn or other job vacancy platforms, recruiters will still ask for a digital copy of your work history, education, skills in one place to be able to refer to it during the selection process.
+                                    Yes! Unfortunately! ;)<br>
+                                    LinkedIn is a useful tool, but it doesn’t offer the same value during the recruitment process.<br>
+                                    Whether applying via LinkedIn or other job vacancy platforms, recruiters will still ask for a digital copy of your work history, education, skills in one place to be able to refer to it during the selection process.<br>
                                     LinkedIn is simply a solid plus to add in your CV, this is why all our templates allow you to add your LinkedIn account.
                                   </b-card-text>
                                 </b-card-body>
                             </b-collapse>
-                          </b-card> -->
+                          </b-card>
 
-                          <!-- <b-card no-body class="mb-3">
+                          <b-card no-body class="mb-3">
                             <b-card-header header-tag="header" class="h4" role="tab">
                                 <h4 block v-b-toggle.accordion-10>Are your tools safe?</h4>
                             </b-card-header>
                             <b-collapse id="accordion-10" accordion="my-accordion" role="tabpanel">
                                 <b-card-body class="text-left">
                                   <b-card-text>
-                                    Yes, our tools have been tested on all platforms with success!
+                                    Yes, our tools have been tested on all platforms with success!<br>
                                     They are secures with the SSL https encrypted protocol.
                                   </b-card-text>
                                 </b-card-body>
                             </b-collapse>
-                          </b-card> -->
+                          </b-card>
 
                           <b-card no-body class="mb-3">
                             <b-card-header header-tag="header" class="h4" role="tab">
@@ -164,8 +164,8 @@
                             <b-collapse id="accordion-13" accordion="my-accordion" role="tabpanel">
                                 <b-card-body class="text-left">
                                   <b-card-text>
-                                    Usually employers prefer one page over two pages. 
-                                    However, as long as your CV is clear and easy to read, you can include two pages. 
+                                    Usually employers prefer one page over two pages.<br>
+                                    However, as long as your CV is clear and easy to read, you can include two pages.<br>
                                     If your work experience is limited to fewer than 10 years, we would recommend you to use only one page. In this specific case, less is more but only with relevant and efficient info.
                                   </b-card-text>
                                 </b-card-body>
