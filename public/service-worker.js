@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.dd68bef933dceb819be826c83ebc8b5b.js"
+  "/precache-manifest.64f56b91bf1629dc6304be8262d638a4.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "cv-builder"});

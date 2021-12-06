@@ -9,8 +9,6 @@ module.exports = {
           args[0].template = './src-public/index.html'
           return args
         })
-
-        
     },
     configureWebpack: {
       devServer: {
