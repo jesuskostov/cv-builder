@@ -9,7 +9,7 @@
                 <div class="price-box">
                 <div class="text-left mr-4">
                     <p v-if="offer === 'free'" class="price">14 CV AT ONCE, 10 MINUTES!!!</p>
-                    <p v-if="offer === 'it'" class="price">
+                    <p v-if="offer === 'paid'" class="price">
                       THE BEST CV OFFER:<br>
                       COMPARE THE PRICES!!!
                     </p>

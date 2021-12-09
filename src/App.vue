@@ -12,6 +12,13 @@ export default {
   components: {
     Navbar,
   },
+  metaInfo: {
+    title: 'Cv Semplice',
+    meta: [
+      { name: 'keywords', content: 'An example Vue application with vue-meta.' },
+      { name: 'description', content: 'An example Vue application with vue-meta.' },
+    ]
+  },
   mounted() {
     if (localStorage.step) {
       let step = localStorage.step;
