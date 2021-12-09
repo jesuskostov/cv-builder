@@ -24,5 +24,15 @@ export default {
     Templates,
     Footer
   },
+  data() {
+    return {
+      title: 'Browse Templates | ' + this.$store.state.domain.site.htmlAttrs.title
+    }
+  },
+  metaInfo () {
+    return {
+      title: this.title
+    }
+  },
 }
 </script>

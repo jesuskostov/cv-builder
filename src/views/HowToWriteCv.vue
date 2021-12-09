@@ -127,10 +127,19 @@ import Footer from '../components/Footer.vue'
 // import '../../node_modules/swiper/dist/css/swiper.css'
 
 export default {
-  name: 'Home',
   components: {
       Footer
-  }
+  },
+  data() {
+    return {
+      title: 'How to write CV | ' + this.$store.state.domain.site.htmlAttrs.title
+    }
+  },
+  metaInfo () {
+    return {
+      title: this.title
+    }
+  },
 }
 </script>
 

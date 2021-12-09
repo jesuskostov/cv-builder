@@ -50,14 +50,19 @@
 import Footer from '../components/Footer.vue'
 
 export default {
-  name: 'Home',
   data() {
     return {
+      title: 'Contact | ' + this.$store.state.domain.site.htmlAttrs.title,
       name: '',
       surname: '',
       subject: '',
       email: '',
-      message: ''
+      message: '',
+    }
+  },
+  metaInfo () {
+    return {
+      title: this.title
     }
   },
   components: {

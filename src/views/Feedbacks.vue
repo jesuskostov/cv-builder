@@ -34,7 +34,7 @@
         </div>
         <div class="row pt-5">
           <div class="col-md-4 mb-3">            
-            <div class="testimonies" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-ease="ease" :data-aos-delay="i * 50">
+            <div class="testimonies">
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
@@ -60,7 +60,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">            
-            <div class="testimonies" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-ease="ease" :data-aos-delay="i * 50">
+            <div class="testimonies">
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
@@ -86,7 +86,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">            
-            <div class="testimonies" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-ease="ease" :data-aos-delay="i * 50">
+            <div class="testimonies">
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
@@ -112,7 +112,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">            
-            <div class="testimonies" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-ease="ease" :data-aos-delay="i * 50">
+            <div class="testimonies">
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
@@ -140,7 +140,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">            
-            <div class="testimonies" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-ease="ease" :data-aos-delay="i * 50">
+            <div class="testimonies">
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
@@ -166,7 +166,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">            
-            <div class="testimonies" data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" data-aos-ease="ease" :data-aos-delay="i * 50">
+            <div class="testimonies">
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
@@ -203,9 +203,18 @@
 import Footer from '../components/Footer.vue'
 
 export default {
-  name: 'Home',
   components: {
     Footer,
+  },
+  data() {
+    return {
+      title: 'Feedback | ' + this.$store.state.domain.site.htmlAttrs.title
+    }
+  },
+  metaInfo () {
+    return {
+      title: this.title
+    }
   },
   computed: {
     offer() {

@@ -13,7 +13,6 @@ export default {
     Navbar,
   },
   metaInfo: {
-    title: 'Cv Semplice',
     meta: [
       { name: 'keywords', content: 'An example Vue application with vue-meta.' },
       { name: 'description', content: 'An example Vue application with vue-meta.' },

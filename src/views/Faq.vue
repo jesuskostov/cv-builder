@@ -187,9 +187,18 @@
 import Footer from '../components/Footer.vue'
 
 export default {
-  name: 'Home',
   components: {
     Footer,
+  },
+  data() {
+    return {
+      title: 'FAQ | ' + this.$store.state.domain.site.htmlAttrs.title
+    }
+  },
+  metaInfo () {
+    return {
+      title: this.title
+    }
   },
 }
 </script>

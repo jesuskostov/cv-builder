@@ -507,14 +507,24 @@ import Footer from "../components/Footer.vue";
 
 export default {
   name: "Home",
+  data() {
+    return {
+      title: this.$store.state.domain.site.htmlAttrs.title
+    }
+  },
   components: {
     Templates,
     Footer,
   },
+  metaInfo () {
+    return {
+      title: this.title
+    }
+  },
   computed: {
     offer() {
       return this.$store.state.domain.offer
-    }
+    },
   },
   methods: {
     async start() {
