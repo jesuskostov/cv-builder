@@ -472,7 +472,13 @@
           </div>
           <div class="why-cv-image w-100 text-center">
             <img
-              src="../assets/images/why-quickcv-image@2x.png"
+              v-if="offer === 'free'"
+              src="../assets/images/why-quickcv-image-free@2x.png"
+              alt="Why QuickCV Generator?"
+            />
+            <img
+              v-if="offer === 'paid'"
+              src="../assets/images/why-quickcv-image-paid@2x.png"
               alt="Why QuickCV Generator?"
             />
           </div>
