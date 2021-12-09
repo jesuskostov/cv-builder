@@ -83,6 +83,7 @@ export default {
   font-weight: bold;
   color: #b4b8be;
   font-size: 0.8rem;
+  width: min-content;
 
   @media (max-width: 991.98px) {
     display: none;

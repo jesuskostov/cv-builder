@@ -13,6 +13,7 @@ import "aos/dist/aos.css";
 import VueGtag from "vue-gtag";
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
+import {currentDomain} from './domains'
 
 Vue.config.productionTip = false;
 
@@ -34,6 +35,9 @@ Vue.use(VueSweetalert2);
 new Vue({
   router,
   store,
+  beforeCreate() {
+    this.$store.dispatch('setDomain', currentDomain())
+  },
   render: (h) => h(App),
   mounted() {
     AOS.init();

@@ -125,13 +125,17 @@
             <!-- <img class="d-block d-md-none intro-cv-image" src="../assets/images/intro-cv-image.svg" alt="intro cv image"> -->
             <div class="price-box">
               <div class="text-left mr-4">
-                <p class="price">1,99 EUR</p>
-                <p class="text">
-                  * Then automatically renewed by subscription,<br />for an
-                  indefinite period, at 39 € per month.
+                <p v-if="offer === 'free'" class="price">14 CV AT ONCE, 10 MINUTES!!!</p>
+                <p v-if="offer === 'paid'" class="price">
+                  WOW: 14 CV in 10 minutes<br>
+                  BEST PRICE: ONLY 1,99 €!!!
+                </p>
+                <p v-if="offer === 'free'" class="text">
+                  Create 1, get 14 efficient CV all at once!
+                  And in only 10 minutes!!!
                 </p>
               </div>
-              <router-link to="/browse-templates" class="btn"
+              <router-link to="/browse-templates" class="btn flex-shrink-0"
                 >Get Started Now</router-link
               >
             </div>
@@ -501,9 +505,10 @@ export default {
     Templates,
     Footer,
   },
-  created() {
-    const domain = window.location.host;
-    console.log(domain);
+  computed: {
+    offer() {
+      return this.$store.state.domain.offer
+    }
   },
   methods: {
     async start() {

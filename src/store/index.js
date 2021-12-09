@@ -7,6 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     selectedCv: 1,
+    domain: {},
     step: null,
     personal: null,
     workHistory: [],
@@ -57,7 +58,11 @@ export default new Vuex.Store({
     },
     SET_PREVIEW_HEIGHT: (state, {height}) => {
       state.previewHeight = height
-    }
+    },
+    SET_DOMAIN: (state, payload) => {
+      state.domain = payload
+    },
+    
   },
   actions: {
     selectCv: ({commit}, {payload}) => {
@@ -95,7 +100,11 @@ export default new Vuex.Store({
     },
     setPreviewHeight: ({commit}, {height}) => {
       commit('SET_PREVIEW_HEIGHT', {height})
-    }
+    },
+    setDomain: ({commit}, payload) => {
+      console.log(payload);
+      commit('SET_DOMAIN', payload)
+    },
   },
   modules: {
   }

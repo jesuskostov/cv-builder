@@ -3,7 +3,8 @@
     <div class="d-flex align-items-center justify-content-between container">
         <div class="nav__logo">
             <router-link to="/">
-                <img src="../assets/images/logo.svg" alt="logo">
+                <img v-if="offer === 'free'" src="../assets/images/logo-cv-semplice.svg" alt="logo">
+                <img v-if="offer === 'paid'" class="paid-logo" src="../assets/images/logo-mio-curriculum.svg" alt="logo">
             </router-link>
         </div>
         <steps v-if="$route.name == 'Builder'" />
@@ -41,6 +42,11 @@ export default {
             showNav: false
         }
     },
+    computed: {
+        offer() {
+          return this.$store.state.domain.offer
+        }
+    },
     props: {
         steps: {
             type: Boolean,
@@ -64,7 +70,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .nav {
     background-color: #fff;
     padding: 1.2rem 0;
@@ -72,6 +77,8 @@ export default {
 
     &__logo {
         img {
+            max-width: 100%;
+            width: 70%;
             @media (max-width: 575.98px) {
                 width: 100%;
             }

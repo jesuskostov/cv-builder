@@ -9,15 +9,13 @@ module.exports = {
     });
   },
   devServer: {
+    historyApiFallback: true, 
     host: "cv-semplice.local",
     allowedHosts: [".cv-semplice.local", ".mio-curriculum.local"],
   },
   // configureWebpack: {
   //   devServer: {
-  //     historyApiFallback: true
+  //     historyApiFallback: true 
   //   }
   // }
 };
-
-// TODO: copy plugin
-// https://forum.vuejs.org/t/vue-cli3-how-to-change-default-public-directory/38796/3

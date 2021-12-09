@@ -8,7 +8,8 @@
               100% secure payment <span class="line"></span>
             </h1>
             <div class="text-left">
-              <p class="price">Price <span>1.99 €*</span></p>
+              <p v-if="offer === 'free'" class="price">Price <span>1.99 €*</span></p>
+              <p v-if="offer === 'paid'" class="price">Price <span>1.99 €</span></p>
             </div>
             <div class="form-group">
               <label for="firstName">
@@ -25,7 +26,7 @@
             </div>
             <div class="form-group">
               <label for="creditCard">
-                <span class="red">*</span> Card number:
+                <span class="red">*</span> Card Number:
               </label>
 
               <input
@@ -327,6 +328,9 @@ export default {
     previewHeight() {
       return this.$store.state.previewHeight;
     },
+    offer() {
+      return this.$store.state.domain.offer
+    }
   },
   filters: {
     formatCardNumber(value) {

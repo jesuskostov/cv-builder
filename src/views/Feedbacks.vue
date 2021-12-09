@@ -8,8 +8,16 @@
                 <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mb-4 mb-md-5">Create a CV that Recruiters will Love</h1>
                 <div class="price-box">
                 <div class="text-left mr-4">
-                    <p class="price">1,99 EUR</p>
-                    <p class="text">* Then automatically renewed by subscription,<br>for an indefinite period, at 39 € per month.</p>
+                    <p v-if="offer === 'free'" class="price">14 CV AT ONCE, 10 MINUTES!!!</p>
+                    <p v-if="offer === 'it'" class="price">
+                      THE BEST CV OFFER:<br>
+                      COMPARE THE PRICES!!!
+                    </p>
+                    <p v-if="offer === 'free'" class="text">
+                      In 10 minutes you can have 14 CV at once!<br>
+                      Various models for various employers!<br> Create 1, get 14 efficient CV all at once!<br>
+                      And in only 10 minutes!!!
+                    </p>
                 </div>
                 <router-link to="/browse-templates" class="btn">Get Started Now</router-link>
                 </div>
@@ -198,6 +206,11 @@ export default {
   name: 'Home',
   components: {
     Footer,
+  },
+  computed: {
+    offer() {
+      return this.$store.state.domain.offer
+    }
   },
 }
 </script>
