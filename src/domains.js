@@ -1,38 +1,38 @@
 const DOMAINS = [
   {
-    offer: 'free',
-    url: ['cv-semplice.com', 'cv-semplice.local'],
-    googleAdsId: 'cv-semplice-1',
-    googleAnaliticsId: 'cv-semplice-2',
-    googleConversionTag: 'cv-semplice-3',
+    offer: "free",
+    url: ["cv-semplice.com", "cv-semplice.local"],
+    googleAdsId: "cv-semplice-1",
+    googleAnaliticsId: "cv-semplice-2",
+    googleConversionTag: "cv-semplice-3",
     site: {
-      title: 'Fin Du cv-semplice',
+      title: "CV Semplice",
       htmlAttrs: {
-        title: 'Fin Du cv-semplice',
-        description: 'Fin Du cv-semplice',
-        keywords: 'Fin Du cv-semplice',
+        title: "CV Semplice",
+        description: "CV Semplice",
+        keywords: "CV Semplice",
       },
     },
   },
   {
-    offer: 'paid',
-    url: ['mio-curriculum.com', 'mio-curriculum.local'],
-    googleAdsId: 'mio-curriculum-1',
-    googleAnaliticsId: 'mio-curriculum-2',
-    googleConversionTag: 'mio-curriculum-3',
+    offer: "paid",
+    url: ["mio-curriculum.com", "mio-curriculum.local"],
+    googleAdsId: "mio-curriculum-1",
+    googleAnaliticsId: "mio-curriculum-2",
+    googleConversionTag: "mio-curriculum-3",
     site: {
-      title: 'Fin Du mio-curriculum',
+      title: "Mio Curriculum",
       htmlAttrs: {
-        title: 'Fin Du mio-curriculum',
-        description: 'Fin Du mio-curriculum',
-        keywords: 'Fin Du mio-curriculum',
+        title: "Mio Curriculum",
+        description: "Mio Curriculum",
+        keywords: "Mio Curriculum",
       },
     },
   },
 ];
 
 export const currentDomain = () => {
-  const host = window.location.hostname
-  const domain = DOMAINS.find((d) => d.url.includes(host))
-  return domain
-}
+  const host = window.location.hostname;
+  const domain = DOMAINS.find((d) => d.url.includes(host));
+  return domain;
+};
