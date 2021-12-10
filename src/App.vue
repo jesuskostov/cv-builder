@@ -18,7 +18,7 @@ export default {
       link: [
         {
           rel: "icon",
-          href: `/img/${this.$store.state.domain.site.favicon}`,
+          href: `${this.$store.state.domain.site.favicon}`,
         },
       ],
     };
