@@ -12,12 +12,18 @@ export default {
   components: {
     Navbar,
   },
-  metaInfo: {
-    meta: [
-      { name: 'keywords', content: 'An example Vue application with vue-meta.' },
-      { name: 'description', content: 'An example Vue application with vue-meta.' },
-    ]
+
+  metaInfo() {
+    return {
+      link: [
+        {
+          rel: "icon",
+          href: `/img/${this.$store.state.domain.site.favicon}`,
+        },
+      ],
+    };
   },
+
   mounted() {
     if (localStorage.step) {
       let step = localStorage.step;

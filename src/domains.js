@@ -7,6 +7,7 @@ const DOMAINS = [
     googleConversionTag: "cv-semplice-3",
     site: {
       title: "CV Semplice",
+      favicon: "favicon-cv-semplice.svg",
       htmlAttrs: {
         title: "CV Semplice",
         description: "CV Semplice",
@@ -22,6 +23,7 @@ const DOMAINS = [
     googleConversionTag: "mio-curriculum-3",
     site: {
       title: "Mio Curriculum",
+      favicon: "favicon-mio-curriculum.svg",
       htmlAttrs: {
         title: "Mio Curriculum",
         description: "Mio Curriculum",
