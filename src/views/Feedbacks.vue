@@ -15,8 +15,7 @@
                     </p>
                     <p v-if="offer === 'free'" class="text">
                       In 10 minutes you can have 14 CV at once!<br>
-                      Various models for various employers!<br> Create 1, get 14 efficient CV all at once!<br>
-                      And in only 10 minutes!!!
+                      Various models for various employers!
                     </p>
                 </div>
                 <router-link to="/browse-templates" class="btn">Get Started Now</router-link>

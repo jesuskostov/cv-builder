@@ -131,7 +131,7 @@
                   BEST PRICE: ONLY 1,99 €!!!
                 </p>
                 <p v-if="offer === 'free'" class="text">
-                  Create 1, get 14 efficient CV all at once!
+                  Create 1, get 14 efficient CV all at once!<br>
                   And in only 10 minutes!!!
                 </p>
               </div>
