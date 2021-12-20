@@ -138,7 +138,7 @@
                     <div class="text-left">
                         <label for="socialProfiles">LinkedIn Account</label>
                         <br>
-                        <input type="text" class="form-control w-100" name="socialProfiles" id="socialProfiles" v-model="personal.socialProfiles" v-validate="'url'" required>
+                        <input type="text" class="form-control w-100" name="socialProfiles" id="socialProfiles" v-model="personal.socialProfiles" v-validate="'url'">
                         <span class="error">{{ errors.first('socialProfiles') }}</span>
                     </div>
                 </div>
