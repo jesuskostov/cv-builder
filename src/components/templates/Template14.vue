@@ -65,6 +65,10 @@
             <h4 class="mb-0">Email</h4>
             <p><span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
           </div>
+          <div class="mb-4">
+            <h4 class="mb-0">Linkedin</h4>
+            <p><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span></p>
+          </div>
           <div>
             <h4 class="mb-0">Personal</h4>
             <p><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>

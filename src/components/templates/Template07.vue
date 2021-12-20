@@ -60,6 +60,10 @@
               <h3 class="subtitle">Email</h3>
               <p class="description mb-1"><span>{{personal.email}}</span></p>
             </div>
+            <div v-if="personal && personal.socialProfiles" class="mb-3">
+              <h3 class="subtitle">Social Profiles</h3>
+              <p class="description mb-1"><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span> <span v-else>Linkedin</span></p>
+            </div>
           </div>
           <!-- Skills -->
           <div v-if="skills.length !== 0" class="skills text-left mb-5">

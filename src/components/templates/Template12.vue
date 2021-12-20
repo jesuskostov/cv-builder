@@ -47,6 +47,7 @@
                     <p class="description mb-0"><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
                     <p class="description mb-0"><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
                     <p class="description mb-0"><span v-if="motherLang.title">Sex: {{motherLang.title}}</span></p>
+                    <p class="description mb-0"><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span> <span v-else>Linkedin</span></p>
                 </div>
               </div>
                 <!-- Skills -->

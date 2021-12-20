@@ -62,6 +62,7 @@
             <p><span v-if="personal && personal.country">{{personal.country}}</span> <span v-else>Country</span></p>
             <p><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span> <span v-else>Phone number</span></p>
             <p><span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
+            <p><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span> <span v-else>Linkedin</span></p>
           </div>
         </div>
         <div v-if="skills.length !== 0" class="skills text-left">

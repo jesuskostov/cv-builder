@@ -20,6 +20,7 @@
                   <p class="description mb-0"><span v-if="personal && personal.country">{{personal.country}}</span> <span v-else>Country</span></p>
                   <p class="description mb-0"><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span> <span v-else>Phone number</span></p>
                   <p class="description mb-0"><span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
+                  <p class="description mb-0"><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span> <span v-else>Linkedin</span></p>
                 </div>
             </div>
             <div v-if="personal" class="mb-5">
