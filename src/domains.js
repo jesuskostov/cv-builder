@@ -1,7 +1,7 @@
 const DOMAINS = [
   {
     offer: "free",
-    url: ["cv-semplice.com", "cv-semplice.local"],
+    url: ["www.cv-semplice.com", "cv-semplice.local"],
     googleAdsId: "cv-semplice-1",
     googleAnaliticsId: "cv-semplice-2",
     googleConversionTag: "cv-semplice-3",
@@ -17,7 +17,7 @@ const DOMAINS = [
   },
   {
     offer: "paid",
-    url: ["mio-curriculum.com", "mio-curriculum.local"],
+    url: ["www.mio-curriculum.com", "mio-curriculum.local"],
     googleAdsId: "mio-curriculum-1",
     googleAnaliticsId: "mio-curriculum-2",
     googleConversionTag: "mio-curriculum-3",

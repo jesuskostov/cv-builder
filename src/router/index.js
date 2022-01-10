@@ -16,6 +16,7 @@ import Benefits from "../views/Benefits.vue";
 import Help from "../views/Help.vue";
 import SiteMap from "../views/SiteMap.vue";
 import Login from "../views/Login.vue";
+import NotFound from "../views/404.vue";
 
 Vue.use(VueRouter);
 Vue.use(Meta);
@@ -95,6 +96,11 @@ const routes = [
     path: "/login",
     name: "Login",
     component: Login,
+  },
+  {
+    path: "/404",
+    name: "NotFound",
+    component: NotFound,
   },
 ];
 
