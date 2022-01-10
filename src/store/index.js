@@ -19,7 +19,8 @@ export default new Vuex.Store({
     licenses: [],
     accomplishments: '',
     previewHeight: 500,
-    templates:templates
+    templates:templates,
+    locale: null,
   },
   mutations: {
     SET_CV_TEMPLATE: (state, payload) => {
@@ -62,7 +63,9 @@ export default new Vuex.Store({
     SET_DOMAIN: (state, payload) => {
       state.domain = payload
     },
-    
+    SET_LOCALE: (state, payload) => {
+      state.locale = payload
+    }
   },
   actions: {
     selectCv: ({commit}, {payload}) => {
@@ -105,6 +108,9 @@ export default new Vuex.Store({
       console.log(payload);
       commit('SET_DOMAIN', payload)
     },
+    setLocale: ({commit}, payload) => {
+      commit('SET_LOCALE', payload)
+    }
   },
   modules: {
   }

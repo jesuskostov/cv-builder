@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 text-left">
-            <h1 class="mb-4 mb-md-5">Create a CV that Recruiters will Love</h1>
+            <h1 class="mb-4 mb-md-5" v-text="$t('hero.title')"></h1>
             <div class="benefits mb-4">
               <div
                 class="benefits__box"

@@ -9,13 +9,21 @@ module.exports = {
     });
   },
   devServer: {
-    historyApiFallback: true, 
+    historyApiFallback: true,
     host: "cv-semplice.local",
     allowedHosts: [".cv-semplice.local", ".mio-curriculum.local"],
   },
+  pluginOptions: {
+    i18n: {
+      locale: "it",
+      fallbackLocale: "it",
+      localeDir: "locales",
+      enableInSFC: true,
+    },
+  },
   // configureWebpack: {
   //   devServer: {
-  //     historyApiFallback: true 
+  //     historyApiFallback: true
   //   }
   // }
 };
