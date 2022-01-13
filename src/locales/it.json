@@ -1,6 +1,98 @@
 {
   "hero": {
-    "title": "IT Create a CV that Recruiters will Love"
+    "title": "IT Create a CV that Recruiters will Love",
+    "benefits": {
+      "0": "Career Optimised CV Templates",
+      "1": "Edit your CV on any device",
+      "2": "No software to download",
+      "3": "Professional CV",
+      "4": "Download in PDF"
+    }
+  },
+  "sectionTitles": {
+    "testimonies": "What our clients say:",
+    "steps": "Create Your Perfect CV within few minutes:",
+    "carousel": {
+      "title": "Make a CV that stands out",
+      "text": "Increase your chance of getting your dream job by creating your best CV ever! <br> Our professional tools have been forged for this only purpose: <br> make your application stand out!"
+    },
+    "why": {
+      "title": "Why Using Our Unique Tools?",
+      "text": "With our uniquely forged set of tools, your CV will uniquely stand out from the crowd!<br> Smart features to personalise easily and fastly your CV on desktop and mobile.<br> And download your PDF in less than 5 minutes!"
+    },
+    "change": "Change Your CV: Change Your Life!"
+  },
+  "steps": {
+    "step1": {
+      "title": "Fill Your Information",
+      "text": "Choose between our collection of professional CV templates, and simply fill in the blanks."
+    },
+    "step2": {
+      "title": "Customise your CV",
+      "text": "Swap in one click between our templates during your CV creation to pick the best one!"
+    },
+    "step3": {
+      "title": "Download your CV in PDF format",
+      "text": "Once completed you can download your CV and immediately send it to recruiters!"
+    }
+  },
+  "price": {
+    "free": "14 CV AT ONCE, 10 MINUTES!!!",
+    "free2": "Create 1, get 14 efficient CV all at once!<br>And in only 10 minutes!!!",
+    "paid": "WOW: 14 CV in 10 minutes <br> BEST PRICE: ONLY 1, 99 €!!!"
+  },
+  "optimization": {
+    "title": "Only 2% of resumes make it past the first round.<br>Be in the top 2%!",
+    "text": "Our Unique CV Tools will help you take your career search to new heights with an efficient, optimized and stylish CV."
+  },
+  "browseTemplatePage": {
+    "title": "The only website which offers you all CV all at once!",
+    "text": "You make your CV and you receive it in PDF format with ALL THESE TEMPLATES!<br> You can alternate your CV template during its creation in one click!<br> Easy. Fast. Efficient."
+  },
+  "howToWriteCV": {
+    "title": "How to write your CV well",
+    "information": {
+      "0": {
+        "title": "What is a CV?",
+        "text": "<b>Your CV is your personal presentation to the prospective employer.</b> It needs to represent your professional profile as best as is possible by <b>marketing you as a new asset for the company.</b> It must be individual and customised to the vacancy you’re applying for and overall it must be convincing, because that is your ultimate aim – to convince the employer that you are the right candidate to invite for an interview!"
+      },
+      "1": {
+        "title": "How to do a CV?",
+        "text": "When it comes to getting down to the basics of how to write a curriculum vitae, there are several elements that each candidate must bear in mind.",
+        "ul": {
+          "0": "<b>A CV or curriculum vitae, often referred to as a resume in the US</b>, is defined as an account of an <b>applicant’s work experience, education and qualifications</b> sent when applying for a job. This is a basic definition for something that must essentially provoke in the reader an urge to want to meet you, therefore learning <b>how to write a CV</b> for a job application must also <b>embrace the notion of writing a story to intrigue the reader</b>, in this case a hiring manager.",
+          "1": "When a candidate decides <b>how to prepare a CV for their job search,</b> he or she <b>must begin by making a plan</b> which encompasses their professional achievements, work history, education, qualities and skills that they can bring to the position and any extra qualifications that make them a suitable candidate.",
+          "2": "This <b>information needs to then be presented in a descriptive but professional manner</b> which showcases the strengths of each individual and their aptitude for the vacancy. You must <b>approach CV writing from the perspective of your audience</b> and treat each CV as an individual and new application, not copying and pasting the same material for every different job vacancy available.",
+          "3": "<b>Research the company and the position,</b> read up on what your duties would be and think about how you would tackle problems that might arise or how your accomplishments and skills would benefit the company you’d like to work for."
+        }
+      },
+      "2": {
+        "title": "CV layout?",
+        "text": "It’s crucial to <b>think carefully about your CV format</b> when you write it. If you choose to do so from scratch you’ll have to plan carefully how to place each section, creating a layout which is easy on the eyes, making good use of white space and not cluttering the page with different fonts, sizes and typefaces. <br><br> It is <b>essential to make a CV with a well-structured format</b> that is visually pleasing and will attract the reader to the important information.br <br><br> <b>Readability is an element to be considered when structuring a CV.</b> This means maintaining an easy-to-read document which is well constructed and <b>using a layout that is comfortable for the employer to navigate</b> to find the relevant information. <br><br> When considering the <b>CV structure</b>, candidates should be mindful of the <b>margins and white space on the page</b> as well as <b>font sizing and types</b>, never using more than 2 fonts in the whole document. Also <b></b> should not be overused or the CV becomes overcrowded. <br><br> The possibility we recommend you to <b>ensure an HR-approved CV layout</b> is by  <b>using our unique tools and templates</b> which are ready-made and will save you tremendous time and energy. Our CV templates simply allow you to introduce your information so as to avoid the need to learn about the best designs for your preferred position and in what order you should place each section, etc. <br> <b>Our unique tools and templates are simply the most efficient available !</b>"
+      },
+      "3": {
+        "title": "How long should my CV be?",
+        "text": "<p>When it comes to deciding on the perfect length for a CV, employers and HR experts differ greatly as it can depend on the applicant, their level of experience and even the industry or role they&rsquo;re applying for.</p> <p>However, as a general rule, the ideal length of a CV is 1-2 A4 pages to contain all of the relevant information you need to include in your job application</p> <p>There are those who say that even 3 pages is acceptable in many cases but as relevance is the key to a successful CV, if you find you are padding out sections or adding information that is neither pertinent or useful, you should stick to the universal less is more rule!</p> <p>In certain professions, it is likely that the job application requires extra information such as a portfolio in artistic pursuits or academic occupations however this information can also be added as a separate attachment to the curriculum vitae and need not be an integral part taking up valuable CV space.</p> <p>It is advisable always to maintain each section as brief and clear as possible without missing out vital details or keywords whilst avoiding long paragraphs or endless lists as these often put employers off.</p> <p>If there is a specific achievement or experience you wish to embellish on, you can use your professional cover letter which should always accompany your job application to do so. <br><br> In a cover letter the candidate has the opportunity to give further explanations or details which could convince the hiring manager to add your name to the interview list.</p>"
+      },
+      "4": {
+        "title": "What not to include on a CV?",
+        "text": "Once you’ve learnt how to write a good CV with our unique tools and templates you still need to make sure you don’t make any critical errors which is when you must consider what NOT to include in a CV before sending off your application.",
+        "text2": "<p>Any&nbsp;<strong>additional information</strong>&nbsp;that a candidate sees as&nbsp;<strong>significant to include in a CV</strong>&nbsp;but doesn&rsquo;t fit or it requires further elaboration, can be&nbsp;<strong>added to a cover letter</strong>&nbsp;where applicants can explain in more details the fundamental reasons why their experience and qualifications make them the ideal candidate.<br><br><b>We wish you every success in your job search!</b></p>",
+        "ul": {
+          "0": "In a European CV you may find it is common to&nbsp;<strong>include a photo</strong>&nbsp;however this is&nbsp;<strong>strictly a NO-NO in a British, American or Canadian CV.</strong>",
+          "1": "Also in a CV for some companies, there is<strong>&nbsp;no need to include any personal details</strong>&nbsp;such as date of birth, age, marital status etc. as this can be seen as discriminatory. Simply check with your potential employer their internal regulations about this point.",
+          "2": "You are&nbsp;<strong>only recommended to include your citizenship if you require a working visa</strong>&nbsp;which is connected to your national ID.",
+          "3": "Try to<strong>&nbsp;steer clear of using clich&eacute; phrases</strong>&nbsp;and certain words that have been overdone in applications in the past.",
+          "4": "Also due to the importance of maintaining relevant information throughout, it is vital that you<strong>&nbsp;remove any unnecessary details or qualifications, skills or experience</strong>&nbsp;which do not relate to the position or provide evidence of your aptitude for the role.",
+          "5": "Finally, as CVs evolve and the HR community changes, you are advised not to include&nbsp;references on your CV&nbsp;at any point unless strictly requested by the job vacancy. In some cases candidates can choose to add a line at the end of the CV to mention that &lsquo;references are available on request&rsquo;."
+        }
+      }
+    }
+  },
+  "button": {
+    "start": "Get Started Now",
+    "viewAll": "View all",
+    "faq": "Go to FAQ page"
   },
   "date_format": "it-IT"
 }

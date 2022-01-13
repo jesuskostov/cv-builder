@@ -7,11 +7,12 @@
             <h1 class="mb-4 mb-md-5" v-text="$t('hero.title')"></h1>
             <div class="benefits mb-4">
               <div
+                v-for="(p, i) in $t('hero.benefits')" :key="i" 
                 class="benefits__box"
                 data-aos="fade"
                 data-aos-duration="1000"
                 data-aos-ease="ease"
-                data-aos-delay="0"
+                :data-aos-delay="i * 100"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -27,117 +28,17 @@
                     fill="#65af2c"
                   />
                 </svg>
-                <h4>Career Optimised CV Templates</h4>
-              </div>
-              <div
-                class="benefits__box"
-                data-aos="fade"
-                data-aos-duration="1000"
-                data-aos-ease="ease"
-                data-aos-delay="100"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    id="Path_396"
-                    data-name="Path 396"
-                    d="M12,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22Zm-1-6,7.07-7.071L16.659,7.515,11,13.172,8.174,10.343,6.76,11.757Z"
-                    transform="translate(-2 -2)"
-                    fill="#65af2c"
-                  />
-                </svg>
-                <h4>Edit your CV on any device</h4>
-              </div>
-              <div
-                class="benefits__box"
-                data-aos="fade"
-                data-aos-duration="1000"
-                data-aos-ease="ease"
-                data-aos-delay="200"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    id="Path_396"
-                    data-name="Path 396"
-                    d="M12,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22Zm-1-6,7.07-7.071L16.659,7.515,11,13.172,8.174,10.343,6.76,11.757Z"
-                    transform="translate(-2 -2)"
-                    fill="#65af2c"
-                  />
-                </svg>
-                <h4>No software to download</h4>
-              </div>
-              <div
-                class="benefits__box"
-                data-aos="fade"
-                data-aos-duration="1000"
-                data-aos-ease="ease"
-                data-aos-delay="300"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    id="Path_396"
-                    data-name="Path 396"
-                    d="M12,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22Zm-1-6,7.07-7.071L16.659,7.515,11,13.172,8.174,10.343,6.76,11.757Z"
-                    transform="translate(-2 -2)"
-                    fill="#65af2c"
-                  />
-                </svg>
-                <h4>Professional CV</h4>
-              </div>
-              <div
-                class="benefits__box"
-                data-aos="fade"
-                data-aos-duration="1000"
-                data-aos-ease="ease"
-                data-aos-delay="400"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="25"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    id="Path_396"
-                    data-name="Path 396"
-                    d="M12,22A10,10,0,1,1,22,12,10,10,0,0,1,12,22Zm-1-6,7.07-7.071L16.659,7.515,11,13.172,8.174,10.343,6.76,11.757Z"
-                    transform="translate(-2 -2)"
-                    fill="#65af2c"
-                  />
-                </svg>
-                <h4>Download in PDF</h4>
+                <h4>{{p}}</h4>
               </div>
             </div>
             <!-- <img class="d-block d-md-none intro-cv-image" src="../assets/images/intro-cv-image.svg" alt="intro cv image"> -->
             <div class="price-box">
               <div class="text-left mr-4">
-                <p v-if="offer === 'free'" class="price">14 CV AT ONCE, 10 MINUTES!!!</p>
-                <p v-if="offer === 'paid'" class="price">
-                  WOW: 14 CV in 10 minutes<br>
-                  BEST PRICE: ONLY 1,99 €!!!
-                </p>
-                <p v-if="offer === 'free'" class="text">
-                  Create 1, get 14 efficient CV all at once!<br>
-                  And in only 10 minutes!!!
-                </p>
+                <p v-if="offer === 'free'" class="price" v-text="$t('price.free')" />
+                <p v-if="offer === 'paid'" class="price" v-html="$t('price.paid')" />
+                <p v-if="offer === 'free'" class="text" v-html="$t('price.free2')" />
               </div>
-              <router-link to="/browse-templates" class="btn flex-shrink-0"
-                >Get Started Now</router-link
-              >
+              <router-link to="/browse-templates" class="btn flex-shrink-0" v-text="$t('button.start')" />
             </div>
           </div>
           <div class="col-md-6 position-relative d-none d-md-block">
@@ -175,14 +76,8 @@
                 />
               </div>
               <div class="text-left">
-                <h3>
-                  Only 2% of resumes make it past the first round.<br />Be in
-                  the top 2%!
-                </h3>
-                <p>
-                  Our Unique CV Tools will help you take your career search to
-                  new heights with an efficient, optimized and stylish CV.
-                </p>
+                <h3 v-html="$t('optimization.title')" />
+                <p v-text="$t('optimization.text')" />
               </div>
             </div>
           </div>
@@ -192,7 +87,7 @@
     <div id="testimonies">
       <div class="container">
         <div class="section-title mb-3 mb-md-5">
-          <h2>What our clients say:</h2>
+          <h2 v-text="$t('sectionTitles.testimonies')" />
           <span class="line"></span>
         </div>
         <div class="row pt-5">
@@ -352,16 +247,14 @@
           </div>
         </div>
         <div class="text-center mt-5">
-          <router-link to="/feedback" class="custom-btn big"
-            >View all</router-link
-          >
+          <router-link to="/feedback" class="custom-btn big" v-text="$t('button.viewAll')" />
         </div>
       </div>
     </div>
     <div id="step-section">
       <div class="container">
         <div class="section-title">
-          <h2>Create Your Perfect CV within few minutes:</h2>
+          <h2 v-text="$t('sectionTitles.steps')" />
           <span class="line"></span>
         </div>
         <div class="row">
@@ -374,11 +267,8 @@
               data-aos-delay="0"
             >
               <img src="../assets/images/fill-info.svg" alt="fill info icon" />
-              <h3>Fill Your Information</h3>
-              <p>
-                Choose between our collection of professional CV templates, and
-                simply fill in the blanks.
-              </p>
+              <h3 v-text="$t('steps.step1.title')" />
+              <p v-text="$t('steps.step1.text')" />
             </div>
           </div>
           <div class="col-md-4">
@@ -393,11 +283,8 @@
                 src="../assets/images/customize-cv.svg"
                 alt="customize cv icon"
               />
-              <h3>Customise your CV</h3>
-              <p>
-                Swap in one click between our templates during your CV creation
-                to pick the best one!
-              </p>
+              <h3 v-text="$t('steps.step2.title')" />
+              <p v-text="$t('steps.step2.text')" />
             </div>
           </div>
           <div class="col-md-4">
@@ -412,11 +299,8 @@
                 src="../assets/images/pdf-download.svg"
                 alt="download pdf icon"
               />
-              <h3>Download your CV in PDF format</h3>
-              <p>
-                Once completed you can download your CV and immediately send it
-                to recruiters!
-              </p>
+              <h3 v-text="$t('steps.step3.title')" />
+              <p v-text="$t('steps.step3.text')" />
             </div>
           </div>
         </div>
@@ -425,18 +309,12 @@
     <div id="templates-carousel">
       <div class="container mb-3 mb-sm-0">
         <div class="section-title">
-          <h2>Make a CV that stands out</h2>
+          <h2 v-text="$t('sectionTitles.carousel.title')" />
           <span class="line"></span>
         </div>
         <div class="row">
           <div class="col-md-9 mx-auto">
-            <p class="text-center pt-4">
-              Increase your chance of getting your dream job by creating your
-              best CV ever! <br />
-              Our professional tools have been forged for this only purpose:
-              <br />
-              make your application stand out!
-            </p>
+            <p class="text-center pt-4" v-html="$t('sectionTitles.carousel.text')" />
           </div>
         </div>
       </div>
@@ -444,30 +322,20 @@
       <templates :preview="true" />
 
       <div class="text-center mb-5">
-        <router-link to="/browse-templates" class="custom-btn big"
-          >View all</router-link
-        >
+        <router-link to="/browse-templates" class="custom-btn big" v-text="$t('button.viewAll')" />
       </div>
     </div>
     <div id="why-section">
       <div class="section-title">
-        <h2>Why Using Our Unique Tools?</h2>
+        <h2 v-text="$t('sectionTitles.why.title')" />
         <span class="line"></span>
       </div>
       <div class="container">
         <div class="row">
           <div class="col-md-8 mx-auto">
-            <p class="text-center pt-4">
-              With our uniquely forged set of tools, your CV will uniquely stand
-              out from the crowd!<br />
-              Smart features to personalise easily and fastly your CV on desktop
-              and mobile.<br />
-              And download your PDF in less than 5 minutes!
-            </p>
+            <p class="text-center pt-4" v-html="$t('sectionTitles.why.text')" />
             <div class="text-center mt-5">
-              <router-link to="/faq" class="custom-btn big"
-                >Go to FAQ page</router-link
-              >
+              <router-link to="/faq" class="custom-btn big" v-text="$t('button.faq')" />
             </div>
           </div>
           <div class="why-cv-image w-100 text-center">
@@ -489,8 +357,8 @@
       <div class="container">
         <img src="../assets/images/squares.svg" alt="squares icons" />
         <div class="content">
-          <h2>Change Your CV: Change Your Life!</h2>
-          <router-link to="/browse-templates">Get Started Now</router-link>
+          <h2 v-text="$t('sectionTitles.change')" />
+          <router-link to="/browse-templates" v-text="$t('button.start')" />
         </div>
       </div>
     </div>
