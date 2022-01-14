@@ -120,7 +120,7 @@
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
-                        <label for="phoneNumber">Phone number</label>
+                        <label for="phoneNumber"><span class="red">*</span> Phone number</label>
                         <br>
                         <input type="tel" class="w-100 form-control" name="phoneNumber" id="phoneNumber" v-model="personal.phoneNumber" v-validate="{required: true, regex: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im }">
                         <span class="error">{{ errors.first('phoneNumber') }}</span>
