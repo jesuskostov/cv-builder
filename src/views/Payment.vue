@@ -8,8 +8,8 @@
               100% secure payment <span class="line"></span>
             </h1>
             <div class="text-left">
-              <p v-if="offer === 'free'" class="price">Price <span>1.99 €*</span></p>
-              <p v-if="offer === 'paid'" class="price">Price <span>1.99 €</span></p>
+              <p v-if="offer === 'free'" class="price">Price <span>1.99 € *</span></p>
+              <p v-if="offer === 'paid'" class="price">Price <span>1.99 € *</span></p>
             </div>
             <div class="form-group">
               <label for="firstName">
@@ -40,7 +40,7 @@
               />
               <span class="error">{{ errors.first("creditCard") }}</span>
             </div>
-            <div class="row">
+            <div class="row mb-5">
               <div class="col">
                 <div class="form-group">
                   <label for="expiryMonth">
@@ -129,10 +129,9 @@
                 <img src="../assets/images/zoom.svg" alt="view icon" />
                 View large
               </button>
-            </div>
-
-            <ul class="mt-4">
-              <li class="d-flex items-center mb-2">
+            </div>            
+            <ul class="mt-4 pl-0">
+              <li class="d-flex items-left mb-2">
                 <span class="mr-2 flex-shrink-0">
                   <svg
                     class="text-success fill-current"
@@ -220,6 +219,14 @@
                 Send instantly to email
               </li>
             </ul>
+            <small v-if="offer === 'free'">
+              *Abbonamento e Sistema dei Crediti
+              Al termine del periodo di prova di 3 giorni, tutti i mesi ti verranno addebitati 44,90€ per il tuo Abbonamento, che avrà durata indeterminata, salva la possibilità di recesso in ogni momento. Avrai a disposizione 100 crediti, che potrai utilizzare per richiedere documenti aggiuntivi. I crediti sono utilizzabili per la richiesta di documenti aggiuntivi, tra cui Visura PRA (20), Visura Camerale (10), Visura Catastale (18), Visura CRIF (10), Visura Protesti (12) e Bilancio Aziendale (15).
+            </small>
+            <small v-if="offer === 'paid'">
+              *Abbonamento e Sistema dei Crediti
+              Al termine del periodo di prova di 3 giorni, tutti i mesi ti verranno addebitati 44,90€ per il tuo Abbonamento, che avrà durata indeterminata, salva la possibilità di recesso in ogni momento. Avrai a disposizione 100 crediti, che potrai utilizzare per richiedere documenti aggiuntivi. I crediti sono utilizzabili per la richiesta di documenti aggiuntivi, tra cui Visura PRA (20), Visura Camerale (10), Visura Catastale (18), Visura CRIF (10), Visura Protesti (12) e Bilancio Aziendale (15).
+            </small>
           </div>
         </div>
       </div>
