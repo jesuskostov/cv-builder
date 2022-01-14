@@ -3,135 +3,155 @@
     <div class="container py-5">
       <div class="row">
         <div class="col-12 col-md-7 col-lg-6 ml-lg-auto">
-          <div class="payment">
-            <h1 class="title">
-              100% secure payment <span class="line"></span>
-            </h1>
-            <div class="text-left">
-              <p v-if="offer === 'free'" class="price">Price <span>1.99 € *</span></p>
-              <p v-if="offer === 'paid'" class="price">Price <span>1.99 € *</span></p>
-            </div>
-            <div class="form-group">
-              <label for="firstName">
-                <span class="red">*</span> Your Name:
-              </label>
-              <input
-                type="text"
-                class="form-control"
-                name="firstName"
-                id="firstName"
-                v-validate="'alpha_spaces'"
-              />
-              <span class="error">{{ errors.first("firstName") }}</span>
-            </div>
-            <div class="form-group">
-              <label for="creditCard">
-                <span class="red">*</span> Card Number:
-              </label>
+          <div class="payment h-100 d-flex flex-column">
+            <div>
+              <h1 class="title">
+                100% secure payment <span class="line"></span>
+              </h1>
+              <div class="text-left">
+                <p v-if="offer === 'free'" class="price">
+                  Price: <span>1.99 € *</span>
+                </p>
+                <p v-if="offer === 'paid'" class="price">
+                  Price: <span>1.99 € *</span>
+                </p>
+              </div>
+              <div class="form-group">
+                <label for="firstName">
+                  <span class="red">*</span> Your Name:
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="firstName"
+                  id="firstName"
+                  v-validate="'alpha_spaces'"
+                />
+                <span class="error">{{ errors.first("firstName") }}</span>
+              </div>
+              <div class="form-group">
+                <label for="creditCard">
+                  <span class="red">*</span> Card Number:
+                </label>
 
-              <input
-                type="text"
-                :value="cardNumber | formatCardNumber"
-                @input="updateValue"
-                class="form-control"
-                name="creditCard"
-                id="firstName"
-                v-validate="'credit_card'"
-              />
-              <span class="error">{{ errors.first("creditCard") }}</span>
-            </div>
-            <div class="row mb-5">
-              <div class="col">
-                <div class="form-group">
-                  <label for="expiryMonth">
-                    <span class="red">*</span>
-                    Expiry Date:
-                  </label>
-                  <div class="row no-gutters mx-n1">
-                    <div class="col-6 px-1">
-                      <input
-                        type="text"
-                        class="form-control "
-                        name="expiryMonth"
-                        id="expiryMonth"
-                        v-validate="'date_format:MM'"
-                        required
-                        maxlength="2"
-                      />
+                <input
+                  type="text"
+                  :value="cardNumber | formatCardNumber"
+                  @input="updateValue"
+                  class="form-control"
+                  name="creditCard"
+                  id="firstName"
+                  v-validate="'credit_card'"
+                />
+                <span class="error">{{ errors.first("creditCard") }}</span>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="expiryMonth">
+                      <span class="red">*</span>
+                      Expiry Date:
+                    </label>
+                    <div class="row no-gutters mx-n1">
+                      <div class="col-6 px-1">
+                        <input
+                          type="text"
+                          class="form-control "
+                          name="expiryMonth"
+                          id="expiryMonth"
+                          v-validate="'date_format:MM'"
+                          required
+                          maxlength="2"
+                        />
+                      </div>
+                      <div class="col-6 px-1">
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="expiryYear"
+                          id="expiryYear"
+                          v-validate="'digits:4'"
+                          required
+                          maxlength="4"
+                        />
+                      </div>
                     </div>
-                    <div class="col-6 px-1">
-                      <input
-                        type="text"
-                        class="form-control"
-                        name="expiryYear"
-                        id="expiryYear"
-                        v-validate="'digits:4'"
-                        required
-                        maxlength="4"
-                      />
-                    </div>
+                    <span class="error">{{ errors.first("expiryMonth") }}</span>
+                    <span class="error">{{ errors.first("expiryYear") }}</span>
                   </div>
-                  <span class="error">{{ errors.first("expiryMonth") }}</span>
-                  <span class="error">{{ errors.first("expiryYear") }}</span>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="cvv"><span class="red">*</span> CVV:</label>
+                    <div class="d-flex align-items-center">
+                      <span class="mr-2">
+                        <input
+                          type="text"
+                          class="form-control mb-0 w-auto"
+                          name="cvv"
+                          id="cvv"
+                          size="3"
+                          maxlength="3"
+                          v-validate="'digits:3'"
+                        />
+                      </span>
+                      <span class="ccv">
+                        <img src="../assets/images/ccv.svg" alt="" />
+                      </span>
+                    </div>
+                    <span class="error">{{ errors.first("cvv") }}</span>
+                  </div>
                 </div>
               </div>
-              <div class="col">
-                <div class="form-group">
-                  <label for="cvv"><span class="red">*</span> CVV:</label>
-                  <div class="d-flex align-items-center">
-                    <span class="mr-2">
-                      <input
-                        type="text"
-                        class="form-control mb-0 w-auto"
-                        name="cvv"
-                        id="cvv"
-                        size="3"
-                        maxlength="3"
-                        v-validate="'digits:3'"
-                      />
-                    </span>
-                    <span class="ccv">
-                      <img src="../assets/images/ccv.svg" alt="" />
-                    </span>
-                  </div>
-                  <span class="error">{{ errors.first("cvv") }}</span>
-                </div>
-              </div>
             </div>
-            <p class="text-center mb-1">
-              <button class="pay-btn">
-                Complete Payment
-              </button>
-            </p>
-            <p class="text-center">
-              <img
-                src="../assets/images/cards.svg"
-                class="img-fluid"
-                alt="cards"
-                width="300"
-              />
-            </p>
+
+            <div class="mt-lg-auto">
+              <p class="text-center mb-1">
+                <button class="pay-btn">
+                  Complete Payment
+                </button>
+              </p>
+              <p class="text-center">
+                <img
+                  src="../assets/images/cards.svg"
+                  class="img-fluid"
+                  alt="cards"
+                  width="300"
+                />
+              </p>
+            </div>
           </div>
         </div>
-        <div class="col-md-4 mr-auto">
+        <div class="col-md-4 mr-auto mt-2 mt-md-0">
           <div class="preview">
-            <div class="px-5 py-3 text-center">
-              <svg
-                :viewBox="`0 0 780 ${previewHeight}`"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <!-- Common use case: embed HTML text into SVG -->
-                <foreignObject x="0" y="0" width="100%" :height="previewHeight">
-                  <templates :color="color" :onBuilder="true" :selected="selectedCv" />
-                </foreignObject>
-              </svg>
-              <button @click="showBigPreview" class="view-large-btn">
-                <img src="../assets/images/zoom.svg" alt="view icon" />
-                View large
-              </button>
-            </div>            
-            <ul class="mt-4 pl-0">
-              <li class="d-flex items-left mb-2">
+            <div class="px-md-5 text-center">
+              <div class="px-lg-3">
+                <svg
+                  :viewBox="`0 0 780 ${previewHeight}`"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Common use case: embed HTML text into SVG -->
+                  <foreignObject
+                    x="0"
+                    y="0"
+                    width="100%"
+                    :height="previewHeight"
+                  >
+                    <templates
+                      :color="color"
+                      :onBuilder="true"
+                      :selected="selectedCv"
+                    />
+                  </foreignObject>
+                </svg>
+              </div>
+            </div>
+            <button @click="showBigPreview" class="view-large-btn">
+              <img src="../assets/images/zoom.svg" alt="view icon" />
+              View large
+            </button>
+            <ul class="mt-2 pl-0">
+              <li class="d-flex items-left mb-1">
                 <span class="mr-2 flex-shrink-0">
                   <svg
                     class="text-success fill-current"
@@ -148,7 +168,7 @@
                 ></span>
                 CV in PDF format
               </li>
-               <li class="d-flex items-center mb-2">
+              <li class="d-flex items-center mb-1">
                 <span class="mr-2 flex-shrink-0">
                   <svg
                     class="text-success fill-current"
@@ -165,7 +185,7 @@
                 ></span>
                 1 click for 14 CV at once!
               </li>
-              <li class="d-flex items-center mb-2">
+              <li class="d-flex items-center mb-1">
                 <span class="mr-2 flex-shrink-0">
                   <svg
                     class="text-success fill-current"
@@ -182,7 +202,7 @@
                 ></span>
                 Change template at anytime
               </li>
-              <li class="d-flex items-center mb-2">
+              <li class="d-flex items-center mb-1">
                 <span class="mr-2 flex-shrink-0"
                   ><svg
                     class="text-success fill-current"
@@ -200,7 +220,7 @@
                 </span>
                 Print from anywhere
               </li>
-              <li class="d-flex items-center mb-2">
+              <li class="d-flex items-center mb-1">
                 <span class="mr-2 flex-shrink-0"
                   ><svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -220,12 +240,24 @@
               </li>
             </ul>
             <small v-if="offer === 'free'">
-              *Abbonamento e Sistema dei Crediti
-              Al termine del periodo di prova di 3 giorni, tutti i mesi ti verranno addebitati 44,90€ per il tuo Abbonamento, che avrà durata indeterminata, salva la possibilità di recesso in ogni momento. Avrai a disposizione 100 crediti, che potrai utilizzare per richiedere documenti aggiuntivi. I crediti sono utilizzabili per la richiesta di documenti aggiuntivi, tra cui Visura PRA (20), Visura Camerale (10), Visura Catastale (18), Visura CRIF (10), Visura Protesti (12) e Bilancio Aziendale (15).
+              *Abbonamento e Sistema dei Crediti Al termine del periodo di prova
+              di 3 giorni, tutti i mesi ti verranno addebitati 44,90€ per il tuo
+              Abbonamento, che avrà durata indeterminata, salva la possibilità
+              di recesso in ogni momento. Avrai a disposizione 100 crediti, che
+              potrai utilizzare per richiedere documenti aggiuntivi. I crediti
+              sono utilizzabili per la richiesta di documenti aggiuntivi, tra
+              cui Visura PRA (20), Visura Camerale (10), Visura Catastale (18),
+              Visura CRIF (10), Visura Protesti (12) e Bilancio Aziendale (15).
             </small>
             <small v-if="offer === 'paid'">
-              *Abbonamento e Sistema dei Crediti
-              Al termine del periodo di prova di 3 giorni, tutti i mesi ti verranno addebitati 44,90€ per il tuo Abbonamento, che avrà durata indeterminata, salva la possibilità di recesso in ogni momento. Avrai a disposizione 100 crediti, che potrai utilizzare per richiedere documenti aggiuntivi. I crediti sono utilizzabili per la richiesta di documenti aggiuntivi, tra cui Visura PRA (20), Visura Camerale (10), Visura Catastale (18), Visura CRIF (10), Visura Protesti (12) e Bilancio Aziendale (15).
+              *Abbonamento e Sistema dei Crediti Al termine del periodo di prova
+              di 3 giorni, tutti i mesi ti verranno addebitati 44,90€ per il tuo
+              Abbonamento, che avrà durata indeterminata, salva la possibilità
+              di recesso in ogni momento. Avrai a disposizione 100 crediti, che
+              potrai utilizzare per richiedere documenti aggiuntivi. I crediti
+              sono utilizzabili per la richiesta di documenti aggiuntivi, tra
+              cui Visura PRA (20), Visura Camerale (10), Visura Catastale (18),
+              Visura CRIF (10), Visura Protesti (12) e Bilancio Aziendale (15).
             </small>
           </div>
         </div>
@@ -252,7 +284,9 @@
                   <img
                     @click="onClick(i)"
                     class="cv-list-img"
-                    :src="require(`@/assets/images/cv-templates/it/${item.thumb}`)"
+                    :src="
+                      require(`@/assets/images/cv-templates/it/${item.thumb}`)
+                    "
                     alt=""
                   />
                 </div>
@@ -336,8 +370,8 @@ export default {
       return this.$store.state.previewHeight;
     },
     offer() {
-      return this.$store.state.domain.offer
-    }
+      return this.$store.state.domain.offer;
+    },
   },
   filters: {
     formatCardNumber(value) {
