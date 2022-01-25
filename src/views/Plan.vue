@@ -1,34 +1,62 @@
 <template>
   <div class="container pb-5">
-    <div class="text-center py-4">
-      <h1>Your CV is ready!</h1>
-    </div>
     <div class="row">
       <div class="col-md-10 mx-auto">
-        <div class="card">
+        <div class="card my-5">
+          <div class="text-center pb-4">
+            <h1 class="font-weight-bold">Your CV is ready!</h1>
+          </div>
           <div class="row mb-5">
             <div class="col-md-6">
-              <div @click="plan = 'CV Expert'" class="plan" :class="{'active': plan === 'CV Expert'}">
-                <h2>CV Expert</h2>
+              <div
+                @click="plan = 'CV Expert'"
+                class="plan"
+                :class="{ active: plan === 'CV Expert' }"
+              >
+                <h2 class="font-weight-bold mb-0">CV Expert</h2>
                 <p class="price">1 € for 3 days*</p>
                 <ul>
                   <li v-for="i in firstPlan" :key="i">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                        <path d="M0 12.116l2.053-1.897c2.401 1.162 3.924 2.045 6.622 3.969 5.073-5.757 8.426-8.678 14.657-12.555l.668 1.536c-5.139 4.484-8.902 9.479-14.321 19.198-3.343-3.936-5.574-6.446-9.679-10.251z"/>
-                    </svg>{{ i }}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                      />
+                    </svg>
+                    {{ i }}
                   </li>
                 </ul>
               </div>
             </div>
             <div class="col-md-6">
-              <div @click="plan = 'Achat Solo'" class="plan" :class="{'active': plan === 'Achat Solo'}">
-                <h2>Achat Solo</h2>
+              <div
+                @click="plan = 'Achat Solo'"
+                class="plan"
+                :class="{ active: plan === 'Achat Solo' }"
+              >
+                <h2 class="font-weight-bold mb-0">Achat Solo</h2>
                 <p class="price">29,90 €</p>
                 <ul>
-                  <li :class="{'overline': i >= 2}" v-for="(name, i) in secondPlan" :key="i">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                        <path d="M0 12.116l2.053-1.897c2.401 1.162 3.924 2.045 6.622 3.969 5.073-5.757 8.426-8.678 14.657-12.555l.668 1.536c-5.139 4.484-8.902 9.479-14.321 19.198-3.343-3.936-5.574-6.446-9.679-10.251z"/>
-                    </svg>{{ name }}
+                  <li
+                    :class="{ overline: i >= 2 }"
+                    v-for="(name, i) in secondPlan"
+                    :key="i"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                      />
+                    </svg>
+                    {{ name }}
                   </li>
                 </ul>
               </div>
@@ -37,17 +65,29 @@
           <!-- EMAIL -->
           <div class="row">
             <div class="col-md-8 mx-auto">
-              <form @submit.prevent="setPlan">
-                  <div class="text-left mb-3">
-                      <label for="email">Email address to receive a safe copy of your CV :</label>
-                      <br>
-                      <input type="email" class="w-100 form-control" name="email" id="email" v-model="email" v-validate="'email'">
-                      <span class="error">{{ errors.first('email')}}</span>
-                  </div>
-                  <div class="text-center">
-                      <button type="submit" class="custom-btn mb-3 mb-md-0">Final Step before Download!</button>
-                  </div>
-              </form>  
+              <form action="" @submit.prevent="setPlan">
+                <div class="form-group mb-3">
+                  <label for="email"
+                    >Email address to receive a safe copy of your CV :</label
+                  >
+
+                  <input
+                    type="text"
+                    class="w-100 form-control"
+                    name="email"
+                    id="email"
+                    v-model="email"
+                    v-validate="'required|email'"
+                  />
+                  <span class="error">{{ errors.first("email") }}</span>
+                </div>
+
+                <div class="text-center">
+                  <button type="submit" class="custom-btn mb-3 mb-md-0">
+                    Final Step before Download!
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -57,27 +97,26 @@
 </template>
 
 <script>
-import { Validator } from 'vee-validate';
-
+import { Validator } from "vee-validate";
 const dict = {
   custom: {
     email: {
-      required: 'Email is required',
-      email: 'Email is not valid',
+      required: "MESSAGE REQUIRED",
+      email: "MESSAGE EMAIL",
     },
   },
 };
 
-Validator.localize('en', dict);
+Validator.localize("en", dict);
 
 export default {
   data() {
     return {
       personal: {
-        phoneNumber: ''
+        phoneNumber: "",
       },
-      plan: 'CV Expert',
-      email: '',
+      plan: "CV Expert",
+      email: null,
       firstPlan: [
         "Download your PDF CV in one click",
         "14 automatic generated models",
@@ -95,19 +134,21 @@ export default {
         "Accessible 24/7",
         "Transfer in 3 clicks to your contacts",
         "Termination at any time",
-      ]
-    }
+      ],
+    };
   },
   methods: {
-    setPlan() {
-      this.$router.push('/Payment')
-    }
-  }
-}
+    async setPlan() {
+      const isValid = await this.$validator.validateAll();
+
+      if (!isValid) return;
+      this.$router.push("/Payment");
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-
 .card {
   padding: 2.5rem 2rem;
   background-color: #fff;
@@ -136,8 +177,8 @@ export default {
 .plan {
   padding: 2rem;
   height: 100%;
-  border: 4px solid rgb(247, 247, 247);
-  border-radius: 4px;
+  border: 2px solid rgb(226, 228, 228);
+  border-radius: 12px;
   cursor: pointer;
   h2 {
     font-size: 1.6rem;
@@ -166,11 +207,13 @@ export default {
         position: relative;
         margin-right: 6px;
         top: -2px;
+        fill: currentColor;
+        color: #c8ccd0;
       }
     }
   }
   &.active {
-    border: 4px solid var(--primary-color);
+    border-color: var(--primary-color);
     .price {
       color: var(--primary-color);
     }
