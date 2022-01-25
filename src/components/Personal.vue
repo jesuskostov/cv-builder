@@ -144,7 +144,7 @@
                     <div class="text-left">
                         <label for="email"><span class="red">*</span> Email</label>
                         <br>
-                        <input type="email" class="w-100 form-control" name="email" id="email" v-model="personal.email" v-validate="'email'" required>
+                        <input type="email" class="w-100 form-control" name="email" id="email" v-model="personal.email" v-validate="'required|email'">
                         <span class="error">{{ errors.first('email') }}</span>
                     </div>
                 </div>
