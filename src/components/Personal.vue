@@ -8,6 +8,7 @@
     <form @submit.prevent="goToFormStep(2)">
         <div class="form mb-5">
             <div class="row">
+                <!-- IMAGE PICKER -->
                 <div class="col-md-12 mb-4">
                     <div class="d-flex justify-content-center align-items-end">
                         <input type="file" class="image-input" ref="imageInput" accept="image/*" @change="onFileChange">
@@ -21,6 +22,7 @@
                         <img v-if="this.personal.image != null" @click="deletePhoto" class="img-bin-icon ml-3" src="../assets/images/bin.svg" alt="bin icon">
                     </div>
                 </div>
+                <!-- NAME -->
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
                         <label for="name"><span class="red">*</span> Nome</label>
@@ -29,6 +31,7 @@
                         <span class="error">{{ errors.first('name') }}</span>
                     </div>
                 </div>
+                <!-- SURNAME -->
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
                         <label for="surname"><span class="red">*</span> Cognome</label>
@@ -37,6 +40,7 @@
                         <span class="error">{{ errors.first('surname') }}</span>
                     </div>
                 </div>
+                <!-- BIRTHDAY -->
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
                         <label for="birthday">Birthday</label>
@@ -45,6 +49,7 @@
                         <span class="error">{{ errors.first('birthday') }}</span>
                     </div>
                 </div>
+                <!-- PROFESSION -->
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
                         <label for="profession">Profession</label>
@@ -53,6 +58,7 @@
                         <span class="error">{{ errors.first('profession') }}</span>
                     </div>
                 </div>
+                <!-- FAMILY -->
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
                         <label for="family">Family</label>
@@ -66,6 +72,7 @@
                         <span class="error">{{ errors.first('family') }}</span>
                     </div>
                 </div>
+                <!-- SEX -->
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
                         <label for="sex">Sex</label>
@@ -79,6 +86,7 @@
                         <span class="error">{{ errors.first('sex') }}</span>
                     </div>
                 </div>
+                <!-- CITY -->
                 <div class="col-md-8 mb-4">
                     <div class="text-left">
                         <label for="city"><span class="red">*</span> City</label>
@@ -86,6 +94,7 @@
                         <span class="error">{{ errors.first('city') }}</span>
                     </div>
                 </div>
+                <!-- ZIP CODE -->
                 <div class="col-md-4 mb-4">
                     <div class="text-left">
                         <label for="zipCode"><span class="red">*</span> Zip code</label>
@@ -94,6 +103,7 @@
                         <span class="error">{{ errors.first('zipCode') }}</span>
                     </div>
                 </div>
+                <!-- COUNTRY -->
                 <div class="col-md-7 col-lg-8 mb-4">
                     <div class="text-left">
                         <label for="country"><span class="red">*</span> Country</label>
@@ -102,6 +112,7 @@
                         <span class="error">{{ errors.first('country') }}</span>
                     </div>
                 </div>
+                <!-- NATIONALITY -->
                 <div class="col-md-5 col-lg-4 mb-4">
                     <div class="text-left">
                         <label for="nationality">Nationality</label>
@@ -110,6 +121,7 @@
                         <span class="error">{{ errors.first('nationality') }}</span>
                     </div>
                 </div>
+                <!-- FULL ADDRESS -->
                 <div class="col-md-12 mb-4">
                     <div class="text-left">
                         <label for="fullAddress"><span class="red">*</span> Full Address</label>
@@ -118,14 +130,16 @@
                         <span class="error">{{ errors.first('fullAddress') }}</span>
                     </div>
                 </div>
+                <!-- PHONE NUMBER -->
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
                         <label for="phoneNumber"><span class="red">*</span> Phone number</label>
                         <br>
                         <input type="tel" class="w-100 form-control" name="phoneNumber" id="phoneNumber" v-model="personal.phoneNumber" v-validate="{required: true, regex: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im }">
-                        <span class="error">{{ errors.first('phoneNumber') }}</span>
+                        <span class="error">{{ errors.first('phoneNumber')}}</span>
                     </div>
                 </div>
+                <!-- EMAIL -->
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
                         <label for="email"><span class="red">*</span> Email</label>
@@ -134,6 +148,7 @@
                         <span class="error">{{ errors.first('email') }}</span>
                     </div>
                 </div>
+                <!-- LINKEDING ACCOUNT -->
                 <div class="col-md-12">
                     <div class="text-left">
                         <label for="socialProfiles">LinkedIn Account (Optional)</label>
@@ -154,6 +169,18 @@
 <script>
 import DatePicker from 'vue2-datepicker';
 import 'vue2-datepicker/index.css';
+import { Validator } from 'vee-validate';
+
+const dict = {
+  custom: {
+    phoneNumber: {
+      required: 'The phone number format is invalid, only numbers, please.',
+      regex: 'The phone number format is invalid, only numbers, please.'
+    },
+  },
+};
+
+Validator.localize('en', dict);
 
 export default {
     data() {
@@ -231,7 +258,7 @@ export default {
         bdate.setFullYear(bdate.getFullYear() - 18);
         const birthDayDefaultDate = bdate.toLocaleDateString().replace(/\//g, "-");
         this.personal.birthday = birthDayDefaultDate;
-    }
+    },
 }
 </script>
 

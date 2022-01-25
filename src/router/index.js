@@ -15,6 +15,7 @@ import SecurePayment from "../views/SecurePayment.vue";
 import Benefits from "../views/Benefits.vue";
 import Help from "../views/Help.vue";
 import SiteMap from "../views/SiteMap.vue";
+import Plan from "../views/Plan.vue";
 import Login from "../views/Login.vue";
 import NotFound from "../views/404.vue";
 
@@ -46,6 +47,11 @@ const routes = [
     path: "/payment",
     name: "Payment",
     component: Payment,
+  },
+  {
+    path: "/plan",
+    name: "Plan",
+    component: Plan,
   },
   {
     path: "/error",

@@ -72,6 +72,7 @@
           >
             <templates
               slot="pdf-content"
+              :color="color"
               :onBuilder="true"
               :selected="selectedCv"
             />
@@ -241,6 +242,9 @@ export default {
     previewHeight() {
       return this.$store.state.previewHeight;
     },
+    offer() {
+      return this.$store.state.domain.offer;
+    },
   },
   watch: {
     selectedCv: {
@@ -255,7 +259,11 @@ export default {
       this.$store.dispatch("step", { step });
     },
     generateReport() {
-      this.$router.push("/payment");
+      if (this.offer === 'free') {
+        this.$router.push("/plan");
+      } else {
+        this.$router.push("/payment");
+      }
       // this.$refs.html2Pdf.generatePdf()
     },
     onClick(i) {
@@ -291,7 +299,7 @@ export default {
     this.nickname = templates[cv].nickname;
   },
   beforeRouteLeave(to, from, next) {
-    if (to.name == "Payment") {
+    if (to.name == "Payment" || to.name == "Plan") {
       next();
     } else {
       const answer = window.confirm("Do you really want to leave?");
