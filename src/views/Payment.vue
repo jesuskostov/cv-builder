@@ -15,10 +15,12 @@
                 </div>
                 <div class="col-md-8">
                   <p v-if="offer === 'free'" class="price">
-                    1.99 € *
+                    <span v-if="plan === 'CV Expert'">1.00 € *</span>
+                    <span v-if="plan === 'Achat Solo'">29,90 €</span>
                   </p>
                   <p v-if="offer === 'paid'" class="price">
-                    1.99 € *
+                    <span v-if="plan === 'CV Expert'">1.00 € *</span>
+                    <span v-if="plan === 'Achat Solo'">29,90 €</span>
                   </p>
                 </div>
               </div>
@@ -218,10 +220,16 @@
               <div class="col-md-12">
               <hr>
                 <div class="personal-info">
-                  <p class="mb-0">Periodo di Prova 3 giorni</p>
-                  <p class="mb-0">Importo da Pagare : 1.00 €!*</p>
+                  <p class="mb-0">
+                    <span v-if="plan === 'CV Expert'">Periodo di Prova 3 giorni</span>
+                    <span v-if="plan === 'Achat Solo'">Achat Solo</span>
+                  </p>
+                  <p class="mb-0">Importo da Pagare : 
+                    <span v-if="plan === 'CV Expert'">1.00 €!*</span>
+                    <span v-if="plan === 'Achat Solo'">29,90 €</span>
+                  </p>
                 </div>
-                <ul class="mt-3 pl-0">
+                <ul v-if="plan === 'CV Expert'" class="mt-3 pl-0">
                   <li class="d-flex items-left mb-1">
                     <span class="mr-2 flex-shrink-0">
                       <svg
@@ -239,7 +247,7 @@
                     ></span>
                     CV in PDF format
                   </li>
-                  <li class="d-flex items-center mb-1">
+                  <li class="d-flex items-left mb-1">
                     <span class="mr-2 flex-shrink-0">
                       <svg
                         class="text-success fill-current"
@@ -254,9 +262,9 @@
                           d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                         /></svg
                     ></span>
-                    1 click for 14 CV at once!
+                    Download your PDF CV in one click,
                   </li>
-                  <li class="d-flex items-center mb-1">
+                  <li class="d-flex items-left mb-1">
                     <span class="mr-2 flex-shrink-0">
                       <svg
                         class="text-success fill-current"
@@ -271,11 +279,11 @@
                           d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                         /></svg
                     ></span>
-                    Change template at anytime
+                    14 automatic generated models,
                   </li>
-                  <li class="d-flex items-center mb-1">
-                    <span class="mr-2 flex-shrink-0"
-                      ><svg
+                  <li class="d-flex items-left mb-1">
+                    <span class="mr-2 flex-shrink-0">
+                      <svg
                         class="text-success fill-current"
                         style="fill: currentColor"
                         xmlns="http://www.w3.org/2000/svg"
@@ -286,33 +294,118 @@
                         <path fill="none" d="M0 0h24v24H0z" />
                         <path
                           d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        />
-                      </svg>
-                    </span>
-                    Print from anywhere
+                        /></svg
+                    ></span>
+                    Personalization by job offer,
                   </li>
-                  <li class="d-flex items-center mb-1">
-                    <span class="mr-2 flex-shrink-0"
-                      ><svg
+                  <li class="d-flex items-left mb-1">
+                    <span class="mr-2 flex-shrink-0">
+                      <svg
+                        class="text-success fill-current"
+                        style="fill: currentColor"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 24 24"
                         width="24"
                         height="24"
-                        class="text-success fill-current"
-                        style="fill: currentColor"
                       >
                         <path fill="none" d="M0 0h24v24H0z" />
                         <path
                           d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        />
-                      </svg>
-                    </span>
-                    Send instantly to email
+                        /></svg
+                    ></span>
+                    Create your resume library,
+                  </li>
+                  <li class="d-flex items-left mb-1">
+                    <span class="mr-2 flex-shrink-0">
+                      <svg
+                        class="text-success fill-current"
+                        style="fill: currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                        /></svg
+                    ></span>
+                    Accessible 24/7,
+                  </li>
+                  <li class="d-flex items-left mb-1">
+                    <span class="mr-2 flex-shrink-0">
+                      <svg
+                        class="text-success fill-current"
+                        style="fill: currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                        /></svg
+                    ></span>
+                    Transfer in 3 clicks to your contacts,
+                  </li>
+                  <li class="d-flex items-left mb-1">
+                    <span class="mr-2 flex-shrink-0">
+                      <svg
+                        class="text-success fill-current"
+                        style="fill: currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                        /></svg
+                    ></span>
+                    Termination at any time,
+                  </li>
+                </ul>
+                <ul v-if="plan === 'Achat Solo'" class="mt-3 pl-0">
+                  <li class="d-flex items-left mb-1">
+                    <span class="mr-2 flex-shrink-0">
+                      <svg
+                        class="text-success fill-current"
+                        style="fill: currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                        /></svg
+                    ></span>
+                    Download your PDF CV in one click
+                  </li>
+                  <li class="d-flex items-left mb-1">
+                    <span class="mr-2 flex-shrink-0">
+                      <svg
+                        class="text-success fill-current"
+                        style="fill: currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                        /></svg
+                    ></span>
+                    14 automatic generated models
                   </li>
                 </ul>
               </div>
             </div>
-            <small v-if="offer === 'free'">
+            <small v-if="offer === 'free'" class="mb-5">
               *Abbonamento e Sistema dei Crediti Al termine del periodo di prova
               di 3 giorni, tutti i mesi ti verranno addebitati 44,90€ per il tuo
               Abbonamento, che avrà durata indeterminata, salva la possibilità
@@ -447,6 +540,9 @@ export default {
     },
     personal() {
       return this.$store.state.personal
+    },
+    plan() {
+      return this.$store.state.plan
     }
   },
   filters: {

@@ -21,6 +21,7 @@ export default new Vuex.Store({
     previewHeight: 500,
     templates:templates,
     locale: null,
+    plan: ''
   },
   mutations: {
     SET_CV_TEMPLATE: (state, payload) => {
@@ -65,6 +66,9 @@ export default new Vuex.Store({
     },
     SET_LOCALE: (state, payload) => {
       state.locale = payload
+    },
+    SET_PLAN: (state, plan) => {
+      state.plan = plan
     }
   },
   actions: {
@@ -110,6 +114,9 @@ export default new Vuex.Store({
     },
     setLocale: ({commit}, payload) => {
       commit('SET_LOCALE', payload)
+    },
+    setPlan: ({commit}, plan) => {
+      commit('SET_PLAN', plan)
     }
   },
   modules: {
