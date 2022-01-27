@@ -241,6 +241,9 @@ export default {
       margin-bottom: 6px;
       &.overline {
         text-decoration: line-through;
+        svg {
+          fill: #c8ccd0 !important;
+        }
       }
       &:last-child {
         margin-bottom: 0;
