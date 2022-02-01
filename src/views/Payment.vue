@@ -2,7 +2,7 @@
   <div>
     <div class="container py-5">
       <div class="row">
-        <div class="col-12 col-md-7 col-lg-7 ml-lg-auto">
+        <div class="col-12 col-md-12 col-lg-7 ml-lg-auto">
           <div class="payment h-100 d-flex flex-column">
             <div>
               <h1 class="title mb-5">
@@ -19,7 +19,7 @@
                     <span v-if="plan === 'Achat Solo'">29,90 €</span>
                   </p>
                   <p v-if="offer === 'paid'" class="price">
-                    <span>1.00 € *</span>
+                    <span>4.90 € *</span>
                   </p>
                 </div>
               </div>
@@ -157,8 +157,8 @@
                 </div>
               </div>
             </div>
-            <div class="mt-lg-auto">
-              <p class="text-center mb-1 mt-5">
+            <div :class="{'mt-lg-5 pt-4': offer === 'paid'}">
+              <p class="text-center mb-1">
                 <button class="pay-btn">
                   Complete Payment
                 </button>
@@ -174,7 +174,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4 col-lg-5 mr-auto mt-2 mt-md-0">
+        <div class="col-12 col-md-12 col-lg-5 mr-auto mt-2 mt-md-0">
           <div class="preview">
             <div class="row mb-3">
               <div class="col-md-5">
@@ -218,13 +218,13 @@
               </div>
               <div class="col-md-12">
               <hr>
-                <div class="personal-info">
+                <div class="personal-info mb-2">
                   <p class="mb-0">
                     <span v-if="plan === 'CV Expert'">Periodo di Prova 3 giorni</span>
                     <span v-if="plan === 'Achat Solo'">Achat Solo</span>
                   </p>
                   <p v-if="offer === 'free'" class="mb-0">Importo da Pagare : 
-                    <span v-if="plan === 'CV Expert'">1.00 €!*</span>
+                    <span v-if="plan === 'CV Expert'">4.90 €!*</span>
                     <span v-if="plan === 'Achat Solo'">29,90 €</span>
                   </p>
                   <p v-if="offer === 'paid'" class="mb-0">
@@ -232,10 +232,10 @@
                     <br>
                     Periodo di Prova 3 giorni
                     <br>
-                    Importo da Pagare : 1,00€!*
+                    Importo da Pagare : 4,90€!*
                   </p>
                 </div>
-                <ul v-if="offer === 'paid'" class="mt-3 pl-0">
+                <ul v-if="offer === 'paid'" class="small-text mt-3 pl-0 mb-0">
                   <li class="d-flex items-left mb-1">
                     <span class="mr-2 flex-shrink-0">
                       <svg
@@ -373,277 +373,277 @@
                     Termination at any time,
                   </li>
                 </ul>
-                <ul v-if="plan === 'CV Expert'" class="mt-3 pl-0">
-                  <li class="d-flex items-left mb-1">
-                    <span class="mr-2 flex-shrink-0">
-                      <svg
-                        class="text-success fill-current"
-                        style="fill: currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        /></svg
-                    ></span>
-                    CV in PDF format
-                  </li>
-                  <li class="d-flex items-left mb-1">
-                    <span class="mr-2 flex-shrink-0">
-                      <svg
-                        class="text-success fill-current"
-                        style="fill: currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        /></svg
-                    ></span>
-                    Download your PDF CV in one click,
-                  </li>
-                  <li class="d-flex items-left mb-1">
-                    <span class="mr-2 flex-shrink-0">
-                      <svg
-                        class="text-success fill-current"
-                        style="fill: currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        /></svg
-                    ></span>
-                    14 automatic generated models,
-                  </li>
-                  <li class="d-flex items-left mb-1">
-                    <span class="mr-2 flex-shrink-0">
-                      <svg
-                        class="text-success fill-current"
-                        style="fill: currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        /></svg
-                    ></span>
-                    Personalization by job offer,
-                  </li>
-                  <li class="d-flex items-left mb-1">
-                    <span class="mr-2 flex-shrink-0">
-                      <svg
-                        class="text-success fill-current"
-                        style="fill: currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        /></svg
-                    ></span>
-                    Create your resume library,
-                  </li>
-                  <li class="d-flex items-left mb-1">
-                    <span class="mr-2 flex-shrink-0">
-                      <svg
-                        class="text-success fill-current"
-                        style="fill: currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        /></svg
-                    ></span>
-                    Accessible 24/7,
-                  </li>
-                  <li class="d-flex items-left mb-1">
-                    <span class="mr-2 flex-shrink-0">
-                      <svg
-                        class="text-success fill-current"
-                        style="fill: currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        /></svg
-                    ></span>
-                    Transfer in 3 clicks to your contacts,
-                  </li>
-                  <li class="d-flex items-left mb-1">
-                    <span class="mr-2 flex-shrink-0">
-                      <svg
-                        class="text-success fill-current"
-                        style="fill: currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        /></svg
-                    ></span>
-                    Termination at any time,
-                  </li>
-                </ul>
-                <ul v-if="plan === 'Achat Solo'" class="mt-3 pl-0">
-                  <li class="d-flex items-left mb-1">
-                    <span class="mr-2 flex-shrink-0">
-                      <svg
-                        class="text-success fill-current"
-                        style="fill: currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        /></svg
-                    ></span>
-                    Download your PDF CV in one click
-                  </li>
-                  <li class="d-flex items-left mb-1">
-                    <span class="mr-2 flex-shrink-0">
-                      <svg
-                        class="text-success fill-current"
-                        style="fill: currentColor"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        /></svg
-                    ></span>
-                    14 automatic generated models
-                  </li>
-                  <li class="overline grey d-flex items-left mb-1">
-                    <span class="mr-2 flex-shrink-0">
-                      <svg
-                        class="text-success"
-                        style="fill: #c8ccd0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        /></svg
-                    ></span>
-                    Personalization by job offer
-                  </li>
-                  <li class="overline grey d-flex items-left mb-1">
-                    <span class="mr-2 flex-shrink-0">
-                      <svg
-                        class="text-success"
-                        style="fill: #c8ccd0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        /></svg
-                    ></span>
-                    Create your resume library
-                  </li>
-                  <li class="overline grey d-flex items-left mb-1">
-                    <span class="mr-2 flex-shrink-0">
-                      <svg
-                        class="text-success"
-                        style="fill: #c8ccd0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        /></svg
-                    ></span>
-                    Accessible 24/7
-                  </li>
-                  <li class="overline grey d-flex items-left mb-1">
-                    <span class="mr-2 flex-shrink-0">
-                      <svg
-                        class="text-success"
-                        style="fill: #c8ccd0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        /></svg
-                    ></span>
-                    Transfer in 3 clicks to your contacts
-                  </li>
-                  <li class="overline grey d-flex items-left mb-1">
-                    <span class="mr-2 flex-shrink-0">
-                      <svg
-                        class="text-success"
-                        style="fill: #c8ccd0"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        width="24"
-                        height="24"
-                      >
-                        <path fill="none" d="M0 0h24v24H0z" />
-                        <path
-                          d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
-                        /></svg
-                    ></span>
-                    Termination at any time
-                  </li>
-                </ul>
+                <small v-if="offer === 'free'">
+                  *Abbonamento e Sistema dei Crediti Al termine del periodo di prova
+                  di 3 giorni, tutti i mesi ti verranno addebitati 44,90€ per il tuo
+                  Abbonamento, che avrà durata indeterminata, salva la possibilità
+                  di recesso in ogni momento. Avrai a disposizione 100 crediti, che
+                  potrai utilizzare per richiedere documenti aggiuntivi. I crediti
+                  sono utilizzabili per la richiesta di documenti aggiuntivi, tra
+                  cui Visura PRA (20), Visura Camerale (10), Visura Catastale (18),
+                  Visura CRIF (10), Visura Protesti (12) e Bilancio Aziendale (15).
+                </small>
               </div>
             </div>
-            <small v-if="offer === 'free'" class="mb-5">
-              *Abbonamento e Sistema dei Crediti Al termine del periodo di prova
-              di 3 giorni, tutti i mesi ti verranno addebitati 44,90€ per il tuo
-              Abbonamento, che avrà durata indeterminata, salva la possibilità
-              di recesso in ogni momento. Avrai a disposizione 100 crediti, che
-              potrai utilizzare per richiedere documenti aggiuntivi. I crediti
-              sono utilizzabili per la richiesta di documenti aggiuntivi, tra
-              cui Visura PRA (20), Visura Camerale (10), Visura Catastale (18),
-              Visura CRIF (10), Visura Protesti (12) e Bilancio Aziendale (15).
-            </small>
+            <ul v-if="plan === 'CV Expert'" class="mt-3 pl-0">
+              <li class="d-flex items-left mb-1">
+                <span class="mr-2 flex-shrink-0">
+                  <svg
+                    class="text-success fill-current"
+                    style="fill: currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                    /></svg
+                ></span>
+                CV in PDF format
+              </li>
+              <li class="d-flex items-left mb-1">
+                <span class="mr-2 flex-shrink-0">
+                  <svg
+                    class="text-success fill-current"
+                    style="fill: currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                    /></svg
+                ></span>
+                Download your PDF CV in one click,
+              </li>
+              <li class="d-flex items-left mb-1">
+                <span class="mr-2 flex-shrink-0">
+                  <svg
+                    class="text-success fill-current"
+                    style="fill: currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                    /></svg
+                ></span>
+                14 automatic generated models,
+              </li>
+              <li class="d-flex items-left mb-1">
+                <span class="mr-2 flex-shrink-0">
+                  <svg
+                    class="text-success fill-current"
+                    style="fill: currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                    /></svg
+                ></span>
+                Personalization by job offer,
+              </li>
+              <li class="d-flex items-left mb-1">
+                <span class="mr-2 flex-shrink-0">
+                  <svg
+                    class="text-success fill-current"
+                    style="fill: currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                    /></svg
+                ></span>
+                Create your resume library,
+              </li>
+              <li class="d-flex items-left mb-1">
+                <span class="mr-2 flex-shrink-0">
+                  <svg
+                    class="text-success fill-current"
+                    style="fill: currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                    /></svg
+                ></span>
+                Accessible 24/7,
+              </li>
+              <li class="d-flex items-left mb-1">
+                <span class="mr-2 flex-shrink-0">
+                  <svg
+                    class="text-success fill-current"
+                    style="fill: currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                    /></svg
+                ></span>
+                Transfer in 3 clicks to your contacts,
+              </li>
+              <li class="d-flex items-left mb-1">
+                <span class="mr-2 flex-shrink-0">
+                  <svg
+                    class="text-success fill-current"
+                    style="fill: currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                    /></svg
+                ></span>
+                Termination at any time,
+              </li>
+            </ul>
+            <ul v-if="plan === 'Achat Solo'" class="mt-3 pl-0">
+              <li class="d-flex items-left mb-1">
+                <span class="mr-2 flex-shrink-0">
+                  <svg
+                    class="text-success fill-current"
+                    style="fill: currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                    /></svg
+                ></span>
+                Download your PDF CV in one click
+              </li>
+              <li class="d-flex items-left mb-1">
+                <span class="mr-2 flex-shrink-0">
+                  <svg
+                    class="text-success fill-current"
+                    style="fill: currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                    /></svg
+                ></span>
+                14 automatic generated models
+              </li>
+              <li class="overline grey d-flex items-left mb-1">
+                <span class="mr-2 flex-shrink-0">
+                  <svg
+                    class="text-success"
+                    style="fill: #c8ccd0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                    /></svg
+                ></span>
+                Personalization by job offer
+              </li>
+              <li class="overline grey d-flex items-left mb-1">
+                <span class="mr-2 flex-shrink-0">
+                  <svg
+                    class="text-success"
+                    style="fill: #c8ccd0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                    /></svg
+                ></span>
+                Create your resume library
+              </li>
+              <li class="overline grey d-flex items-left mb-1">
+                <span class="mr-2 flex-shrink-0">
+                  <svg
+                    class="text-success"
+                    style="fill: #c8ccd0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                    /></svg
+                ></span>
+                Accessible 24/7
+              </li>
+              <li class="overline grey d-flex items-left mb-1">
+                <span class="mr-2 flex-shrink-0">
+                  <svg
+                    class="text-success"
+                    style="fill: #c8ccd0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                    /></svg
+                ></span>
+                Transfer in 3 clicks to your contacts
+              </li>
+              <li class="overline grey d-flex items-left mb-1">
+                <span class="mr-2 flex-shrink-0">
+                  <svg
+                    class="text-success"
+                    style="fill: #c8ccd0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0z" />
+                    <path
+                      d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
+                    /></svg
+                ></span>
+                Termination at any time
+              </li>
+            </ul>
             <small v-if="offer === 'paid'" class="mb-5">
               *Abbonamento e Sistema dei Crediti Al termine del periodo di prova
               di 3 giorni, tutti i mesi ti verranno addebitati 44,90€ per il tuo
@@ -951,31 +951,6 @@ export default {
   }
 }
 
-.preview {
-  display: flex;
-  flex-direction: column;
-  border-radius: 4px;
-  background-color: #e9ecf0;
-  height: 100%;
-  padding: 20px;
-  .edit {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 43px;
-    font-size: 1rem;
-    font-weight: bold;
-    text-align: left;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 9px;
-    border: 0;
-    background-color: #fff;
-    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.16);
-  }
-}
-
 .big-preview {
   position: fixed;
   inset: 0;
@@ -1096,6 +1071,16 @@ export default {
     border: 0;
     background-color: #fff;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.small-text {
+  li {
+    font-size: 0.9rem;
+    svg {
+      width: 18px;
+      height: 18px;
+    }
   }
 }
 </style>

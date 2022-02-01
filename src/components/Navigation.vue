@@ -8,7 +8,7 @@
             </router-link>
         </div>
         <steps v-if="$route.name == 'Builder'" />
-        <ul v-if="$route.name != 'Builder'" class="nav__menu" :class="{'show-nav': showNav}">
+        <ul v-if="$route.name != 'Builder' && $route.name != 'Payment'" class="nav__menu" :class="{'show-nav': showNav}">
             <button @click="routeTo('/browse-templates')">Browse Templates</button>
             <button @click="routeTo('/how-to-write-cv')">How to write CV</button>
             <button @click="routeTo('/feedback')">Feedback</button>

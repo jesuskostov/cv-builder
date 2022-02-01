@@ -42,7 +42,7 @@
     </div>
     <div v-if="step == 5" class="container pt-5 pb-5">
       <div class="row flex-column-reverse flex-md-row">
-        <div ref="template" class="col-md-8">
+        <div ref="template" class="col-md-12 col-lg-8">
           <svg
             :viewBox="`0 0 700 ${previewHeight}`"
             xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@
             />
           </vue-html2pdf>
         </div>
-        <div class="col-md-4 mb-5 mb-md-0">
+        <div class="col-md-12 col-lg-4 mb-5 mb-md-0">
           <div class="preview p-4">
             <div class="steps-title mb-4">
               <h3>Template configuration</h3>
