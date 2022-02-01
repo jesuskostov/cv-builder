@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-md-8">
                   <p v-if="offer === 'free'" class="price">
-                    <span v-if="plan === 'CV Expert'">1.00 € *</span>
+                    <span v-if="plan === 'CV Expert'">4.90 € *</span>
                     <span v-if="plan === 'Achat Solo'">29,90 €</span>
                   </p>
                   <p v-if="offer === 'paid'" class="price">
@@ -228,8 +228,6 @@
                     <span v-if="plan === 'Achat Solo'">29,90 €</span>
                   </p>
                   <p v-if="offer === 'paid'" class="mb-0">
-                    My CV
-                    <br>
                     Periodo di Prova 3 giorni
                     <br>
                     Importo da Pagare : 4,90€!*
