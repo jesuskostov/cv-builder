@@ -15,11 +15,11 @@
                 </div>
                 <div class="col-md-8">
                   <p v-if="offer === 'free'" class="price">
-                    <span v-if="plan === 'CV Expert'">4.90 € *</span>
+                    <span v-if="plan === 'CV Expert'">4,90 € *</span>
                     <span v-if="plan === 'Achat Solo'">29,90 €</span>
                   </p>
                   <p v-if="offer === 'paid'" class="price">
-                    <span>4.90 € *</span>
+                    <span>4,90 € *</span>
                   </p>
                 </div>
               </div>
