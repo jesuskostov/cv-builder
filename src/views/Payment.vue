@@ -157,7 +157,7 @@
                 </div>
               </div>
             </div>
-            <div :class="{'mt-lg-5 pt-4': offer === 'paid'}">
+            <div>
               <p class="text-center mb-1">
                 <button class="pay-btn">
                   Complete Payment
@@ -176,7 +176,7 @@
         </div>
         <div class="col-12 col-md-12 col-lg-5 mr-auto mt-2 mt-md-0">
           <div class="preview">
-            <div class="row mb-3">
+            <div class="row mb-1">
               <div class="col-md-5">
                 <div>
                   <svg
@@ -233,7 +233,17 @@
                     Importo da Pagare : 4,90€!*
                   </p>
                 </div>
-                <ul v-if="offer === 'paid'" class="small-text mt-3 pl-0 mb-0">
+                <small v-if="offer === 'paid'">
+                  *Abbonamento e Sistema dei Crediti Al termine del periodo di prova
+                  di 3 giorni, tutti i mesi ti verranno addebitati 44,90€ per il tuo
+                  Abbonamento, che avrà durata indeterminata, salva la possibilità
+                  di recesso in ogni momento. Avrai a disposizione 100 crediti, che
+                  potrai utilizzare per richiedere documenti aggiuntivi. I crediti
+                  sono utilizzabili per la richiesta di documenti aggiuntivi, tra
+                  cui Visura PRA (20), Visura Camerale (10), Visura Catastale (18),
+                  Visura CRIF (10), Visura Protesti (12) e Bilancio Aziendale (15).
+                </small>
+                <ul v-if="offer === 'paid'" class="mt-3 pl-0 mb-0">
                   <li class="d-flex items-left mb-1">
                     <span class="mr-2 flex-shrink-0">
                       <svg
@@ -642,16 +652,6 @@
                 Termination at any time
               </li>
             </ul>
-            <small v-if="offer === 'paid'" class="mb-5">
-              *Abbonamento e Sistema dei Crediti Al termine del periodo di prova
-              di 3 giorni, tutti i mesi ti verranno addebitati 44,90€ per il tuo
-              Abbonamento, che avrà durata indeterminata, salva la possibilità
-              di recesso in ogni momento. Avrai a disposizione 100 crediti, che
-              potrai utilizzare per richiedere documenti aggiuntivi. I crediti
-              sono utilizzabili per la richiesta di documenti aggiuntivi, tra
-              cui Visura PRA (20), Visura Camerale (10), Visura Catastale (18),
-              Visura CRIF (10), Visura Protesti (12) e Bilancio Aziendale (15).
-            </small>
           </div>
         </div>
       </div>
