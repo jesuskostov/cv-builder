@@ -11,7 +11,12 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     host: "cv-semplice.local",
-    allowedHosts: [".cv-semplice.local", ".mio-curriculum.local"],
+    allowedHosts: [
+      "cv-semplice.local",
+      "mio-curriculum.local",
+      "cv-immediat.local",
+      "cv-rapide.local",
+    ],
   },
   pluginOptions: {
     i18n: {
