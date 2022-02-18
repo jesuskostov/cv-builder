@@ -166,7 +166,6 @@
               <p class="text-center">
                 <img
                   src="../assets/images/cards.svg"
-                  class="img-fluid"
                   alt="cards"
                   width="300"
                 />
