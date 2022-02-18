@@ -1,7 +1,7 @@
 const DOMAINS = [
   {
     offer: "free",
-    url: ["www.cv-rapide.com", "cv-semplice.com", "cv-semplice.local"],
+    url: ["www.cv-semplice.com", "cv-semplice.com", "cv-semplice.local"],
     googleAdsId: "cv-semplice-1",
     googleAnaliticsId: "cv-semplice-2",
     googleConversionTag: "cv-semplice-3",
