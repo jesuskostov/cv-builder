@@ -21,6 +21,23 @@
   </div>
 </template>
 
+<script>
+export default {
+  name: "Error",
+  mounted() {
+    this.$gtag.event("conversion", {
+      send_to: this.domain.googleConversionTag,
+      transaction_id: "",
+    });
+  },
+  computed: {
+    domain() {
+      return this.$store.state.domain;
+    },
+  },
+};
+</script>
+
 <style scoped>
 .error-img {
   width: 100px;

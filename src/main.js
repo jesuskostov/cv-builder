@@ -22,9 +22,9 @@ Vue.config.productionTip = false;
 Vue.use(
   VueGtag,
   {
-    config: { id: process.env.VUE_APP_GOOGLE_ANALITICS_ID },
+    config: { id: currentDomain().googleAdsId },
     // if two IDS
-    includes: [{ id: process.env.VUE_APP_GOOGLE_ANALITICS_ID2 }],
+    // includes: [{ id: process.env.VUE_APP_GOOGLE_ANALITICS_ID2 }],
   },
   router
 );
