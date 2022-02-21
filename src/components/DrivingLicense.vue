@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="accordion px-4 py-4">
-      <h3>Driving license:</h3>
+      <h3 v-text="$t('other_step.drivingLicense')" />
       <multiselect
         v-model="licenses"
         class="w-100"
@@ -11,7 +11,7 @@
         :clear-on-select="false"
         :preserve-search="true"
         @input="onChange"
-        placeholder="Choose"
+        placeholder="Scegliere"
         label="title"
         track-by="title"
       />
@@ -38,7 +38,7 @@ export default {
   data() {
     return {
       licenses: [],
-      predefined: [{ title: "Car" }, { title: "Moto" }, { title: "None" }],
+      predefined: [{ title: "Auto" }, { title: "Moto" }, { title: "Nessuno" }],
       selected: "",
     };
   },

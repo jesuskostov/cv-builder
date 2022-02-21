@@ -15,21 +15,21 @@
                     </div>
                     <div class="col-6 col-md-3 mb-3 mb-md-0">
                         <div class="d-flex flex-column align-items-start">
-                            <router-link to="/browse-templates">Get Started</router-link>
-                            <router-link to="/how-to-write-cv">How to write CV</router-link>
-                            <router-link to="/browse-templates">Browse Templates</router-link>                        
-                            <router-link to="/feedback">Feedback</router-link>
-                            <router-link to="/faq">FAQ</router-link>
+                            <router-link to="/browse-templates" v-text="$t('footer_menu')[0]">Get Started</router-link>
+                            <router-link to="/how-to-write-cv" v-text="$t('footer_menu')[1]">How to write CV</router-link>
+                            <router-link to="/browse-templates" v-text="$t('footer_menu')[2]">Browse Templates</router-link>                        
+                            <router-link to="/feedback" v-text="$t('footer_menu')[3]">Feedback</router-link>
+                            <router-link to="/faq" v-text="$t('footer_menu')[4]">FAQ</router-link>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="d-flex flex-column align-items-start">
-                            <router-link to="/partnership">Partnership</router-link>
-                            <router-link to="/secure-payment">Secure Payment</router-link>
-                            <router-link to="#">Privacy Policy</router-link>
-                            <router-link to="#">Terms of Service</router-link>
-                            <router-link to="#">Cookie Policy</router-link>
-                            <router-link to="#">Note Legali</router-link>
+                            <router-link to="/partnership" v-text="$t('footer_menu')[5]">Partnership</router-link>
+                            <router-link to="/secure-payment" v-text="$t('footer_menu')[6]">Secure Payment</router-link>
+                            <router-link to="#" v-text="$t('footer_menu')[7]">Privacy Policy</router-link>
+                            <router-link to="#" v-text="$t('footer_menu')[8]">Terms of Service</router-link>
+                            <router-link to="#" v-text="$t('footer_menu')[9]">Cookie Policy</router-link>
+                            <router-link to="#" v-text="$t('footer_menu')[10]">Note Legali</router-link>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">

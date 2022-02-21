@@ -1,6 +1,6 @@
 <template>
   <div class="accordion text-left px-4 py-4">
-    <label for="accomplishments">Accomplishments:</label>
+    <label for="accomplishments" v-text="$t('other_step.accomplishments')" />
     <br>
     <vue-editor name="accomplishments" id="accomplishments" v-model="accomplishments" :editorToolbar="customToolbar"></vue-editor>
   </div>

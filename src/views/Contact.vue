@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-12">
               <div class="d-flex flex-column align-items-center">
-                <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mb-4 mb-md-5">Contact us</h1>
+                <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mb-4 mb-md-5" v-text="$t('contact.title')" />
               </div>
           </div>
         </div>
@@ -18,21 +18,21 @@
                     <form @submit.prevent="alertDisplay">
                       <div class="row">
                           <div class="col-md-6">
-                              <input type="text" v-model="name" class="w-100 form-control" minlength="2" placeholder="Name" required>
+                              <input type="text" v-model="name" class="w-100 form-control" minlength="2" placeholder="Nome" required>
                           </div>
                           <div class="col-md-6">
-                              <input type="text" v-model="surname" class="w-100 form-control" minlength="2" placeholder="Surname" required>
+                              <input type="text" v-model="surname" class="w-100 form-control" minlength="2" placeholder="Cognome" required>
                           </div>
                           <div class="col-md-6">
                               <input type="email" v-model="email" class="w-100 form-control" placeholder="Email" required>
                           </div>
                           <div class="col-md-6">
-                              <input type="text" v-model="subject" class="w-100 form-control" placeholder="Subject" required>
+                              <input type="text" v-model="subject" class="w-100 form-control" placeholder="Oggetto" required>
                           </div>
                           <div class="col-md-12 mt-3">
-                              <textarea v-model="message" cols="10" rows="5" class="form-control" placeholder="Your message..." required></textarea>
+                              <textarea v-model="message" cols="10" rows="5" class="form-control" placeholder="Il tuo messaggio..." required></textarea>
                               <div class="text-center">
-                                  <button type="submit" class="custom-btn big">Send</button>
+                                  <button type="submit" class="custom-btn big">Invia</button>
                               </div>
                           </div>
                       </div>

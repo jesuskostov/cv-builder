@@ -3,17 +3,17 @@
     <!-- Education -->
     <section>
         <div class="steps-title mb-5">
-            <h1>Education & Skills</h1>
+            <h1 v-text="$t('school_history.title')" />
             <span class="line"></span>
-            <h3 class="mt-4 mb-2">Education</h3>
-            <p class="text mt-0">Employers quickly scan the education section. We’ll take care of the formatting so it’s easy to find. Include every school, even if you’re still there or didn’t graduate.</p>
+            <h3 class="mt-4 mb-2" v-text="$t('school_history.subTitle')" />
+            <p class="text mt-0" v-text="$t('school_history.text')" />
         </div>
         <draggable v-model="education" @end="dragSchool">
                 <div v-for="(school, i) in education" :key="i" class="accordion">
                     <div class="box-label">
                         <h2 class="d-flex align-items-center">
                             <img class="mr-3" src="../assets/images/lines.svg" alt="lines">
-                            <span v-if="school.schoolName">{{school.schoolName}}</span><span v-else>School name</span>
+                            <span v-if="school.schoolName">{{school.schoolName}}</span><span v-else v-text="$t('school_history.schoolName')" />
                         </h2>
                         <div class="d-flex">
                             <button class="action-btn mr-3" @click="deleteSchool(i)">
@@ -29,21 +29,21 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="text-left">
-                                        <label for="schoolName">School Name</label>
+                                        <label for="schoolName" v-text="$t('school_history.schoolName')" />
                                         <br>
                                         <input type="text" class="w-100 form-control" id="schoolName" v-model="school.schoolName">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="text-left">
-                                        <label for="schoolLocation">School City</label>
+                                        <label for="schoolLocation" v-text="$t('school_history.schoolCity')" />
                                         <br>
                                         <input type="text" class="w-100 form-control" v-model="school.schoolLocation">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="text-left">
-                                        <label for="degree">Degree</label>
+                                        <label for="degree" v-text="$t('school_history.degree')" />
                                         <br>
                                         <input type="text" class="w-100 form-control" v-model="school.degree">
                                     </div>
@@ -53,7 +53,7 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="text-left">
-                                        <label for="description">Description</label>
+                                        <label for="description" v-text="$t('school_history.description')" />
                                         <br>
                                         <vue-editor name="description" id="description" v-model="school.description" :editorToolbar="customToolbar"></vue-editor>
                                     </div>
@@ -66,8 +66,8 @@
         <div class="text-left mb-5">
             <button class="add-more-btn" @click="addNewSchool">
                 <img src="../assets/images/red-cross.svg" alt="red plus icon">
-                <span v-if="education.length != 0">Add another school</span>
-                <span v-else>Add school</span>
+                <span v-if="education.length != 0" v-text="$t('school_history.addAnotherSchool')" />
+                <span v-else v-text="$t('school_history.addSchool')" />
             </button>
         </div>
     </section>
@@ -75,8 +75,8 @@
     <!-- SKILLS -->
     <section>
         <div class="steps-title mb-5">
-            <h3 class="mt-4 mb-2">Skills</h3>
-            <p class="text mt-0">Employers scan skills for relevant keywords. We’ll help you choose the best ones.</p>
+            <h3 class="mt-4 mb-2" v-text="$t('skills.title')" />
+            <p class="text mt-0"  v-text="$t('skills.text')" />            
         </div>
         <div class="accordion px-4 py-4">
             <!-- <select class="opt-dropdown" @change="addPredefinedSkill(selected)" v-model="selected">
@@ -85,7 +85,7 @@
             </select> -->
             <div class="position-relative">
                 <input type="text" class="form-control w-100" v-model="skill">
-                <button @click="addSkill" class="custom-btn add-btn">ADD</button>
+                <button @click="addSkill" class="custom-btn add-btn">Aggiungi</button>
             </div>
             <!-- <multiselect v-model="skills" class="w-100" :options="options" :multiple="true" :taggable="true" @tag="addSkill" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some" label="title" track-by="title" /> -->
             <draggable v-model="skills" @end="dragSkill">
@@ -156,8 +156,8 @@
         </div>
     </section>
     <div class="mt-5 d-flex justify-content-between">
-        <button class="go-back" @click="step(2)">Go Back</button>
-        <button class="custom-btn" @click="step(4)">Next: Other</button>
+        <button class="go-back" @click="step(2)" v-text="$t('school_history.goBack')" />
+        <button class="custom-btn" @click="step(4)" v-text="$t('school_history.button')" />
     </div>
   </div>
 </template>

@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-6 mb-3">
       <div class="text-left">
-        <label for="startDate">From</label>
+        <label for="startDate" v-text="$t('work_history.from')" />
         <br />
         <date-picker
           type="month"
@@ -17,7 +17,7 @@
     </div>
     <div class="col-md-6 mb-3">
       <div class="text-left">
-        <label for="startDate">To</label>
+        <label for="startDate" v-text="$t('work_history.to')" />
         <br />
         <date-picker
           type="month"

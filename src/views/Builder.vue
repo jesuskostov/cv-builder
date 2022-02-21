@@ -81,12 +81,12 @@
         <div class="col-md-12 col-lg-4 mb-5 mb-md-0">
           <div class="preview p-4">
             <div class="steps-title mb-4">
-              <h3>Template configuration</h3>
+              <h3 v-text="$t('endPreview.templateConfig')" />
               <span class="line"></span>
             </div>
             <div class="d-flex flex-column mb-4" v-if="step == 5">
               <p class="text-left mb-1">
-                Template name: <b>{{ nickname }}</b>
+                <span v-text="$t('endPreview.templateName')" /> <b>{{ nickname }}</b>
               </p>
               <div class="colors justify-content-start mb-4">
                 <button
@@ -97,35 +97,35 @@
                 ></button>
               </div>
               <button class="edit" @click="showBigPreview">
-                Change CV template
+                <span v-text="$t('endPreview.changeCv')" />
                 <img src="../assets/images/pencil.svg" alt="edit icon" />
               </button>
             </div>
             <div class="steps-title mb-4">
-              <h3>Summary Section</h3>
+              <h3 v-text="$t('endPreview.summarySection')" />
               <span class="line"></span>
             </div>
             <div class="d-flex flex-column flex-grow-1" v-if="step == 5">
               <div>
                 <button class="edit" @click="goTo(1)">
-                  Personal <img src="../assets/images/pencil.svg" alt="edit icon" />
+                  <span v-text="$t('endPreview.personal')" /> <img src="../assets/images/pencil.svg" alt="edit icon" />
                 </button>
                 <button class="edit" @click="goTo(2)">
-                  Work history <img src="../assets/images/pencil.svg" alt="edit icon" />
+                  <span v-text="$t('endPreview.workHistory')" /> <img src="../assets/images/pencil.svg" alt="edit icon" />
                 </button>
                 <button class="edit" @click="goTo(3)">
-                  Education & Skills
+                  <span v-text="$t('endPreview.educationSkills')" />
                   <img src="../assets/images/pencil.svg" alt="edit icon" />
                 </button>
                 <button class="edit" @click="goTo(4)">
-                  Other <img src="../assets/images/pencil.svg" alt="edit icon" />
+                  <span v-text="$t('endPreview.other')" /> <img src="../assets/images/pencil.svg" alt="edit icon" />
                 </button>
               </div>
               <button
                 class="custom-btn download mt-auto"
                 @click="generateReport"
               >
-                Download PDF
+                Scarica PDF
               </button>
             </div>
           </div>

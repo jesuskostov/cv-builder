@@ -1,14 +1,14 @@
 <template>
   <div>
        <div class="accordion px-4 py-4">
-        <h3>Interests:</h3>
+        <h3 v-text="$t('other_step.interests')" />
         <!-- <select class="opt-dropdown" @change="addPredefinedInterests(selected)" v-model="selected">
             <option disabled value="">Please select one</option>
             <option v-for="(int, i) in interestsPredefined" :key="i" :value="int.title">{{int.title}}</option>
         </select> -->
         <div class="position-relative">
             <input type="text" class="form-control w-100" v-model="interes">
-            <button @click="addInt" class="custom-btn add-btn">ADD</button>
+            <button @click="addInt" class="custom-btn add-btn">Aggiungi</button>
         </div>
         <!-- <multiselect v-model="interests" class="w-100" :options="interestsPredefined" :multiple="true" :taggable="true" @tag="addInterest" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Write some and press Enter" label="title" track-by="title" /> -->
         <draggable v-model="interests" @end="drag">

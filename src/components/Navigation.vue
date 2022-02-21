@@ -12,12 +12,12 @@
         class="nav__menu"
         :class="{ 'show-nav': showNav }"
       >
-        <button @click="routeTo('/browse-templates')">Browse Templates</button>
-        <button @click="routeTo('/how-to-write-cv')">How to write CV</button>
+        <button @click="routeTo('/browse-templates')" v-text="$t('nav_menu')[0]">Browse Templates</button>
+        <button @click="routeTo('/how-to-write-cv')" v-text="$t('nav_menu')[1]">How to write CV</button>
         <button @click="routeTo('/feedback')">Feedback</button>
         <button @click="routeTo('/faq')">FAQ</button>
-        <button @click="routeTo('/contact')">Contact</button>
-        <button @click="routeTo('/browse-templates')" class="btn">
+        <button @click="routeTo('/contact')" v-text="$t('nav_menu')[5]">Contact</button>
+        <button @click="routeTo('/browse-templates')" class="btn" v-text="$t('nav_menu')[6]">
           Get Started
         </button>
         <button

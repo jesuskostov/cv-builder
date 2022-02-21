@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="steps-title mb-5">
-        <h1>Other</h1>
+        <h1 v-text="$t('other_step.title')" />
         <span class="line"></span>
     </div>
     <div class="accordion px-4 py-4">
-        <h3>Native Languages:</h3>
+        <h3 v-text="$t('other_step.nativeLang')" />
         <multiselect v-model="motherLanguages" class="w-100" :options="languages" :multiple="false" :taggable="true" @tag="addMotherLang" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Pick some or you can also write and press Enter" label="title" :track-by="'title'" />
         <div v-if="motherLanguages.title" class="box-row">
             <div class="d-flex align-items-center">
@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="accordion px-4 py-4">
-        <h3>Spoken Languages:</h3>
+        <h3 v-text="$t('other_step.spokenLang')" />
         <multiselect v-model="spokenLanguages" class="w-100" :options="languages" :multiple="true" :taggable="true" @tag="addLang" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Write some and press Enter" label="title" track-by="title" />
         <draggable v-model="spokenLanguages" @end="drag">
             <div v-for="(lang, i) in spokenLanguages" :key="i" class="box-row flex-column flex-sm-row align-items-start align-items-sm-center">

@@ -5,7 +5,7 @@
         <div class="card mt-4 mb-5">
           <!-- TITLE -->
           <div class="text-center pb-4">
-            <h1 class="font-weight-bold">Your CV is ready!</h1>
+            <h1 class="font-weight-bold">Il tuo CV è pronto!</h1>
           </div>
           <!-- PLAN -->
           <div class="row mb-5">
@@ -72,7 +72,7 @@
               <form action="" @submit.prevent="setPlan">
                 <div class="form-group text-center mb-3">
                   <label for="email"
-                    >Email address to receive a safe copy of your CV :</label
+                    >Indirizzo e-mail per ricevere una copia sicura del tuo CV:</label
                   >
 
                   <input
@@ -88,7 +88,7 @@
 
                 <div class="text-center">
                   <button type="submit" class="custom-btn mb-3 mb-md-0">
-                    Final Step before Download!
+                    Ultimo passo prima del download!
                   </button>
                 </div>
               </form>
@@ -101,9 +101,9 @@
                 <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <path d="M18 10v-4c0-3.313-2.687-6-6-6s-6 2.687-6 6v4h-3v14h18v-14h-3zm-5 7.723v2.277h-2v-2.277c-.595-.347-1-.984-1-1.723 0-1.104.896-2 2-2s2 .896 2 2c0 .738-.404 1.376-1 1.723zm-5-7.723v-4c0-2.206 1.794-4 4-4 2.205 0 4 1.794 4 4v4h-8z"/>
                 </svg>
-                <p class="payment-title mb-2">Secure Payment</p>
+                <p class="payment-title mb-2">Pagamento sicuro</p>
               </div>
-              <p class="mb-4">Pay with confidence with your secure bank cards:</p>
+              <p class="mb-4">Paga con fiducia con le tue carte di credito sicure:</p>
               <img
                 src="../assets/images/cards.svg"
                 class="img-fluid"
@@ -113,9 +113,11 @@
             </div>
             <div class="col-md-6">
               <div class="subscribe">
-                <p class="h6"><b>Unlimited Expert Tools Subscription</b></p>
-                <small>* CV Expert : 1 € for 3 days, then 29,90 € monthly to enjoy our set of expert tools to manage your CB and your career
-                  <br> the best way possible with us. You can cancel this subscription at any time with one click.</small>
+                <p class="h6"><b>Abbonamento illimitato agli strumenti Expert</b></p>
+                <small>* CV Expert : 1 € per 3 giorni, poi 29,90 € mensili per godere del nostro set di strumenti esperti per gestire il tuo CV e la tua carriera
+                    nel miglior modo possibile
+                  <br>Puoi annullare l’abbonamento abbonamento in qualsiasi momento con un clic.
+                </small>
               </div>
             </div>
           </div>
@@ -147,22 +149,22 @@ export default {
       plan: "CV Expert",
       email: null,
       firstPlan: [
-        "Download your PDF CV in one click",
-        "14 automatic generated models",
-        "Personalization by job offer",
-        "Create your resume library",
-        "Accessible 24/7",
-        "Transfer in 3 clicks to your contacts",
-        "Termination at any time",
+        "Scarica il tuo CV in PDF con un solo clic",
+        "14 modelli generati automaticamente",
+        "Personalizzazione per offerta di lavoro",
+        "Crea la tua libreria di curricula",
+        "Accessibile 24/7",
+        "Trasferimento in 3 clic ai tuoi contatti",
+        "Disdetta in qualsiasi momento",
       ],
       secondPlan: [
-        "Download your PDF CV in one click",
-        "14 automatic generated models",
-        "Personalization by job offer",
-        "Create your resume library",
-        "Accessible 24/7",
-        "Transfer in 3 clicks to your contacts",
-        "Termination at any time",
+        "Scarica il tuo CV in PDF con un solo clic",
+        "14 modelli generati automaticamente",
+        "Personalizzazione per offerta di lavoro",
+        "Crea la tua libreria di curricula",
+        "Accessibile 24/7",
+        "Trasferimento in 3 clic ai tuoi contatti",
+        "Disdetta in qualsiasi momento",
       ],
     };
   },

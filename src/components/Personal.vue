@@ -43,7 +43,7 @@
                 <!-- BIRTHDAY -->
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
-                        <label for="birthday">Birthday</label>
+                        <label for="birthday" v-text="$t('personal_step.birthday')" />
                         <br>
                         <date-picker :current-value="new Date()" v-validate="`date_format:dd-MM-yyyy|date_between:01-01-1920,01-01-${new Date().getFullYear() - 10}`" name="birthday" id="birthday" class="w-100" input-class="form-control m-0" :value-type="'format'" :format="'DD-MM-YYYY'" v-model="personal.birthday" type="date" />
                         <span class="error">{{ errors.first('birthday') }}</span>
@@ -52,7 +52,7 @@
                 <!-- PROFESSION -->
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
-                        <label for="profession">Profession</label>
+                        <label for="profession" v-text="$t('personal_step.profession')" />
                         <br>
                         <input type="text" class="w-100 form-control" name="profession" id="profession" v-model="personal.profession" v-validate="'alpha_spaces'">
                         <span class="error">{{ errors.first('profession') }}</span>
@@ -61,7 +61,7 @@
                 <!-- FAMILY -->
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
-                        <label for="family">Family</label>
+                        <label for="family" v-text="$t('personal_step.family')" />
                         <br>
                         <select class="w-100 custom-select" name="family" id="family" v-model="personal.family">
                             <option disable value="">Select your family status</option>
@@ -75,13 +75,13 @@
                 <!-- SEX -->
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
-                        <label for="sex">Sex</label>
+                        <label for="sex" v-text="$t('personal_step.sex')" />
                         <br>
                         <select class="w-100 custom-select" name="sex" id="sex" v-model="personal.sex">
-                            <option disable value="">Select your sex</option>
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                            <option value="">Do not indicate</option>
+                            <option disable value="" v-text="$t('personal_step.sexText')">Select your sex</option>
+                            <option value="Male" v-text="$t('personal_step.male')">Male</option>
+                            <option value="Female" v-text="$t('personal_step.female')">Female</option>
+                            <option value="" v-text="$t('personal_step.notIndicate')">Do not indicate</option>
                         </select>
                         <span class="error">{{ errors.first('sex') }}</span>
                     </div>
@@ -89,7 +89,7 @@
                 <!-- CITY -->
                 <div class="col-md-8 mb-4">
                     <div class="text-left">
-                        <label for="city"><span class="red">*</span> City</label>
+                        <label for="city"><span class="red">*</span> <span v-text="$t('personal_step.city')"></span></label>
                         <input type="text" class="w-100 form-control" name="city" id="city" v-model="personal.city" v-validate="'alpha_spaces'">
                         <span class="error">{{ errors.first('city') }}</span>
                     </div>
@@ -97,7 +97,7 @@
                 <!-- ZIP CODE -->
                 <div class="col-md-4 mb-4">
                     <div class="text-left">
-                        <label for="zipCode"><span class="red">*</span> Zip code</label>
+                        <label for="zipCode"><span class="red">*</span> <span v-text="$t('personal_step.zipCode')"></span></label>
                         <br>
                         <input type="number" minlength="2" class="w-100 form-control" name="zipCode" id="zipCode" v-model="personal.zipCode" v-validate="'required'">
                         <span class="error">{{ errors.first('zipCode') }}</span>
@@ -106,7 +106,7 @@
                 <!-- COUNTRY -->
                 <div class="col-md-7 col-lg-8 mb-4">
                     <div class="text-left">
-                        <label for="country"><span class="red">*</span> Country</label>
+                        <label for="country"><span class="red">*</span> <span v-text="$t('personal_step.country')"></span></label>
                         <br>
                         <input type="text" class="w-100 form-control" name="country" id="country" v-model="personal.country" v-validate="'alpha_spaces'">
                         <span class="error">{{ errors.first('country') }}</span>
@@ -115,7 +115,7 @@
                 <!-- NATIONALITY -->
                 <div class="col-md-5 col-lg-4 mb-4">
                     <div class="text-left">
-                        <label for="nationality">Nationality</label>
+                        <label for="nationality" v-text="$t('personal_step.nationality')" />
                         <br>
                         <input type="text" class="w-100 form-control" name="nationality" id="nationality" v-model="personal.nationality" v-validate="'alpha_spaces'">
                         <span class="error">{{ errors.first('nationality') }}</span>
@@ -124,7 +124,7 @@
                 <!-- FULL ADDRESS -->
                 <div class="col-md-12 mb-4">
                     <div class="text-left">
-                        <label for="fullAddress"><span class="red">*</span> Full Address</label>
+                        <label for="fullAddress"><span class="red">*</span> <span v-text="$t('personal_step.fullAddress')"></span></label>
                         <br>
                         <input type="text" class="w-100 form-control" name="fullAddress" id="fullAddress" v-model="personal.fullAddress" v-validate="'required'">
                         <span class="error">{{ errors.first('fullAddress') }}</span>
@@ -133,7 +133,7 @@
                 <!-- PHONE NUMBER -->
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
-                        <label for="phoneNumber"><span class="red">*</span> Phone number</label>
+                        <label for="phoneNumber"><span class="red">*</span> <span v-text="$t('personal_step.phoneNumber')"></span></label>
                         <br>
                         <input type="tel" class="w-100 form-control" name="phoneNumber" id="phoneNumber" v-model="personal.phoneNumber" v-validate="{required: true, regex: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im }">
                         <span class="error">{{ errors.first('phoneNumber')}}</span>
@@ -151,7 +151,7 @@
                 <!-- LINKEDING ACCOUNT -->
                 <div class="col-md-12">
                     <div class="text-left">
-                        <label for="socialProfiles">LinkedIn Account (Optional)</label>
+                        <label for="socialProfiles" v-text="$t('personal_step.linkedin')" />
                         <br>
                         <input type="text" class="form-control w-100" name="socialProfiles" id="socialProfiles" v-model="personal.socialProfiles" v-validate="'url'">
                         <span class="error">{{ errors.first('socialProfiles') }}</span>
@@ -160,7 +160,7 @@
             </div>
         </div>
         <div class="d-flex flex-column-reverse flex-md-row align-items-center justify-content-end">
-            <button type="submit" class="custom-btn mb-3 mb-md-0">Next: Work History</button>
+            <button type="submit" class="custom-btn mb-3 mb-md-0" v-text="$t('personal_step.button')" />
         </div>
     </form>  
   </div>

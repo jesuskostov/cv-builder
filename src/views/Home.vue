@@ -136,8 +136,8 @@
               </div>
               <div class="testimonies__body">
                 <p>
-                  This has been the best cv help ever! Nothing but job offers.
-                  Exceeded my expectations. I totally recommend it!
+                  Questo è stato il miglior aiuto per il cv di sempre! Nient'altro che offerte di lavoro.
+                  Ha superato le mie aspettative. Lo consiglio vivamente!
                 </p>
               </div>
             </div>
@@ -187,9 +187,9 @@
               </div>
               <div class="testimonies__body">
                 <p>
-                  Very easy to use service. Multiple options for templates. Fill
-                  in the blank in many sections and everything is already
-                  pre-formatted. Flawless! I will use this service again.
+                  Servizio molto facile da usare. Molteplici opzioni per i modelli.
+                  Riempi in bianco in molte sezioni e tutto è già preformattato.
+                  Impeccabile! Userò ancora questo servizio.
                 </p>
               </div>
             </div>
@@ -239,8 +239,8 @@
               </div>
               <div class="testimonies__body">
                 <p>
-                  I FINALLY have a professional-looking resume!!!!!! This has
-                  saved me so many tears! Effortless. WOW!!!!! MANY THANKS!!!!!!
+                  Ho FINALMENTE un curriculum dall'aspetto professionale !!!!!! Questo mi ha
+                  risparmiato così tante lacrime! Senza sforzo. WOW!!!!! MOLTI GRAZIE!!!!!!
                 </p>
               </div>
             </div>

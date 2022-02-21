@@ -5,20 +5,20 @@
         <div class="row">
           <div class="col-md-12">
               <div class="d-flex flex-column align-items-center">
-                <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mb-4 mb-md-5">Create a CV that Recruiters will Love</h1>
+                <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mb-4 mb-md-5" v-text="$t('feedback.hero.title')" />
                 <div class="price-box">
                 <div class="text-left mr-4">
-                    <p v-if="offer === 'free'" class="price">14 CV AT ONCE, 10 MINUTES!!!</p>
+                    <p v-if="offer === 'free'" class="price">14 CV IN UNA VOLTA SOLA, 10 MINUTI!!!</p>
                     <p v-if="offer === 'paid'" class="price">
-                      THE BEST CV OFFER:<br>
-                      COMPARE THE PRICES!!!
+                      LA MIGLIORE OFFERTA DI CV:<br>
+                      CONFRONTA I PREZZI!!!
                     </p>
                     <p v-if="offer === 'free'" class="text">
-                      In 10 minutes you can have 14 CV at once!<br>
-                      Various models for various employers!
+                      In 10 minuti puoi avere 14 CV in una volta sola!<br>
+                      Vari modelli per vari datori di lavoro!
                     </p>
                 </div>
-                <router-link to="/browse-templates" class="btn">Get Started Now</router-link>
+                <router-link to="/browse-templates" class="btn">Inizia ora</router-link>
                 </div>
               </div>
           </div>
@@ -28,16 +28,16 @@
     <div id="testimonies">
       <div class="container">
         <div class="section-title mb-5">
-          <h2>What our clients say:</h2>
+          <h2 v-text="$t('feedback.title')" />
           <span class="line"></span>
         </div>
         <div class="row pt-5">
-          <div class="col-md-4 mb-3">            
+          <div v-for="(feedback, i) in $t('feedback.list')" :key="i" class="col-md-4 mb-3">            
             <div class="testimonies">
                 <div class="testimonies__header">
                   <div class="testimonies__header__profile">
                     <div class="d-flex flex-column">
-                      <h4 class="text-left">Roberto Lombardi</h4>
+                      <h4 class="text-left">{{ feedback.name }}</h4>
                       <div class="text-left">
                         <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
                             <g>
@@ -54,139 +54,7 @@
                   </div>
                 </div>
                 <div class="testimonies__body">
-                  <p>Good tool with many templates to choose from.</p>
-                </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">            
-            <div class="testimonies">
-                <div class="testimonies__header">
-                  <div class="testimonies__header__profile">
-                    <div class="d-flex flex-column">
-                      <h4 class="text-left">Sarah Bagni</h4>
-                      <div class="text-left">
-                        <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
-                            <g>
-                                <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
-                                    c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
-                                    c-5.649,0.82-10.344,4.778-12.108,10.208c-1.765,5.431-0.293,11.392,3.796,15.377l114.848,111.954L92.271,482.671
-                                    c-0.966,5.628,1.348,11.314,5.967,14.671c2.613,1.898,5.708,2.864,8.818,2.864c2.388,0,4.784-0.569,6.978-1.723l141.967-74.638
-                                    l141.961,74.637c5.055,2.657,11.178,2.215,15.797-1.141c4.619-3.356,6.934-9.044,5.969-14.672l-27.117-158.081l114.861-111.955
-                                    C511.56,208.649,513.033,202.688,511.267,197.258z"/>
-                            </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="testimonies__body">
-                  <p>Love it! Great interface! Thumbs up for ease of use and great selection of templates and designs. I really liked to pick my own colors.</p>
-                </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">            
-            <div class="testimonies">
-                <div class="testimonies__header">
-                  <div class="testimonies__header__profile">
-                    <div class="d-flex flex-column">
-                      <h4 class="text-left">Giovanni L***</h4>
-                      <div class="text-left">
-                        <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
-                            <g>
-                                <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
-                                    c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
-                                    c-5.649,0.82-10.344,4.778-12.108,10.208c-1.765,5.431-0.293,11.392,3.796,15.377l114.848,111.954L92.271,482.671
-                                    c-0.966,5.628,1.348,11.314,5.967,14.671c2.613,1.898,5.708,2.864,8.818,2.864c2.388,0,4.784-0.569,6.978-1.723l141.967-74.638
-                                    l141.961,74.637c5.055,2.657,11.178,2.215,15.797-1.141c4.619-3.356,6.934-9.044,5.969-14.672l-27.117-158.081l114.861-111.955
-                                    C511.56,208.649,513.033,202.688,511.267,197.258z"/>
-                            </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="testimonies__body">
-                  <p>Easy to use, affordable and reliable. Great template to get you started with your CV at whatever level you are at your career.</p>
-                </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">            
-            <div class="testimonies">
-                <div class="testimonies__header">
-                  <div class="testimonies__header__profile">
-                    <div class="d-flex flex-column">
-                      <h4 class="text-left">Guilia Ricci</h4>
-                      <div class="text-left">
-                        <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
-                            <g>
-                                <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
-                                    c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
-                                    c-5.649,0.82-10.344,4.778-12.108,10.208c-1.765,5.431-0.293,11.392,3.796,15.377l114.848,111.954L92.271,482.671
-                                    c-0.966,5.628,1.348,11.314,5.967,14.671c2.613,1.898,5.708,2.864,8.818,2.864c2.388,0,4.784-0.569,6.978-1.723l141.967-74.638
-                                    l141.961,74.637c5.055,2.657,11.178,2.215,15.797-1.141c4.619-3.356,6.934-9.044,5.969-14.672l-27.117-158.081l114.861-111.955
-                                    C511.56,208.649,513.033,202.688,511.267,197.258z"/>
-                            </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="testimonies__body">
-                  <p>
-                    Very easy to use and has very good structure that leads you along the way of creating the perfect resume. Was surprised it was already finished!
-                  </p>
-                </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">            
-            <div class="testimonies">
-                <div class="testimonies__header">
-                  <div class="testimonies__header__profile">
-                    <div class="d-flex flex-column">
-                      <h4 class="text-left">Giuseppe P***</h4>
-                      <div class="text-left">
-                        <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
-                            <g>
-                                <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
-                                    c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
-                                    c-5.649,0.82-10.344,4.778-12.108,10.208c-1.765,5.431-0.293,11.392,3.796,15.377l114.848,111.954L92.271,482.671
-                                    c-0.966,5.628,1.348,11.314,5.967,14.671c2.613,1.898,5.708,2.864,8.818,2.864c2.388,0,4.784-0.569,6.978-1.723l141.967-74.638
-                                    l141.961,74.637c5.055,2.657,11.178,2.215,15.797-1.141c4.619-3.356,6.934-9.044,5.969-14.672l-27.117-158.081l114.861-111.955
-                                    C511.56,208.649,513.033,202.688,511.267,197.258z"/>
-                            </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="testimonies__body">
-                  <p>Very Seamless, love it!</p>
-                </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">            
-            <div class="testimonies">
-                <div class="testimonies__header">
-                  <div class="testimonies__header__profile">
-                    <div class="d-flex flex-column">
-                      <h4 class="text-left">Raffaello Petri</h4>
-                      <div class="text-left">
-                        <svg v-for="i in 5" :key="i" class="star active" style="enable-background:new 0 0 512.002 512.002;" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.002 512.002" xml:space="preserve">
-                            <g>
-                                <path d="M511.267,197.258c-1.764-5.431-6.457-9.389-12.107-10.209l-158.723-23.065L269.452,20.157
-                                    c-2.526-5.12-7.741-8.361-13.45-8.361c-5.71,0-10.924,3.241-13.451,8.361l-70.988,143.827l-158.72,23.065
-                                    c-5.649,0.82-10.344,4.778-12.108,10.208c-1.765,5.431-0.293,11.392,3.796,15.377l114.848,111.954L92.271,482.671
-                                    c-0.966,5.628,1.348,11.314,5.967,14.671c2.613,1.898,5.708,2.864,8.818,2.864c2.388,0,4.784-0.569,6.978-1.723l141.967-74.638
-                                    l141.961,74.637c5.055,2.657,11.178,2.215,15.797-1.141c4.619-3.356,6.934-9.044,5.969-14.672l-27.117-158.081l114.861-111.955
-                                    C511.56,208.649,513.033,202.688,511.267,197.258z"/>
-                            </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="testimonies__body">
-                  <p>This CV builder is simply brilliant! I was very pleased by how helpful this is. I was able to do it in a short period of time and easily add and make changes whenever I wanted. And the swap template feature is really a super cool feature!</p>
+                  <p>{{ feedback.text }}</p>
                 </div>
             </div>
           </div>

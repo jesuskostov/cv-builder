@@ -6,7 +6,7 @@
           <div class="payment h-100 d-flex flex-column">
             <div>
               <h1 class="title mb-5">
-                100% secure payment <span class="line"></span>
+                100% pagamento sicuro <span class="line"></span>
               </h1>
               <!-- PRICE -->
               <div class="row">
@@ -160,7 +160,7 @@
             <div>
               <p class="text-center mb-1">
                 <button class="pay-btn">
-                  Complete Payment
+                  Completare il pagamento
                 </button>
               </p>
               <p class="text-center">
@@ -200,13 +200,13 @@
                 
               </div>
               <div class="col-md-7">
-                <h2>Download CV</h2>
+                <h2>Scaricare il CV</h2>
                 <hr>
                 <div class="personal-info">
-                  <p class="mb-0">First name : {{ personal.firstName }}</p>
-                  <p class="mb-0">Last name : {{ personal.lastName }}</p>
-                  <p class="mb-0">City : {{ personal.city }}</p>
-                  <p class="mb-0">Country : {{ personal.country }}</p>
+                  <p class="mb-0">Nome : {{ personal.firstName }}</p>
+                  <p class="mb-0">Cognome : {{ personal.lastName }}</p>
+                  <p class="mb-0">Città : {{ personal.city }}</p>
+                  <p class="mb-0">Paese : {{ personal.country }}</p>
                   <p class="mb-0">Email : {{ personal.email }}</p>
                   <div class="text-right">
                     <button @click="showBigPreview" class="view-large-btn">
@@ -258,7 +258,7 @@
                           d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                         /></svg
                     ></span>
-                    CV in PDF format
+                    CV in formato PDF
                   </li>
                   <li class="d-flex items-left mb-1">
                     <span class="mr-2 flex-shrink-0">
@@ -275,7 +275,7 @@
                           d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                         /></svg
                     ></span>
-                    Download your PDF CV in one click,
+                    Scarica il tuo CV in PDF con un solo clic,
                   </li>
                   <li class="d-flex items-left mb-1">
                     <span class="mr-2 flex-shrink-0">
@@ -292,7 +292,7 @@
                           d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                         /></svg
                     ></span>
-                    14 automatic generated models,
+                    14 modelli generati automaticamente,
                   </li>
                   <li class="d-flex items-left mb-1">
                     <span class="mr-2 flex-shrink-0">
@@ -309,7 +309,7 @@
                           d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                         /></svg
                     ></span>
-                    Personalization by job offer,
+                    Personalizzazione per offerta di lavoro,
                   </li>
                   <li class="d-flex items-left mb-1">
                     <span class="mr-2 flex-shrink-0">
@@ -326,7 +326,7 @@
                           d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                         /></svg
                     ></span>
-                    Create your resume library,
+                    Crea la tua libreria di curricula,
                   </li>
                   <li class="d-flex items-left mb-1">
                     <span class="mr-2 flex-shrink-0">
@@ -343,7 +343,7 @@
                           d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                         /></svg
                     ></span>
-                    Accessible 24/7,
+                    Accessibile 24/7,
                   </li>
                   <li class="d-flex items-left mb-1">
                     <span class="mr-2 flex-shrink-0">
@@ -360,7 +360,7 @@
                           d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                         /></svg
                     ></span>
-                    Transfer in 3 clicks to your contacts,
+                    Trasferimento in 3 clic ai tuoi contatti,
                   </li>
                   <li class="d-flex items-left mb-1">
                     <span class="mr-2 flex-shrink-0">
@@ -377,7 +377,7 @@
                           d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                         /></svg
                     ></span>
-                    Termination at any time,
+                    Disdetta in qualsiasi momento,
                   </li>
                 </ul>
                 <small v-if="offer === 'free'">
@@ -408,7 +408,7 @@
                       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                     /></svg
                 ></span>
-                CV in PDF format
+                CV in formato PDF
               </li>
               <li class="d-flex items-left mb-1">
                 <span class="mr-2 flex-shrink-0">
@@ -425,7 +425,7 @@
                       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                     /></svg
                 ></span>
-                Download your PDF CV in one click,
+                Scarica il tuo CV in PDF con un solo clic,
               </li>
               <li class="d-flex items-left mb-1">
                 <span class="mr-2 flex-shrink-0">
@@ -442,7 +442,7 @@
                       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                     /></svg
                 ></span>
-                14 automatic generated models,
+                14 modelli generati automaticamente,
               </li>
               <li class="d-flex items-left mb-1">
                 <span class="mr-2 flex-shrink-0">
@@ -459,7 +459,7 @@
                       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                     /></svg
                 ></span>
-                Personalization by job offer,
+                Personalizzazione per offerta di lavoro,
               </li>
               <li class="d-flex items-left mb-1">
                 <span class="mr-2 flex-shrink-0">
@@ -476,7 +476,7 @@
                       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                     /></svg
                 ></span>
-                Create your resume library,
+                Crea la tua libreria di curricula,
               </li>
               <li class="d-flex items-left mb-1">
                 <span class="mr-2 flex-shrink-0">
@@ -493,7 +493,7 @@
                       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                     /></svg
                 ></span>
-                Accessible 24/7,
+                Accessibile 24/7,
               </li>
               <li class="d-flex items-left mb-1">
                 <span class="mr-2 flex-shrink-0">
@@ -510,7 +510,7 @@
                       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                     /></svg
                 ></span>
-                Transfer in 3 clicks to your contacts,
+                Trasferimento in 3 clic ai tuoi contatti,
               </li>
               <li class="d-flex items-left mb-1">
                 <span class="mr-2 flex-shrink-0">
@@ -527,7 +527,7 @@
                       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                     /></svg
                 ></span>
-                Termination at any time,
+                Disdetta in qualsiasi momento,
               </li>
             </ul>
             <ul v-if="plan === 'Achat Solo'" class="mt-3 pl-0">
@@ -546,7 +546,7 @@
                       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                     /></svg
                 ></span>
-                Download your PDF CV in one click
+                Scarica il tuo CV in PDF con un solo clic
               </li>
               <li class="d-flex items-left mb-1">
                 <span class="mr-2 flex-shrink-0">
@@ -563,7 +563,7 @@
                       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                     /></svg
                 ></span>
-                14 automatic generated models
+                14 modelli generati automaticamente
               </li>
               <li class="overline grey d-flex items-left mb-1">
                 <span class="mr-2 flex-shrink-0">
@@ -580,7 +580,7 @@
                       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                     /></svg
                 ></span>
-                Personalization by job offer
+                Personalizzazione per offerta di lavoro
               </li>
               <li class="overline grey d-flex items-left mb-1">
                 <span class="mr-2 flex-shrink-0">
@@ -597,7 +597,7 @@
                       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                     /></svg
                 ></span>
-                Create your resume library
+                Crea la tua libreria di curricula
               </li>
               <li class="overline grey d-flex items-left mb-1">
                 <span class="mr-2 flex-shrink-0">
@@ -614,7 +614,7 @@
                       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                     /></svg
                 ></span>
-                Accessible 24/7
+                Accessibile 24/7
               </li>
               <li class="overline grey d-flex items-left mb-1">
                 <span class="mr-2 flex-shrink-0">
@@ -631,7 +631,7 @@
                       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                     /></svg
                 ></span>
-                Transfer in 3 clicks to your contacts
+                Trasferimento in 3 clic ai tuoi contatti
               </li>
               <li class="overline grey d-flex items-left mb-1">
                 <span class="mr-2 flex-shrink-0">
@@ -648,7 +648,7 @@
                       d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-.997-6l7.07-7.071-1.414-1.414-5.656 5.657-2.829-2.829-1.414 1.414L11.003 16z"
                     /></svg
                 ></span>
-                Termination at any time
+                Disdetta in qualsiasi momento
               </li>
             </ul>
           </div>

@@ -1,16 +1,16 @@
 <template>
   <div>
     <div class="steps-title mb-5">
-        <h1>Work History</h1>
+        <h1 v-text="$t('work_history.title')" />
         <span class="line"></span>
-        <p class="text">Employers scan your resume for 5 seconds to decide if you’re a match. We’ll suggest to add only your job positions that make a great impression.</p>
+        <p class="text" v-text="$t('work_history.text')" />
     </div>
     <draggable v-model="workHistory" @end="drag">
         <div v-for="(work, i) in workHistory" :key="i" class="accordion">
             <div class="box-label">
                 <h2 class="d-flex align-items-center">
                     <img class="mr-3" src="../assets/images/lines.svg" alt="lines">
-                    <span v-if="work.jobTitle">{{work.jobTitle}}</span><span v-else>Job title</span>
+                    <span v-if="work.jobTitle">{{work.jobTitle}}</span><span v-else v-text="$t('work_history.jobTitle')" />
                 </h2>
                 <div class="d-flex">
                     <button class="action-btn mr-3" @click="deleteJob(i)">
@@ -27,14 +27,14 @@
                         <div class="col-md-6 mb-3">
                             <div class="text-left">
                                 <!-- <p>Job Title: {{work.jobTitle}}</p> -->
-                                <label for="jobTitle">Job title</label>
+                                <label for="jobTitle" v-text="$t('work_history.jobTitle')" />
                                 <br>
                                 <input type="text" class="w-100 form-control" id="jobTitle" v-model="work.jobTitle">
                             </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <div class="text-left">
-                                <label for="employer">Employer</label>
+                                <label for="employer" v-text="$t('work_history.employer')" />
                                 <br>
                                 <input type="text" class="w-100 form-control" id="employer" v-model="work.employer">
                             </div>
@@ -43,12 +43,12 @@
                             <Dates :dates="work.date" :checked="work.date.present" @update-date="updateJobDate(i, ...arguments)" />
                             <span>
                                 <input type="checkbox" id="checkbox" :checked="work.date.present" @click="work.date.present = !work.date.present" />
-                                <label class="checkbox-label" for="checkbox">I am currently working here</label>
+                                <label class="checkbox-label" for="checkbox" v-text="$t('work_history.currentWork')" />
                             </span>
                         </div>
                         <div class="col-md-12">
                             <div class="text-left">
-                                <label for="workDescription">Work description</label>
+                                <label for="workDescription" v-text="$t('work_history.workDescription')" />
                                 <vue-editor name="workDescription" id="workDescription" v-model="work.description" :editorToolbar="customToolbar"></vue-editor>
                             </div>                        
                         </div>
@@ -60,14 +60,14 @@
     <div class="text-left">
         <button class="add-job-btn" @click="addNewJob">
             <img src="../assets/images/red-cross.svg" alt="red plus icon">
-            <span v-if="workHistory.length != 0">Add another job</span>
-            <span v-else>Add a job</span>
+            <span v-if="workHistory.length != 0" v-text="$t('work_history.addAnotherJob')" />
+            <span v-else v-text="$t('work_history.addJob')" />
         </button>
     </div>
     <br>
     <div class="d-flex flex-column-reverse flex-md-row align-items-center justify-content-between mt-5">
-        <button class="go-back" @click="step(1)">Go Back</button>
-        <button class="custom-btn mb-3 mb-md-0" @click="step(3)">Next: Education & Skills</button>
+        <button class="go-back" @click="step(1)" v-text="$t('work_history.goBack')" />
+        <button class="custom-btn mb-3 mb-md-0" @click="step(3)" v-text="$t('work_history.button')" />
     </div>
   </div>
 </template>
