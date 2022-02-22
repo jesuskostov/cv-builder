@@ -8,7 +8,7 @@
           alt="error icon"
         />
         <h2 class="mb-4">
-          404 Not found.
+          404 Non trovato.
         </h2>
       </div>
     </div>

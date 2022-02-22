@@ -99,7 +99,7 @@
                     <div class="text-left">
                         <label for="zipCode"><span class="red">*</span> <span v-text="$t('personal_step.zipCode')"></span></label>
                         <br>
-                        <input type="number" minlength="2" class="w-100 form-control" name="zipCode" id="zipCode" v-model="personal.zipCode" v-validate="'required'">
+                        <input type="text" class="w-100 form-control" name="zipCode" id="zipCode" v-model="personal.zipCode" v-validate="{required: true, min: 3, numeric: true}">
                         <span class="error">{{ errors.first('zipCode') }}</span>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
                     <div class="text-left">
                         <label for="fullAddress"><span class="red">*</span> <span v-text="$t('personal_step.fullAddress')"></span></label>
                         <br>
-                        <input type="text" class="w-100 form-control" name="fullAddress" id="fullAddress" v-model="personal.fullAddress" v-validate="'required'">
+                        <input type="text" class="w-100 form-control" name="fullAddress" id="fullAddress" v-model="personal.fullAddress" v-validate="{required: true}">
                         <span class="error">{{ errors.first('fullAddress') }}</span>
                     </div>
                 </div>
@@ -144,8 +144,8 @@
                     <div class="text-left">
                         <label for="email"><span class="red">*</span> Email</label>
                         <br>
-                        <input type="email" class="w-100 form-control" name="email" id="email" v-model="personal.email" v-validate="'required|email'">
-                        <span class="error">{{ errors.first('email') }}</span>
+                        <input type="text" class="w-100 form-control" name="email" id="email" v-model="personal.email" v-validate="{required: true, email: true}">
+                        <span class="error">{{ errors.first('email') ? "Richiesto l'invio di un'e-mail" : '' }}</span>
                     </div>
                 </div>
                 <!-- LINKEDING ACCOUNT -->
@@ -174,11 +174,24 @@ import { Validator } from 'vee-validate';
 const dict = {
   custom: {
     phoneNumber: {
-      required: 'The phone number format is invalid, only numbers, please.',
-      regex: 'The phone number format is invalid, only numbers, please.'
+      required: 'Il formato del numero di telefono non è valido, solo numeri, per favore.',
+      regex: 'Il formato del numero di telefono non è valido, solo numeri, per favore.',
     },
+    email: {
+        required: 'Il campo email è richiesto',
+        email: 'Il campo email è richiesto'
+    },
+    zipCode: {
+        required: 'Il codice postale è richiesto',
+        min: 'Il campo del codice postale deve essere di almeno 3 caratteri',
+        numeric: 'Il campo del codice postale deve essere numerico'
+    },
+    fullAddress: {
+        required: "Il campo dell'indirizzo è richiesto",
+    }
   },
 };
+
 
 Validator.localize('en', dict);
 

@@ -8,13 +8,12 @@
           alt="error icon"
         />
         <h2 class="mb-4">
-          There was a problem with our system! <br />We are unable to comply
-          with your request.
+          C'è stato un errore nei nostri sistemi! <br />Non siamo in grado di soddisfare la sua richiesta.
         </h2>
         <p class="text-center">
-          Important: NO payments have been made. Our team has just been notified
-          of this technical error. A solution will be provided as soon as
-          possible. Thanks for your understanding.
+          Importante: Nessun pagamento è stato effettuato. Il nostro team è stato appena informato
+          di questo errore tecnico. Una soluzione sarà fornita al più presto
+          possibile. Grazie per la vostra comprensione.
         </p>
       </div>
     </div>

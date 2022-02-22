@@ -20,7 +20,7 @@
                         <input type="text" class="form-control" placeholder="Email" required>
                         <input type="password" class="form-control" placeholder="Password" required>
                         <div class="text-center mt-4">
-                            <button type="submit" class="custom-btn px-5">Login</button>
+                            <button type="submit" class="custom-btn px-5">Accesso</button>
                         </div>
                     </form>
                 </div>
