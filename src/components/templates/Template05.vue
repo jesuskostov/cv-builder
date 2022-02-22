@@ -6,8 +6,8 @@
           <img :src="personal.image" alt="square image">
         </div>
         <div class="info">
-          <h1 class="text-capitalize"><span v-if="personal && personal.firstName">{{personal.firstName}} {{personal.lastName}}</span> <span v-else>Your Name</span></h1>
-          <p v-if="personal && personal.profession" class="profession"><span v-if="personal && personal.profession">{{personal.profession}}</span><span v-else>Profession</span></p>
+          <h1 class="text-capitalize"><span v-if="personal && personal.firstName">{{personal.firstName}} {{personal.lastName}}</span> <span v-else v-text="$t('cvPlaceholder.name')" /></h1>
+          <p v-if="personal && personal.profession" class="profession"><span v-if="personal && personal.profession">{{personal.profession}}</span><span v-else v-text="$t('cvPlaceholder.profession')" /></p>
           <p v-if="personal && personal.fullAddress" class="address"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}, {{personal.city}} {{personal.zipCode}}, {{personal.country}}</span> <span v-else>Full address</span> <br> <span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}} |</span><span v-else>Phone number</span> <span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
           <p class="address mt-0"><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span> <span v-else>Linkedin</span></p>
         </div>
@@ -15,11 +15,11 @@
       <div class="body">
         <div class="col-right">
           <div v-if="accomp" class="profile text-left mb-5">
-            <h2 class="title">Profile</h2>
+            <h2 class="title" v-text="$t('cvPlaceholder.profile')" />
             <p class="description" v-html="accomp" />
           </div>
           <div v-if="workHistory.length && workHistory[0].jobTitle" class="work text-left mb-5">
-            <h2 class="title">Employment History</h2>
+            <h2 class="title" v-text="$t('cvPlaceholder.work')" />
             <div v-for="(work, i) in workHistory" :key="i">
               <h3 class="subtitle">
                 {{work.jobTitle}} - {{work.employer}}
@@ -32,7 +32,7 @@
             </div>
           </div>
           <div v-if="education.length && education[0].schoolName" class="education text-left">
-            <h2 class="title">Education</h2>
+            <h2 class="title" v-text="$t('cvPlaceholder.education')" />
             <div v-for="(school, i) in education" :key="i">
               <h3 class="subtitle">
                 {{school.degree}}, {{school.schoolName}} - {{school.schoolLocation}}
@@ -44,7 +44,7 @@
         </div>
         <div class="col-left">
           <div v-if="skills.length !== 0" class="skills text-left mb-5">
-            <h2 class="title small">Skills</h2>
+            <h2 class="title small" v-text="$t('cvPlaceholder.skills')" />
             <div v-for="(skill, i) in skills" :key="i" class="mb-2">
               <p class="skill-name">{{skill.title}}</p>
               <div ref="rating" class="rating" :rating="skill.rating">
@@ -57,14 +57,14 @@
             </div>
           </div>
           <div v-if="languages.length !== 0" class="text-left mb-5">
-            <h2 class="title small">Languages</h2>
+            <h2 class="title small" v-text="$t('cvPlaceholder.languages')" />
             <div>
               <p class="description mb-0" v-for="(lang, i) in languages" :key="i">{{lang.title}} <b>{{lang.langLevel}}</b></p>
             </div>
           </div>
           <div v-if="personal">
             <div v-if="personal.birthday || personal.nationality || personal.family || personal.sex || motherLang.title" class="text-left">
-              <h2 class="title small">Personal</h2>
+              <h2 class="title small" v-text="$t('cvPlaceholder.personal')" />
               <div>
                 <p class="description mb-1"><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
                 <p class="description mb-1"><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>

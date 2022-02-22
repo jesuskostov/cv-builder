@@ -5,17 +5,17 @@
       <div class="col-right">
         <!-- Profile -->
         <div class="text-left">
-            <h1 class="name"><span v-if="personal">{{personal.firstName}} {{personal.lastName}}</span><span v-else>Your Name</span></h1>
+            <h1 class="name"><span v-if="personal">{{personal.firstName}} {{personal.lastName}}</span><span v-else v-text="$t('cvPlaceholder.name')" /></h1>
         </div>
         <hr>
         <div>
-          <h2 class="black">Profile</h2>
+          <h2 class="black" v-text="$t('cvPlaceholder.profile')" />
           <p v-if="accomp" v-html="accomp" />
         </div>
         <hr>
         <!-- Work history -->
         <div>
-          <h2 class="black">Employment History</h2>
+          <h2 class="black" v-text="$t('cvPlaceholder.work')" />
           <div v-for="(work, i) in workHistory" :key="i">
             <h3 class="subtitle">{{work.jobTitle}} - {{work.employer}}
               <br> 
@@ -29,7 +29,7 @@
         <hr>
         <!-- Education -->
         <div>
-          <h2 class="black">Education</h2>
+          <h2 class="black" v-text="$t('cvPlaceholder.education')" />
           <div v-for="(school, i) in education" :key="i">
             <h3 class="subtitle">{{school.degree}} - {{school.schoolName}} <br> <span class="black">{{school.schoolLocation}}</span> <br><span>September 2012 - December 2021</span> </h3>
           </div>
@@ -37,7 +37,7 @@
         <hr>
         <!-- Languages -->
         <div>
-          <h2 class="black mb-3">Languages</h2>
+          <h2 class="black mb-3" v-text="$t('cvPlaceholder.languages')" />
           <h3 class="lang-title" v-for="(lang, i) in languages" :key="i">{{lang.title}} {{lang.langLevel}} </h3>
         </div>
       </div>
@@ -52,13 +52,13 @@
           <p class="profession"><span v-if="personal && personal.profession">{{personal.profession}}</span><span v-else>customer service</span></p> -->
         </div>
         <div class="details mb-4 text-left">
-          <h2>Details</h2>
+          <h2 v-text="$t('cvPlaceholder.details')" />
           <div class="mb-4">
-            <h4 class="mb-0">Address</h4>
+            <h4 class="mb-0" v-text="$t('cvPlaceholder.address2')" />
             <p><span v-if="personal && personal.fullAddress">{{personal.fullAddress}},<br> {{personal.city}} {{personal.zipCode}},<br> {{personal.country}}</span><span v-else>Number of street</span></p>
           </div>
           <div class="mb-4">
-            <h4 class="mb-0">Phone number</h4>
+            <h4 class="mb-0" v-text="$t('cvPlaceholder.phoneNumb')" />
             <p><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span> <span v-else>Phone number</span></p>
           </div>
           <div class="mb-4">
@@ -70,7 +70,7 @@
             <p><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span></p>
           </div>
           <div>
-            <h4 class="mb-0">Personal</h4>
+            <h4 class="mb-0" v-text="$t('cvPlaceholder.personal')" />
             <p><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
             <p><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
             <p><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
@@ -78,16 +78,16 @@
           </div>
         </div>
         <div class="details mb-4 text-left">
-          <h2>Languages</h2>
+          <h2 v-text="$t('cvPlaceholder.languages')" />
           <div>
-            <h4 class="mb-0">Mother languages</h4>
+            <h4 class="mb-0" v-text="$t('cvPlaceholder.motherLang')" />
             <p v-if="motherLang">
                 Mother language: {{motherLang.title}}
             </p>
           </div>
         </div>
         <div class="details skills text-left">
-          <h2 class="mb-2">Skills</h2>
+          <h2 class="mb-2" v-text="$t('cvPlaceholder.skills')" />
           <div v-for="(skill, i) in skills" :key="i" class="pr-4">
             <p class="skill-name">{{skill.title}}</p>
             <div class="progress mb-2">

@@ -211,5 +211,39 @@
    "9": "Cookie Policy",
    "10": "Note Legali"
 },
+"cvPlaceholder": {
+    "personalInfo": "Personal Information",
+    "personal": "Personal",
+    "personalSkills": "personal skills",
+    "name": "Your name",
+    "nameAndSurname": "Replace with First name(s) Surname(s)",
+    "address": "Replace with house number, street name, city, postcode, country",
+    "phoneNumb": "Replace with telephone number",
+    "email": "E-mail address",
+    "sex": "sex",
+    "enterSex": "Enter sex",
+    "birhtday": "Date of Birth",
+    "nationality": "Nationality",
+    "work": "Work experience",
+    "educationAndTraning": "Education and Traning",
+    "educationAndSkills": "Education and Skills",
+    "skills": "skills"
+},
 "date_format": "it-IT"
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
