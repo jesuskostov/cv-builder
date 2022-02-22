@@ -188,6 +188,9 @@ const dict = {
     },
     fullAddress: {
         required: "Il campo dell'indirizzo è richiesto",
+    },
+    socialProfiles: {
+        url: "Il campo dei profili sociali non è un URL valido"
     }
   },
 };

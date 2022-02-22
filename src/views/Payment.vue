@@ -729,7 +729,21 @@
 <script>
 import Templates from "../components/Template.vue";
 import Footer from "../components/Footer.vue";
+import { Validator } from 'vee-validate';
 
+const dict = {
+  custom: {
+    creditCard: {
+      credit_card: 'Il campo della carta di credito non è valido'
+    },
+    cvv: {
+      digits: 'Il campo cvv non è valido'
+    }
+  },
+};
+
+
+Validator.localize('en', dict);
 export default {
   name: "Payment",
   components: {
