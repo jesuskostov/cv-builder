@@ -6,7 +6,7 @@
     </div>
     <div class="accordion px-4 py-4">
         <h3 v-text="$t('other_step.nativeLang')" />
-        <multiselect v-model="motherLanguages" class="w-100" :options="languages" :multiple="false" :taggable="true" @tag="addMotherLang" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Sceglietene alcuni o potete anche scrivere e premere Invio" label="title" :track-by="'title'" />
+        <multiselect v-model="motherLanguages" class="w-100" :options="languages" :multiple="false" :taggable="true" @tag="addMotherLang" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Puoi sceglierne alcuno o scrivere e premere invio" label="title" :track-by="'title'" />
         <div v-if="motherLanguages.title" class="box-row">
             <div class="d-flex align-items-center">
                 <img class="mr-3" src="../assets/images/lines.svg" alt="lines">
