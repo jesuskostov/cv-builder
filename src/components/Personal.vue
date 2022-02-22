@@ -64,7 +64,7 @@
                         <label for="family" v-text="$t('personal_step.family')" />
                         <br>
                         <select class="w-100 custom-select" name="family" id="family" v-model="personal.family">
-                            <option disable value="">Seleziona il tuo stato di famiglia</option>
+                            <option disable value="">Seleziona il tuo stato civile</option>
                             <option :value="$t('personal_step.single')" v-text="$t('personal_step.single')" />
                             <option :value="$t('personal_step.notSingle')" v-text="$t('personal_step.notSingle')" />
                             <option value="" v-text="$t('personal_step.notIndicate')" />

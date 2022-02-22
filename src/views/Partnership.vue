@@ -14,11 +14,11 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <div class="text-left">
-                    <p><b>Our service allows you to offer your customers a quality service at an affordable price.</b></p>
-                    <p><b>Do you want to offer us a collaboration?</b><br>Do you want to collaborate only in one of the sectors we deal with?<br>Write to us now!</p>
+                <div class="text-left">                
+                    <p><b>Il nostro servizio ti permette di offrire ai tuoi clienti un servizio di qualità ad un prezzo accessibile.</b></p>
+                    <p><b>Vuoi offrirci una collaborazione?</b><br>Vuoi collaborare solo in uno dei settori che trattiamo?<br>Scrivici ora!</p>
                     <div class="text-center mt-5">
-                        <router-link to="/contact" class="custom-btn py-3">Contact us</router-link>
+                        <router-link to="/contact" class="custom-btn py-3">Contattaci</router-link>
                     </div>
                 </div>
             </div>

@@ -17,7 +17,7 @@
               >
                 <span class="custom-checkbox"></span>
                 <h2 class="font-weight-bold mb-0">CV Expert</h2>
-                <p class="price">4,90 € for 3 days*</p>
+                <p class="price">4,90 € per 3 giorni*</p>
                 <ul>
                   <li v-for="i in firstPlan" :key="i">
                     <svg
@@ -114,7 +114,7 @@
             <div class="col-md-6">
               <div class="subscribe">
                 <p class="h6"><b>Abbonamento illimitato agli strumenti Expert</b></p>
-                <small>* CV Expert : 1 € per 3 giorni, poi 29,90 € mensili per godere del nostro set di strumenti esperti per gestire il tuo CV e la tua carriera
+                <small>* CV Expert : 4,90 € per 3 giorni, poi 29,90 € mensili per godere del nostro set di strumenti esperti per gestire il tuo CV e la tua carriera
                     nel miglior modo possibile
                   <br>Puoi annullare l’abbonamento abbonamento in qualsiasi momento con un clic.
                 </small>

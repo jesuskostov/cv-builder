@@ -133,7 +133,7 @@
               <div class="form-group">
                 <div class="row">
                   <div class="col-md-4">
-                    <label for="cvv">Ultime 3 cifre sul retro della carta :</label>
+                    <label for="cvv">Codice di sicurezza:</label>
                   </div>
                   <div class="col-md-8">
                     <div class="d-flex align-items-center">

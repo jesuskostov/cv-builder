@@ -9,7 +9,7 @@
         ><span v-if="step == 1">1</span
         ><img v-else src="../assets/images/step-ok.svg" alt="ok icon"
       /></span>
-      Personali <span class="line"></span>
+      Informazioni Personali <span class="line"></span>
     </div>
     <div
       @click="goTo(2)"
