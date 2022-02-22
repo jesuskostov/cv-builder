@@ -738,6 +738,9 @@ const dict = {
     },
     cvv: {
       digits: 'Il campo cvv non è valido'
+    },
+    firstName: {
+      alpha_spaces: 'Il campo può contenere solo caratteri alfabetici e spazi'
     }
   },
 };

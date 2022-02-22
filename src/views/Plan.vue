@@ -83,7 +83,7 @@
                     v-model="email"
                     v-validate="'required|email'"
                   />
-                  <span class="error">{{ errors.first("email") }}</span>
+                  <span class="error">{{ errors.first("email") ? "Richiesto l'invio di un'e-mail" : '' }}</span>
                 </div>
 
                 <div class="text-center">
