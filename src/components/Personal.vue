@@ -64,10 +64,10 @@
                         <label for="family" v-text="$t('personal_step.family')" />
                         <br>
                         <select class="w-100 custom-select" name="family" id="family" v-model="personal.family">
-                            <option disable value="">Select your family status</option>
-                            <option value="married">Married</option>
-                            <option value="single">Single</option>
-                            <option value="">Do not indicate</option>
+                            <option disable value="">Seleziona il tuo stato di famiglia</option>
+                            <option :value="$t('personal_step.single')" v-text="$t('personal_step.single')" />
+                            <option :value="$t('personal_step.notSingle')" v-text="$t('personal_step.notSingle')" />
+                            <option value="" v-text="$t('personal_step.notIndicate')" />
                         </select>
                         <span class="error">{{ errors.first('family') }}</span>
                     </div>
@@ -78,10 +78,10 @@
                         <label for="sex" v-text="$t('personal_step.sex')" />
                         <br>
                         <select class="w-100 custom-select" name="sex" id="sex" v-model="personal.sex">
-                            <option disable value="" v-text="$t('personal_step.sexText')">Select your sex</option>
-                            <option value="Male" v-text="$t('personal_step.male')">Male</option>
-                            <option value="Female" v-text="$t('personal_step.female')">Female</option>
-                            <option value="" v-text="$t('personal_step.notIndicate')">Do not indicate</option>
+                            <option disable value="" v-text="$t('personal_step.sexText')" />
+                            <option :value="$t('personal_step.male')" v-text="$t('personal_step.male')" />
+                            <option :value="$t('personal_step.female')" v-text="$t('personal_step.female')" />
+                            <option value="" v-text="$t('personal_step.notIndicate')" />
                         </select>
                         <span class="error">{{ errors.first('sex') }}</span>
                     </div>

@@ -214,6 +214,8 @@
     "birthday": "Data di nascita",
     "profession": "Professione",
     "family": "Famiglia",
+    "single": "Celibe/Nubile",
+    "notSingle": "Sposato/Sposata",
     "sex": "Sesso",
     "sexText": "Seleziona il tuo sesso",
     "male": "Maschio",
