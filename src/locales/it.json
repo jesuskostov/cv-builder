@@ -323,17 +323,17 @@
     "currentWork": "Lavoro attuale"
   },
   "link": {
-    "browseTemplate": "sfogliare-il-modello",
-    "howToWriteCv": "come-scrivere-cv",
-    "builder": "costruttore",
+    "browseTemplate": "cerca-un-template",
+    "howToWriteCv": "come-scrivere-un-cv",
+    "builder": "crea-il-tuo-cv",
     "payment": "pagamento",
-    "plan": "piano",
+    "plan": "piani",
     "error": "errore",
-    "feedback": "feedback",
+    "feedback": "recensioni",
     "faq": "faq",
-    "partnership": "partnership",
-    "contact": "contattare",
-    "login": "login"
+    "partnership": "collaborazioni",
+    "contact": "contattaci",
+    "login": "accedi"
   },
   "date_format": "it-IT"
 }
