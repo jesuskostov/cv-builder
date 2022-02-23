@@ -3,7 +3,7 @@ const DOMAINS = [
     offer: "free",
     url: ["www.cv-semplice.com", "cv-semplice.com", "cv-semplice.local"],
     googleAdsId: "AW-10854202946",
-    googleAnaliticsId: "cv-semplice-2",
+    googleAnaliticsId: "UA-115340529-22",
     googleConversionTag: "AW-10854202946/stkkCOPylaIDEML817co",
     locale: "it",
     site: {
@@ -44,7 +44,7 @@ const DOMAINS = [
       "mio-curriculum.local",
     ],
     googleAdsId: "AW-10854202946",
-    googleAnaliticsId: "mio-curriculum-2",
+    googleAnaliticsId: "UA-115340529-22",
     googleConversionTag: "AW-10854202946/stkkCOPylaIDEML817co",
     locale: "it",
     site: {

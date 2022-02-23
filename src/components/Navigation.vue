@@ -12,12 +12,19 @@
         class="nav__menu"
         :class="{ 'show-nav': showNav }"
       >
-         <button @click="routeTo('BrowseTemplates')" v-text="$t('nav_menu')[0]" />
+        <button
+          @click="routeTo('BrowseTemplates')"
+          v-text="$t('nav_menu')[0]"
+        />
         <button @click="routeTo('HowToWriteCv')" v-text="$t('nav_menu')[1]" />
         <button @click="routeTo('Feedbacks')">Feedback</button>
         <button @click="routeTo('Faq')">FAQ</button>
         <button @click="routeTo('Contact')" v-text="$t('nav_menu')[5]" />
-        <button @click="routeTo('BrowseTemplates')" class="btn" v-text="$t('nav_menu')[6]" />
+        <button
+          @click="routeTo('BrowseTemplates')"
+          class="btn"
+          v-text="$t('nav_menu')[6]"
+        />
         <button
           v-if="showNav"
           @click="showNav = false"
@@ -81,10 +88,12 @@ export default {
     async start() {
       let step = 1;
       await this.$store.dispatch("step", { step });
-      this.$router.push("/builder");
+      this.$router.push({
+        name: "Builder",
+      });
     },
     routeTo(link) {
-      this.$router.push({name: link}).catch(() => {});
+      this.$router.push({ name: link }).catch(() => {});
       this.showNav = false;
     },
   },

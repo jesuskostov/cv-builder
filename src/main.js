@@ -23,8 +23,7 @@ Vue.use(
   VueGtag,
   {
     config: { id: currentDomain().googleAdsId },
-    // if two IDS
-    // includes: [{ id: process.env.VUE_APP_GOOGLE_ANALITICS_ID2 }],
+    includes: [{ id: currentDomain().googleAnaliticsId }],
   },
   router
 );

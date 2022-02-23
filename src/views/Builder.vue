@@ -16,11 +16,11 @@
               xmlns="http://www.w3.org/2000/svg"
             >
               <foreignObject x="0" y="0" width="100%" :height="previewHeight">
-                  <templates
-                    :color="color"
-                    :onBuilder="true"
-                    :selected="selectedCv"
-                  />
+                <templates
+                  :color="color"
+                  :onBuilder="true"
+                  :selected="selectedCv"
+                />
               </foreignObject>
             </svg>
             <div class="colors">
@@ -86,7 +86,8 @@
             </div>
             <div class="d-flex flex-column mb-4" v-if="step == 5">
               <p class="text-left mb-1">
-                <span v-text="$t('endPreview.templateName')" /> <b>{{ nickname }}</b>
+                <span v-text="$t('endPreview.templateName')" />
+                <b>{{ nickname }}</b>
               </p>
               <div class="colors justify-content-start mb-4">
                 <button
@@ -108,17 +109,20 @@
             <div class="d-flex flex-column flex-grow-1" v-if="step == 5">
               <div>
                 <button class="edit" @click="goTo(1)">
-                  <span v-text="$t('endPreview.personal')" /> <img src="../assets/images/pencil.svg" alt="edit icon" />
+                  <span v-text="$t('endPreview.personal')" />
+                  <img src="../assets/images/pencil.svg" alt="edit icon" />
                 </button>
                 <button class="edit" @click="goTo(2)">
-                  <span v-text="$t('endPreview.workHistory')" /> <img src="../assets/images/pencil.svg" alt="edit icon" />
+                  <span v-text="$t('endPreview.workHistory')" />
+                  <img src="../assets/images/pencil.svg" alt="edit icon" />
                 </button>
                 <button class="edit" @click="goTo(3)">
                   <span v-text="$t('endPreview.educationSkills')" />
                   <img src="../assets/images/pencil.svg" alt="edit icon" />
                 </button>
                 <button class="edit" @click="goTo(4)">
-                  <span v-text="$t('endPreview.other')" /> <img src="../assets/images/pencil.svg" alt="edit icon" />
+                  <span v-text="$t('endPreview.other')" />
+                  <img src="../assets/images/pencil.svg" alt="edit icon" />
                 </button>
               </div>
               <button
@@ -133,8 +137,12 @@
       </div>
     </div>
     <div v-if="bigPreview" class="big-preview">
-      <button @click="hideBigPreview" class="close-btn">              
-        <svg data-marpit-svg="" viewBox="0 0 329.26933 329" xmlns="http://www.w3.org/2000/svg">
+      <button @click="hideBigPreview" class="close-btn">
+        <svg
+          data-marpit-svg=""
+          viewBox="0 0 329.26933 329"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             d="m194.800781 164.769531 128.210938-128.214843c8.34375-8.339844 8.34375-21.824219 0-30.164063-8.339844-8.339844-21.824219-8.339844-30.164063 0l-128.214844 128.214844-128.210937-128.214844c-8.34375-8.339844-21.824219-8.339844-30.164063 0-8.34375 8.339844-8.34375 21.824219 0 30.164063l128.210938 128.214843-128.210938 128.214844c-8.34375 8.339844-8.34375 21.824219 0 30.164063 4.15625 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921875-2.089844 15.082031-6.25l128.210937-128.214844 128.214844 128.214844c4.160156 4.160156 9.621094 6.25 15.082032 6.25 5.460937 0 10.921874-2.089844 15.082031-6.25 8.34375-8.339844 8.34375-21.824219 0-30.164063zm0 0"
           />
@@ -153,7 +161,9 @@
                   <img
                     @click="onClick(i)"
                     class="cv-list-img"
-                    :src="require(`@/assets/images/cv-templates/it/${item.thumb}`)"
+                    :src="
+                      require(`@/assets/images/cv-templates/it/${item.thumb}`)
+                    "
                     alt=""
                   />
                 </div>
@@ -209,6 +219,7 @@ import Footer from "../components/Footer.vue";
 import { templates } from "../store/templates";
 
 export default {
+  name: "Builder",
   data() {
     return {
       color: "#91976f",
@@ -259,10 +270,10 @@ export default {
       this.$store.dispatch("step", { step });
     },
     generateReport() {
-      if (this.offer === 'free') {
-        this.$router.push({name: 'Plan'});
+      if (this.offer === "free") {
+        this.$router.push({ name: "Plan" });
       } else {
-        this.$router.push({name: 'Payment'});
+        this.$router.push({ name: "Payment" });
       }
       // this.$refs.html2Pdf.generatePdf()
     },
@@ -272,7 +283,7 @@ export default {
       this.$store.dispatch("selectCv", { payload });
     },
     toPayment() {
-      this.$router.push({name: 'Payment'});
+      this.$router.push({ name: "Payment" });
     },
     showBigPreview() {
       this.bigPreview = true;
