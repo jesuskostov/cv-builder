@@ -9,23 +9,23 @@
                             <router-link to="/">Homepage</router-link>
                             <router-link to="/i-nostri-valori">I nostri valori</router-link>
                             <router-link to="/aiuto">Aiuto</router-link>    
-                            <router-link to="/contact">Contattaci</router-link>
+                            <router-link :to="{name: 'Contact'}">Contattaci</router-link>
                             <router-link to="/site-map">Mappa del sito</router-link>                                                        
                         </div>
                     </div>
                     <div class="col-6 col-md-3 mb-3 mb-md-0">
                         <div class="d-flex flex-column align-items-start">
-                            <router-link to="/browse-templates" v-text="$t('footer_menu')[0]">Get Started</router-link>
-                            <router-link to="/how-to-write-cv" v-text="$t('footer_menu')[1]">How to write CV</router-link>
-                            <router-link to="/browse-templates" v-text="$t('footer_menu')[2]">Browse Templates</router-link>                        
-                            <router-link to="/feedback" v-text="$t('footer_menu')[3]">Feedback</router-link>
-                            <router-link to="/faq" v-text="$t('footer_menu')[4]">FAQ</router-link>
+                            <router-link :to="{name: 'BrowseTemplates'}" v-text="$t('footer_menu')[0]">Get Started</router-link>
+                            <router-link :to="{name: 'HowToWriteCv'}" v-text="$t('footer_menu')[1]">How to write CV</router-link>
+                            <router-link :to="{name: 'BrowseTemplates'}" v-text="$t('footer_menu')[2]">Browse Templates</router-link>                        
+                            <router-link :to="{name: 'Feedbacks'}" v-text="$t('footer_menu')[3]">Feedback</router-link>
+                            <router-link :to="{name: 'Faq'}" v-text="$t('footer_menu')[4]">FAQ</router-link>
                         </div>
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="d-flex flex-column align-items-start">
-                            <router-link to="/partnership" v-text="$t('footer_menu')[5]">Partnership</router-link>
-                            <router-link to="/secure-payment" v-text="$t('footer_menu')[6]">Secure Payment</router-link>
+                            <router-link :to="{name: 'Partnership'}" v-text="$t('footer_menu')[5]">Partnership</router-link>
+                            <router-link :to="{name: 'SecurePayment'}" v-text="$t('footer_menu')[6]">Secure Payment</router-link>
                             <router-link to="#" v-text="$t('footer_menu')[7]">Privacy Policy</router-link>
                             <router-link to="#" v-text="$t('footer_menu')[8]">Terms of Service</router-link>
                             <router-link to="#" v-text="$t('footer_menu')[9]">Cookie Policy</router-link>
@@ -34,7 +34,7 @@
                     </div>
                     <div class="col-6 col-md-3">
                         <div class="d-flex flex-column align-items-start">
-                            <router-link to="/login">Il mio abbonamento</router-link>
+                            <router-link :to="{name: 'Login'}">Il mio abbonamento</router-link>
                         </div>
                     </div>
                 </div>

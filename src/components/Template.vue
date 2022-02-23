@@ -85,7 +85,7 @@ export default {
       localStorage.setItem('cv_variant', payload);
       await this.$store.dispatch('selectCv', {payload});
       await this.$store.dispatch('step', {step});
-      this.$router.push('/builder');
+      this.$router.push({name: 'Builder'});
     },
   },
   computed: {

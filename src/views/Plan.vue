@@ -174,7 +174,7 @@ export default {
       let plan = this.plan
       this.$store.dispatch('setPlan', plan)
       if (!isValid) return;
-      this.$router.push("/payment");
+      this.$router.push({name: 'Payment'});
     },
   },
 };

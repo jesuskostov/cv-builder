@@ -18,7 +18,7 @@
                     <p><b>Il nostro servizio ti permette di offrire ai tuoi clienti un servizio di qualità ad un prezzo accessibile.</b></p>
                     <p><b>Vuoi offrirci una collaborazione?</b><br>Vuoi collaborare solo in uno dei settori che trattiamo?<br>Scrivici ora!</p>
                     <div class="text-center mt-5">
-                        <router-link to="/contact" class="custom-btn py-3">Contattaci</router-link>
+                        <router-link :to="{name: 'Contact'}" class="custom-btn py-3">Contattaci</router-link>
                     </div>
                 </div>
             </div>

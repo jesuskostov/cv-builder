@@ -33,8 +33,8 @@
             </div>
             <div class="col-md-4">
                 <div class="d-flex flex-column text-left">
-                    <router-link to="/browse-templates">Get Started</router-link>
-                    <router-link to="/browse-templates">Browse Templates</router-link>                        
+                    <router-link :to="{name: 'BrowseTemplates'}">Get Started</router-link>
+                    <router-link :to="{name: 'BrowseTemplates'}">Browse Templates</router-link>                        
                     <router-link to="/how-to-write-cv">How to write CV</router-link>
                     <router-link to="/feedback">Feedback</router-link>
                     <router-link to="/faq">FAQ</router-link>

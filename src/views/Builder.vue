@@ -260,9 +260,9 @@ export default {
     },
     generateReport() {
       if (this.offer === 'free') {
-        this.$router.push("/plan");
+        this.$router.push({name: 'Plan'});
       } else {
-        this.$router.push("/payment");
+        this.$router.push({name: 'Payment'});
       }
       // this.$refs.html2Pdf.generatePdf()
     },
@@ -272,7 +272,7 @@ export default {
       this.$store.dispatch("selectCv", { payload });
     },
     toPayment() {
-      this.$router.push("/Payment");
+      this.$router.push({name: 'Payment'});
     },
     showBigPreview() {
       this.bigPreview = true;

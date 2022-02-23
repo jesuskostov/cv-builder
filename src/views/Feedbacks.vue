@@ -18,7 +18,7 @@
                       Vari modelli per vari datori di lavoro!
                     </p>
                 </div>
-                <router-link to="/browse-templates" class="btn">Inizia ora</router-link>
+                <router-link :to="{name: 'BrowseTemplates'}" class="btn">Inizia ora</router-link>
                 </div>
               </div>
           </div>

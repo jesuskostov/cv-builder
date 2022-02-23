@@ -229,6 +229,18 @@
     "educationAndSkills": "Education and Skills",
     "skills": "skills"
 },
+"link": {
+    "browseTemplate": "browseTemplate",
+    "howToWriteCv": "howToWriteCv",
+    "payment": "payment",
+    "plan": "plan",
+    "error": "error",
+    "feedback": "feedback",
+    "faq": "faq",
+    "partnership": "partnership",
+    "contact": "contact",
+    "login": "login"
+},
 "date_format": "it-IT"
 }
 

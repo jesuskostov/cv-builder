@@ -18,6 +18,7 @@ import SiteMap from "../views/SiteMap.vue";
 import Plan from "../views/Plan.vue";
 import Login from "../views/Login.vue";
 import NotFound from "../views/404.vue";
+import i18n from "../i18n";
 
 Vue.use(VueRouter);
 Vue.use(Meta);
@@ -29,47 +30,47 @@ const routes = [
     component: Home,
   },
   {
-    path: "/builder",
+    path: `/${i18n.t('link.builder')}`,
     name: "Builder",
     component: Builder,
   },
   {
-    path: "/browse-templates",
+    path: `/${i18n.t('link.browseTemplate')}`,
     name: "BrowseTemplates",
     component: BrowseTemplates,
   },
   {
-    path: "/how-to-write-cv",
+    path: `/${i18n.t('link.howToWriteCv')}`,
     name: "HowToWriteCv",
     component: HowToWriteCv,
   },
   {
-    path: "/payment",
+    path: `/${i18n.t('link.payment')}`,
     name: "Payment",
     component: Payment,
   },
   {
-    path: "/plan",
+    path: `/${i18n.t('link.plan')}`,
     name: "Plan",
     component: Plan,
   },
   {
-    path: "/error",
+    path: `/${i18n.t('link.error')}`,
     name: "Error",
     component: ErrorPage,
   },
   {
-    path: "/feedback",
+    path: `/${i18n.t('link.feedback')}`,
     name: "Feedbacks",
     component: Feedbacks,
   },
   {
-    path: "/faq",
+    path: `/${i18n.t('link.faq')}`,
     name: "Faq",
     component: Faq,
   },
   {
-    path: "/partnership",
+    path: `/${i18n.t('link.partnership')}`,
     name: "Partnership",
     component: Partnership,
   },
@@ -94,12 +95,12 @@ const routes = [
     component: SecurePayment,
   },
   {
-    path: "/contact",
+    path: `/${i18n.t('link.contact')}`,
     name: "Contact",
     component: Contact,
   },
   {
-    path: "/login",
+    path: `/${i18n.t('link.login')}`,
     name: "Login",
     component: Login,
   },

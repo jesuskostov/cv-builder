@@ -322,5 +322,18 @@
     "socialProf": "Profili sociali",
     "currentWork": "Lavoro attuale"
   },
+  "link": {
+    "browseTemplate": "sfogliare-il-modello",
+    "howToWriteCv": "come-scrivere-cv",
+    "builder": "costruttore",
+    "payment": "pagamento",
+    "plan": "piano",
+    "error": "errore",
+    "feedback": "feedback",
+    "faq": "faq",
+    "partnership": "partnership",
+    "contact": "contattare",
+    "login": "login"
+  },
   "date_format": "it-IT"
 }

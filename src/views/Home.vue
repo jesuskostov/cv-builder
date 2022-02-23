@@ -38,7 +38,7 @@
                 <p v-if="offer === 'paid'" class="price" v-html="$t('price.paid')" />
                 <p v-if="offer === 'free'" class="text" v-html="$t('price.free2')" />
               </div>
-              <router-link to="/browse-templates" class="btn flex-shrink-0" v-text="$t('button.start')" />
+              <router-link :to="{name: 'BrowseTemplates'}" class="btn flex-shrink-0" v-text="$t('button.start')" />
             </div>
           </div>
           <div class="col-md-6 position-relative d-none d-md-block">
@@ -247,7 +247,7 @@
           </div>
         </div>
         <div class="text-center mt-5">
-          <router-link to="/feedback" class="custom-btn big" v-text="$t('button.viewAll')" />
+          <router-link :to="{name: 'Feedbacks'}" class="custom-btn big" v-text="$t('button.viewAll')" />
         </div>
       </div>
     </div>
@@ -322,7 +322,7 @@
       <templates :preview="true" />
 
       <div class="text-center mb-5">
-        <router-link to="/browse-templates" class="custom-btn big" v-text="$t('button.viewAll')" />
+        <router-link :to="{name: 'BrowseTemplates'}" class="custom-btn big" v-text="$t('button.viewAll')" />
       </div>
     </div>
     <div id="why-section">
@@ -358,7 +358,7 @@
         <img src="../assets/images/squares.svg" alt="squares icons" />
         <div class="content">
           <h2 v-text="$t('sectionTitles.change')" />
-          <router-link to="/browse-templates" v-text="$t('button.start')" />
+          <router-link :to="{name: 'BrowseTemplates'}" v-text="$t('button.start')" />
         </div>
       </div>
     </div>
@@ -398,7 +398,7 @@ export default {
     async start() {
       let step = 1;
       await this.$store.dispatch("step", { step });
-      this.$router.push("/builder");
+      this.$router.push({name: 'Builder'});
     },
   },
 };
