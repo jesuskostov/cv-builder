@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="steps-title mb-5">
-        <h1 v-text="$t('personal_step.button')" />
+        <h1 v-text="$t('personal_step.title')" />
         <span class="line"></span>
         <p class="text" v-text="$t('personal_step.text')" />
     </div>
