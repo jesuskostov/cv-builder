@@ -1,7 +1,354 @@
 {
   "hero": {
-    "title": "FR TEXT NOT DONE"
+    "title": "Créez un CV que les recruteurs vont adorer",
+    "benefits": {
+      "0": "Modèles de CV optimisés pour la carrière",
+      "1": "Modifiez votre CV sur n'importe quel appareil",
+      "2": "Aucun logiciel à télécharger",
+      "3": "CV professionnel",
+      "4": "Télécharger en PDF"
+    }
   },
-
+  "sectionTitles": {
+    "testimonies": "Ce que disent nos clients :",
+    "steps": "Créez un CV parfait en quelques minutes :",
+    "carousel": {
+      "title": "Faire un CV qui se démarque",
+      "text": "Augmentez vos chances de trouver le job de vos rêves en créant le meilleur CV qui soit ! <br> Nos outils professionnels ont été forgés dans ce seul but : <br> démarquez votre candidature !"
+    },
+    "why": {
+      "title": "Pourquoi utiliser nos outils uniques ?",
+      "text": "Grâce à notre ensemble d'outils, votre CV se démarquera des autres !<br> Des fonctionnalités intelligentes pour personnaliser facilement et rapidement votre CV sur ordinateur et mobile.<br> Et téléchargez votre PDF en moins de 5 minutes !"
+    },
+    "change": "Changez Votre CV : Changez Votre Vie !"
+  },
+  "steps": {
+    "step1": {
+      "title": "Entrez vos informations",
+      "text": "Choisissez parmi notre collection de modèles de CV et remplissez simplement les champs."
+    },
+    "step2": {
+      "title": "Personnalisez votre CV",
+      "text": "Changez de modèle en un clic lors de la création de votre CV pour choisir le meilleur !"
+    },
+    "step3": {
+      "title": "Téléchargez votre CV au format PDF",
+      "text": "Une fois terminé, vous pouvez télécharger votre CV et l'envoyer immédiatement aux recruteurs !"
+    }
+  },
+  "price": {
+    "free": "14 CV en 10 minutes !!!",
+    "free2": "Créez-en 1, obtenez 14 CV d'un coup !<br>Et en seulement 10 minutes !",
+    "paid": "WOW : 14 CV en 10 minutes <br> MEILLEUR PRIX : SEULEMENT 4,90 € !"
+  },
+  "optimization": {
+    "title": "Seuls 2% des CV passent la première sélection.<br>Soyez dans ces 2% !",
+    "text": "Nos outils uniques vous aideront à faire passer votre recherche d'emploi au niveau supérieur avec un CV efficace, simple et élégant."
+  },
+  "browseTemplatePage": {
+    "title": "Le seul site qui vous propose tous les CV d'un coup !",
+    "text": "Vous faites votre CV et vous le recevez au format PDF avec TOUS CES MODELES !<br> Vous pouvez modifier votre modèle de CV en un clic lors de sa création !<br> Facile. Rapide. Efficace."
+  },
+  "howToWriteCV": {
+    "title": "Comment bien rédiger votre CV",
+    "information": {
+      "0": {
+        "title": "Qu'est-ce qu'un CV ?",
+        "text": "<b>Votre CV est votre présentation personnelle à l'employeur potentiel.</b> Il doit représenter au mieux votre profil professionnel en <b>vous présentant comme un nouvel atout pour l'entreprise.</b> Il doit être unique et adapté au poste pour lequel vous postulez et, dans l'ensemble, il doit être convaincant, car c'est votre objectif ultime : convaincre l'employeur que vous êtes le bon candidat pour un entretien !"
+      },
+      "1": {
+        "title": "Comment faire un CV ?",
+        "text": "Lorsqu'il s'agit de la rédaction d'un curriculum vitae, il y a plusieurs éléments que chaque candidat doit garder à l'esprit.",
+        "ul": {
+          "0": "<b>Un CV ou curriculum vitae, appelé aussi 'resume' aux États-Unis</b>, est défini comme un compte rendu <b>de l'expérience professionnelle, de la formation et des qualifications</b> envoyé lors de la recherche d'emploi. C'est une définition élémentaire pour quelque chose qui doit essentiellement provoquer chez le lecteur l'envie de vouloir vous rencontrer, donc apprendre <b>à rédiger un CV</b> pour une demande d'emploi, c'est aussi <b>apprendre à écrire une histoire capable d'intriguer le lecteur,</b>, ici un responsable du recrutement.",
+          "1": "Lorsqu'un(e) candidat(e) décide de <b>préparer un CV pour une recherche d'emploi,</b> il ou elle <b>doit commencer par créer un plan</b> qui retrace ses réalisations, ses antécédents professionnels, sa formation, les qualités et les compétences supplémentaires qui en font un(e) candidat(e) légitime.",
+          "2": "Ces <b>informations doivent ensuite être présentées d'une manière descriptive mais professionnelle</b> qui met en valeur les points forts de chaque individu et leur aptitude pour le poste à pourvoir. Vous devez <b>aborder la rédaction de votre CV du point de vue de votre public</b> et traiter chaque CV comme une candidature individuelle et nouvelle, et non un copier/coller du même contenu pour chaque poste vacant disponible.",
+          "3": "<b>Faites des recherches sur l'entreprise et le poste à pourvoir</b>, renseignez-vous sur vos tâches et réfléchissez à la manière dont vous aborderiez les problèmes qui pourraient survenir ou à la façon dont vos compétences profiteraient à l'entreprise pour laquelle vous aimeriez travailler."
+        }
+      },
+      "2": {
+        "title": "Mise en page",
+        "text": "Il est essentiel de <b>réfléchir soigneusement à la mise en page de votre CV</b> lorsque vous le rédigez. Si vous le créez à partir de zéro, vous devrez planifier soigneusement la façon de placer chaque section, en créant une mise en page agréable à regarder, en faisant bon usage de l'espace libre et en n'encombrant pas la page avec différentes polices, tailles et caractères.<br><br> Il est <b>essentiel de faire un CV avec une mise en forme bien structurée</b> qui sera visuellement agréable et attirera le lecteur vers les informations importantes. <br><br> <b> La lisibilité est un élément à prendre en compte lors de la mise en page d'un CV.</b> <br><br> Cela signifie qu'il faut créer un document facile à lire, bien construit et <b>utiliser une mise en page qui permet à l'employeur de naviguer confortablement</b> vers les informations pertinentes. <br><br> Lors de la création de la <b>structure du CV</b>, les candidats doivent tenir compte des <b>marges et des espaces blancs sur la page</b> ainsi que <b>de la taille et des types de police< /b>, en n'utilisant jamais plus de 2 polices dans tout le document. De plus, <b>les couleurs</b> ne doivent pas être multipliées ou le CV devient surchargé. <br><br> Nous vous recommandons pour assurer <b>une mise en page approuvée par les ressources humaines d'utiliser nos outils et modèles uniques</b>, ils sont prêts à l'emploi et vous feront gagner un temps et une énergie considérables. Entrez simplement vos informations et choisissez la mise en page qui vous convient le mieux. <br> <b>Nos outils et modèles sont tout simplement les plus efficaces disponibles !</b>"
+      },
+      "3": {
+        "title": "Quelle doit être la longueur de mon CV ?",
+        "text": "<p>Lorsqu'il s'agit de connaître la longueur parfaite d'un CV, les avis des employeurs et experts en recrutement diffèrent car cela peut dépendre du candidat, de son niveau d'expérience et même du secteur ou de l'emploi pour lequel il postule.</p> <p>Cependant, en règle générale, la longueur idéale d'un CV est de 1 à 2 pages A4 pour contenir toutes les informations pertinentes nécessaires.</p> <p>Certains pensent que 3 pages sont également acceptables, mais comme la pertinence est la clé d'un CV réussi, si vous estimez que vous ajoutez des informations qui ne sont ni pertinentes ni utiles, vous devriez vous en tenir à l'adage 'le mieux est l'ennemi du bien' !</p> <p>Dans certaines professions (artistiques ou académiques), il se peut que la demande d'emploi implique des informations supplémentaires telles qu'un portfolio, mais ces informations peuvent être ajoutées en tant que pièces jointes distinctes du CV, elles ne doivent pas en faire partie intégrante.</p> <p>Il est recommandé de garder chaque section aussi courte et claire que possible sans omettre de détails essentiels ou de mots-clés, en évitant les longs paragraphes ou les longues listes qui découragent souvent les employeurs.</p> <p>S'il y a une réalisation ou une expérience spécifique que vous souhaitez mettre en avant, vous pouvez utiliser la lettre de motivation qui doit toujours accompagner une candidature pour le faire. <br><br> Dans une lettre de motivation, vous avez la possibilité de donner des explications ou des détails supplémentaires qui pourraient convaincre le responsable du recrutement d'ajouter votre nom à la liste des entretiens.</p>"
+      },
+      "4": {
+        "title": "Ce qu'il ne faut pas mettre sur un CV",
+        "text": "Une fois que vous avez appris à rédiger un bon CV avec nos outils et modèles uniques, vous devrez toujours vous assurer de ne pas commettre d'erreurs critiques, c'est ici, avant d'envoyer votre candidature, que vous devrez considérer ce qu'il ne faut PAS inclure dans un CV.",
+        "text2": "Toute information supplémentaire qu'un candidat considère comme importante à inclure dans un CV, mais qui ne correspond pas ou qui nécessite un traitement plus approfondi, peut être ajoutée à la lettre de motivation où les candidats peuvent expliquer plus en détail les raisons fondamentales pour lesquelles leur expérience et leurs qualifications font d'eux le candidat idéal.<br><br><b>Nous vous souhaitons tout le succès possible dans votre recherche d'emploi !</b></p>",
+        "ul": {
+          "0": "Dans un CV européen, bien que ce ne soit pas obligatoire, il est courant d'ajouter une photo, mais ceci est à prohiber dans un CV britannique, américain ou canadien.",
+          "1": "Pour certaines entreprises, il n'est pas nécessaire d'inclure dans le CV des détails personnels tels que la date de naissance, l'âge ou l'état civil. Cela peut être considéré comme discriminatoire. Vérifiez donc auprès de votre employeur potentiel quel est son règlement intérieur sur ce point.",
+          "2": "Il vous est recommandé de mentionner votre nationalité uniquement si vous avez besoin d'un visa de travail lié à cette dernière.",
+          "3": "Essayez d'éviter d'utiliser des phrases stéréotypées et certains mots qui ont été exagérément utilisés par le passé.",
+          "4": "Afin de conserver uniquement des informations pertinentes, il est essentiel que vous supprimiez tous les détails, qualifications, compétences ou expériences qui ne sont pas liés directement au poste ou qui ne fournissent pas la preuve de votre aptitude pour ce dernier.",
+          "5": "Enfin, à mesure que les CV évoluent et que la communauté des ressources humaines change, il vous est conseillé de ne pas inclure de références sur votre CV, sauf si cela est strictement mentionné dans l'offre d'emploi. Dans certains cas, les candidats peuvent choisir d'ajouter une ligne à la fin du CV pour informer que des références sont disponibles sur demande."
+        }
+      }
+    }
+  },
+  "feedback": {
+    "hero": {
+      "title": "Créez un CV que les recruteurs vont adorer"
+    },
+    "title": "Ce que disent nos clients :",
+    "list": {
+      "0": {
+        "name": "Robert Lombard",
+        "text": "Bon outil avec de nombreux modèles au choix."
+      },
+      "1": {
+        "name": "Sarah Bagni",
+        "text": "J'adore ! Super interface ! Bravo pour la facilité d'utilisation et le grand choix de modèles et de designs. J'ai vraiment aimé choisir mes propres couleurs."
+      },
+      "2": {
+        "name": "Jean L***",
+        "text": "Facile à utiliser, abordable et fiable. Excellent modèle pour vous aider à démarrer avec votre CV où que vous en soyez dans votre carrière."
+      },
+      "3": {
+        "name": "Julia Ricci",
+        "text": "Très facile à utiliser et doté d'un très bon guide qui vous aide tout au long de la création du CV. J'ai été surprise qu'il soit déjà terminé !"
+      },
+      "4": {
+        "name": "Joseph P***",
+        "text": "Très maniable, j'adore !"
+      },
+      "5": {
+        "name": "Raphaël Perrin",
+        "text": "Ce créateur de CV est tout simplement génial ! J'étais ravi de son efficacité. J'ai pu le faire en peu de temps et facilement apporter des modifications quand je le voulais. Et la fonction d'échange de modèles est vraiment un outil super cool !"
+      }
+    }
+  },
+  "faq": {
+    "title": "Foire aux questions",
+    "questions": {
+      "0": {
+        "title": "Comment ça fonctionne ?",
+        "text": "",
+        "list": {
+          "0": "Choisissez un modèle",
+          "1": "Remplissez les champs",
+          "2": "Une fois fini, permutez entre les modèles pour choisir le meilleur",
+          "3": "Télécharger le CV au format PDF",
+          "4": "C'est aussi simple que cela!"
+        }
+      },
+      "1": {
+        "title": "Combien de temps faut-il ?",
+        "text": "10 minutes ! <br>Vraiment, 10 minutes ! <br> Grâce à nos outils uniques, vous créerez votre CV en un rien de temps !",
+        "list": {}
+      },
+      "2": {
+        "title": "Puis-je faire une pause pendant la création ?",
+        "text": "Oui, nous stockons vos données au fur et à mesure. <br> Vous pouvez prendre le temps que VOUS VOULEZ pour rechercher des données supplémentaires ou les modifier sereinement. <br> Vous pouvez même commencer aujourd'hui et finir demain, toutes vos données seront conservées pour plus de facilité.",
+        "list": {}
+      },
+      "3": {
+        "title": "Puis-je facilement changer de modèle ?",
+        "text": "Oui! <br> À tout moment, vous pouvez échanger contre l'un des autres modèles. <br> Utilisez nos outils pour essayer tous les modèles facilement !",
+        "list": {}
+      },
+      "4": {
+        "title": "Puis-je faire mon CV sur mon téléphone portable ?",
+        "text": "Oui! Oui, oui, oui et oui ! ;) <br> Nos outils uniques ont été développés pour tous les appareils disponibles : smartphones, tablettes, <br> iPad, Microsoft Surface, ordinateurs de bureau et portables. <br> Profitez de notre approche technique complète !",
+        "list": {}
+      },
+      "5": {
+        "title": "Si j'ai un profil LinkedIn, dois-je tout de même faire un CV ?",
+        "text": "Oui ! Malheureusement ! ;) <br> LinkedIn est un outil utile, mais il n'offre pas la même valeur qu'un CV lors du recrutement. <br> Que vous postuliez via LinkedIn ou d'autres plateformes d'offres d'emploi, les recruteurs demanderont toujours une copie numérique de vos antécédents professionnels, de votre formation et de vos compétences en un seul document pour pouvoir s'y référer pendant la sélection. <br> Mais LinkedIn est un plus solide à ajouter dans votre CV, c'est pourquoi tous nos modèles vous permettent d'ajouter votre compte LinkedIn.",
+        "list": {}
+      },
+      "6": {
+        "title": "Vos outils sont-ils sécurisés ?",
+        "text": "Oui, nos outils ont été testés sur toutes les plateformes avec succès ! <br> Ils sont sécurisés grâce au cryptage SSL.",
+        "list": {}
+      },
+      "7": {
+        "title": "Vos outils sont-ils privés ?",
+        "text": "Oui, nos outils sont 100% privés. <br> Vos données personnelles sont rigoureusement protégées. <br> Personne ne peut les consulter !",
+        "list": {}
+      },
+      "8": {
+        "title": "Dois-je mettre en page moi-même mon CV ?",
+        "text": "Non! <br> Nous avons fait tout le travail pour vous ! <br> Nos CV, conçus par des professionnels, suivent les dernières tendances du secteur du recrutement ! Choisissez celui que vous préférez, remplissez vos données et téléchargez votre PDF. <br> Oui, c'est aussi simple que cela !",
+        "list": {}
+      },
+      "9": {
+        "title": "Quelle longueur doit avoir mon CV ?",
+        "text": "Habituellement, les employeurs préfèrent une seule page. <br> Cependant, tant que votre CV est clair et facile à lire, vous pouvez aller jusqu'à deux pages. <br> Si votre expérience professionnelle se limite à moins de 10 ans, nous vous recommandons de n'utiliser qu'une seule page et seulement avec des informations pertinentes et ciblées.",
+        "list": {}
+      }
+    }
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "fields": {
+      "name": "Prénom",
+      "surname": "Nom",
+      "email": "Email",
+      "subject": "Objet"
+    }
+  },
+  "button": {
+    "start": "Commencer maintenant",
+    "start2": "Commencer",
+    "viewAll": "Voir tout",
+    "faq": "Aller à la page FAQ",
+    "contact": "Envoyer"
+  },
+  "nav_menu": {
+    "0": "Browse templates",
+    "1": "How to write CV",
+    "3": "Feedback",
+    "4": "FAQ",
+    "5": "Contact us",
+    "6": "Get started"
+  },
+  "footer_menu": {
+    "0": "Commencer",
+    "1": "Comment rédiger un CV",
+    "2": "Parcourir les modèles",
+    "3": "Avis",
+    "4": "FAQ",
+    "5": "Partenariat",
+    "6": "Paiement sécurisé",
+    "7": "Charte de confidentialité",
+    "8": "Conditions d'utilisation",
+    "9": "Gestion des cookies",
+    "10": "Mentions légales"
+  },
+  "personal_step": {
+    "title": "Personal information",
+    "text": "What's the best way a company has to contact you? We suggest you include an email and phone number. Even a photo wouldn't be bad.",
+    "addPhoto": "Add photo",
+    "name": "Name",
+    "surname": "Surname",    
+    "birthday": "Birthday",
+    "profession": "Profession",
+    "family": "Family",
+    "single": "Not married",
+    "notSingle": "Married",
+    "sex": "Sex",
+    "sexText": "Select your gender",
+    "male": "Male",
+    "female": "Female",
+    "notIndicate": "Do not indicate",
+    "city": "City",
+    "zipCode": "Zip code",
+    "country": "Country",
+    "nationality": "Nationality",
+    "fullAddress": "Full address",
+    "phoneNumber": "Phone number",
+    "linkedin": "Linkedin account (optional)",
+    "button": "Next: Work history"
+  },
+  "work_history": {
+    "title": "Work history",
+    "text": "Employers scan your resume for 5 seconds to decide if you are suitable. We suggest that you only add jobs that make a great impression.",
+    "jobTitle": "Job title",
+    "employer": "Employer",
+    "from": "From",
+    "to": "To",
+    "workDescription": "Description",
+    "currentWork": "I currently work here",
+    "addJob": "Add job",
+    "addAnotherJob": "Add another job",
+    "goBack": "Go back",
+    "button": "Next: Education & Skills"
+  },
+  "school_history": {
+    "title": "Education and Skills",
+    "subTitle": "Education",
+    "text": "Employers quickly scan the section on education. We take care of the formatting so that it is easy to find. Include every school, even if you are still attending or have not graduated.",
+    "schoolName": "School name",
+    "schoolCity": "School city",
+    "degree": "Degree",
+    "from": "From",
+    "to": "To",
+    "description": "Description",
+    "addSchool": "Add school",
+    "addAnotherSchool": "Add another school",
+    "goBack": "Go back",
+    "button": "Next: other"
+  },
+  "skills": {
+    "title": "Skills",
+    "text": "Employers scan skills for relevant keywords. We will help you choose the best ones."
+  },
+  "other_step": {
+    "title": "Other",
+    "nativeLang": "Native language:",
+    "spokenLang": "Spoken language:",
+    "drivingLicense": "Driving license:",
+    "selectLevel": "Select level",
+    "choose": "Choose",
+    "car": "Car",
+    "moto": "Motorcycle",
+    "none": "None",
+    "interests": "Interests",
+    "accomplishments": "Accomplishments",
+    "goBack": "Go back",
+    "button": "Next: Summary"
+  },
+  "endPreview": {
+    "templateConfig": "Template configuration",
+    "templateName": "Template name:",
+    "changeCv": "Change template",
+    "summarySection": "Summary",
+    "personal": "Personal",
+    "workHistory": "Work history",
+    "educationSkills": "Education & Skills",
+    "other": "Other"
+  },
+  "cvPlaceholder": {
+    "personalInfo": "Personal Information",
+    "personal": "Personal",
+    "personalSkills": "personal skills",
+    "name": "Your name",
+    "nameAndSurname": "Replace with First name(s) Surname(s)",
+    "address": "Replace with house number, street name, city, postcode, country",
+    "phoneNumb": "Replace with telephone number",
+    "email": "E-mail address",
+    "sex": "sex",
+    "enterSex": "Enter sex",
+    "birhtday": "Date of Birth",
+    "nationality": "Nationality",
+    "work": "Work experience",
+    "educationAndTraning": "Education and Traning",
+    "educationAndSkills": "Education and Skills",
+    "skills": "skills",
+    "motherLang": "Native language",
+    "motherLang2": "Replace with native language (s)",
+    "otherLang": "Other languages",
+    "drivingLicense": "Driving license",
+    "understanding": "Understanding",
+    "speaking": "Speaking",
+    "writing": "Writing",
+    "listening": "Listening",
+    "reading": "Reading",
+    "spokenInteraction": "Spoken interaction",
+    "spokenProduction": "Spoken production",
+    "familyStatus": "Family status",
+    "details": "Details",
+    "profile": "Profile",
+    "education": "Education",
+    "languages": "Languages",
+    "socialProf": "Social profile",
+    "currentWork": "Current work"
+  },
+  "link": {
+    "browseTemplate": "browseTemplate",
+    "howToWriteCv": "howToWriteCv",
+    "payment": "payment",
+    "plan": "plan",
+    "error": "error",
+    "feedback": "feedback",
+    "faq": "faq",
+    "partnership": "partnership",
+    "contact": "contact",
+    "login": "login"
+  },
   "date_format": "fr-FR"
 }

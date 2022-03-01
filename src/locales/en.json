@@ -198,7 +198,15 @@
     "faq": "Go to FAQ page",
     "contact": "Send"
 },
-"menu": {
+"nav_menu": {
+    "0": "Browse templates",
+    "1": "How to write CV",
+    "3": "Feedback",
+    "4": "FAQ",
+    "5": "Contact us",
+    "6": "Get started"
+},
+"footer_menu": {
    "0": "Get Started",
    "1": "How to write CV",
    "2": "Browse Templates",
@@ -210,6 +218,90 @@
    "8": "Terms of Service",
    "9": "Cookie Policy",
    "10": "Note Legali"
+},
+"personal_step": {
+    "title": "Personal information",
+    "text": "What's the best way a company has to contact you? We suggest you include an email and phone number. Even a photo wouldn't be bad.",
+    "addPhoto": "Add photo",
+    "name": "Name",
+    "surname": "Surname",
+    "birthday": "Birthday",
+    "profession": "Profession",
+    "family": "Family",
+    "single": "Not married",
+    "notSingle": "Married",
+    "familySelectText": "Select your family status",
+    "sex": "Sex",
+    "sexText": "Select your gender",
+    "male": "Male",
+    "female": "Female",
+    "notIndicate": "Do not indicate",
+    "city": "City",
+    "zipCode": "Zip code",
+    "country": "Country",
+    "nationality": "Nationality",
+    "fullAddress": "Full address",
+    "phoneNumber": "Phone number",
+    "linkedin": "Linkedin account (optional)",
+    "button": "Next: Work history"
+},
+"work_history": {
+    "title": "Work history",
+    "text": "Employers scan your resume for 5 seconds to decide if you are suitable. We suggest that you only add jobs that make a great impression.",
+    "jobTitle": "Job title",
+    "employer": "Employer",
+    "from": "From",
+    "to": "To",
+    "workDescription": "Description",
+    "currentWork": "I currently work here",
+    "addJob": "Add job",
+    "addAnotherJob": "Add another job",
+    "goBack": "Go back",
+    "button": "Next: Education & Skills"
+},
+"school_history": {
+    "title": "Education and Skills",
+    "subTitle": "Education",
+    "text": "Employers quickly scan the section on education. We take care of the formatting so that it is easy to find. Include every school, even if you are still attending or have not graduated.",
+    "schoolName": "School name",
+    "schoolCity": "School city",
+    "degree": "Degree",
+    "from": "From",
+    "to": "To",
+    "description": "Description",
+    "addSchool": "Add school",
+    "addAnotherSchool": "Add another school",
+    "goBack": "Go back",
+    "button": "Next: other"
+},
+"skills": {
+    "title": "Skills",
+    "text": "Employers scan skills for relevant keywords. We will help you choose the best ones."
+},
+"other_step": {
+    "title": "Other",
+    "nativeLang": "Native language:",
+    "spokenLang": "Spoken language:",
+    "drivingLicense": "Driving license:",
+    "selectLevel": "Select level",
+    "choose": "Choose",
+    "car": "Car",
+    "moto": "Motorcycle",
+    "none": "None",
+    "interests": "Interests",
+    "accomplishments": "Accomplishments",
+    "goBack": "Go back",
+    "button": "Next: Summary"
+},
+"endPreview": {
+    "templateConfig": "Template configuration",
+    "templateName": "Template name:",
+    "changeCv": "Change template",
+    "summarySection": "Summary",
+    "personal": "Personal",
+    "workHistory": "Work history",
+    "educationSkills": "Education & Skills",
+    "other": "Other"
 },
 "cvPlaceholder": {
     "personalInfo": "Personal Information",
@@ -227,7 +319,25 @@
     "work": "Work experience",
     "educationAndTraning": "Education and Traning",
     "educationAndSkills": "Education and Skills",
-    "skills": "skills"
+    "skills": "skills",
+    "motherLang": "Native language",
+    "motherLang2": "Replace with native language (s)",
+    "otherLang": "Other languages",
+    "drivingLicense": "Driving license",
+    "understanding": "Understanding",
+    "speaking": "Speaking",
+    "writing": "Writing",
+    "listening": "Listening",
+    "reading": "Reading",
+    "spokenInteraction": "Spoken interaction",
+    "spokenProduction": "Spoken production",
+    "familyStatus": "Family status",
+    "details": "Details",
+    "profile": "Profile",
+    "education": "Education",
+    "languages": "Languages",
+    "socialProf": "Social profile",
+    "currentWork": "Current work"
 },
 "link": {
     "browseTemplate": "browseTemplate",
@@ -241,21 +351,5 @@
     "contact": "contact",
     "login": "login"
 },
-"date_format": "it-IT"
+"date_format": "en-EN"
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

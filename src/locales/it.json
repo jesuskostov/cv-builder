@@ -207,11 +207,17 @@
     "10": "Note Legali"
   },
   "personal_step": {
+    "title": "Informazioni Personali",
+    "text": "Qual è il miglior modo che un'azienda ha per contattarti? Ti suggeriamo di includere un'e-mail e un numero di telefono. Anche una foto non sarebbe male.",
+    "addPhoto": "Aggiungi Foto",
+    "name": "Nome",
+    "surname": "Cognome",
     "birthday": "Data di nascita",
     "profession": "Professione",
     "family": "Famiglia",
     "single": "Celibe/Nubile",
     "notSingle": "Sposato/Sposata",
+    "familySelectText": "Seleziona il tuo stato civile",
     "sex": "Sesso",
     "sexText": "Seleziona il tuo sesso",
     "male": "Maschio",

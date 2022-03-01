@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="steps-title mb-5">
-        <h1>Informazioni Personali</h1>
+        <h1 v-text="$t('personal_step.button')" />
         <span class="line"></span>
-        <p class="text">Qual è il miglior modo che un'azienda ha per contattarti? Ti suggeriamo di includere un'e-mail e un numero di telefono. Anche una foto non sarebbe male.</p>
+        <p class="text" v-text="$t('personal_step.text')" />
     </div>
     <form @submit.prevent="goToFormStep(2)">
         <div class="form mb-5">
@@ -16,7 +16,7 @@
                             <img v-if="this.personal.image != null" class="personal-img" :src="this.personal.image" alt="">
                             <div v-else>
                                 <img src="../assets/images/user.svg" alt="user">
-                                <p>Aggiungi Foto</p>
+                                <p v-text="$t('personal_step.addPhoto')" />
                             </div>
                         </div>
                         <img v-if="this.personal.image != null" @click="deletePhoto" class="img-bin-icon ml-3" src="../assets/images/bin.svg" alt="bin icon">
@@ -25,7 +25,7 @@
                 <!-- NAME -->
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
-                        <label for="name"><span class="red">*</span> Nome</label>
+                        <label for="name"><span class="red">*</span> {{ $t('personal_step.name') }}</label>
                         <br>
                         <input type="text" class="w-100 form-control" name="name" id="firstName" v-model="personal.firstName" v-validate="'alpha_spaces'">
                         <span class="error">{{ errors.first('name') }}</span>
@@ -34,7 +34,7 @@
                 <!-- SURNAME -->
                 <div class="col-md-6 mb-4">
                     <div class="text-left">
-                        <label for="surname"><span class="red">*</span> Cognome</label>
+                        <label for="surname"><span class="red">*</span> {{ $t('personal_step.surname') }}</label>
                         <br>
                         <input type="text" class="w-100 form-control" name="surname" id="surname" v-model="personal.lastName" v-validate="'alpha_spaces'">
                         <span class="error">{{ errors.first('surname') }}</span>
@@ -64,7 +64,7 @@
                         <label for="family" v-text="$t('personal_step.family')" />
                         <br>
                         <select class="w-100 custom-select" name="family" id="family" v-model="personal.family">
-                            <option disable value="">Seleziona il tuo stato civile</option>
+                            <option disable value="" v-text="$t('personal_step.familySelectText')" />
                             <option :value="$t('personal_step.single')" v-text="$t('personal_step.single')" />
                             <option :value="$t('personal_step.notSingle')" v-text="$t('personal_step.notSingle')" />
                             <option value="" v-text="$t('personal_step.notIndicate')" />
