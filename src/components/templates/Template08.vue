@@ -41,10 +41,10 @@
               <div v-if="personal" class="details mb-4">
                 <div v-if="personal.fullAddress || personal.zipCode || personal.country || personal.phoneNumber || personal.email" class="text-left">
                   <h3 class="subtitle mb-2" v-text="$t('cvPlaceholder.details')" />
-                  <p class="description mb-0"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}</span><span v-else>Number of street</span></p>
-                  <p class="description mb-0"><span v-if="personal && personal.zipCode">{{personal.zipCode}}</span> <span v-else>zip code</span></p>
-                  <p class="description mb-0"><span v-if="personal && personal.country">{{personal.country}}</span> <span v-else>Country</span></p>
-                  <p class="description mb-0"><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span> <span v-else>Phone number</span></p>
+                  <p class="description mb-0"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}</span></p>
+                  <p class="description mb-0"><span v-if="personal && personal.zipCode">{{personal.zipCode}}</span> <span v-text="$t('cvPlaceholder.zipCode')" /></p>
+                  <p class="description mb-0"><span v-if="personal && personal.country">{{personal.country}}</span> <span v-text="$t('cvPlaceholder.country')" /></p>
+                  <p class="description mb-0"><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span> <span v-text="$t('cvPlaceholder.phoneNumb')" /></p>
                   <p class="description mb-0"><span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
                   <p class="description mb-0"><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span> <span v-else>Linkedin</span></p>
                 </div>
@@ -52,11 +52,11 @@
               <div v-if="personal" class="mb-5">
                 <div v-if="personal.birthday || personal.nationality || personal.family || personal.sex || motherLang.title" class="text-left">
                     <h3 class="subtitle mb-2" v-text="$t('cvPlaceholder.personal')" />
-                    <p class="description mb-0"><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
-                    <p class="description mb-0"><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
-                    <p class="description mb-0"><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
-                    <p class="description mb-0"><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
-                    <p class="description mb-0"><span v-if="motherLang">Mother language: {{motherLang.title}}</span></p>
+                    <p class="description"><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}: {{personal.birthday}}</span></p>
+                    <p class="description"><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}: {{personal.nationality}}</span></p>
+                    <p class="description"><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}: {{personal.family}}</span></p>
+                    <p class="description"><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}: {{personal.sex}}</span></p>
+                    <p class="description"><span v-if="motherLang.title">{{ $t('cvPlaceholder.motherLang') }}: {{motherLang.title}}</span></p>
                 </div>
               </div>
                 <!-- Skills -->

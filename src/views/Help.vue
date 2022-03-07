@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-12">
               <div class="d-flex flex-column align-items-center">
-                <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mb-5 mb-md-5">Aiuto</h1>
+                <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mb-5 mb-md-5" v-text="$t('help.title')" />
               </div>
           </div>
         </div>
@@ -15,22 +15,16 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <div class="mb-5">
-                    <h2><b>Il mio pagamento è sicuro ?</b></h2>
-                    <p>La sicurezza è al cuore della nostra offerta commerciale, e lo è ben inteso anche per le transazioni ! La nostra soluzione di pagamento è protetta grazie alla crittografia SSL. I vostri dati sono quindi protetti al 100%.</p>
+                    <h2><b>{{ $t('help.paymentSecure.title') }}</b></h2>
+                    <p v-html="$t('help.paymentSecure.description')" />
                 </div>
                 <div class="mb-5">
-                    <h2><b>Come funziona il mio abbonamento ?</b></h2>
-                    <p>Permettiamo a tutti i nuovi clienti di usufruire della nostra offerta eccezionale di benvenuto : 3 giorni a soli 3,90€ !</p>
-                    <p>Al termine del periodo di prova, la continuità del servizio è assicurata grazie al rinnovo automatico dell'abbonamento a 39€ mensili.</p>
+                    <h2><b>{{ $t('help.subscriptionWork.title') }}</b></h2>
+                    <p v-html="$t('help.subscriptionWork.description')" />
                 </div>
                 <div class="mb-5">
-                    <h2><b>Come cancellare il mio abbonamento ?</b></h2>
-                    <p>Semplicissimo : disponi delle seguenti possibilità per cancellare l'abbonamento :</p>
-                    <ol>
-                        <li>Navigare all'area utenti Dolcumento Premium : nella sezione " IL MIO ACCOUNT", utilizzate l'opzione di cancellazione. E' automatica e istantanea...</li>
-                        <li>Tramite email : scrivici a contatti@Dolcumento.com per esprimere la tua volontà. La tua richiesta sarà presa in considerazione nei due giorni lavorativi seguenti la ricezione del tuo messaggio.</li>
-                        <li>Telefonicamente : puoi chiamarci ogni giorno della settimana dalle 10 alle 17, per farlo ti preghiamo di recarti alla pagina "Contattarci".</li>
-                    </ol>
+                    <h2><b>{{ $t('help.cancelSubscription.title') }}</b></h2>
+                    <p v-html="$t('help.cancelSubscription.description')" />
                 </div>
             </div>
         </div>

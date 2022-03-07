@@ -57,10 +57,10 @@
           </div>
           <div v-if="personal.fullAddress || personal.zipCode || personal.country || personal.phoneNumber || personal.email" class="details mb-4 text-left">
             <h2>{{ $t('cvPlaceholder.details') }}</h2>
-            <p><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}</span><span v-else>Number of street</span></p>
-            <p><span v-if="personal && personal.zipCode">{{personal.zipCode}}</span> <span v-else>zip code</span></p>
-            <p><span v-if="personal && personal.country">{{personal.country}}</span> <span v-else>Country</span></p>
-            <p><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span> <span v-else>Phone number</span></p>
+            <p><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}</span></p>
+            <p><span v-if="personal && personal.zipCode">{{personal.zipCode}}</span> <span v-else v-text="$t('cvPlaceholder.zipCode')" /></p>
+            <p><span v-if="personal && personal.country">{{personal.country}}</span> <span v-else v-text="$t('cvPlaceholder.country')" /></p>
+            <p><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span> <span v-else v-text="$t('cvPlaceholder.phoneNumb')" /></p>
             <p><span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
             <p><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span> <span v-else>Linkedin</span></p>
           </div>

@@ -18,21 +18,21 @@
                     <form @submit.prevent="alertDisplay">
                       <div class="row">
                           <div class="col-md-6">
-                              <input type="text" v-model="name" class="w-100 form-control" minlength="2" placeholder="Nome" required>
+                              <input type="text" v-model="name" class="w-100 form-control" minlength="2" :placeholder="$t('contact.fields.name')" required>
                           </div>
                           <div class="col-md-6">
-                              <input type="text" v-model="surname" class="w-100 form-control" minlength="2" placeholder="Cognome" required>
+                              <input type="text" v-model="surname" class="w-100 form-control" minlength="2" :placeholder="$t('contact.fields.surname')" required>
                           </div>
                           <div class="col-md-6">
-                              <input type="email" v-model="email" class="w-100 form-control" placeholder="Email" required>
+                              <input type="email" v-model="email" class="w-100 form-control" :placeholder="$t('contact.fields.email')" required>
                           </div>
                           <div class="col-md-6">
-                              <input type="text" v-model="subject" class="w-100 form-control" placeholder="Oggetto" required>
+                              <input type="text" v-model="subject" class="w-100 form-control" :placeholder="$t('contact.fields.subject')" required>
                           </div>
                           <div class="col-md-12 mt-3">
-                              <textarea v-model="message" cols="10" rows="5" class="form-control" placeholder="Il tuo messaggio..." required></textarea>
+                              <textarea v-model="message" cols="10" rows="5" class="form-control" :placeholder="$t('contact.fields.message')" required></textarea>
                               <div class="text-center">
-                                  <button type="submit" class="custom-btn big">Invia</button>
+                                  <button type="submit" class="custom-btn big" v-text="$t('contact.send')" />
                               </div>
                           </div>
                       </div>

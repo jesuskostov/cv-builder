@@ -26,7 +26,7 @@
         <div v-if="personal" class="details mb-4">
           <div v-if="personal.fullAddress || personal.zipCode || personal.country || personal.phoneNumber || personal.email" class="text-left">
             <h2 v-text="$t('cvPlaceholder.details')" />
-            <p><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}</span><span v-else>Number of street</span></p>
+            <p><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}</span></p>
             <p><span v-if="personal && personal.zipCode">{{personal.zipCode}}</span> <span v-else v-text="$t('cvPlaceholder.zipCode')" /></p>
             <p><span v-if="personal && personal.country">{{personal.country}}</span> <span v-else v-text="$t('cvPlaceholder.country')" /></p>
             <p><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span> <span v-else v-text="$t('cvPlaceholder.phoneNumb')" /></p>

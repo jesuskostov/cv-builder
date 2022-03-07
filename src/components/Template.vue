@@ -10,7 +10,7 @@
         <swiper-slide v-for="(item, i) in templates" :key="i" :virtualIndex="item" class="carouselItem">
           <p class="text-center h5 mb-2">{{item.nickname}}</p>
           <img :src="require(`@/assets/images/cv-templates/it/${item.thumb}`)" class="img-fluid" alt="">
-          <button class="custom-btn mt-3" @click="onClick(i)">Scegli</button>
+          <button class="custom-btn mt-3" @click="onClick(i)" v-text="$t('pickCv')" />
         </swiper-slide>
       </swiper>
     </div>
@@ -23,7 +23,7 @@
           <p class="text-left mb-2">{{item.nickname}}</p>
           <div class="item">
             <img @click="onClick(i)" :src="require(`@/assets/images/cv-templates/it/${item.thumb}`)" alt="">
-            <button class="custom-btn mt-3" @click="onClick(i)">Scegli</button>
+            <button class="custom-btn mt-3" @click="onClick(i)" v-text="$t('pickCv')" />
           </div>
         </div>
       </div>

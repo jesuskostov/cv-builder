@@ -15,11 +15,11 @@
           <h2 v-text="$t('cvPlaceholder.details')" />
           <div class="mb-4">
             <h4 class="mb-0" v-text="$t('cvPlaceholder.address2')" />
-            <p><span v-if="personal && personal.fullAddress">{{personal.fullAddress}},<br> {{personal.city}} {{personal.zipCode}},<br> {{personal.country}}</span><span v-else>Number of street</span></p>
+            <p><span v-if="personal && personal.fullAddress">{{personal.fullAddress}},<br> {{personal.city}} {{personal.zipCode}},<br> {{personal.country}}</span></p>
           </div>
           <div class="mb-4">
             <h4 class="mb-0" v-text="$t('cvPlaceholder.phoneNumb')" />
-            <p><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span> <span v-else>Phone number</span></p>
+            <p><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span> <span v-else v-text="$t('cvPlaceholder.phoneNumb')" /></p>
           </div>
           <div class="mb-4">
             <h4 class="mb-0">Email</h4>
@@ -31,10 +31,10 @@
           </div>
           <div>
             <h4 class="mb-0" v-text="$t('cvPlaceholder.personal')" />
-            <p><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
-            <p><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
-            <p><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
-            <p><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
+            <p class="description"><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}: {{personal.birthday}}</span></p>
+            <p class="description"><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}: {{personal.nationality}}</span></p>
+            <p class="description"><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}: {{personal.family}}</span></p>
+            <p class="description"><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}: {{personal.sex}}</span></p>
           </div>
         </div>
         <div class="details mb-4 text-left">
@@ -42,7 +42,7 @@
           <div>
             <h4 class="mb-0" v-text="$t('cvPlaceholder.motherLang')" />
             <p v-if="motherLang">
-                Mother language: {{motherLang.title}}
+                {{ $t('cvPlaceholder.motherLang') }}: {{motherLang.title}}
             </p>
           </div>
         </div>

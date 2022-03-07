@@ -18,11 +18,9 @@
                     <span class="white-icon-bg">
                         <img class="benefit-icon mb-3" src="../assets/images/icon-commitment-01.svg" alt="">
                     </span>
-                    <h2 class="mb-4">Qualità</h2>
+                    <h2 class="mb-4" v-text="$t('ourValues.quality.title')" />
                     <div class="text-center">
-                        <p>La qualità del servizio è alla base della nostra missione aziendale.</p>
-                        <p>Ecco perchè scegliamo di collaborare solo con i professionisti più affidabili nel settore.</p>
-                        <p>Il nostro obiettivo è migliorare il tuo rapporto con l'amministrazione, e permetterti di ottenere i documenti di cui hai bisogno nel modo più efficiente possibile.</p>
+                        <p v-html="$t('ourValues.quality.description')" />
                     </div>
                 </div>
             </div>
@@ -31,11 +29,9 @@
                     <span class="white-icon-bg">
                         <img class="benefit-icon mb-3" src="../assets/images/icon-commitment-02.svg" alt="">
                     </span>
-                    <h2 class="mb-4">Efficienza</h2>
+                    <h2 class="mb-4" v-text="$t('ourValues.efficiency.title')" />
                     <div class="text-center">
-                        <p>Il nostro team di collaboratori efficienti e rigorosi vi consigliano, vi guidano e vi aiutano con efficienza e rapidità.</p>
-                        <p>L'obiettivo è semplice : essere il riferimento assoluto del supporto amministrativo disponibile in Italia.</p>
-                        <p>L'efficienza che ci contraddistingue ci permette di offrire i nostri servizi a tutti ad un prezzo accessibile.</p>
+                        <p v-html="$t('ourValues.efficiency.description')" />
                     </div>
                 </div>
             </div>
@@ -44,11 +40,9 @@
                     <span class="white-icon-bg">
                         <img class="benefit-icon mb-3" src="../assets/images/icon-commitment-03.svg" alt="">
                     </span>
-                    <h2 class="mb-4">Precisione</h2>
+                    <h2 class="mb-4" v-text="$t('ourValues.precision.title')" />
                     <div class="text-center">
-                        <p>Meticolosità e precisione sono alla base del nostro approccio.</p>
-                        <p>Tutorial e guide da noi realizzati sono un esempio del nostro impegno in questo senso : informazioni precise espresse in modo semplice per ogni tipologia di cliente.</p>
-                        <p>Grazie alla nostra meticolosità ti offriamo un prodotto sempre ai massimi standard qualitativi.</p>
+                        <p v-html="$t('ourValues.precision.description')" />
                     </div>
                 </div>
             </div>
@@ -57,11 +51,9 @@
                     <span class="white-icon-bg">
                         <img class="benefit-icon mb-3" src="../assets/images/icon-commitment-04.svg" alt="">
                     </span>
-                    <h2 class="mb-4">Sicurezza</h2>
+                    <h2 class="mb-4" v-text="$t('ourValues.safety.title')" />
                     <div class="text-center">
-                        <p>Il nostro team di specialisti in sicurezza informatica ci consente di proteggere i vostri dati personali (cognomi, coordinate, email, varie informazioni) grazie ai nostri siti web sicuri al 100% (tecnologia di crittografia SSL a 256 bit)</p>
-                        <p>Tutti i tuoi dati sono protetti, essendo disposti su server differenti.</p>
-                        <p>Nessuna interruzione del servizio, 7 giorni su 7, tutti i giorni dell'anno.</p>
+                        <p v-html="$t('ourValues.safety.description')" />
                     </div>
                 </div>
             </div>
@@ -70,11 +62,9 @@
                     <span class="white-icon-bg">
                         <img class="benefit-icon mb-3" src="../assets/images/icon-commitment-05.svg" alt="">
                     </span>
-                    <h2 class="mb-4">Soddisfazione Cliente</h2>
+                    <h2 class="mb-4" v-text="$t('ourValues.customerSatisfaction.title')" />
                     <div class="text-center">
-                        <p>Siamo a tua disposizione, per offrirti un servizio sempre ai massimi livelli.</p>
-                        <p>Vogliamo offrirti un'esperienza di altissima qualità in tutti gli ambiti.</p>
-                        <p>Meriti un Servizio Clienti eccellente.</p>
+                        <p v-html="$t('ourValues.customerSatisfaction.description')" />
                     </div>
                 </div>
             </div>
@@ -83,11 +73,9 @@
                     <span class="white-icon-bg">
                         <img class="benefit-icon mb-3" src="../assets/images/icon-commitment-06.svg" alt="">
                     </span>
-                    <h2 class="mb-4">Riservatezza</h2>
+                    <h2 class="mb-4" v-text="$t('ourValues.confidentiality.title')" />
                     <div class="text-center">
-                        <p>La riservatezza assoluta è parte integrante della nostra filosofia.</p>
-                        <p>La nostra società rispetta il tuo diritto alla riservatezza.</p>
-                        <p>Inoltre, i tuoi dati non vengono mai utilizzati a fini commerciali.</p>
+                        <p v-html="$t('ourValues.confidentiality.description')" />
                     </div>
                 </div>
             </div>

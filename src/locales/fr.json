@@ -188,8 +188,10 @@
       "name": "Prénom",
       "surname": "Nom",
       "email": "Email",
-      "subject": "Objet"
-    }
+      "subject": "Objet",
+      "message": "Votre message..."
+    },
+    "send": "Soumettre"
   },
   "button": {
     "start": "Commencer maintenant",
@@ -217,7 +219,13 @@
     "7": "Charte de confidentialité",
     "8": "Conditions d'utilisation",
     "9": "Gestion des cookies",
-    "10": "Mentions légales"
+    "10": "Mentions légales",
+    "11": "Page d'accueil",
+    "12": "Nos valeurs",
+    "13": "Aide",
+    "14": "Plan du site",
+    "15": "Mon abonnement",
+    "16": "Nous contacter"
   },
   "personal_step": {
     "title": "Informations personnelles",
@@ -339,16 +347,68 @@
     "currentWork": "Profession actuelle"
   },
   "link": {
-    "browseTemplate": "Parcourir les modèles",
-    "howToWriteCv": "Comment rédiger un CV",
-    "payment": "Paiement",
-    "plan": "Plan du site",
-    "error": "Erreur",
+    "browseTemplate": "parcourir-les-modèles",
+    "howToWriteCv": "Comment-rédiger-un-cv",
+    "payment": "paiement",
+    "plan": "plan-du-site",
+    "error": "erreur",
     "feedback": "avis",
-    "faq": "FAQ",
-    "partnership": "Partenariat",
-    "contact": "Nous contacter",
-    "login": "Connexion"
+    "faq": "faq",
+    "partnership": "partenariat",
+    "contact": "nous-contacter",
+    "login": "connexion"
   },
+  "ourValues": {
+    "title": "Nos valeurs",
+    "quality": {
+      "title": "Qualité",
+      "description": "<p>La qualité de notre service est la base de notre mission.</p> <p>C'est pourquoi nous choisissons de collaborer uniquement avec les professionnels les plus fiables du secteur.</p> <p>Notre objectif est d'améliorer votre relation avec l'administration, et de vous permettre d'obtenir les documents dont vous avez besoin de la manière la plus efficace possible.</p>"
+    },
+    "efficiency": {
+      "title": "Efficacité",
+      "description": "<p>Notre équipe de collaborateurs efficaces et rigoureux vous conseille, vous guide et vous aide activement et rapidement.</p> <p>L'objectif est simple : être la référence absolue du support administratif disponible en France.</p> <p>L'efficacité qui nous distingue nous permet d'offrir nos services à tous à un prix abordable.</p>"
+    },
+    "precision": {
+      "title": "Précision",
+      "description": "<p>Rigueur et précision sont la base de notre approche.</p> <p>Les tutoriels et guides créés par nos soins sont un exemple de notre engagement en ce sens : des informations précises exprimées de manière simple pour chaque type de client.</p> <p>Grâce à notre minutie nous vous offrons un produit toujours aux plus hauts des standards de qualité.</p>"
+    },
+    "safety": {
+      "title": "Sécurité",
+      "description": "<p>Notre équipe de spécialistes en sécurité informatique nous permet de protéger vos données personnelles (noms, coordonnées, emails, informations diverses) grâce à nos sites 100% sécurisés (technologie de cryptage SSL 256 bits).</p> <p>Toutes vos données sont protégées, étant sauvegardées sur différents serveurs.</p> <p>Aucune interruption de service, 7 jours sur 7, tous les jours de l'année.</p>"
+    },
+    "customerSatisfaction": {
+      "title": "Satisfaction du client",
+      "description": "<p>Nous sommes à votre disposition pour vous accorder un service toujours au plus haut niveau.</p> <p>Nous voulons vous offrir une expérience de la plus haute qualité dans tous les domaines.</p> <p>Vous méritez un excellent service client.</p>"
+    },
+    "confidentiality": {
+      "title": "Confidentialité",
+      "description": "<p>La confidentialité absolue fait partie intégrante de notre philosophie.</p> <p>Notre société respecte votre droit à la vie privée.</p> <p>De plus, vos données ne sont jamais utilisées à des fins commerciales.</p>"
+    }
+  },
+  "help": {
+    "title": "Aide",
+    "paymentSecure": {
+      "title": "Mon paiement est-il sécurisé ?",
+      "description": "La sécurité est au cœur de notre offre commerciale, et bien sûr elle l'est aussi pour les transactions ! Notre solution de paiement est protégée grâce au cryptage SSL. Vos données sont donc protégées à 100%."
+    },
+    "subscriptionWork": {
+      "title": "Comment fonctionne mon abonnement ?",
+      "description": "Tous les nouveaux clients peuvent profiter de notre offre de bienvenue exceptionnelle : 3 jours pour seulement 3,90€ ! <br/><br/> A la fin de la période d'essai, la continuité du service est assurée grâce au renouvellement automatique de l'abonnement pour 39€ par mois."
+    },
+    "cancelSubscription": {
+      "title": "Comment résilier mon abonnement ?",
+      "description": "C’est simple ! Vous disposez des options suivantes pour annuler votre abonnement : <ol> <li>Accédez à votre espace client : dans la rubrique « MON COMPTE », utilisez l'option de désinscription. C'est automatique et instantané...</li> <li>Par email : écrivez-nous à ????@????.???. Votre demande sera prise en compte dans les deux jours ouvrés suivant la réception de votre message.</li> <li>Telefonicamente : puoi chiamarci ogni giorno della settimana dalle 10 alle 17, per farlo ti preghiamo di recarti alla pagina 'Contattarci'.</li> </ol>"
+    }
+  },
+  "partnership": {
+    "title": "Devenons partenaire !",
+    "description": "<b>Notre service vous permet d'offrir à vos clients un service de qualité à un prix abordable.</b> <br/><br/> <b>Vous souhaitez nous proposer une collaboration ?</b> <br/>Vous souhaitez collaborer uniquement dans un des secteurs avec lesquels nous traitons ? <br/> Écrivez-nous maintenant !",
+    "button": "Contactez-nous"
+  },
+  "pagamentoSecure": {
+    "title": "PAIEMENT SÉCURISÉ",
+    "description": "<p>Pour vous permettre un achat sûr, facile et immédiat, nous avons choisi de vous proposer un large panel de paiement par carte bancaire, vous pouvez donc utiliser les canaux suivants : Mastercard, Mastercard SecureCode, Visa, Verified by VISA.</p><p>Le paiement s'effectue directement sur le serveur sécurisé de notre partenaire bancaire, grâce à une connexion sécurisée qui utilise le procédé de cryptage SSL (Secure Socket Layer), le protocole le plus utilisé et le plus respecté au monde.</p><p>De plus, le 'S' dans l'adresse de la page de paiement (httpS: // ....) confirme que la page sur laquelle vous vous trouvez est bien protégée.</p><p>Enfin, le cadenas qui apparaît en bas de page ou dans la barre de navigation (selon le navigateur Internet utilisé), assure une protection cryptée.</p><p>Tout cela garantit de manière claire et efficace que vos informations personnelles sont strictement confidentielles et restent entièrement cryptées durant toutes les étapes de paiement, évitant ainsi tout risque de piratage.</p><p>Une fois que votre banque acceptera la transaction, votre commande sera validée. Vous recevrez alors un email récapitulant la transaction.</p><p><i>Pour plus de détails sur notre politique de sécurité et de confidentialité, nous vous invitons à consulter nos Conditions Générales d'Utilisation et de Vente, ainsi que notre Charte de Confidentialité, disponibles dans les rubriques correspondantes de notre Site.</i></p>"
+  },
+  "pickCv": "Choisis",
   "date_format": "fr-FR"
 }

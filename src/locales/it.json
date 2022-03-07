@@ -175,8 +175,10 @@
       "name": "Nome",
       "surname": "Cognome",
       "email": "Email",
-      "subject": "Oggetto"
-    }
+      "subject": "Oggetto",
+      "message": "Il tuo messaggio..."
+    },
+    "send": "Invia"
   },
   "button": {
     "start": "Inizia ora",
@@ -204,7 +206,12 @@
     "7": "Informativa sulla privacy",
     "8": "Condizioni di servizio",
     "9": "Informativa sui cookie",
-    "10": "Note Legali"
+    "10": "Note Legali",
+    "11": "Homepage",
+    "12": "I nostri valori",
+    "13": "Aiuto",
+    "14": "Mappa del sito",
+    "15": "Mon abonnement"
   },
   "personal_step": {
     "title": "Informazioni Personali",
@@ -341,5 +348,57 @@
     "contact": "contattaci",
     "login": "accedi"
   },
+  "ourValues": {
+    "title": "I nostri valori",
+    "quality": {
+      "title": "Qualità",
+      "description": "<p>La qualità del servizio è alla base della nostra missione aziendale.</p> <p>Ecco perchè scegliamo di collaborare solo con i professionisti più affidabili nel settore.</p> <p>Il nostro obiettivo è migliorare il tuo rapporto con l'amministrazione, e permetterti di ottenere i documenti di cui hai bisogno nel modo più efficiente possibile.</p>"
+    },
+    "efficiency": {
+      "title": "Efficienza",
+      "description": "<p>Il nostro team di collaboratori efficienti e rigorosi vi consigliano, vi guidano e vi aiutano con efficienza e rapidità.</p> <p>L'obiettivo è semplice : essere il riferimento assoluto del supporto amministrativo disponibile in Italia.</p> <p>L'efficienza che ci contraddistingue ci permette di offrire i nostri servizi a tutti ad un prezzo accessibile.</p>"
+    },
+    "precision": {
+      "title": "Precisione",
+      "description": "<p>Meticolosità e precisione sono alla base del nostro approccio.</p> <p>Tutorial e guide da noi realizzati sono un esempio del nostro impegno in questo senso : informazioni precise espresse in modo semplice per ogni tipologia di cliente.</p> <p>Grazie alla nostra meticolosità ti offriamo un prodotto sempre ai massimi standard qualitativi.</p>"
+    },
+    "safety": {
+      "title": "Sicurezza",
+      "description": "<p>Il nostro team di specialisti in sicurezza informatica ci consente di proteggere i vostri dati personali (cognomi, coordinate, email, varie informazioni) grazie ai nostri siti web sicuri al 100% (tecnologia di crittografia SSL a 256 bit)</p> <p>Tutti i tuoi dati sono protetti, essendo disposti su server differenti.</p> <p>Nessuna interruzione del servizio, 7 giorni su 7, tutti i giorni dell'anno.</p>"
+    },
+    "customerSatisfaction": {
+      "title": "Soddisfazione Cliente",
+      "description": "<p>Siamo a tua disposizione, per offrirti un servizio sempre ai massimi livelli.</p> <p>Vogliamo offrirti un'esperienza di altissima qualità in tutti gli ambiti.</p> <p>Meriti un Servizio Clienti eccellente.</p>"
+    },
+    "confidentiality": {
+      "title": "Riservatezza",
+      "description": "<p>La riservatezza assoluta è parte integrante della nostra filosofia.</p> <p>La nostra società rispetta il tuo diritto alla riservatezza.</p> <p>Inoltre, i tuoi dati non vengono mai utilizzati a fini commerciali.</p>"
+    }
+  },
+  "help": {
+    "title": "Aiuto",
+    "paymentSecure": {
+      "title": "Il mio pagamento è sicuro ?",
+      "description": "La sicurezza è al cuore della nostra offerta commerciale, e lo è ben inteso anche per le transazioni ! La nostra soluzione di pagamento è protetta grazie alla crittografia SSL. I vostri dati sono quindi protetti al 100%."
+    },
+    "subscriptionWork": {
+      "title": "Come funziona il mio abbonamento ?",
+      "description": "Permettiamo a tutti i nuovi clienti di usufruire della nostra offerta eccezionale di benvenuto : 3 giorni a soli 3,90€ ! <br/><br/> Al termine del periodo di prova, la continuità del servizio è assicurata grazie al rinnovo automatico dell'abbonamento a 39€ mensili."
+    },
+    "cancelSubscription": {
+      "title": "Come cancellare il mio abbonamento ?",
+      "description": "Semplicissimo : disponi delle seguenti possibilità per cancellare l'abbonamento : <ol> <li>Navigare all'area utenti Dolcumento Premium : nella sezione 'IL MIO ACCOUNT', utilizzate l'opzione di cancellazione. E' automatica e istantanea...</li> <li>Tramite email : scrivici a contatti@Dolcumento.com per esprimere la tua volontà. La tua richiesta sarà presa in considerazione nei due giorni lavorativi seguenti la ricezione del tuo messaggio.</li> <li>Telefonicamente : puoi chiamarci ogni giorno della settimana dalle 10 alle 17, per farlo ti preghiamo di recarti alla pagina 'Contattarci'.</li> </ol>"
+    }
+  },
+  "partnership": {
+    "title": "Diventiamo partner !",
+    "description": "<b>Il nostro servizio ti permette di offrire ai tuoi clienti un servizio di qualità ad un prezzo accessibile.</b> <br/><br/> <b>Vuoi offrirci una collaborazione?</b> <br/>Vuoi collaborare solo in uno dei settori che trattiamo? <br/> Scrivici ora!",
+    "button": "Contattaci"
+  },
+  "pagamentoSecure": {
+    "title": "PAGAMENTO SICURO",
+    "description": "<p>Per consentirvi un acquisto sicuro, facile ed immediato, abbiamo scelto di offrirvi un largo pannello di pagamento con carta di credito, è così possibile utilizzare i seguenti canali: Mastercard, Mastercard SecureCode, Visa, Verified by VISA.</p><p>Il pagamento si effettua direttamente sul server protetto del nostro partner bancario, grazie a una connessione sicura che utilizza il processo di crittografia SSL (Secure Socket Layer), il protocollo più usato e rispettato al mondo.</p><p>Inoltre, la “S” nell’indirizzo della pagina di pagamento (httpS://….) conferma che la pagina sulla quale vi trovate è ben protetta.</p><p>Infine, il lucchetto che appare nella parte inferiore della pagina o nella barra di navigazione (a seconda del browser Internet utilizzato), assicura una protezione cifrata.</p><p>Tutto questo garantisce in modo chiaro ed efficiente che le vostre informazioni personali sono strettamente confidenziali e rimangono completamente crittografate durante tutte le fasi del pagamento, evitando così qualsiasi rischio di un eventuale atto di pirateria informatica.</p><p>Una volta che la vostra banca avrà accettato la transazione, il vostro ordine verrà convalidato. Riceverete dunque una email ricapitolativa dell’avvenuta transazione.</p><p><i>Per maggiori dettagli relativi alla nostra politica di sicurezza e privacy, vi invitiamo a consultare le nostre Condizioni Generali di Utilizzo e Vendita, nonché la nostra Carta della Privacy, disponibili nelle rubriche corrispondenti del nostro Sito.</i></p>"
+  },
+  "pickCv": "Scegli",
   "date_format": "it-IT"
 }

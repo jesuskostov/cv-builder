@@ -66,11 +66,11 @@
             <div v-if="personal.birthday || personal.nationality || personal.family || personal.sex || motherLang.title" class="text-left">
               <h2 class="title small" v-text="$t('cvPlaceholder.personal')" />
               <div>
-                <p class="description mb-1"><span v-if="personal && personal.birthday">Birthday: {{personal.birthday}}</span></p>
-                <p class="description mb-1"><span v-if="personal && personal.nationality">Nationality: {{personal.nationality}}</span></p>
-                <p class="description mb-1"><span v-if="personal && personal.family">Family: {{personal.family}}</span></p>
-                <p class="description mb-1"><span v-if="personal && personal.sex">Sex: {{personal.sex}}</span></p>
-                <p class="description mb-1"><span v-if="motherLang.title">Mother language: {{motherLang.title}}</span></p>
+                <p class="description mb-1"><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}: {{personal.birthday}}</span></p>
+                <p class="description mb-1"><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}: {{personal.nationality}}</span></p>
+                <p class="description mb-1"><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}: {{personal.family}}</span></p>
+                <p class="description mb-1"><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}: {{personal.sex}}</span></p>
+                <p class="description mb-1"><span v-if="motherLang.title">{{ $t('cvPlaceholder.motherLang') }}: {{motherLang.title}}</span></p>
               </div>
             </div>
           </div>

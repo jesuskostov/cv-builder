@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-12">
               <div class="d-flex flex-column align-items-center">            
-                <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mb-4 mb-md-5">Diventiamo partner !</h1>
+                <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mb-4 mb-md-5" v-text="$t('partnership.title')" />
               </div>
           </div>
         </div>
@@ -15,10 +15,9 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <div class="text-left">                
-                    <p><b>Il nostro servizio ti permette di offrire ai tuoi clienti un servizio di qualità ad un prezzo accessibile.</b></p>
-                    <p><b>Vuoi offrirci una collaborazione?</b><br>Vuoi collaborare solo in uno dei settori che trattiamo?<br>Scrivici ora!</p>
+                    <p v-html="$t('partnership.description')" />
                     <div class="text-center mt-5">
-                        <router-link :to="{name: 'Contact'}" class="custom-btn py-3">Contattaci</router-link>
+                        <router-link :to="{name: 'Contact'}" class="custom-btn py-3" v-text="$t('partnership.button')" />
                     </div>
                 </div>
             </div>
