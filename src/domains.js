@@ -9,6 +9,7 @@ const DOMAINS = [
     site: {
       title: "CV Semplice",
       slug: "cv-semplice",
+      legalDocsSlug: "cv-ita",
       favicon: require("./assets/images/favicon-cv-semplice.svg"),
       htmlAttrs: {
         title: "CV Semplice",
@@ -27,6 +28,7 @@ const DOMAINS = [
     site: {
       title: "CV Rapide",
       slug: "cv-rapide",
+      legalDocsSlug: "cv-rapide",
       favicon: require("./assets/images/favicon-cv-semplice.svg"),
       htmlAttrs: {
         title: "CV Rapide",
@@ -50,6 +52,7 @@ const DOMAINS = [
     site: {
       title: "Mio Curriculum",
       slug: "mio-curriculum",
+      legalDocsSlug: "cv-ita",
       favicon: require("./assets/images/favicon-mio-curriculum.svg"),
       htmlAttrs: {
         title: "Mio Curriculum",
@@ -69,6 +72,7 @@ const DOMAINS = [
     site: {
       title: "CV Immediat",
       slug: "cv-immediat",
+      legalDocsSlug: "cv-immediat",
       favicon: require("./assets/images/favicon-mio-curriculum.svg"),
       htmlAttrs: {
         title: "CV Immediat",

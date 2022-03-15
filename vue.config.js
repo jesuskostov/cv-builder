@@ -1,13 +1,16 @@
 const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
-  outputDir: path.resolve(__dirname, "./public/"),
-  chainWebpack: (config) => {
-    config.plugin("html").tap((args) => {
-      args[0].template = "./src-public/index.html";
-      return args;
-    });
+  outputDir: path.resolve("./public"),
+  configureWebpack: {
+    plugins: [
+      new CopyWebpackPlugin({
+        patterns: [{ from: "src-public/legal", to: "legal" }],
+      }),
+    ],
   },
+
   devServer: {
     historyApiFallback: true,
     host: "cv-semplice.local",
