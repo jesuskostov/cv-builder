@@ -14,7 +14,7 @@
                         <input type="file" class="image-input" ref="imageInput" accept="image/*" @change="onFileChange">
                         <div @click="pickImage" class="add-photo-container">
                             <img v-if="this.personal.image != null" class="personal-img" :src="this.personal.image" alt="">
-                            <div v-else>
+                            <div v-else class="d-flex flex-column align-items-center">
                                 <img src="../assets/images/user.svg" alt="user">
                                 <p v-text="$t('personal_step.addPhoto')" />
                             </div>

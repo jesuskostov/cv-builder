@@ -7,7 +7,8 @@
             <h1 class="mb-4 mb-md-5" v-text="$t('hero.title')"></h1>
             <div class="benefits mb-4">
               <div
-                v-for="(p, i) in $t('hero.benefits')" :key="i" 
+                v-for="(p, i) in $t('hero.benefits')"
+                :key="i"
                 class="benefits__box"
                 data-aos="fade"
                 data-aos-duration="1000"
@@ -28,17 +29,33 @@
                     fill="#65af2c"
                   />
                 </svg>
-                <h4>{{p}}</h4>
+                <h4>{{ p }}</h4>
               </div>
             </div>
             <!-- <img class="d-block d-md-none intro-cv-image" src="../assets/images/intro-cv-image.svg" alt="intro cv image"> -->
             <div class="price-box">
               <div class="text-left mr-4">
-                <p v-if="offer === 'free'" class="price" v-text="$t('price.free')" />
-                <p v-if="offer === 'paid'" class="price" v-html="$t('price.paid')" />
-                <p v-if="offer === 'free'" class="text" v-html="$t('price.free2')" />
+                <p
+                  v-if="offer === 'free'"
+                  class="price"
+                  v-text="$t('price.free')"
+                />
+                <p
+                  v-if="offer === 'paid'"
+                  class="price"
+                  v-html="$t('price.paid')"
+                />
+                <p
+                  v-if="offer === 'free'"
+                  class="text"
+                  v-html="$t('price.free2')"
+                />
               </div>
-              <router-link :to="{name: 'BrowseTemplates'}" class="btn flex-shrink-0" v-text="$t('button.start')" />
+              <router-link
+                :to="{ name: 'BrowseTemplates' }"
+                class="btn flex-shrink-0"
+                v-text="$t('button.start')"
+              />
             </div>
           </div>
           <div class="col-md-6 position-relative d-none d-md-block">
@@ -52,7 +69,7 @@
             <div>
               <img
                 class="intro-cv-image displayBox"
-                src="../assets/images/intro-cv-image.png"
+                :src="require(`../assets/images/intro-cv-image-${locale}.png`)"
                 alt="intro cv image"
                 data-aos-duration="1000"
                 data-aos-delay="500"
@@ -91,7 +108,11 @@
           <span class="line"></span>
         </div>
         <div class="row pt-5">
-          <div v-for="(item, i) in $t('homeFeedback')" :key="i" class="col-md-4 mb-3">
+          <div
+            v-for="(item, i) in $t('homeFeedback')"
+            :key="i"
+            class="col-md-4 mb-3"
+          >
             <div
               class="testimonies"
               data-aos="fade-up"
@@ -143,7 +164,11 @@
           </div>
         </div>
         <div class="text-center mt-5">
-          <router-link :to="{name: 'Feedbacks'}" class="custom-btn big" v-text="$t('button.viewAll')" />
+          <router-link
+            :to="{ name: 'Feedbacks' }"
+            class="custom-btn big"
+            v-text="$t('button.viewAll')"
+          />
         </div>
       </div>
     </div>
@@ -210,7 +235,10 @@
         </div>
         <div class="row">
           <div class="col-md-9 mx-auto">
-            <p class="text-center pt-4" v-html="$t('sectionTitles.carousel.text')" />
+            <p
+              class="text-center pt-4"
+              v-html="$t('sectionTitles.carousel.text')"
+            />
           </div>
         </div>
       </div>
@@ -218,7 +246,11 @@
       <templates :preview="true" />
 
       <div class="text-center mb-5">
-        <router-link :to="{name: 'BrowseTemplates'}" class="custom-btn big" v-text="$t('button.viewAll')" />
+        <router-link
+          :to="{ name: 'BrowseTemplates' }"
+          class="custom-btn big"
+          v-text="$t('button.viewAll')"
+        />
       </div>
     </div>
     <div id="why-section">
@@ -231,18 +263,19 @@
           <div class="col-md-8 mx-auto">
             <p class="text-center pt-4" v-html="$t('sectionTitles.why.text')" />
             <div class="text-center mt-5">
-              <router-link to="/faq" class="custom-btn big" v-text="$t('button.faq')" />
+              <router-link
+                to="/faq"
+                class="custom-btn big"
+                v-text="$t('button.faq')"
+              />
             </div>
           </div>
           <div class="why-cv-image w-100 text-center">
+            <img :src="logo" alt="logo" class="why-cv-image__logo" />
             <img
-              v-if="offer === 'free'"
-              src="../assets/images/why-quickcv-image-free@2x.png"
-              alt="Why QuickCV Generator?"
-            />
-            <img
-              v-if="offer === 'paid'"
-              src="../assets/images/why-quickcv-image-paid@2x.png"
+              :src="
+                require(`../assets/images/why-quickcv-image-free-${locale}@2x.png`)
+              "
               alt="Why QuickCV Generator?"
             />
           </div>
@@ -254,7 +287,10 @@
         <img src="../assets/images/squares.svg" alt="squares icons" />
         <div class="content">
           <h2 v-text="$t('sectionTitles.change')" />
-          <router-link :to="{name: 'BrowseTemplates'}" v-text="$t('button.start')" />
+          <router-link
+            :to="{ name: 'BrowseTemplates' }"
+            v-text="$t('button.start')"
+          />
         </div>
       </div>
     </div>
@@ -273,28 +309,37 @@ export default {
   name: "Home",
   data() {
     return {
-      title: this.$store.state.domain.site.htmlAttrs.title
-    }
+      title: this.$store.state.domain.site.htmlAttrs.title,
+    };
   },
   components: {
     Templates,
     Footer,
   },
-  metaInfo () {
+  metaInfo() {
     return {
-      title: this.title
-    }
+      title: this.title,
+    };
   },
   computed: {
     offer() {
-      return this.$store.state.domain.offer
+      return this.$store.state.domain.offer;
+    },
+    locale() {
+      return this.$i18n.locale;
+    },
+    domain() {
+      return this.$store.state.domain;
+    },
+    logo() {
+      return require(`../assets/images/logo-${this.domain.site.slug}.svg`);
     },
   },
   methods: {
     async start() {
       let step = 1;
       await this.$store.dispatch("step", { step });
-      this.$router.push({name: 'Builder'});
+      this.$router.push({ name: "Builder" });
     },
   },
 };
@@ -550,6 +595,13 @@ h1 {
     img {
       width: 100%;
     }
+  }
+  .why-cv-image .why-cv-image__logo {
+    width: 11%;
+    position: absolute;
+    z-index: 1;
+    left: 14%;
+    top: 19%;
   }
 }
 // WHY SECTION END
