@@ -95,6 +95,7 @@
                       :value="cardNumber | formatCardNumber"
                       @input="updateValue"
                       class="form-control"
+                      :data-vv-as="$t('payment.cardNumber')"
                       name="creditCard"
                       id="firstName"
                       v-validate="'credit_card'"
@@ -172,6 +173,7 @@
                         <input
                           type="text"
                           class="form-control mb-0 w-auto"
+                          :data-vv-as="$t('payment.cardCVV')"
                           name="cvv"
                           id="cvv"
                           size="3"
@@ -284,15 +286,7 @@
                   </li>
                 </ul>
                 <small v-if="offer === 'free'">
-                  *Abbonamento e Sistema dei Crediti Al termine del periodo di
-                  prova di 3 giorni, tutti i mesi ti verranno addebitati 44,90€
-                  per il tuo Abbonamento, che avrà durata indeterminata, salva
-                  la possibilità di recesso in ogni momento. Avrai a
-                  disposizione 100 crediti, che potrai utilizzare per richiedere
-                  documenti aggiuntivi. I crediti sono utilizzabili per la
-                  richiesta di documenti aggiuntivi, tra cui Visura PRA (20),
-                  Visura Camerale (10), Visura Catastale (18), Visura CRIF (10),
-                  Visura Protesti (12) e Bilancio Aziendale (15).
+                  {{ $t('payment.subscriptionFree') }}
                 </small>
               </div>
             </div>

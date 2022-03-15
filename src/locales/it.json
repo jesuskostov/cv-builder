@@ -475,6 +475,7 @@
     "period3days": "Periodo di Prova 3 giorni",
     "amountToPay": "Importo da Pagare",
     "subscriptionText": "*Abbonamento e Sistema dei Crediti Al termine del periodo di prova di 3 giorni, tutti i mesi ti verranno addebitati 44,90€ per il tuo Abbonamento, che avrà durata indeterminata, salva la possibilità di recesso in ogni momento. Avrai a disposizione 100 crediti, che potrai utilizzare per richiederedocumenti aggiuntivi. Non sono affatto sicuro di questa traduzione!!! I crediti possono essere utilizzati per richiedere documenti aggiuntivi tra cui Certificato PRA (20), Iscrizione Camera di Commercio (10), Certificato Catastale (18), Certificato CRIF (10), Proteste di ricerca (12) e Bilancio dell'azienda (15).",
+    "subscriptionFree": "*Abbonamento e Sistema dei Crediti Al termine del periodo di prova di 3 giorni, tutti i mesi ti verranno addebitati 44,90€ per il tuo Abbonamento, che avrà durata indeterminata, salva la possibilità di recesso in ogni momento. Avrai a disposizione 100 crediti, che potrai utilizzare per richiedere documenti aggiuntivi. I crediti sono utilizzabili per la richiesta di documenti aggiuntivi, tra cui Visura PRA (20), Visura Camerale (10), Visura Catastale (18), Visura CRIF (10), Visura Protesti (12) e Bilancio Aziendale (15).",
     "cvFormat": "CV in formato PDF"
   },
   "errors": {

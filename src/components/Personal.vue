@@ -366,32 +366,6 @@
 import DatePicker from "vue2-datepicker";
 import "vue2-datepicker/index.css";
 
-// const dict = {
-//   custom: {
-//     phoneNumber: {
-//       required:
-//         "Il formato del numero di telefono non è valido, solo numeri, per favore.",
-//       regex:
-//         "Il formato del numero di telefono non è valido, solo numeri, per favore.",
-//     },
-//     email: {
-//       required: "Il campo email è richiesto",
-//       email: "Il campo email è richiesto",
-//     },
-//     zipCode: {
-//       required: "Il codice postale è richiesto",
-//       min: "Il campo del codice postale deve essere di almeno 3 caratteri",
-//       numeric: "Il campo del codice postale deve essere numerico",
-//     },
-//     fullAddress: {
-//       required: "Il campo dell'indirizzo è richiesto",
-//     },
-//     socialProfiles: {
-//       url: "Il campo dei profili sociali non è un URL valido",
-//     },
-//   },
-// };
-
 export default {
   data() {
     return {

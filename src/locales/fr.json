@@ -485,6 +485,7 @@
     "period3days": "Période d'essai 3 jours",
     "amountToPay": "Montant à payer",
     "subscriptionText": "Abonnement et système de crédit à l'issue de la période d'essai de 3 jours, chaque mois 44,90 € vous seront facturés pour votre abonnement à durée indéterminée, sous réserve de rétractation possible à tout moment. Vous obtiendrez 100 crédits, que vous pourrez utiliser pour demander des documents supplémentaires. Je ne suis pas sûre du tout de cette traduction !!! Les crédits peuvent être utilisés pour demander des documents supplémentaires, notamment Certificat PRA (20), Inscription à la chambre de commerce (10), Certificat cadastral (18), Certificat CRIF (10), Protestations de recherche (12) et les états financiers de l'entreprise (15).",
+    "subscriptionFree": "* Abonnement et système de crédit A l'issue de la période d'essai de 3 jours, chaque mois 44,90 € vous seront facturés pour votre Abonnement, qui aura une durée indéterminée, sous réserve d'une possibilité de rétractation à tout moment. Vous aurez 100 crédits disponibles, que vous pourrez utiliser pour demander des documents supplémentaires. Les crédits peuvent être utilisés pour demander des documents supplémentaires, notamment Visura PRA (20), Visura Camerale (10), Visura Cadastale (18), Visura CRIF (10), Visura Protesti (12) et les états financiers de l'entreprise (15).",
     "cvFormat": "CV au format PDF"
   },
   "errors": {
