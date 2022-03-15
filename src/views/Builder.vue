@@ -34,7 +34,7 @@
             </div>
             <button @click="showBigPreview" class="view-large-btn">
               <img src="../assets/images/zoom.svg" alt="view icon" />
-              Ingrandisci
+              {{ $t('zoom') }}
             </button>
           </div>
         </div>
@@ -129,7 +129,7 @@
                 class="custom-btn download mt-auto"
                 @click="generateReport"
               >
-                Scarica PDF
+                {{ $t('downloadPdf') }}
               </button>
             </div>
           </div>
@@ -256,11 +256,14 @@ export default {
     offer() {
       return this.$store.state.domain.offer;
     },
+    locale() {
+      return this.$store.state.domain.locale;
+    },
   },
   watch: {
     selectedCv: {
       handler(val) {
-        this.nickname = templates[val].nickname;
+        this.nickname = templates[val][this.locale].nickname;
       },
       deep: true,
     },
@@ -307,7 +310,7 @@ export default {
       }
     }, 1500);
     let cv = this.$store.state.selectedCv;
-    this.nickname = templates[cv].nickname;
+    this.nickname = templates[cv][this.locale].nickname;
   },
   beforeRouteLeave(to, from, next) {
     if (to.name == "Payment" || to.name == "Plan") {

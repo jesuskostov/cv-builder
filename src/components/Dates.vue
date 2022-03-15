@@ -54,10 +54,7 @@ export default {
   },
   computed: {
     date() {
-      let dateArray = [];
-      this.startDate && dateArray.push(this.startDate);
-      this.endDate && dateArray.push(this.endDate);
-      return dateArray;
+      return [new Date(this.startDate).toISOString().split('T')[0], new Date(this.endDate).toISOString().split('T')[0]];
     },
   },
   methods: {

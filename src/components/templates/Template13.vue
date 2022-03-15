@@ -18,14 +18,14 @@
             <p><span v-if="personal && personal.fullAddress">{{personal.fullAddress}},<br> {{personal.city}} {{personal.zipCode}},<br> {{personal.country}}</span></p>
           </div>
           <div class="mb-4">
-            <h4 class="mb-0" v-text="$t('cvPlaceholder.phoneNumb')" />
+            <h4 class="mb-0" v-text="$t('cvPlaceholder.phoneNumb2')" />
             <p><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span> <span v-else v-text="$t('cvPlaceholder.phoneNumb')" /></p>
           </div>
           <div class="mb-4">
             <h4 class="mb-0">Email</h4>
             <p><span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
           </div>
-          <div class="mb-4">
+          <div v-if="personal && personal.socialProfiles" class="mb-4">
             <h4 class="mb-0">Linkedin</h4>
             <p><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span></p>
           </div>
@@ -65,7 +65,7 @@
         <hr>
         <div>
           <h2 class="black" v-text="$t('cvPlaceholder.profile')" />
-          <p v-if="accomp" v-html="accomp" />
+          <p class="descrition" v-if="accomp" v-html="accomp" />
         </div>
         <hr>
         <!-- Work history -->
@@ -76,7 +76,7 @@
               <br>
               <span v-if="work.date && work.date.from">{{work.date.from | toDate}} - </span>
               <span v-if="work.date && work.date.to && !work.date.present">{{work.date.to | toDate}}</span>
-              <span v-if="work.date.present">Current work</span>
+              <span v-if="work.date.present">{{ $t('cvPlaceholder.currentWork') }}</span>
             </h3>
             <p class="description" v-html="work.description" />
           </div>
@@ -86,7 +86,7 @@
         <div>
           <h2 class="black" v-text="$t('cvPlaceholder.education')" />
           <div v-for="(school, i) in education" :key="i">
-            <h3 class="subtitle">{{school.degree}} - {{school.schoolName}} <br> <span class="black">{{school.schoolLocation}}</span> <br><span>September 2012 - December 2021</span> </h3>
+            <h3 class="subtitle">{{school.degree}} <span v-if="school.degree">-</span> {{school.schoolName}} <br> <span class="black">{{school.schoolLocation}}</span> <br><span>{{school.date.from}} - {{school.date.to}}</span> </h3>
           </div>
         </div>
         <hr>

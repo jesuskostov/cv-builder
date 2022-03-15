@@ -7,10 +7,10 @@
                     <div class="col-6 col-md-3 mb-3 mb-md-0">
                         <div class="d-flex flex-column align-items-start">
                             <router-link to="/" v-text="$t('footer_menu')[11]" />
-                            <router-link to="/i-nostri-valori" v-text="$t('footer_menu')[12]" />
-                            <router-link to="/aiuto" v-text="$t('footer_menu')[13]" />
+                            <router-link :to="`/${$t('link.values')}`" v-text="$t('footer_menu')[12]" />
+                            <router-link :to="`/${$t('link.help')}`" v-text="$t('footer_menu')[13]" />
                             <router-link :to="{name: 'Contact'}" v-text="$t('footer_menu')[16]" />
-                            <router-link to="/site-map" v-text="$t('footer_menu')[14]" />
+                            <router-link :to="`/${$t('link.siteMap')}`" v-text="$t('footer_menu')[14]" />
                         </div>
                     </div>
                     <div class="col-6 col-md-3 mb-3 mb-md-0">
@@ -40,7 +40,8 @@
                 </div>
             </div>
             <div class="d-flex justify-content-between flex-column flex-md-row py-4">
-                <p>© 2016-2022. All Rights Reserved.</p>
+                <!-- <p>© 2016-2022. All Rights Reserved.</p> -->
+                <p v-text="$t('rights')" />
                 <!-- <p>Lanonium B.V. ; Veembroederhof 281, <br>1019HD Amsterdam, Netherlands</p> -->
             </div>
           </div>

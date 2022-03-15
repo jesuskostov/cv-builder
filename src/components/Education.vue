@@ -85,7 +85,7 @@
             </select> -->
             <div class="position-relative">
                 <input type="text" class="form-control w-100" v-model="skill">
-                <button @click="addSkill" class="custom-btn add-btn">Aggiungi</button>
+                <button @click="addSkill" class="custom-btn add-btn">{{ $t('add') }}</button>
             </div>
             <!-- <multiselect v-model="skills" class="w-100" :options="options" :multiple="true" :taggable="true" @tag="addSkill" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Pick some" label="title" track-by="title" /> -->
             <draggable v-model="skills" @end="dragSkill">

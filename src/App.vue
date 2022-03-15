@@ -344,4 +344,8 @@ input[type="number"] {
 .container {
   max-width: 1280px !important;
 }
+
+p {
+  word-break: break-word;
+}
 </style>

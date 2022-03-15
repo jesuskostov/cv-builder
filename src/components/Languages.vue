@@ -6,7 +6,7 @@
     </div>
     <div class="accordion px-4 py-4">
         <h3 v-text="$t('other_step.nativeLang')" />
-        <multiselect v-model="motherLanguages" class="w-100" :options="languages" :multiple="false" :taggable="true" @tag="addMotherLang" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Puoi sceglierne alcuno o scrivere e premere invio" label="title" :track-by="'title'" />
+        <multiselect v-model="motherLanguages" class="w-100" :options="languages" :select-label="`${selectLangLabel.select[`${locale}`]}`" :deselect-label="`${selectLangLabel.remove[`${locale}`]}`" :multiple="false" :taggable="true" @tag="addMotherLang" :close-on-select="true" :clear-on-select="false" :preserve-search="true" :placeholder="`${placeholder.motherLang[`${locale}`]}`" label="title" :track-by="'title'" />
         <div v-if="motherLanguages.title" class="box-row">
             <div class="d-flex align-items-center">
                 <img class="mr-3" src="../assets/images/lines.svg" alt="lines">
@@ -21,7 +21,7 @@
     </div>
     <div class="accordion px-4 py-4">
         <h3 v-text="$t('other_step.spokenLang')" />
-        <multiselect v-model="spokenLanguages" class="w-100" :options="languages" :multiple="true" :taggable="true" @tag="addLang" :close-on-select="true" :clear-on-select="false" :preserve-search="true" placeholder="Write some and press Enter" label="title" track-by="title" />
+        <multiselect v-model="spokenLanguages" class="w-100" :options="languages" :multiple="true" :taggable="true" @tag="addLang" :select-label="`${selectLangLabel.select[`${locale}`]}`" :deselect-label="`${selectLangLabel.remove[`${locale}`]}`" :close-on-select="true" :clear-on-select="false" :preserve-search="true" :placeholder="`${placeholder.spokenLang[`${locale}`]}`" label="title" track-by="title" />
         <draggable v-model="spokenLanguages" @end="drag">
             <div v-for="(lang, i) in spokenLanguages" :key="i" class="box-row flex-column flex-sm-row align-items-start align-items-sm-center">
                 <div class="d-flex align-items-center mb-3 mb-md-0">
@@ -54,11 +54,11 @@ export default {
             motherLanguages: {},
             spokenLanguages: [],
             languages: [
-                { title: 'Italiano', langLevel: '' },
-                { title: 'Inglese', langLevel: '' },
-                { title: 'Francese', langLevel: '' },
-                { title: 'Tedesco', langLevel: '' },
-                { title: 'Spagnolo', langLevel: '' },
+                { title: this.$t('languages.italian'), langLevel: '' },
+                { title: this.$t('languages.english'), langLevel: '' },
+                { title: this.$t('languages.french'), langLevel: '' },
+                { title: this.$t('languages.german'), langLevel: '' },
+                { title: this.$t('languages.spanish'), langLevel: '' },
             ],
             langLevel: [
                 { 'title': 'A1' },
@@ -68,6 +68,30 @@ export default {
                 { 'title': 'C1' },
                 { 'title': 'C2' },
             ],
+            selectLangLabel: {
+                select: {
+                    'en': 'Press enter to select',
+                    'it': 'Tasto Invio per scegliere',
+                    'fr': 'Touche Entrée pour choisir'
+                },
+                remove: {
+                    'en': 'Press enter to remove',
+                    'it': 'Premi invio per rimuovere',
+                    'fr': 'Appuyez sur Entrée pour supprimer'
+                }
+            },
+            placeholder: {
+                motherLang: {
+                    'en': 'You can choose any or write and press enter',
+                    'it': 'Puoi sceglierne alcuno o scrivere e premere invio',
+                    'fr': "Vous pouvez choisir n'importe lequel ou écrire et appuyer sur Entrée"
+                },
+                spokenLang: {
+                    'en': 'Write some and press Enter',
+                    'it': 'Scrivine qualcuno e premi Invio',
+                    'fr': "Écrivez-en et appuyez sur Entrée"
+                }
+            }
         }
     },
     components: {
@@ -127,6 +151,11 @@ export default {
             deep: true
         },
     },
+    computed: {
+        locale() {
+            return this.$store.state.domain.locale
+        }
+    },
     mounted() {
         // Retrieving data from localStorage
         if (JSON.parse(localStorage.getItem('spokenLanguages')) != null) {
@@ -141,6 +170,6 @@ export default {
 
 <style lang="scss" scoped>
 .lang-level {
-width: auto;
+    width: auto;
 }
 </style>

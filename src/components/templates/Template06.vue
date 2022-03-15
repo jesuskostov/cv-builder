@@ -76,8 +76,8 @@
           <div v-if="education.length && education[0].schoolName" class="text-left">
             <h2 class="title mb-4" v-text="$t('cvPlaceholder.education')" />
             <div v-for="(school, i) in education" :key="i" class="mb-3">
-              <h3 class="subtitle text-capitalize">{{school.degree}}, {{school.schoolName}}</h3>
-              <p class="date">{{school.date[0]}} - {{school.date[1]}} <br> {{school.schoolLocation}}</p>
+              <h3 class="subtitle text-capitalize">{{school.degree}}<span v-if="school.degree">,</span> {{school.schoolName}}</h3>
+              <p class="date">{{school.date.from}} - {{school.date.to}} <br> {{school.schoolLocation}}</p>
               <p class="description" v-html="school.description" />
             </div>
           </div>
@@ -275,6 +275,7 @@ export default {
   font-weight: 500;
   color: rgb(114, 114, 114);
   margin-bottom: 0;
+  word-break: break-word;
 }
 
 .date {

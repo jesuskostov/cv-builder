@@ -5,7 +5,7 @@
         <div class="card mt-4 mb-5">
           <!-- TITLE -->
           <div class="text-center pb-4">
-            <h1 class="font-weight-bold">Il tuo CV è pronto!</h1>
+            <h1 class="font-weight-bold">{{ $t('plan.title') }}</h1>
           </div>
           <!-- PLAN -->
           <div class="row mb-5">
@@ -17,9 +17,9 @@
               >
                 <span class="custom-checkbox"></span>
                 <h2 class="font-weight-bold mb-0">CV Expert</h2>
-                <p class="price">4,90 € per 3 giorni*</p>
+                <p class="price">{{ $t('plan.cvExpert.price') }}</p>
                 <ul>
-                  <li v-for="i in firstPlan" :key="i">
+                  <li v-for="i in $t('plan.benefits')" :key="i">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -47,7 +47,7 @@
                 <ul>
                   <li
                     :class="{ overline: i >= 2 }"
-                    v-for="(name, i) in secondPlan"
+                    v-for="(name, i) in $t('plan.benefits')"
                     :key="i"
                   >
                     <svg
@@ -72,7 +72,7 @@
               <form action="" @submit.prevent="setPlan">
                 <div class="form-group text-center mb-3">
                   <label for="email"
-                    >Indirizzo e-mail per ricevere una copia sicura del tuo CV:</label
+                    >{{ $t('plan.emailText') }}</label
                   >
 
                   <input
@@ -83,12 +83,12 @@
                     v-model="email"
                     v-validate="'required|email'"
                   />
-                  <span class="error">{{ errors.first("email") ? "Richiesto l'invio di un'e-mail" : '' }}</span>
+                  <span class="error">{{ errors.first("email") }}</span>
                 </div>
 
                 <div class="text-center">
                   <button type="submit" class="custom-btn mb-3 mb-md-0">
-                    Ultimo passo prima del download!
+                    {{ $t('plan.emailBtn') }}
                   </button>
                 </div>
               </form>
@@ -101,9 +101,9 @@
                 <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <path d="M18 10v-4c0-3.313-2.687-6-6-6s-6 2.687-6 6v4h-3v14h18v-14h-3zm-5 7.723v2.277h-2v-2.277c-.595-.347-1-.984-1-1.723 0-1.104.896-2 2-2s2 .896 2 2c0 .738-.404 1.376-1 1.723zm-5-7.723v-4c0-2.206 1.794-4 4-4 2.205 0 4 1.794 4 4v4h-8z"/>
                 </svg>
-                <p class="payment-title mb-2">Pagamento sicuro</p>
+                <p class="payment-title mb-2">{{ $t('plan.paymentSecure') }}</p>
               </div>
-              <p class="mb-4">Paga con fiducia con le tue carte di credito sicure:</p>
+              <p class="mb-4">{{ $t('plan.secureCards') }}</p>
               <img
                 src="../assets/images/cards.svg"
                 class="img-fluid"
@@ -113,11 +113,8 @@
             </div>
             <div class="col-md-6">
               <div class="subscribe">
-                <p class="h6"><b>Abbonamento illimitato agli strumenti Expert</b></p>
-                <small>* CV Expert : 4,90 € per 3 giorni, poi 29,90 € mensili per godere del nostro set di strumenti esperti per gestire il tuo CV e la tua carriera
-                    nel miglior modo possibile
-                  <br>Puoi annullare l’abbonamento abbonamento in qualsiasi momento con un clic.
-                </small>
+                <p class="h6"><b>{{ $t('plan.subscription') }}</b></p>
+                <small>{{ $t('plan.subscriptionText') }}</small>
               </div>
             </div>
           </div>
@@ -148,24 +145,6 @@ export default {
       },
       plan: "CV Expert",
       email: null,
-      firstPlan: [
-        "Scarica il tuo CV in PDF con un solo clic",
-        "14 modelli generati automaticamente",
-        "Personalizzazione per offerta di lavoro",
-        "Crea la tua libreria di curricula",
-        "Accessibile 24/7",
-        "Trasferimento in 3 clic ai tuoi contatti",
-        "Disdetta in qualsiasi momento",
-      ],
-      secondPlan: [
-        "Scarica il tuo CV in PDF con un solo clic",
-        "14 modelli generati automaticamente",
-        "Personalizzazione per offerta di lavoro",
-        "Crea la tua libreria di curricula",
-        "Accessibile 24/7",
-        "Trasferimento in 3 clic ai tuoi contatti",
-        "Disdetta in qualsiasi momento",
-      ],
     };
   },
   methods: {
@@ -279,7 +258,7 @@ export default {
     ul {
       li {
         svg {
-          fill: rgb(115, 201, 115);
+          fill: #28a745;
         }
       }
     }

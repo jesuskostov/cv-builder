@@ -8,14 +8,14 @@
         <div class="info">
           <h1 class="text-capitalize"><span v-if="personal && personal.firstName">{{personal.firstName}} {{personal.lastName}}</span> <span v-else v-text="$t('cvPlaceholder.name')" /></h1>
           <p v-if="personal && personal.profession" class="profession"><span v-if="personal && personal.profession">{{personal.profession}}</span><span v-else>Profession</span></p>
-          <p v-if="personal && personal.fullAddress" class="address"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}, {{personal.city}} {{personal.zipCode}}, {{personal.country}}</span> <span v-else>Full address</span> <br> <span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}} |</span><span v-else>Phone number</span> <span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
+          <p v-if="personal && personal.fullAddress" class="address"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}, {{personal.zipCode}} {{personal.city}}, {{personal.country}}</span> <span v-else>Full address</span> <br> <span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}} |</span><span v-else>Phone number</span> <span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
           <p class="address mt-0"><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span></p>
         </div>
       </div>      
       <div class="body">
         <div class="col-left">
           <div v-if="skills.length !== 0" class="skills text-left mb-5">
-            <h2 class="title small">Abilità</h2>
+            <h2 class="title small">{{ $t('cvPlaceholder.skills') }}</h2>
             <div v-for="(skill, i) in skills" :key="i" class="mb-2">
               <p class="skill-name">{{skill.title}}</p>
               <div ref="rating" class="rating" :rating="skill.rating">
@@ -28,7 +28,7 @@
             </div>
           </div>
           <div v-if="languages.length !== 0" class="languages text-left mb-5">
-            <h2 class="title small">Lingue</h2>
+            <h2 class="title small">{{ $t('cvPlaceholder.languages') }}</h2>
             <div>
               <p class="description mb-0" v-for="(lang, i) in languages" :key="i">{{lang.title}} <b>{{lang.langLevel}}</b></p>
             </div>
@@ -52,25 +52,25 @@
             <p class="description" v-html="accomp" />
           </div>
           <div v-if="workHistory.length && workHistory[0].jobTitle" class="work text-left mb-5">
-            <h2 class="title">Esperienza lavorativa</h2>
+            <h2 class="title">{{ $t('cvPlaceholder.work') }}</h2>
             <div v-for="(work, i) in workHistory" :key="i">
               <h3 class="subtitle">
                 {{work.jobTitle}} - {{work.employer}}
                 <br>
                 <span v-if="work.date && work.date.from">{{work.date.from | toDate}} - </span>
                 <span v-if="work.date && work.date.to && !work.date.present">{{work.date.to | toDate}}</span>
-                <span v-if="work.date.present">Current work</span>
+                <span v-if="work.date.present" v-text="$t('cvPlaceholder.currentWork')" />
               </h3>
               <p class="description" v-html="work.description" />
             </div>
           </div>
           <div v-if="education.length && education[0].schoolName" class="education text-left">
-            <h2 class="title">Istruzione</h2>
+            <h2 class="title">{{ $t('cvPlaceholder.education') }}</h2>
             <div v-for="(school, i) in education" :key="i">
               <h3 class="subtitle">
-                {{school.degree}}, {{school.schoolName}} - {{school.schoolLocation}}
+                {{school.degree}}<span v-if="school.degree">,</span> {{school.schoolName}} - {{school.schoolLocation}}
                 <br>
-                <span>{{school.date[0]}} - {{school.date[1]}}</span>
+                <span>{{school.date.from}} - {{school.date.to}}</span>
               </h3>
             </div>
           </div>
@@ -180,7 +180,7 @@ export default {
       },
       deep: true
     },
-    accomp() {
+    accomp() {      
       this.getPreviewHeight()
     },
   },
@@ -196,8 +196,7 @@ export default {
           ratingSlot[i].classList.add('active')
         }
       })
-    }
-      
+    }    
   }
 };
 </script>
@@ -288,6 +287,7 @@ export default {
 
 .description {
   font-size: 11px;
+  word-break: break-word;
 }
 
 .subtitle {

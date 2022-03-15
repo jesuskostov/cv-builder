@@ -109,7 +109,6 @@ export default new Vuex.Store({
       commit('SET_PREVIEW_HEIGHT', {height})
     },
     setDomain: ({commit}, payload) => {
-      console.log(payload);
       commit('SET_DOMAIN', payload)
     },
     setLocale: ({commit}, payload) => {

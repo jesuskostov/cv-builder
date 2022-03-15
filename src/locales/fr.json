@@ -60,7 +60,7 @@
         "title": "Comment faire un CV ?",
         "text": "Lorsqu'il s'agit de la rédaction d'un curriculum vitae, il y a plusieurs éléments que chaque candidat doit garder à l'esprit.",
         "ul": {
-          "0": "<b>Un CV ou curriculum vitae, appelé aussi 'resume' aux États-Unis</b>, est défini comme un compte rendu <b>de l'expérience professionnelle, de la formation et des qualifications</b> envoyé lors de la recherche d'emploi. C'est une définition élémentaire pour quelque chose qui doit essentiellement provoquer chez le lecteur l'envie de vouloir vous rencontrer, donc apprendre <b>à rédiger un CV</b> pour une demande d'emploi, c'est aussi <b>apprendre à écrire une histoire capable d'intriguer le lecteur,</b>, ici un responsable du recrutement.",
+          "0": "<b>Un CV ou curriculum vitae, appelé aussi 'resume' aux États-Unis</b>, est défini comme un compte rendu <b>de l'expérience professionnelle, de la formation et des qualifications</b> envoyé lors de la recherche d'emploi. C'est une définition élémentaire pour quelque chose qui doit essentiellement provoquer chez le lecteur l'envie de vouloir vous rencontrer, donc apprendre <b>à rédiger un CV</b> pour une demande d'emploi, c'est aussi <b>apprendre à écrire une histoire capable d'intriguer le lecteur,</b> ici un responsable du recrutement.",
           "1": "Lorsqu'un(e) candidat(e) décide de <b>préparer un CV pour une recherche d'emploi,</b> il ou elle <b>doit commencer par créer un plan</b> qui retrace ses réalisations, ses antécédents professionnels, sa formation, les qualités et les compétences supplémentaires qui en font un(e) candidat(e) légitime.",
           "2": "Ces <b>informations doivent ensuite être présentées d'une manière descriptive mais professionnelle</b> qui met en valeur les points forts de chaque individu et leur aptitude pour le poste à pourvoir. Vous devez <b>aborder la rédaction de votre CV du point de vue de votre public</b> et traiter chaque CV comme une candidature individuelle et nouvelle, et non un copier/coller du même contenu pour chaque poste vacant disponible.",
           "3": "<b>Faites des recherches sur l'entreprise et le poste à pourvoir</b>, renseignez-vous sur vos tâches et réfléchissez à la manière dont vous aborderiez les problèmes qui pourraient survenir ou à la façon dont vos compétences profiteraient à l'entreprise pour laquelle vous aimeriez travailler."
@@ -68,7 +68,7 @@
       },
       "2": {
         "title": "Mise en page",
-        "text": "Il est essentiel de <b>réfléchir soigneusement à la mise en page de votre CV</b> lorsque vous le rédigez. Si vous le créez à partir de zéro, vous devrez planifier soigneusement la façon de placer chaque section, en créant une mise en page agréable à regarder, en faisant bon usage de l'espace libre et en n'encombrant pas la page avec différentes polices, tailles et caractères.<br><br> Il est <b>essentiel de faire un CV avec une mise en forme bien structurée</b> qui sera visuellement agréable et attirera le lecteur vers les informations importantes. <br><br> <b> La lisibilité est un élément à prendre en compte lors de la mise en page d'un CV.</b> <br><br> Cela signifie qu'il faut créer un document facile à lire, bien construit et <b>utiliser une mise en page qui permet à l'employeur de naviguer confortablement</b> vers les informations pertinentes. <br><br> Lors de la création de la <b>structure du CV</b>, les candidats doivent tenir compte des <b>marges et des espaces blancs sur la page</b> ainsi que <b>de la taille et des types de police< /b>, en n'utilisant jamais plus de 2 polices dans tout le document. De plus, <b>les couleurs</b> ne doivent pas être multipliées ou le CV devient surchargé. <br><br> Nous vous recommandons pour assurer <b>une mise en page approuvée par les ressources humaines d'utiliser nos outils et modèles uniques</b>, ils sont prêts à l'emploi et vous feront gagner un temps et une énergie considérables. Entrez simplement vos informations et choisissez la mise en page qui vous convient le mieux. <br> <b>Nos outils et modèles sont tout simplement les plus efficaces disponibles !</b>"
+        "text": "Il est essentiel de <b>réfléchir soigneusement à la mise en page de votre CV</b> lorsque vous le rédigez. Si vous le créez à partir de zéro, vous devrez planifier soigneusement la façon de placer chaque section, en créant une mise en page agréable à regarder, en faisant bon usage de l'espace libre et en n'encombrant pas la page avec différentes polices, tailles et caractères.<br><br> Il est <b>essentiel de faire un CV avec une mise en forme bien structurée</b> qui sera visuellement agréable et attirera le lecteur vers les informations importantes. <br><br> <b> La lisibilité est un élément à prendre en compte lors de la mise en page d'un CV.</b> <br><br> Cela signifie qu'il faut créer un document facile à lire, bien construit et <b>utiliser une mise en page qui permet à l'employeur de naviguer confortablement</b> vers les informations pertinentes. <br><br> Lors de la création de la <b>structure du CV</b>, les candidats doivent tenir compte des <b>marges et des espaces blancs sur la page</b> ainsi que <b>de la taille et des types de police</b>, en n'utilisant jamais plus de 2 polices dans tout le document. De plus, <b>les couleurs</b> ne doivent pas être multipliées ou le CV devient surchargé. <br><br> Nous vous recommandons pour assurer <b>une mise en page approuvée par les ressources humaines d'utiliser nos outils et modèles uniques</b>, ils sont prêts à l'emploi et vous feront gagner un temps et une énergie considérables. Entrez simplement vos informations et choisissez la mise en page qui vous convient le mieux. <br> <b>Nos outils et modèles sont tout simplement les plus efficaces disponibles !</b>"
       },
       "3": {
         "title": "Quelle doit être la longueur de mon CV ?",
@@ -87,6 +87,20 @@
           "5": "Enfin, à mesure que les CV évoluent et que la communauté des ressources humaines change, il vous est conseillé de ne pas inclure de références sur votre CV, sauf si cela est strictement mentionné dans l'offre d'emploi. Dans certains cas, les candidats peuvent choisir d'ajouter une ligne à la fin du CV pour informer que des références sont disponibles sur demande."
         }
       }
+    }
+  },
+  "homeFeedback": {
+    "0": {
+      "name": "Bernardo Buontalenti",
+      "text": "C'est le meilleur assistant pour CV de tous les temps ! Rien que pour les offres d'emploi. Il a dépassé mes attentes. Je le recommande fortement !"
+    },
+    "1": {
+      "name": "Eva C***",
+      "text": "Service très simple d'utilisation. Plusieurs options pour les modèles. Remplissez simplement les champs et tout est déjà préformaté. Sans défaut ! J'utiliserai à nouveau ce service."
+    },
+    "2": {
+      "name": "Giulio Parigi",
+      "text": "J'ai ENFIN un CV d'allure professionnelle !!!!!! Cela m'a épargné tant de larmes ! Sans effort. WOW !!!!! MERCI BEAUCOUP !!!!!!"
     }
   },
   "feedback": {
@@ -147,12 +161,12 @@
       },
       "3": {
         "title": "Puis-je facilement changer de modèle ?",
-        "text": "Oui! <br> À tout moment, vous pouvez échanger contre l'un des autres modèles. <br> Utilisez nos outils pour essayer tous les modèles facilement !",
+        "text": "Oui ! <br> À tout moment, vous pouvez échanger contre l'un des autres modèles. <br> Utilisez nos outils pour essayer tous les modèles facilement !",
         "list": {}
       },
       "4": {
         "title": "Puis-je faire mon CV sur mon téléphone portable ?",
-        "text": "Oui! Oui, oui, oui et oui ! ;) <br> Nos outils uniques ont été développés pour tous les appareils disponibles : smartphones, tablettes, <br> iPad, Microsoft Surface, ordinateurs de bureau et portables. <br> Profitez de notre approche technique complète !",
+        "text": "Oui ! Oui, oui, oui et oui ! ;) <br> Nos outils uniques ont été développés pour tous les appareils disponibles : smartphones, tablettes, <br> iPad, Microsoft Surface, ordinateurs de bureau et portables. <br> Profitez de notre approche technique complète !",
         "list": {}
       },
       "5": {
@@ -172,7 +186,7 @@
       },
       "8": {
         "title": "Dois-je mettre en page moi-même mon CV ?",
-        "text": "Non! <br> Nous avons fait tout le travail pour vous ! <br> Nos CV, conçus par des professionnels, suivent les dernières tendances du secteur du recrutement ! Choisissez celui que vous préférez, remplissez vos données et téléchargez votre PDF. <br> Oui, c'est aussi simple que cela !",
+        "text": "Non ! <br> Nous avons fait tout le travail pour vous ! <br> Nos CV, conçus par des professionnels, suivent les dernières tendances du secteur du recrutement ! Choisissez celui que vous préférez, remplissez vos données et téléchargez votre PDF. <br> Oui, c'est aussi simple que cela !",
         "list": {}
       },
       "9": {
@@ -238,6 +252,7 @@
     "family": "Situation familiale",
     "single": "Célibataire",
     "notSingle": "Marié(e)",
+    "familySelectText": "Sélectionnez votre situation familiale",
     "sex": "Sexe",
     "sexText": "Selectionner votre sexe",
     "male": "Homme",
@@ -319,9 +334,9 @@
     "address": "Remplacer par le numéro, le nom de la rue, la ville, le code postal, le pays",
     "phoneNumb": "Remplacer par le numéro de téléphone",
     "email": "Adresse e-mail",
-    "sex": "sexe",
+    "sex": "Sexe",
     "enterSex": "Renseignez votre sexe",
-    "birhtday": "Date de naissance",
+    "birthday": "Date de naissance",
     "nationality": "Nationalité",
     "work": "Expérience professionnelle",
     "educationAndTraning": "Études",
@@ -344,19 +359,31 @@
     "education": "Formation",
     "languages": "Langues",
     "socialProf": "Profil social",
-    "currentWork": "Profession actuelle"
+    "currentWork": "Occupation actuelle"
+  },
+  "languages": {
+    "italian": "Italien",
+    "english": "Anglais",
+    "french": "Français",
+    "german": "Allemand",
+    "spanish": "Espagnol"
   },
   "link": {
     "browseTemplate": "parcourir-les-modèles",
-    "howToWriteCv": "Comment-rédiger-un-cv",
+    "howToWriteCv": "comment-rédiger-un-cv",
     "payment": "paiement",
-    "plan": "plan-du-site",
+    "plan": "des-plans",
+    "builder": "créez-votre-cv",
     "error": "erreur",
     "feedback": "avis",
     "faq": "faq",
     "partnership": "partenariat",
     "contact": "nous-contacter",
-    "login": "connexion"
+    "login": "connexion",
+    "values": "nos-valeurs",
+    "siteMap": "plan-du-site",
+    "help": "aide",
+    "securePayment": "paiement-sécurisé"
   },
   "ourValues": {
     "title": "Nos valeurs",
@@ -393,11 +420,11 @@
     },
     "subscriptionWork": {
       "title": "Comment fonctionne mon abonnement ?",
-      "description": "Tous les nouveaux clients peuvent profiter de notre offre de bienvenue exceptionnelle : 3 jours pour seulement 3,90€ ! <br/><br/> A la fin de la période d'essai, la continuité du service est assurée grâce au renouvellement automatique de l'abonnement pour 39€ par mois."
+      "description": "Tous les nouveaux clients peuvent profiter de notre offre de bienvenue exceptionnelle : 3 jours pour seulement 4,90 € ! <br/><br/> A la fin de la période d'essai, la continuité du service est assurée grâce au renouvellement automatique de l'abonnement pour 29,90 € par mois."
     },
     "cancelSubscription": {
       "title": "Comment résilier mon abonnement ?",
-      "description": "C’est simple ! Vous disposez des options suivantes pour annuler votre abonnement : <ol> <li>Accédez à votre espace client : dans la rubrique « MON COMPTE », utilisez l'option de désinscription. C'est automatique et instantané...</li> <li>Par email : écrivez-nous à ????@????.???. Votre demande sera prise en compte dans les deux jours ouvrés suivant la réception de votre message.</li> <li>Telefonicamente : puoi chiamarci ogni giorno della settimana dalle 10 alle 17, per farlo ti preghiamo di recarti alla pagina 'Contattarci'.</li> </ol>"
+      "description": "C’est simple ! Vous disposez des options suivantes pour annuler votre abonnement : <ol> <li>Accédez à votre espace client : dans la rubrique « MON COMPTE », utilisez l'option de désinscription. C'est automatique et instantané...</li> <li>Par email : écrivez-nous à support@cv-rapide.com Votre demande sera prise en compte dans les deux jours ouvrés suivant la réception de votre message.</li> <li>Par téléphone : vous pouvez nous appeler tous les jours de la semaine de 10h à 17h, pour cela rendez-vous sur la page « Nous contacter ».</li> </ol>"
     }
   },
   "partnership": {
@@ -409,6 +436,69 @@
     "title": "PAIEMENT SÉCURISÉ",
     "description": "<p>Pour vous permettre un achat sûr, facile et immédiat, nous avons choisi de vous proposer un large panel de paiement par carte bancaire, vous pouvez donc utiliser les canaux suivants : Mastercard, Mastercard SecureCode, Visa, Verified by VISA.</p><p>Le paiement s'effectue directement sur le serveur sécurisé de notre partenaire bancaire, grâce à une connexion sécurisée qui utilise le procédé de cryptage SSL (Secure Socket Layer), le protocole le plus utilisé et le plus respecté au monde.</p><p>De plus, le 'S' dans l'adresse de la page de paiement (httpS: // ....) confirme que la page sur laquelle vous vous trouvez est bien protégée.</p><p>Enfin, le cadenas qui apparaît en bas de page ou dans la barre de navigation (selon le navigateur Internet utilisé), assure une protection cryptée.</p><p>Tout cela garantit de manière claire et efficace que vos informations personnelles sont strictement confidentielles et restent entièrement cryptées durant toutes les étapes de paiement, évitant ainsi tout risque de piratage.</p><p>Une fois que votre banque acceptera la transaction, votre commande sera validée. Vous recevrez alors un email récapitulant la transaction.</p><p><i>Pour plus de détails sur notre politique de sécurité et de confidentialité, nous vous invitons à consulter nos Conditions Générales d'Utilisation et de Vente, ainsi que notre Charte de Confidentialité, disponibles dans les rubriques correspondantes de notre Site.</i></p>"
   },
-  "pickCv": "Choisis",
+  "login": {
+    "login": "Se connecter",
+    "registered": "Déjà inscrit ?",
+    "email": "Email",
+    "password": "Password",
+    "access": "Connexion"
+  },
+  "navSteps": {
+    "personalInfo": "Informations personnelles",
+    "workingExp": "Expérience professionnelle",
+    "educationAndSkills": "Formation et compétences",
+    "otherInfo": "Autres informations",
+    "summary": "Récapitulatif"
+  },
+  "plan": {
+    "title": "Votre CV est prêt !",
+    "cvExpert": {
+      "price": "4,90 € pour 3 jours*"
+    },
+    "benefits": {
+      "0": "Téléchargez votre CV en PDF en un clic",
+      "1": "14 modèles générés automatiquement",
+      "2": "Personnalisation selon l’offre d'emploi",
+      "3": "Créez votre CVthèque",
+      "4": "Accessible 24h/24 et 7j/7",
+      "5": "Transfert en 3 clics vers vos contacts",
+      "6": "Résiliation à tout moment"
+    },
+    "emailText": "Adresse e-mail pour recevoir une copie sécurisée de votre CV :",
+    "emailBtn": "Dernière étape avant le téléchargement !",
+    "paymentSecure": "Paiement sécurisé",
+    "secureCards": "Payez en toute confiance avec vos cartes bancaires sécurisées :",
+    "subscription": "Abonnement illimité aux outils « Expert »",
+    "subscriptionText": "CV Expert : 4,90 € pour 3 jours, puis 29,90 € par mois pour profiter de notre boîte à outils experte pour gérer au mieux votre CV et votre carrière. Vous pouvez résilier votre abonnement à tout moment en un clic."
+  },
+  "payment": {
+    "title": "Paiement 100% sécurisé",
+    "amount": "Montant",
+    "cardType": "Type de carte",
+    "cardHolder": "Nom du titulaire",
+    "cardNumber": "Numéro de carte",
+    "cardDate": "Date d'expiration",
+    "cardCVV": "Code de sécurité",
+    "pay": "Completare il pagamento",
+    "editCV": "Modifier",
+    "period3days": "Période d'essai 3 jours",
+    "amountToPay": "Montant à payer",
+    "subscriptionText": "Abonnement et système de crédit à l'issue de la période d'essai de 3 jours, chaque mois 44,90 € vous seront facturés pour votre abonnement à durée indéterminée, sous réserve de rétractation possible à tout moment. Vous obtiendrez 100 crédits, que vous pourrez utiliser pour demander des documents supplémentaires. Je ne suis pas sûre du tout de cette traduction !!! Les crédits peuvent être utilisés pour demander des documents supplémentaires, notamment Certificat PRA (20), Inscription à la chambre de commerce (10), Certificat cadastral (18), Certificat CRIF (10), Protestations de recherche (12) et les états financiers de l'entreprise (15).",
+    "cvFormat": "CV au format PDF"
+  },
+  "errors": {
+    "emailRequired": "Demande d'envoi d'e-mail",
+    "emailNotValid": "L'e-mail est invalide"
+  },
+  "paymentError": {
+    "title": "Il y a eu une erreur dans nos systèmes ! <br> Nous ne sommes pas en mesure de répondre à votre demande.",
+    "text": "Important : Aucun paiement n'a été effectué. Notre équipe vient d'être prévenue de cette erreur technique. <br> Une solution sera apportée dans les plus brefs délais. Merci pour votre compréhension."
+  },
+  "pickCv": "Choisir",
+  "zoom": "Agrandir",
+  "add": "Ajouter",
+  "downloadPdf": "Télécharger le PDF",
+  "downloadCV": "Télécharger le CV",
+  "rights": "© 2016-2022. Tous droits réservés.",
   "date_format": "fr-FR"
 }

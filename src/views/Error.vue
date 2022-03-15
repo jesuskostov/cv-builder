@@ -7,14 +7,8 @@
           src="../assets/images/icon-error.svg"
           alt="error icon"
         />
-        <h2 class="mb-4">
-          C'è stato un errore nei nostri sistemi! <br />Non siamo in grado di soddisfare la sua richiesta.
-        </h2>
-        <p class="text-center">
-          Importante: Nessun pagamento è stato effettuato. Il nostro team è stato appena informato
-          di questo errore tecnico. Una soluzione sarà fornita al più presto
-          possibile. Grazie per la vostra comprensione.
-        </p>
+        <h2 class="mb-4" v-html="$t('paymentError.title')" />
+        <p class="text-center" v-html="$t('paymentError.text')" />
       </div>
     </div>
   </div>

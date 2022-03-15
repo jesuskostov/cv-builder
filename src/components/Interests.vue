@@ -8,7 +8,7 @@
         </select> -->
         <div class="position-relative">
             <input type="text" class="form-control w-100" v-model="interes">
-            <button @click="addInt" class="custom-btn add-btn">Aggiungi</button>
+            <button @click="addInt" class="custom-btn add-btn">{{ $t('add') }}</button>
         </div>
         <!-- <multiselect v-model="interests" class="w-100" :options="interestsPredefined" :multiple="true" :taggable="true" @tag="addInterest" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Write some and press Enter" label="title" track-by="title" /> -->
         <draggable v-model="interests" @end="drag">

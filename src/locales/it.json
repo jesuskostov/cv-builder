@@ -89,6 +89,20 @@
       }
     }
   },
+  "homeFeedback": {
+    "0": {
+      "name": "Bernardo Buontalenti",
+      "text": "Questo è stato il miglior aiuto per il cv di sempre! Nient'altro che offerte di lavoro. Ha superato le mie aspettative. Lo consiglio vivamente!"
+    },
+    "1": {
+      "name": "Eva C***",
+      "text": "Servizio molto facile da usare. Molteplici opzioni per i modelli. Riempi in bianco in molte sezioni e tutto è già preformattato. Impeccabile! Userò ancora questo servizio."
+    },
+    "2": {
+      "name": "Giulio Parigi",
+      "text": "Ho FINALMENTE un curriculum dall'aspetto professionale !!!!!! Questo mi ha risparmiato così tante lacrime! Senza sforzo. WOW!!!!! MOLTI GRAZIE!!!!!!"
+    }
+  },
   "feedback": {
     "hero": {
       "title": "Crea un CV che i reclutatori ameranno"
@@ -201,7 +215,7 @@
     "2": "Sfoglia i modelli",
     "3": "Feedback",
     "4": "FAQ",
-    "5": "Partnership",
+    "5": "Collaborazione",
     "6": "Pagamento sicuro",
     "7": "Informativa sulla privacy",
     "8": "Condizioni di servizio",
@@ -211,7 +225,8 @@
     "12": "I nostri valori",
     "13": "Aiuto",
     "14": "Mappa del sito",
-    "15": "Mon abonnement"
+    "15": "Mon abonnement",
+    "16": "Contattaci"
   },
   "personal_step": {
     "title": "Informazioni Personali",
@@ -266,7 +281,7 @@
     "addSchool": "Aggiungi scuola",
     "addAnotherSchool": "Aggiungi un'altra scuola",
     "goBack": "Torna indietro",
-    "button": "Avanti: altro"
+    "button": "Avanti: Altro"
   },
   "skills": {
     "title": "Competenze",
@@ -335,6 +350,13 @@
     "socialProf": "Profili sociali",
     "currentWork": "Lavoro attuale"
   },
+  "languages": {
+    "italian": "Italiano",
+    "english": "Inglese",
+    "french": "Francese",
+    "german": "Tedesco",
+    "spanish": "Spagnolo"
+  },
   "link": {
     "browseTemplate": "cerca-un-template",
     "howToWriteCv": "come-scrivere-un-cv",
@@ -346,7 +368,11 @@
     "faq": "faq",
     "partnership": "collaborazioni",
     "contact": "contattaci",
-    "login": "accedi"
+    "login": "accedi",
+    "values": "i-nostri-valori",
+    "siteMap": "mappa-del-sito",
+    "help": "aiuto",
+    "securePayment": "pagamento-sicuro"
   },
   "ourValues": {
     "title": "I nostri valori",
@@ -383,7 +409,7 @@
     },
     "subscriptionWork": {
       "title": "Come funziona il mio abbonamento ?",
-      "description": "Permettiamo a tutti i nuovi clienti di usufruire della nostra offerta eccezionale di benvenuto : 3 giorni a soli 3,90€ ! <br/><br/> Al termine del periodo di prova, la continuità del servizio è assicurata grazie al rinnovo automatico dell'abbonamento a 39€ mensili."
+      "description": "Permettiamo a tutti i nuovi clienti di usufruire della nostra offerta eccezionale di benvenuto : 3 giorni a soli 4,90 € ! <br/><br/> Al termine del periodo di prova, la continuità del servizio è assicurata grazie al rinnovo automatico dell'abbonamento a 29,90 € mensili."
     },
     "cancelSubscription": {
       "title": "Come cancellare il mio abbonamento ?",
@@ -399,6 +425,69 @@
     "title": "PAGAMENTO SICURO",
     "description": "<p>Per consentirvi un acquisto sicuro, facile ed immediato, abbiamo scelto di offrirvi un largo pannello di pagamento con carta di credito, è così possibile utilizzare i seguenti canali: Mastercard, Mastercard SecureCode, Visa, Verified by VISA.</p><p>Il pagamento si effettua direttamente sul server protetto del nostro partner bancario, grazie a una connessione sicura che utilizza il processo di crittografia SSL (Secure Socket Layer), il protocollo più usato e rispettato al mondo.</p><p>Inoltre, la “S” nell’indirizzo della pagina di pagamento (httpS://….) conferma che la pagina sulla quale vi trovate è ben protetta.</p><p>Infine, il lucchetto che appare nella parte inferiore della pagina o nella barra di navigazione (a seconda del browser Internet utilizzato), assicura una protezione cifrata.</p><p>Tutto questo garantisce in modo chiaro ed efficiente che le vostre informazioni personali sono strettamente confidenziali e rimangono completamente crittografate durante tutte le fasi del pagamento, evitando così qualsiasi rischio di un eventuale atto di pirateria informatica.</p><p>Una volta che la vostra banca avrà accettato la transazione, il vostro ordine verrà convalidato. Riceverete dunque una email ricapitolativa dell’avvenuta transazione.</p><p><i>Per maggiori dettagli relativi alla nostra politica di sicurezza e privacy, vi invitiamo a consultare le nostre Condizioni Generali di Utilizzo e Vendita, nonché la nostra Carta della Privacy, disponibili nelle rubriche corrispondenti del nostro Sito.</i></p>"
   },
+  "login": {
+    "login": "Accedi",
+    "registered": "Già iscritto ?",
+    "email": "Email",
+    "password": "Password",
+    "access": "Accesso"
+  },
+  "navSteps": {
+    "personalInfo": "Informazioni Personali",
+    "workingExp": "Esperienza Lavorativa",
+    "educationAndSkills": "Istruzione e Competenze",
+    "otherInfo": "Altre Informazioni",
+    "summary": "Riepilogo"
+  },
+  "plan": {
+    "title": "Il tuo CV è pronto!",
+    "cvExpert": {
+      "price": "4,90 € per 3 giorni*"
+    },
+    "benefits": {
+      "0": "Scarica il tuo CV in PDF con un solo clic",
+      "1": "14 modelli generati automaticamente",
+      "2": "Personalizzazione per offerta di lavoro",
+      "3": "Crea la tua libreria di curricula",
+      "4": "Accessibile 24/7",
+      "5": "Trasferimento in 3 clic ai tuoi contatti",
+      "6": "Disdetta in qualsiasi momento"
+    },
+    "emailText": "Indirizzo e-mail per ricevere una copia sicura del tuo CV:",
+    "emailBtn": "Ultimo passo prima del download!",
+    "paymentSecure": "Pagamento sicuro",
+    "secureCards": "Paga con fiducia con le tue carte di credito sicure:",
+    "subscription": "Abbonamento illimitato agli strumenti Expert",
+    "subscriptionText": "* CV Expert : 4,90 € per 3 giorni, poi 29,90 € mensili per godere del nostro set di strumenti esperti per gestire il tuo CV e la tua carriera nel miglior modo possibile Puoi annullare l’abbonamento abbonamento in qualsiasi momento con un clic."
+  },
+  "payment": {
+    "title": "100% pagamento sicuro",
+    "amount": "Importo",
+    "cardType": "Tipo di carta ",
+    "cardHolder": "Nome intestatario",
+    "cardNumber": "Numero carta ",
+    "cardDate": "Data di scadenza ",
+    "cardCVV": "Codice di sicurezza",
+    "pay": "procéder au paiement",
+    "editCV": "Modifica",
+    "period3days": "Periodo di Prova 3 giorni",
+    "amountToPay": "Importo da Pagare",
+    "subscriptionText": "*Abbonamento e Sistema dei Crediti Al termine del periodo di prova di 3 giorni, tutti i mesi ti verranno addebitati 44,90€ per il tuo Abbonamento, che avrà durata indeterminata, salva la possibilità di recesso in ogni momento. Avrai a disposizione 100 crediti, che potrai utilizzare per richiederedocumenti aggiuntivi. Non sono affatto sicuro di questa traduzione!!! I crediti possono essere utilizzati per richiedere documenti aggiuntivi tra cui Certificato PRA (20), Iscrizione Camera di Commercio (10), Certificato Catastale (18), Certificato CRIF (10), Proteste di ricerca (12) e Bilancio dell'azienda (15).",
+    "cvFormat": "CV in formato PDF"
+  },
+  "errors": {
+    "emailRequired": "Richiesto l'invio di un'e-mail",
+    "emailNotValid": "L'email non è valida"
+  },
+  "paymentError": {
+    "title": "C'è stato un errore nei nostri sistemi! <br> Non siamo in grado di soddisfare la sua richiesta.",
+    "text": "Importante: Nessun pagamento è stato effettuato. Il nostro team è stato appena informato di questo errore tecnico. <br> Una soluzione sarà fornita al più presto possibile. Grazie per la vostra comprensione."
+  },
+  "zoom": "Ingrandisci",
   "pickCv": "Scegli",
+  "add": "Aggiungi",
+  "downloadPdf": "Scarica PDF",
+  "downloadCV": "Scaricare il CV",
+  "rights": "© 2016-2022. Tutti i diritti riservati.",
   "date_format": "it-IT"
 }

@@ -75,22 +75,22 @@ const routes = [
     component: Partnership,
   },
   {
-    path: "/i-nostri-valori",
+    path: `/${i18n.t('link.values')}`,
     name: "Benefits",
     component: Benefits,
   },
   {
-    path: "/aiuto",
+    path: `/${i18n.t('link.help')}`,
     name: "Help",
     component: Help,
   },
   {
-    path: "/site-map",
+    path: `/${i18n.t('link.siteMap')}`,
     name: "SiteMap",
     component: SiteMap,
   },
   {
-    path: "/secure-payment",
+    path: `/${i18n.t('link.securePayment')}`,
     name: "SecurePayment",
     component: SecurePayment,
   },

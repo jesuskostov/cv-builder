@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-12">
               <div class="d-flex flex-column align-items-center">
-                <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mb-5 mb-md-5">I nostri valori</h1>
+                <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mb-5 mb-md-5">{{ $t('ourValues.title') }}</h1>
               </div>
           </div>
         </div>

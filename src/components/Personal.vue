@@ -54,7 +54,7 @@
                     <div class="text-left">
                         <label for="profession" v-text="$t('personal_step.profession')" />
                         <br>
-                        <input type="text" class="w-100 form-control" name="profession" id="profession" v-model="personal.profession" v-validate="'alpha_spaces'">
+                        <input type="text" class="w-100 form-control" name="profession" id="profession" v-model="personal.profession" v-validate="''">
                         <span class="error">{{ errors.first('profession') }}</span>
                     </div>
                 </div>

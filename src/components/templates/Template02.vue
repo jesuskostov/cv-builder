@@ -49,7 +49,7 @@
         <!-- Profile -->
         <div v-if="accomp" class="mb-5">
           <h2 class="black" v-text="$t('cvPlaceholder.profile')" />
-          <p v-html="accomp" />
+          <p class="description" v-html="accomp" />
         </div>
         <!-- Work history -->
         <div v-if="workHistory.length && workHistory[0].jobTitle" class="mb-5">
@@ -69,7 +69,7 @@
         <div v-if="education.length && education[0].schoolName" class="mb-5">
           <h2 class="black mb-3" v-text="$t('cvPlaceholder.education')" />
           <div v-for="(school, i) in education" :key="i" class="mb-2">
-            <h3 class="subtitle">{{school.degree}} - {{school.schoolName}} <br> <span class="black">{{school.schoolLocation}}</span> <br v-if="school.schoolLocation"><span>{{school.date[0]}} - {{school.date[1]}}</span></h3>
+            <h3 class="subtitle">{{school.degree}} <span v-if="school.degree">-</span> {{school.schoolName}} <br> <span class="black">{{school.schoolLocation}}</span> <br v-if="school.schoolLocation"><span>{{school.date.from }} - {{ school.date.to }}</span></h3>
           </div>
         </div>
         <!-- Languages -->
@@ -197,7 +197,6 @@ export default {
   },
   mounted() {
     this.getPreviewHeight()
-    console.log(this.workHistory);
   },
 };
 </script>
@@ -290,7 +289,7 @@ h4 {
 .details {
   p {
     color: #fff;
-    font-size: 13px;
+    font-size: 12px;
     margin-bottom: 0;
   }
 }
@@ -332,6 +331,6 @@ h4 {
 
 p.description {
   font-size: 10px;
-  word-break: break-all;
+  word-break: break-word;
 }
 </style>

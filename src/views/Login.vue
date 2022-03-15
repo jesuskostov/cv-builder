@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-12">
               <div class="d-flex flex-column align-items-center">
-                <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mb-5 mb-md-5">Accedi</h1>
+                <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mb-5 mb-md-5">{{ $t('login.login') }}</h1>
               </div>
           </div>
         </div>
@@ -16,11 +16,11 @@
             <div class="col-md-5 mx-auto">
                 <div class="form">
                     <form @submit.prevent="login">
-                        <h2 class="mb-4"><b>Già iscritto ?</b></h2>
+                        <h2 class="mb-4"><b>{{ $t('login.registered') }}</b></h2>
                         <input type="text" class="form-control" placeholder="Email" required>
                         <input type="password" class="form-control" placeholder="Password" required>
                         <div class="text-center mt-4">
-                            <button type="submit" class="custom-btn px-5">Accesso</button>
+                            <button type="submit" class="custom-btn px-5">{{ $t('login.access') }}</button>
                         </div>
                     </form>
                 </div>

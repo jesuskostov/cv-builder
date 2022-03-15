@@ -10,8 +10,10 @@
         :close-on-select="true"
         :clear-on-select="false"
         :preserve-search="true"
+        :select-label="`${selectLangLabel.select[`${locale}`]}`"
+        :deselect-label="`${selectLangLabel.remove[`${locale}`]}`"
         @input="onChange"
-        placeholder="Scegliere"
+        :placeholder="$t('other_step.choose')"
         label="title"
         track-by="title"
       />
@@ -40,6 +42,18 @@ export default {
       licenses: [],
       predefined: [{ title: "Auto" }, { title: "Moto" }, { title: "Nessuno" }],
       selected: "",
+      selectLangLabel: {
+          select: {
+              'en': 'Press enter to select',
+              'it': 'Tasto Invio per scegliere',
+              'fr': 'Touche Entrée pour choisir'
+          },
+          remove: {
+              'en': 'Press enter to remove',
+              'it': 'Premi invio per rimuovere',
+              'fr': 'Appuyez sur Entrée pour supprimer'
+          }
+      },
     };
   },
   components: {
@@ -85,6 +99,11 @@ export default {
       },
       deep: true,
     },
+  },
+  computed: {
+    locale() {
+        return this.$store.state.domain.locale
+    }
   },
   mounted() {
     // Retrieving data from localStorage

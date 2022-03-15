@@ -17,7 +17,7 @@
           v-text="$t('nav_menu')[0]"
         />
         <button @click="routeTo('HowToWriteCv')" v-text="$t('nav_menu')[1]" />
-        <button @click="routeTo('Feedbacks')">Feedback</button>
+        <button @click="routeTo('Feedbacks')" v-text="$t('nav_menu')[3]" />
         <button @click="routeTo('Faq')">FAQ</button>
         <button @click="routeTo('Contact')" v-text="$t('nav_menu')[5]" />
         <button

@@ -26,7 +26,7 @@
                 <br>
                 <span v-if="work.date && work.date.from">{{work.date.from | toDate}} - </span>
                 <span v-if="work.date && work.date.to && !work.date.present">{{work.date.to | toDate}}</span>
-                <span v-if="work.date.present">Current work</span>
+                <span v-if="work.date.present">{{ $t('cvPlaceholder.currentWork') }}</span>
               </h3>
               <p class="description" v-html="work.description" />
             </div>
@@ -35,9 +35,9 @@
             <h2 class="title" v-text="$t('cvPlaceholder.education')" />
             <div v-for="(school, i) in education" :key="i">
               <h3 class="subtitle">
-                {{school.degree}}, {{school.schoolName}} - {{school.schoolLocation}}
+                {{school.degree}}<span v-if="school.degree">,</span> {{school.schoolName}} - {{school.schoolLocation}}
                 <br>
-                <span>{{school.date[0]}} - {{school.date[1]}}</span>
+                <span>{{school.date.from}} - {{school.date.to}}</span>
               </h3>
             </div>
           </div>

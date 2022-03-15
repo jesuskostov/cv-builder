@@ -8,8 +8,8 @@
     <div v-if="!onBuilder && !onBrowse" class="template">
       <swiper :options="swiperOption">
         <swiper-slide v-for="(item, i) in templates" :key="i" :virtualIndex="item" class="carouselItem">
-          <p class="text-center h5 mb-2">{{item.nickname}}</p>
-          <img :src="require(`@/assets/images/cv-templates/it/${item.thumb}`)" class="img-fluid" alt="">
+          <p class="text-center h5 mb-2">{{item[locale].nickname}}</p>
+          <img :src="require(`@/assets/images/cv-templates/${locale}/${item.thumb}`)" class="img-fluid" alt="">
           <button class="custom-btn mt-3" @click="onClick(i)" v-text="$t('pickCv')" />
         </swiper-slide>
       </swiper>
@@ -20,9 +20,9 @@
     <div v-if="onBrowse" class="container browse-template">
       <div class="row">
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-5" v-for="(item, i) in templates" :key="i" data-aos="fade-up" data-aos-duration="300" data-aos-ease="ease">
-          <p class="text-left mb-2">{{item.nickname}}</p>
+          <p class="text-left mb-2">{{item[locale].nickname}}</p>
           <div class="item">
-            <img @click="onClick(i)" :src="require(`@/assets/images/cv-templates/it/${item.thumb}`)" alt="">
+            <img @click="onClick(i)" :src="require(`@/assets/images/cv-templates/${locale}/${item.thumb}`)" alt="">
             <button class="custom-btn mt-3" @click="onClick(i)" v-text="$t('pickCv')" />
           </div>
         </div>
@@ -118,6 +118,9 @@ export default {
     },
     accomp() {
       return this.$store.state.accomplishments
+    },
+    locale() {
+      return this.$store.state.domain.locale
     }
   },
   mounted() {    

@@ -8,15 +8,9 @@
                 <h1 data-aos="fade-up" data-aos-ease="ease" data-aos-duration="1500" class="mb-4 mb-md-5" v-text="$t('feedback.hero.title')" />
                 <div class="price-box">
                 <div class="text-left mr-4">
-                    <p v-if="offer === 'free'" class="price">14 CV IN UNA VOLTA SOLA, 10 MINUTI!!!</p>
-                    <p v-if="offer === 'paid'" class="price">
-                      LA MIGLIORE OFFERTA DI CV:<br>
-                      CONFRONTA I PREZZI!!!
-                    </p>
-                    <p v-if="offer === 'free'" class="text">
-                      In 10 minuti puoi avere 14 CV in una volta sola!<br>
-                      Vari modelli per vari datori di lavoro!
-                    </p>
+                  <p v-if="offer === 'free'" class="price" v-text="$t('price.free')" />
+                  <p v-if="offer === 'paid'" class="price" v-html="$t('price.paid')" />
+                  <p v-if="offer === 'free'" class="text" v-html="$t('price.free2')" />
                 </div>
                 <router-link :to="{name: 'BrowseTemplates'}" class="btn" v-text="$t('button.start')" />
                 </div>

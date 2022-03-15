@@ -9,7 +9,7 @@
         ><span v-if="step == 1">1</span
         ><img v-else src="../assets/images/step-ok.svg" alt="ok icon"
       /></span>
-      Informazioni Personali <span class="line"></span>
+      {{ $t('navSteps.personalInfo') }} <span class="line"></span>
     </div>
     <div
       @click="goTo(2)"
@@ -20,7 +20,7 @@
         ><span v-if="step <= 2">2</span
         ><img v-else src="../assets/images/step-ok.svg" alt="ok icon"
       /></span>
-      Esperienza Lavorativa <span class="line"></span>
+      {{ $t('navSteps.workingExp') }} <span class="line"></span>
     </div>
     <div
       @click="goTo(3)"
@@ -31,7 +31,7 @@
         ><span v-if="step <= 3">3</span
         ><img v-else src="../assets/images/step-ok.svg" alt="ok icon"
       /></span>
-      Istruzione e Competenze <span class="line"></span>
+      {{ $t('navSteps.educationAndSkills') }} <span class="line"></span>
     </div>
     <div
       @click="goTo(4)"
@@ -42,7 +42,7 @@
         ><span v-if="step <= 4">4</span
         ><img v-else src="../assets/images/step-ok.svg" alt="ok icon"
       /></span>
-      Altre Informazioni <span class="line"></span>
+      {{ $t('navSteps.otherInfo') }} <span class="line"></span>
     </div>
     <div
       @click="goTo(5)"
@@ -53,7 +53,7 @@
         ><span v-if="step <= 5">5</span
         ><img v-else src="../assets/images/step-ok.svg" alt="ok icon"
       /></span>
-      Riepilogo
+      {{ $t('navSteps.summary') }}
     </div>
   </div>
 </template>

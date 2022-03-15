@@ -1,407 +1,481 @@
 {
+  "hero": {
+    "title": "IT Create a CV that Recruiters will Love",
+    "benefits": {
+      "0": "Career Optimised CV Templates",
+      "1": "Edit your CV on any device",
+      "2": "No software to download",
+      "3": "Professional CV",
+      "4": "Download in PDF"
+    }
+  },
+  "sectionTitles": {
+    "testimonies": "What our clients say:",
+    "steps": "Create Your Perfect CV within few minutes:",
+    "carousel": {
+      "title": "Make a CV that stands out",
+      "text": "Increase your chance of getting your dream job by creating your best CV ever! <br> Our professional tools have been forged for this only purpose: <br> make your application stand out!"
+    },
+    "why": {
+      "title": "Why Using Our Unique Tools?",
+      "text": "With our uniquely forged set of tools, your CV will uniquely stand out from the crowd!<br> Smart features to personalise easily and fastly your CV on desktop and mobile.<br> And download your PDF in less than 5 minutes!"
+    },
+    "change": "Change Your CV: Change Your Life!"
+  },
+  "steps": {
+    "step1": {
+      "title": "Fill Your Information",
+      "text": "Choose between our collection of professional CV templates, and simply fill in the blanks."
+    },
+    "step2": {
+      "title": "Customise your CV",
+      "text": "Swap in one click between our templates during your CV creation to pick the best one!"
+    },
+    "step3": {
+      "title": "Download your CV in PDF format",
+      "text": "Once completed you can download your CV and immediately send it to recruiters!"
+    }
+  },
+  "price": {
+    "free": "14 CV AT ONCE, 10 MINUTES!!!",
+    "free2": "Create 1, get 14 efficient CV all at once!<br>And in only 10 minutes!!!",
+    "paid": "WOW: 14 CV in 10 minutes <br> BEST PRICE: ONLY 4,90 €!!!"
+  },
+  "optimization": {
+    "title": "Only 2% of resumes make it past the first round.<br>Be in the top 2%!",
+    "text": "Our Unique CV Tools will help you take your career search to new heights with an efficient, optimized and stylish CV."
+  },
+  "browseTemplatePage": {
+    "title": "The only website which offers you all CV all at once!",
+    "text": "You make your CV and you receive it in PDF format with ALL THESE TEMPLATES!<br> You can alternate your CV template during its creation in one click!<br> Easy. Fast. Efficient."
+  },
+  "howToWriteCV": {
+    "title": "How to write your CV well",
+    "information": {
+      "0": {
+        "title": "What is a CV?",
+        "text": "<b>Your CV is your personal presentation to the prospective employer.</b> It needs to represent your professional profile as best as is possible by <b>marketing you as a new asset for the company.</b> It must be individual and customised to the vacancy you’re applying for and overall it must be convincing, because that is your ultimate aim – to convince the employer that you are the right candidate to invite for an interview!"
+      },
+      "1": {
+        "title": "How to do a CV?",
+        "text": "When it comes to getting down to the basics of how to write a curriculum vitae, there are several elements that each candidate must bear in mind.",
+        "ul": {
+          "0": "<b>A CV or curriculum vitae, often referred to as a resume in the US</b>, is defined as an account of an <b>applicant’s work experience, education and qualifications</b> sent when applying for a job. This is a basic definition for something that must essentially provoke in the reader an urge to want to meet you, therefore learning <b>how to write a CV</b> for a job application must also <b>embrace the notion of writing a story to intrigue the reader</b>, in this case a hiring manager.",
+          "1": "When a candidate decides <b>how to prepare a CV for their job search,</b> he or she <b>must begin by making a plan</b> which encompasses their professional achievements, work history, education, qualities and skills that they can bring to the position and any extra qualifications that make them a suitable candidate.",
+          "2": "This <b>information needs to then be presented in a descriptive but professional manner</b> which showcases the strengths of each individual and their aptitude for the vacancy. You must <b>approach CV writing from the perspective of your audience</b> and treat each CV as an individual and new application, not copying and pasting the same material for every different job vacancy available.",
+          "3": "<b>Research the company and the position,</b> read up on what your duties would be and think about how you would tackle problems that might arise or how your accomplishments and skills would benefit the company you’d like to work for."
+        }
+      },
+      "2": {
+        "title": "CV layout?",
+        "text": "It’s crucial to <b>think carefully about your CV format</b> when you write it. If you choose to do so from scratch you’ll have to plan carefully how to place each section, creating a layout which is easy on the eyes, making good use of white space and not cluttering the page with different fonts, sizes and typefaces. <br><br> It is <b>essential to make a CV with a well-structured format</b> that is visually pleasing and will attract the reader to the important information.br <br><br> <b>Readability is an element to be considered when structuring a CV.</b> This means maintaining an easy-to-read document which is well constructed and <b>using a layout that is comfortable for the employer to navigate</b> to find the relevant information. <br><br> When considering the <b>CV structure</b>, candidates should be mindful of the <b>margins and white space on the page</b> as well as <b>font sizing and types</b>, never using more than 2 fonts in the whole document. Also <b></b> should not be overused or the CV becomes overcrowded. <br><br> The possibility we recommend you to <b>ensure an HR-approved CV layout</b> is by  <b>using our unique tools and templates</b> which are ready-made and will save you tremendous time and energy. Our CV templates simply allow you to introduce your information so as to avoid the need to learn about the best designs for your preferred position and in what order you should place each section, etc. <br> <b>Our unique tools and templates are simply the most efficient available !</b>"
+      },
+      "3": {
+        "title": "How long should my CV be?",
+        "text": "<p>When it comes to deciding on the perfect length for a CV, employers and HR experts differ greatly as it can depend on the applicant, their level of experience and even the industry or role they&rsquo;re applying for.</p> <p>However, as a general rule, the ideal length of a CV is 1-2 A4 pages to contain all of the relevant information you need to include in your job application</p> <p>There are those who say that even 3 pages is acceptable in many cases but as relevance is the key to a successful CV, if you find you are padding out sections or adding information that is neither pertinent or useful, you should stick to the universal less is more rule!</p> <p>In certain professions, it is likely that the job application requires extra information such as a portfolio in artistic pursuits or academic occupations however this information can also be added as a separate attachment to the curriculum vitae and need not be an integral part taking up valuable CV space.</p> <p>It is advisable always to maintain each section as brief and clear as possible without missing out vital details or keywords whilst avoiding long paragraphs or endless lists as these often put employers off.</p> <p>If there is a specific achievement or experience you wish to embellish on, you can use your professional cover letter which should always accompany your job application to do so. <br><br> In a cover letter the candidate has the opportunity to give further explanations or details which could convince the hiring manager to add your name to the interview list.</p>"
+      },
+      "4": {
+        "title": "What not to include on a CV?",
+        "text": "Once you’ve learnt how to write a good CV with our unique tools and templates you still need to make sure you don’t make any critical errors which is when you must consider what NOT to include in a CV before sending off your application.",
+        "text2": "<p>Any&nbsp;<strong>additional information</strong>&nbsp;that a candidate sees as&nbsp;<strong>significant to include in a CV</strong>&nbsp;but doesn&rsquo;t fit or it requires further elaboration, can be&nbsp;<strong>added to a cover letter</strong>&nbsp;where applicants can explain in more details the fundamental reasons why their experience and qualifications make them the ideal candidate.<br><br><b>We wish you every success in your job search!</b></p>",
+        "ul": {
+          "0": "In a European CV you may find it is common to&nbsp;<strong>include a photo</strong>&nbsp;however this is&nbsp;<strong>strictly a NO-NO in a British, American or Canadian CV.</strong>",
+          "1": "Also in a CV for some companies, there is<strong>&nbsp;no need to include any personal details</strong>&nbsp;such as date of birth, age, marital status etc. as this can be seen as discriminatory. Simply check with your potential employer their internal regulations about this point.",
+          "2": "You are&nbsp;<strong>only recommended to include your citizenship if you require a working visa</strong>&nbsp;which is connected to your national ID.",
+          "3": "Try to<strong>&nbsp;steer clear of using clich&eacute; phrases</strong>&nbsp;and certain words that have been overdone in applications in the past.",
+          "4": "Also due to the importance of maintaining relevant information throughout, it is vital that you<strong>&nbsp;remove any unnecessary details or qualifications, skills or experience</strong>&nbsp;which do not relate to the position or provide evidence of your aptitude for the role.",
+          "5": "Finally, as CVs evolve and the HR community changes, you are advised not to include&nbsp;references on your CV&nbsp;at any point unless strictly requested by the job vacancy. In some cases candidates can choose to add a line at the end of the CV to mention that &lsquo;references are available on request&rsquo;."
+        }
+      }
+    }
+  },
+  "homeFeedback": {
+    "0": {
+      "name": "Bernardo Buontalenti",
+      "text": "This was the best CV helper ever! Nothing but job offers. It exceeded my expectations. I highly recommend it!"
+    },
+    "1": {
+      "name": "Eva C***",
+      "text": "Very easy to use service. Multiple options for templates. Fill in white in many sections and everything is already preformatted. Flawless! I will use this service again."
+    },
+    "2": {
+      "name": "Giulio Parigi",
+      "text": "I FINALLY have a professional looking resume !!!!!! This has saved me so many tears! Effortlessly. WOW !!!!! THANK YOU VERY MUCH!!!!!!"
+    }
+  },
+  "feedback": {
     "hero": {
-        "title": "IT Create a CV that Recruiters will Love",
-        "benefits": {
-            "0": "Career Optimised CV Templates",
-            "1": "Edit your CV on any device",
-            "2": "No software to download",
-            "3": "Professional CV",
-            "4": "Download in PDF"
-        }
+      "title": "Create a CV that Recruiters will Love"
     },
-    "sectionTitles": {
-        "testimonies": "What our clients say:",
-        "steps": "Create Your Perfect CV within few minutes:",
-        "carousel": {
-            "title": "Make a CV that stands out",
-            "text": "Increase your chance of getting your dream job by creating your best CV ever! <br> Our professional tools have been forged for this only purpose: <br> make your application stand out!"
-        },
-        "why": {
-            "title": "Why Using Our Unique Tools?",
-            "text": "With our uniquely forged set of tools, your CV will uniquely stand out from the crowd!<br> Smart features to personalise easily and fastly your CV on desktop and mobile.<br> And download your PDF in less than 5 minutes!"
-        },
-        "change": "Change Your CV: Change Your Life!"
-    },
-    "steps": {
-        "step1": {
-            "title": "Fill Your Information",
-            "text": "Choose between our collection of professional CV templates, and simply fill in the blanks."
-        },
-        "step2": {
-            "title": "Customise your CV",
-            "text": "Swap in one click between our templates during your CV creation to pick the best one!"
-        },
-        "step3": {
-            "title": "Download your CV in PDF format",
-            "text": "Once completed you can download your CV and immediately send it to recruiters!"
-        }
-    },
-    "price": {
-        "free": "14 CV AT ONCE, 10 MINUTES!!!",
-        "free2": "Create 1, get 14 efficient CV all at once!<br>And in only 10 minutes!!!",
-        "paid": "WOW: 14 CV in 10 minutes <br> BEST PRICE: ONLY 4,90 €!!!"
-    },
-    "optimization": {
-        "title": "Only 2% of resumes make it past the first round.<br>Be in the top 2%!",
-        "text": "Our Unique CV Tools will help you take your career search to new heights with an efficient, optimized and stylish CV."
-    },
-    "browseTemplatePage": {
-        "title": "The only website which offers you all CV all at once!",
-        "text": "You make your CV and you receive it in PDF format with ALL THESE TEMPLATES!<br> You can alternate your CV template during its creation in one click!<br> Easy. Fast. Efficient."
-    },
-    "howToWriteCV": {
-        "title": "How to write your CV well",
-        "information": {
-            "0": {
-                "title": "What is a CV?",
-                "text": "<b>Your CV is your personal presentation to the prospective employer.</b> It needs to represent your professional profile as best as is possible by <b>marketing you as a new asset for the company.</b> It must be individual and customised to the vacancy you’re applying for and overall it must be convincing, because that is your ultimate aim – to convince the employer that you are the right candidate to invite for an interview!"
-            },
-            "1": {
-                "title": "How to do a CV?",
-                "text": "When it comes to getting down to the basics of how to write a curriculum vitae, there are several elements that each candidate must bear in mind.",
-                "ul": {
-                    "0": "<b>A CV or curriculum vitae, often referred to as a resume in the US</b>, is defined as an account of an <b>applicant’s work experience, education and qualifications</b> sent when applying for a job. This is a basic definition for something that must essentially provoke in the reader an urge to want to meet you, therefore learning <b>how to write a CV</b> for a job application must also <b>embrace the notion of writing a story to intrigue the reader</b>, in this case a hiring manager.",
-                    "1": "When a candidate decides <b>how to prepare a CV for their job search,</b> he or she <b>must begin by making a plan</b> which encompasses their professional achievements, work history, education, qualities and skills that they can bring to the position and any extra qualifications that make them a suitable candidate.",
-                    "2": "This <b>information needs to then be presented in a descriptive but professional manner</b> which showcases the strengths of each individual and their aptitude for the vacancy. You must <b>approach CV writing from the perspective of your audience</b> and treat each CV as an individual and new application, not copying and pasting the same material for every different job vacancy available.",
-                    "3": "<b>Research the company and the position,</b> read up on what your duties would be and think about how you would tackle problems that might arise or how your accomplishments and skills would benefit the company you’d like to work for."
-                }
-            },
-            "2": {
-                "title": "CV layout?",
-                "text": "It’s crucial to <b>think carefully about your CV format</b> when you write it. If you choose to do so from scratch you’ll have to plan carefully how to place each section, creating a layout which is easy on the eyes, making good use of white space and not cluttering the page with different fonts, sizes and typefaces. <br><br> It is <b>essential to make a CV with a well-structured format</b> that is visually pleasing and will attract the reader to the important information.br <br><br> <b>Readability is an element to be considered when structuring a CV.</b> This means maintaining an easy-to-read document which is well constructed and <b>using a layout that is comfortable for the employer to navigate</b> to find the relevant information. <br><br> When considering the <b>CV structure</b>, candidates should be mindful of the <b>margins and white space on the page</b> as well as <b>font sizing and types</b>, never using more than 2 fonts in the whole document. Also <b></b> should not be overused or the CV becomes overcrowded. <br><br> The possibility we recommend you to <b>ensure an HR-approved CV layout</b> is by  <b>using our unique tools and templates</b> which are ready-made and will save you tremendous time and energy. Our CV templates simply allow you to introduce your information so as to avoid the need to learn about the best designs for your preferred position and in what order you should place each section, etc. <br> <b>Our unique tools and templates are simply the most efficient available !</b>"
-            },
-            "3": {
-                "title": "How long should my CV be?",
-                "text": "<p>When it comes to deciding on the perfect length for a CV, employers and HR experts differ greatly as it can depend on the applicant, their level of experience and even the industry or role they&rsquo;re applying for.</p> <p>However, as a general rule, the ideal length of a CV is 1-2 A4 pages to contain all of the relevant information you need to include in your job application</p> <p>There are those who say that even 3 pages is acceptable in many cases but as relevance is the key to a successful CV, if you find you are padding out sections or adding information that is neither pertinent or useful, you should stick to the universal less is more rule!</p> <p>In certain professions, it is likely that the job application requires extra information such as a portfolio in artistic pursuits or academic occupations however this information can also be added as a separate attachment to the curriculum vitae and need not be an integral part taking up valuable CV space.</p> <p>It is advisable always to maintain each section as brief and clear as possible without missing out vital details or keywords whilst avoiding long paragraphs or endless lists as these often put employers off.</p> <p>If there is a specific achievement or experience you wish to embellish on, you can use your professional cover letter which should always accompany your job application to do so. <br><br> In a cover letter the candidate has the opportunity to give further explanations or details which could convince the hiring manager to add your name to the interview list.</p>"
-            },
-            "4": {
-                "title": "What not to include on a CV?",
-                "text": "Once you’ve learnt how to write a good CV with our unique tools and templates you still need to make sure you don’t make any critical errors which is when you must consider what NOT to include in a CV before sending off your application.",
-                "text2": "<p>Any&nbsp;<strong>additional information</strong>&nbsp;that a candidate sees as&nbsp;<strong>significant to include in a CV</strong>&nbsp;but doesn&rsquo;t fit or it requires further elaboration, can be&nbsp;<strong>added to a cover letter</strong>&nbsp;where applicants can explain in more details the fundamental reasons why their experience and qualifications make them the ideal candidate.<br><br><b>We wish you every success in your job search!</b></p>",
-                "ul": {
-                    "0": "In a European CV you may find it is common to&nbsp;<strong>include a photo</strong>&nbsp;however this is&nbsp;<strong>strictly a NO-NO in a British, American or Canadian CV.</strong>",
-                    "1": "Also in a CV for some companies, there is<strong>&nbsp;no need to include any personal details</strong>&nbsp;such as date of birth, age, marital status etc. as this can be seen as discriminatory. Simply check with your potential employer their internal regulations about this point.",
-                    "2": "You are&nbsp;<strong>only recommended to include your citizenship if you require a working visa</strong>&nbsp;which is connected to your national ID.",
-                    "3": "Try to<strong>&nbsp;steer clear of using clich&eacute; phrases</strong>&nbsp;and certain words that have been overdone in applications in the past.",
-                    "4": "Also due to the importance of maintaining relevant information throughout, it is vital that you<strong>&nbsp;remove any unnecessary details or qualifications, skills or experience</strong>&nbsp;which do not relate to the position or provide evidence of your aptitude for the role.",
-                    "5": "Finally, as CVs evolve and the HR community changes, you are advised not to include&nbsp;references on your CV&nbsp;at any point unless strictly requested by the job vacancy. In some cases candidates can choose to add a line at the end of the CV to mention that &lsquo;references are available on request&rsquo;."
-                }
-            }
-        }
-    },
-    "feedback": {
-        "hero": {
-            "title": "Create a CV that Recruiters will Love"
-        },
-        "title": "What our clients say:",
+    "title": "What our clients say:",
+    "list": {
+      "0": {
+        "name": "Roberto Lombardi",
+        "text": "Good tool with many templates to choose from."
+      },
+      "1": {
+        "name": "Sarah Bagni",
+        "text": "Love it! Great interface! Thumbs up for ease of use and great selection of templates and designs. I really liked to pick my own colors."
+      },
+      "2": {
+        "name": "Giovanni L***",
+        "text": "Easy to use, affordable and reliable. Great template to get you started with your CV at whatever level you are at your career."
+      },
+      "3": {
+        "name": "Guilia Ricci",
+        "text": "Very easy to use and has very good structure that leads you along the way of creating the perfect resume. Was surprised it was already finished!"
+      },
+      "4": {
+        "name": "Giuseppe P***",
+        "text": "Very Seamless, love it!"
+      },
+      "5": {
+        "name": "Raffaello Petri",
+        "text": "This CV builder is simply brilliant! I was very pleased by how helpful this is. I was able to do it in a short period of time and easily add and make changes whenever I wanted. And the swap template feature is really a super cool feature!"
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": {
+      "0": {
+        "title": "How does it work?",
+        "text": "",
         "list": {
-            "0": {
-                "name": "Roberto Lombardi",
-                "text": "Good tool with many templates to choose from."
-            },
-            "1": {
-                "name": "Sarah Bagni",
-                "text": "Love it! Great interface! Thumbs up for ease of use and great selection of templates and designs. I really liked to pick my own colors."
-            },
-            "2": {
-                "name": "Giovanni L***",
-                "text": "Easy to use, affordable and reliable. Great template to get you started with your CV at whatever level you are at your career."
-            },
-            "3": {
-                "name": "Guilia Ricci",
-                "text": "Very easy to use and has very good structure that leads you along the way of creating the perfect resume. Was surprised it was already finished!"
-            },
-            "4": {
-                "name": "Giuseppe P***",
-                "text": "Very Seamless, love it!"
-            },
-            "5": {
-                "name": "Raffaello Petri",
-                "text": "This CV builder is simply brilliant! I was very pleased by how helpful this is. I was able to do it in a short period of time and easily add and make changes whenever I wanted. And the swap template feature is really a super cool feature!"
-            }
+          "0": "Choose a template",
+          "1": "Fill the data",
+          "2": "Once completed swap between templates to pick the very best one",
+          "3": "Download the CV in PDF format.",
+          "4": "As simple as that!"
         }
+      },
+      "1": {
+        "title": "How long does it take?",
+        "text": "Minutes! <br> Really, minutes! <br> With our unique tools, you will create your efficient CV in no time!",
+        "list": {}
+      },
+      "2": {
+        "title": "Can I make a break during the process?",
+        "text": "Yes, we store your data along the way. <br> You can take the time YOU WANT to search for additional data or edit it peacefully. <br> You can even start today and finish it tomorrow, all your data will be saved to offer you the best flexibility.",
+        "list": {}
+      },
+      "3": {
+        "title": "Can I easily change my template?",
+        "text": "Yes! <br> At any moment, you can swap for any of our other templates. <br> Use our tools to its fullest, try all the templates easily!",
+        "list": {}
+      },
+      "4": {
+        "title": "Can I make my CV on my mobile phone?",
+        "text": "Yes! Lots of yesses, we know! ;) <br> Our unique tools have been developed for all the available appliances: smartphones, tablets, <br> iPad, Microsoft Surfaces, desktops and laptops. <br> Enjoy our global technical approach!",
+        "list": {}
+      },
+      "5": {
+        "title": "If I have a LinkedIn profile, do I still need to make a CV?",
+        "text": "Yes! Unfortunately! ;) <br> LinkedIn is a useful tool, but it doesn’t offer the same value during the recruitment process. <br> Whether applying via LinkedIn or other job vacancy platforms, recruiters will still ask for a digital copy of your work history, education, skills in one place to be able to refer to it during the selection process. <br> LinkedIn is simply a solid plus to add in your CV, this is why all our templates allow you to add your LinkedIn account.",
+        "list": {}
+      },
+      "6": {
+        "title": "Are your tools safe?",
+        "text": "Yes, our tools have been tested on all platforms with success! <br> They are secures with the SSL https encrypted protocol.",
+        "list": {}
+      },
+      "7": {
+        "title": "Are your tools private?",
+        "text": "Yes, our tools are 100% private. <br> Your personal data is strictly protected. <br> No one can consult them!",
+        "list": {}
+      },
+      "8": {
+        "title": "Do I need to layout myself my CV?",
+        "text": "No! <br> We have done all the work for you! <br> Our professionally designed CV are following all the latest trends in the recruitment industry! Pick the one you prefer, fill your data, and download your PDF. <br> Yes, it’s that easy!",
+        "list": {}
+      },
+      "9": {
+        "title": "How long should your CV be?",
+        "text": "Usually employers prefer one page over two pages. <br> However, as long as your CV is clear and easy to read, you can include two pages. <br> If your work experience is limited to fewer than 10 years, we would recommend you to use only one page. In this specific case, less is more but only with relevant and efficient info.",
+        "list": {}
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact us",
+    "fields": {
+      "name": "Name",
+      "surname": "Surname",
+      "email": "Email",
+      "subject": "Subject"
+    }
+  },
+  "button": {
+    "start": "Get Started Now",
+    "start2": "Get Started",
+    "viewAll": "View all",
+    "faq": "Go to FAQ page",
+    "contact": "Send"
+  },
+  "nav_menu": {
+    "0": "Browse templates",
+    "1": "How to write CV",
+    "3": "Feedback",
+    "4": "FAQ",
+    "5": "Contact us",
+    "6": "Get started"
+  },
+  "footer_menu": {
+    "0": "Get Started",
+    "1": "How to write CV",
+    "2": "Browse Templates",
+    "3": "Feedback",
+    "4": "FAQ",
+    "5": "Partnership",
+    "6": "Secure Payment",
+    "7": "Privacy Policy",
+    "8": "Terms of Service",
+    "9": "Cookie Policy",
+    "10": "Note Legali"
+  },
+  "personal_step": {
+    "title": "Personal information",
+    "text": "What's the best way a company has to contact you? We suggest you include an email and phone number. Even a photo wouldn't be bad.",
+    "addPhoto": "Add photo",
+    "name": "Name",
+    "surname": "Surname",
+    "birthday": "Birthday",
+    "profession": "Profession",
+    "family": "Family",
+    "single": "Not married",
+    "notSingle": "Married",
+    "familySelectText": "Select your family status",
+    "sex": "Sex",
+    "sexText": "Select your gender",
+    "male": "Male",
+    "female": "Female",
+    "notIndicate": "Do not indicate",
+    "city": "City",
+    "zipCode": "Zip code",
+    "country": "Country",
+    "nationality": "Nationality",
+    "fullAddress": "Full address",
+    "phoneNumber": "Phone number",
+    "linkedin": "Linkedin account (optional)",
+    "button": "Next: Work history"
+  },
+  "work_history": {
+    "title": "Work history",
+    "text": "Employers scan your resume for 5 seconds to decide if you are suitable. We suggest that you only add jobs that make a great impression.",
+    "jobTitle": "Job title",
+    "employer": "Employer",
+    "from": "From",
+    "to": "To",
+    "workDescription": "Description",
+    "currentWork": "I currently work here",
+    "addJob": "Add job",
+    "addAnotherJob": "Add another job",
+    "goBack": "Go back",
+    "button": "Next: Education & Skills"
+  },
+  "school_history": {
+    "title": "Education and Skills",
+    "subTitle": "Education",
+    "text": "Employers quickly scan the section on education. We take care of the formatting so that it is easy to find. Include every school, even if you are still attending or have not graduated.",
+    "schoolName": "School name",
+    "schoolCity": "School city",
+    "degree": "Degree",
+    "from": "From",
+    "to": "To",
+    "description": "Description",
+    "addSchool": "Add school",
+    "addAnotherSchool": "Add another school",
+    "goBack": "Go back",
+    "button": "Next: other"
+  },
+  "skills": {
+    "title": "Skills",
+    "text": "Employers scan skills for relevant keywords. We will help you choose the best ones."
+  },
+  "other_step": {
+    "title": "Other",
+    "nativeLang": "Native language:",
+    "spokenLang": "Spoken language:",
+    "drivingLicense": "Driving license:",
+    "selectLevel": "Select level",
+    "choose": "Choose",
+    "car": "Car",
+    "moto": "Motorcycle",
+    "none": "None",
+    "interests": "Interests",
+    "accomplishments": "Accomplishments",
+    "goBack": "Go back",
+    "button": "Next: Summary"
+  },
+  "endPreview": {
+    "templateConfig": "Template configuration",
+    "templateName": "Template name:",
+    "changeCv": "Change template",
+    "summarySection": "Summary",
+    "personal": "Personal",
+    "workHistory": "Work history",
+    "educationSkills": "Education & Skills",
+    "other": "Other"
+  },
+  "cvPlaceholder": {
+    "personalInfo": "Personal Information",
+    "personal": "Personal",
+    "personalSkills": "personal skills",
+    "name": "Your name",
+    "nameAndSurname": "Replace with First name(s) Surname(s)",
+    "address": "Replace with house number, street name, city, postcode, country",
+    "phoneNumb": "Replace with telephone number",
+    "email": "E-mail address",
+    "sex": "sex",
+    "enterSex": "Enter sex",
+    "birhtday": "Date of Birth",
+    "nationality": "Nationality",
+    "work": "Work experience",
+    "educationAndTraning": "Education and Traning",
+    "educationAndSkills": "Education and Skills",
+    "skills": "skills",
+    "motherLang": "Native language",
+    "motherLang2": "Replace with native language (s)",
+    "otherLang": "Other languages",
+    "drivingLicense": "Driving license",
+    "understanding": "Understanding",
+    "speaking": "Speaking",
+    "writing": "Writing",
+    "listening": "Listening",
+    "reading": "Reading",
+    "spokenInteraction": "Spoken interaction",
+    "spokenProduction": "Spoken production",
+    "familyStatus": "Family status",
+    "details": "Details",
+    "profile": "Profile",
+    "education": "Education",
+    "languages": "Languages",
+    "socialProf": "Social profile",
+    "currentWork": "Current work"
+  },
+  "link": {
+    "browseTemplate": "browseTemplate",
+    "howToWriteCv": "howToWriteCv",
+    "payment": "payment",
+    "plan": "plan",
+    "error": "error",
+    "feedback": "feedback",
+    "faq": "faq",
+    "partnership": "partnership",
+    "contact": "contact",
+    "login": "login",
+    "values": "our-values"
+  },
+  "ourValues": {
+    "title": "Our values",
+    "quality": {
+      "title": "Quality",
+      "description": "<p>The quality of the service is the basis of our corporate mission.</p> <p>This is why we choose to collaborate only with the most reliable professionals in the sector.</p> <p>Our goal is to improve your relationship with the administration, and to allow you to obtain the documents you need in the most efficient way possible.</p>"
     },
-    "faq": {
-        "title": "Frequently Asked Questions",
-        "questions": {
-            "0": {
-                "title": "How does it work?",
-                "text": "",
-                "list": {
-                    "0": "Choose a template",
-                    "1": "Fill the data",
-                    "2": "Once completed swap between templates to pick the very best one",
-                    "3": "Download the CV in PDF format.",
-                    "4": "As simple as that!"
-                }
-            },
-            "1": {
-                "title": "How long does it take?",
-                "text": "Minutes! <br> Really, minutes! <br> With our unique tools, you will create your efficient CV in no time!",
-                "list": {}
-            },
-            "2": {
-                "title": "Can I make a break during the process?",
-                "text": "Yes, we store your data along the way. <br> You can take the time YOU WANT to search for additional data or edit it peacefully. <br> You can even start today and finish it tomorrow, all your data will be saved to offer you the best flexibility.",
-                "list": {}
-            },
-            "3": {
-                "title": "Can I easily change my template?",
-                "text": "Yes! <br> At any moment, you can swap for any of our other templates. <br> Use our tools to its fullest, try all the templates easily!",
-                "list": {}
-            },
-            "4": {
-                "title": "Can I make my CV on my mobile phone?",
-                "text": "Yes! Lots of yesses, we know! ;) <br> Our unique tools have been developed for all the available appliances: smartphones, tablets, <br> iPad, Microsoft Surfaces, desktops and laptops. <br> Enjoy our global technical approach!",
-                "list": {}
-            },
-            "5": {
-                "title": "If I have a LinkedIn profile, do I still need to make a CV?",
-                "text": "Yes! Unfortunately! ;) <br> LinkedIn is a useful tool, but it doesn’t offer the same value during the recruitment process. <br> Whether applying via LinkedIn or other job vacancy platforms, recruiters will still ask for a digital copy of your work history, education, skills in one place to be able to refer to it during the selection process. <br> LinkedIn is simply a solid plus to add in your CV, this is why all our templates allow you to add your LinkedIn account.",
-                "list": {}
-            },
-            "6": {
-                "title": "Are your tools safe?",
-                "text": "Yes, our tools have been tested on all platforms with success! <br> They are secures with the SSL https encrypted protocol.",
-                "list": {}
-            },
-            "7": {
-                "title": "Are your tools private?",
-                "text": "Yes, our tools are 100% private. <br> Your personal data is strictly protected. <br> No one can consult them!",
-                "list": {}
-            },
-            "8": {
-                "title": "Do I need to layout myself my CV?",
-                "text": "No! <br> We have done all the work for you! <br> Our professionally designed CV are following all the latest trends in the recruitment industry! Pick the one you prefer, fill your data, and download your PDF. <br> Yes, it’s that easy!",
-                "list": {}
-            },
-            "9": {
-                "title": "How long should your CV be?",
-                "text": "Usually employers prefer one page over two pages. <br> However, as long as your CV is clear and easy to read, you can include two pages. <br> If your work experience is limited to fewer than 10 years, we would recommend you to use only one page. In this specific case, less is more but only with relevant and efficient info.",
-                "list": {}
-            }
-        }
+    "efficiency": {
+      "title": "Efficiency",
+      "description": "<p>Our team of efficient and rigorous collaborators advise, guide and help you efficiently and quickly.</p> <p>The goal is simple: to be the absolute reference of the administrative support available in Italy.</p> <p>The efficiency that distinguishes us allows us to offer our services to everyone at an affordable price.</p>"
     },
-    "contact": {
-        "title": "Contact us",
-        "fields": {
-            "name": "Name",
-            "surname": "Surname",
-            "email": "Email",
-            "subject": "Subject"
-        }
+    "precision": {
+      "title": "Precision",
+      "description": "<p>Meticulousness and precision are the basis of our approach.</p> <p>Tutorials and guides created by us are an example of our commitment in this sense: precise information expressed in a simple way for each type of customer.</p> <p>Thanks to our meticulousness we offer you a product always at the highest quality standards.</p>"
     },
-    "button": {
-        "start": "Get Started Now",
-        "start2": "Get Started",
-        "viewAll": "View all",
-        "faq": "Go to FAQ page",
-        "contact": "Send"
+    "safety": {
+      "title": "Safety",
+      "description": "<p>Our team of IT security specialists allows us to protect your personal data (surnames, coordinates, emails, various information) thanks to our 100% secure websites (256-bit SSL encryption technology)</p> <p>All your data is protected, being arranged on different servers.</p> <p>No service interruptions, 7 days a week, every day of the year.</p>"
     },
-    "nav_menu": {
-        "0": "Browse templates",
-        "1": "How to write CV",
-        "3": "Feedback",
-        "4": "FAQ",
-        "5": "Contact us",
-        "6": "Get started"
+    "customerSatisfaction": {
+      "title": "Customer Satisfaction",
+      "description": "<p>We are at your disposal, to offer you a service that is always at the highest levels.</p> <p>We want to offer you the highest quality experience in all areas.</p> <p>You deserve excellent customer service.</p>"
     },
-    "footer_menu": {
-        "0": "Get Started",
-        "1": "How to write CV",
-        "2": "Browse Templates",
-        "3": "Feedback",
-        "4": "FAQ",
-        "5": "Partnership",
-        "6": "Secure Payment",
-        "7": "Privacy Policy",
-        "8": "Terms of Service",
-        "9": "Cookie Policy",
-        "10": "Note Legali"
+    "confidentiality": {
+      "title": "Confidentiality",
+      "description": "<p>Absolute confidentiality is an integral part of our philosophy.</p> <p>Our company respects your right to privacy.</p> <p>Furthermore, your data is never used for commercial purposes.</p>"
+    }
+  },
+  "help": {
+    "title": "Help",
+    "paymentSecure": {
+      "title": "Is my payment secure?",
+      "description": "Security is at the heart of our commercial offer, and it is also intended for transactions! Our payment solution is protected thanks to SSL encryption. Your data is therefore 100% protected."
     },
-    "personal_step": {
-        "title": "Personal information",
-        "text": "What's the best way a company has to contact you? We suggest you include an email and phone number. Even a photo wouldn't be bad.",
-        "addPhoto": "Add photo",
-        "name": "Name",
-        "surname": "Surname",
-        "birthday": "Birthday",
-        "profession": "Profession",
-        "family": "Family",
-        "single": "Not married",
-        "notSingle": "Married",
-        "familySelectText": "Select your family status",
-        "sex": "Sex",
-        "sexText": "Select your gender",
-        "male": "Male",
-        "female": "Female",
-        "notIndicate": "Do not indicate",
-        "city": "City",
-        "zipCode": "Zip code",
-        "country": "Country",
-        "nationality": "Nationality",
-        "fullAddress": "Full address",
-        "phoneNumber": "Phone number",
-        "linkedin": "Linkedin account (optional)",
-        "button": "Next: Work history"
+    "subscriptionWork": {
+      "title": "How does my subscription work?",
+      "description": "We allow all new customers to take advantage of our exceptional welcome offer: 3 days for only € 3.90! <br/> At the end of the trial period, the continuity of the service is ensured thanks to the automatic renewal of the subscription for € 39 per month."
     },
-    "work_history": {
-        "title": "Work history",
-        "text": "Employers scan your resume for 5 seconds to decide if you are suitable. We suggest that you only add jobs that make a great impression.",
-        "jobTitle": "Job title",
-        "employer": "Employer",
-        "from": "From",
-        "to": "To",
-        "workDescription": "Description",
-        "currentWork": "I currently work here",
-        "addJob": "Add job",
-        "addAnotherJob": "Add another job",
-        "goBack": "Go back",
-        "button": "Next: Education & Skills"
+    "cancelSubscription": {
+      "title": "How to cancel my subscription?",
+      "description": "Very simple: you have the following options to cancel your subscription: <ol> <li>Navigate to the Dolcumento Premium user area: in the 'MY ACCOUNT' section, use the unsubscribe option. It's automatic and instant ...</li> <li>By email: write to us at contacts@Dolcumento.com to express your will. Your request will be considered in the two working days following receipt of your message.</li> <li>By phone: you can call us every day of the week from 10 to 17, to do so please go to the 'Contact us' page.</li> </ol>"
+    }
+  },
+  "partnership": {
+    "title": "Let's become a partner!",
+    "description": "<b>Our service allows you to offer your customers a quality service at an affordable price.</b> <br/><br/> <b>Do you want to offer us a collaboration?</b> <br/>Do you want to collaborate only in one of the sectors we deal with? <br/> Write to us now!",
+    "button": "Contact us"
+  },
+  "pagamentoSecure": {
+    "title": "SECURE PAYMENT",
+    "description": "<p>To allow you a safe, easy and immediate purchase, we have chosen to offer you a large credit card payment panel, so you can use the following channels: Mastercard, Mastercard SecureCode, Visa, Verified by VISA.</p><p>Payment is made directly on the secure server of our banking partner, thanks to a secure connection that uses the SSL (Secure Socket Layer) encryption process, the most used and respected protocol in the world.</p><p>Also, the 'S' in the payment page address (httpS: //….) Confirms that the page you are on is well protected.</p><p>Finally, the padlock that appears at the bottom of the page or in the navigation bar (depending on the Internet browser used), ensures encrypted protection.</p><p>All this clearly and efficiently guarantees that your personal information is strictly confidential and remains fully encrypted during all stages of payment, thus avoiding any risk of any hacking.</p><p>Once your bank accepts the transaction, your order will be validated. You will then receive an email summarizing the transaction.</p><p><i>For more details on our security and privacy policy, we invite you to consult our General Conditions of Use and Sale, as well as our Privacy Charter, available in the corresponding sections of our Site.</i></p>"
+  },
+  "login": {
+    "login": "Log in",
+    "registered": "Already registered?",
+    "email": "Email",
+    "password": "Password",
+    "access": "Access"
+  },
+  "navSteps": {
+    "personalInfo": "Personal Information",
+    "workingExp": "Working experience",
+    "educationAndSkills": "Education and Skills",
+    "otherInfo": "Other Information",
+    "summary": "Summary"
+  },
+  "plan": {
+    "title": "Your CV is ready!",
+    "cvExpert": {
+      "price": "€ 4.90 for 3 days *"
     },
-    "school_history": {
-        "title": "Education and Skills",
-        "subTitle": "Education",
-        "text": "Employers quickly scan the section on education. We take care of the formatting so that it is easy to find. Include every school, even if you are still attending or have not graduated.",
-        "schoolName": "School name",
-        "schoolCity": "School city",
-        "degree": "Degree",
-        "from": "From",
-        "to": "To",
-        "description": "Description",
-        "addSchool": "Add school",
-        "addAnotherSchool": "Add another school",
-        "goBack": "Go back",
-        "button": "Next: other"
+    "benefits": {
+      "0": "Download your CV in PDF in one click",
+      "1": "14 modèles générés automatiquement",
+      "2": "Personnalization selon offers it d'emploi",
+      "3": "Créez votre CVthèque",
+      "4": "Accessible 24h / 24 and 7j / 7",
+      "5": "Transfer in 3 clics vers vos contacts",
+      "6": "Résiliation à tout momen"
     },
-    "skills": {
-        "title": "Skills",
-        "text": "Employers scan skills for relevant keywords. We will help you choose the best ones."
-    },
-    "other_step": {
-        "title": "Other",
-        "nativeLang": "Native language:",
-        "spokenLang": "Spoken language:",
-        "drivingLicense": "Driving license:",
-        "selectLevel": "Select level",
-        "choose": "Choose",
-        "car": "Car",
-        "moto": "Motorcycle",
-        "none": "None",
-        "interests": "Interests",
-        "accomplishments": "Accomplishments",
-        "goBack": "Go back",
-        "button": "Next: Summary"
-    },
-    "endPreview": {
-        "templateConfig": "Template configuration",
-        "templateName": "Template name:",
-        "changeCv": "Change template",
-        "summarySection": "Summary",
-        "personal": "Personal",
-        "workHistory": "Work history",
-        "educationSkills": "Education & Skills",
-        "other": "Other"
-    },
-    "cvPlaceholder": {
-        "personalInfo": "Personal Information",
-        "personal": "Personal",
-        "personalSkills": "personal skills",
-        "name": "Your name",
-        "nameAndSurname": "Replace with First name(s) Surname(s)",
-        "address": "Replace with house number, street name, city, postcode, country",
-        "phoneNumb": "Replace with telephone number",
-        "email": "E-mail address",
-        "sex": "sex",
-        "enterSex": "Enter sex",
-        "birhtday": "Date of Birth",
-        "nationality": "Nationality",
-        "work": "Work experience",
-        "educationAndTraning": "Education and Traning",
-        "educationAndSkills": "Education and Skills",
-        "skills": "skills",
-        "motherLang": "Native language",
-        "motherLang2": "Replace with native language (s)",
-        "otherLang": "Other languages",
-        "drivingLicense": "Driving license",
-        "understanding": "Understanding",
-        "speaking": "Speaking",
-        "writing": "Writing",
-        "listening": "Listening",
-        "reading": "Reading",
-        "spokenInteraction": "Spoken interaction",
-        "spokenProduction": "Spoken production",
-        "familyStatus": "Family status",
-        "details": "Details",
-        "profile": "Profile",
-        "education": "Education",
-        "languages": "Languages",
-        "socialProf": "Social profile",
-        "currentWork": "Current work"
-    },
-    "link": {
-        "browseTemplate": "browseTemplate",
-        "howToWriteCv": "howToWriteCv",
-        "payment": "payment",
-        "plan": "plan",
-        "error": "error",
-        "feedback": "feedback",
-        "faq": "faq",
-        "partnership": "partnership",
-        "contact": "contact",
-        "login": "login"
-    },
-    "ourValues": {
-        "title": "Our values",
-        "quality": {
-            "title": "Quality",
-            "description": "<p>The quality of the service is the basis of our corporate mission.</p> <p>This is why we choose to collaborate only with the most reliable professionals in the sector.</p> <p>Our goal is to improve your relationship with the administration, and to allow you to obtain the documents you need in the most efficient way possible.</p>"
-        },
-        "efficiency": {
-            "title": "Efficiency",
-            "description": "<p>Our team of efficient and rigorous collaborators advise, guide and help you efficiently and quickly.</p> <p>The goal is simple: to be the absolute reference of the administrative support available in Italy.</p> <p>The efficiency that distinguishes us allows us to offer our services to everyone at an affordable price.</p>"
-        },
-        "precision": {
-            "title": "Precision",
-            "description": "<p>Meticulousness and precision are the basis of our approach.</p> <p>Tutorials and guides created by us are an example of our commitment in this sense: precise information expressed in a simple way for each type of customer.</p> <p>Thanks to our meticulousness we offer you a product always at the highest quality standards.</p>"
-        },
-        "safety": {
-            "title": "Safety",
-            "description": "<p>Our team of IT security specialists allows us to protect your personal data (surnames, coordinates, emails, various information) thanks to our 100% secure websites (256-bit SSL encryption technology)</p> <p>All your data is protected, being arranged on different servers.</p> <p>No service interruptions, 7 days a week, every day of the year.</p>"
-        },
-        "customerSatisfaction": {
-            "title": "Customer Satisfaction",
-            "description": "<p>We are at your disposal, to offer you a service that is always at the highest levels.</p> <p>We want to offer you the highest quality experience in all areas.</p> <p>You deserve excellent customer service.</p>"
-        },
-        "confidentiality": {
-            "title": "Confidentiality",
-            "description": "<p>Absolute confidentiality is an integral part of our philosophy.</p> <p>Our company respects your right to privacy.</p> <p>Furthermore, your data is never used for commercial purposes.</p>"
-        }
-    },
-    "help": {
-        "title": "Help",
-        "paymentSecure": {
-            "title": "Is my payment secure?",
-            "description": "Security is at the heart of our commercial offer, and it is also intended for transactions! Our payment solution is protected thanks to SSL encryption. Your data is therefore 100% protected."
-        },
-        "subscriptionWork": {
-            "title": "How does my subscription work?",
-            "description": "We allow all new customers to take advantage of our exceptional welcome offer: 3 days for only € 3.90! <br/> At the end of the trial period, the continuity of the service is ensured thanks to the automatic renewal of the subscription for € 39 per month."
-        },
-        "cancelSubscription": {
-            "title": "How to cancel my subscription?",
-            "description": "Very simple: you have the following options to cancel your subscription: <ol> <li>Navigate to the Dolcumento Premium user area: in the 'MY ACCOUNT' section, use the unsubscribe option. It's automatic and instant ...</li> <li>By email: write to us at contacts@Dolcumento.com to express your will. Your request will be considered in the two working days following receipt of your message.</li> <li>By phone: you can call us every day of the week from 10 to 17, to do so please go to the 'Contact us' page.</li> </ol>"
-        }
-    },
-    "partnership": {
-        "title": "Let's become a partner!",
-        "description": "<b>Our service allows you to offer your customers a quality service at an affordable price.</b> <br/><br/> <b>Do you want to offer us a collaboration?</b> <br/>Do you want to collaborate only in one of the sectors we deal with? <br/> Write to us now!",
-        "button": "Contact us"
-    },
-    "pagamentoSecure": {
-        "title": "SECURE PAYMENT",
-        "description": "<p>To allow you a safe, easy and immediate purchase, we have chosen to offer you a large credit card payment panel, so you can use the following channels: Mastercard, Mastercard SecureCode, Visa, Verified by VISA.</p><p>Payment is made directly on the secure server of our banking partner, thanks to a secure connection that uses the SSL (Secure Socket Layer) encryption process, the most used and respected protocol in the world.</p><p>Also, the 'S' in the payment page address (httpS: //….) Confirms that the page you are on is well protected.</p><p>Finally, the padlock that appears at the bottom of the page or in the navigation bar (depending on the Internet browser used), ensures encrypted protection.</p><p>All this clearly and efficiently guarantees that your personal information is strictly confidential and remains fully encrypted during all stages of payment, thus avoiding any risk of any hacking.</p><p>Once your bank accepts the transaction, your order will be validated. You will then receive an email summarizing the transaction.</p><p><i>For more details on our security and privacy policy, we invite you to consult our General Conditions of Use and Sale, as well as our Privacy Charter, available in the corresponding sections of our Site.</i></p>"
-    },
-    "pickCv": "Choose",
-    "date_format": "en-EN"
+    "emailText": "E-mail address to receive a secure copy of your CV:",
+    "emailBtn": "Last step before downloading!",
+    "paymentSecure": "Secure payment",
+    "secureCards": "Pay with confidence with your secure credit cards:",
+    "subscription": "Unlimited subscription to Expert tools",
+    "subscriptionText": "CV Expert: €4.90 for 3 days, then €29.90 per month to take advantage of our expert toolbox to better manage your CV and your career. You can cancel your subscription at any time with one click."
+  },
+  "payment": {
+    "title": "Paiement 100% sécurisé",
+    "amount": "Amount",
+    "cardType": "Card type",
+    "cardHolder": "Cardholder name",
+    "cardNumber": "Card number",
+    "cardDate": "Expiration date",
+    "cardCVV": "Security code",
+    "pay": "Proceed to payment",
+    "editCV": "Modify",
+    "period3days": "3 day trial period",
+    "amountToPay": "Amount to pay: €4.90!*",
+    "subscriptionText": "Subscription and credit system At the end of the 3-day trial period, each month €44.90 will be billed to you for your subscription for an indefinite period, subject to possible withdrawal at any time. You will get 100 credits, which you can use to request additional documents. I am not sure of this translation at all!!! Credits can be used to request additional documents including PRA Certificate (20), Chamber of Commerce Registration (10), Cadastral Certificate (18), CRIF Certificate (10), Search Protests (12) and Financial Statements of the company (15).",
+    "cvFormat": "Resume in PDF format",
+    "downloadCV": "Download your CV in PDF with just one click"
+  },
+  "errors": {
+    "emailRequired": "Email is required",
+    "emailNotValid": "Email is not valid"
+  },
+  "zoom": "Enlarge",
+  "pickCv": "Choose",
+  "add": "Add",
+  "downloadPdf": "Download PDF",
+  "downloadCV": "Download the CV",
+  "date_format": "en-EN"
 }

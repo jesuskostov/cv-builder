@@ -5,7 +5,7 @@
         <!-- Profile -->
         <div>
           <h2 v-if="accomp" class="black" v-text="$t('cvPlaceholder.profile')" />
-          <p v-html="accomp" />
+          <p class="description" v-html="accomp" />
         </div>
         <!-- Work history -->
         <div v-if="workHistory.length && workHistory[0].jobTitle">
@@ -25,7 +25,7 @@
         <div v-if="education.length && education[0].schoolName">
           <h2 class="black" v-text="$t('cvPlaceholder.education')" />
           <div v-for="(school, i) in education" :key="i">
-            <h3 class="subtitle">{{school.degree}} - {{school.schoolName}} <br> <span class="black">{{school.schoolLocation}}</span> <br><span>September 2012 - December 2021</span> </h3>
+            <h3 class="subtitle">{{school.degree}} <span v-if="school.degree">-</span> {{school.schoolName}} <br> <span class="black">{{school.schoolLocation}}</span> <br><span>{{school.date.from}} - {{school.date.to}}</span> </h3>
           </div>
         </div>
         <!-- Languages -->
@@ -47,11 +47,11 @@
         <div v-if="personal">
           <div v-if="personal.birthday || personal.nationality || personal.family || personal.sex" class="details mb-4 text-left">
             <h2>Personal</h2>
-            <p><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}: {{personal.birthday}}</span></p>
-            <p><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}: {{personal.nationality}}</span></p>
-            <p><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}: {{personal.family}}</span></p>
-            <p><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}: {{personal.sex}}</span></p>
-            <p v-if="motherLang.title">
+            <p class="col-r-description"><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}: {{personal.birthday}}</span></p>
+            <p class="col-r-description"><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}: {{personal.nationality}}</span></p>
+            <p class="col-r-description"><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}: {{personal.family}}</span></p>
+            <p class="col-r-description"><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}: {{personal.sex}}</span></p>
+            <p class="col-r-description" v-if="motherLang.title">
               Mother language: {{motherLang.title}}
             </p>
           </div>
@@ -74,7 +74,6 @@
               </div>
             </div>
           </div>
-        
         </div>
       </div>
     </div>
@@ -323,6 +322,10 @@ h4 {
 
 p.description {
   font-size: 10px;
-  word-break: break-all;
+  word-break: break-word;
+}
+
+.col-r-description {
+  font-size: 12px !important;
 }
 </style>

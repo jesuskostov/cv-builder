@@ -24,7 +24,7 @@
                         <p class="date">
                           <span v-if="work.date && work.date.from">{{work.date.from | toDate}} - </span>
                           <span v-if="work.date && work.date.to && !work.date.present">{{work.date.to | toDate}}</span>
-                          <span v-if="work.date.present">Current work</span>
+                          <span v-if="work.date.present">{{ $t('cvPlaceholder.currentWork') }}</span>
                         </p>
                         <p class="description" v-html="work.description" />
                     </div>
@@ -32,8 +32,8 @@
                 <div class="text-left">
                     <h2 class="title mb-2" v-text="$t('cvPlaceholder.education')" />
                     <div v-for="(school, i) in education" :key="i" class="mb-3">
-                    <h3 class="subtitle text-capitalize">{{school.degree}}, {{school.schoolName}}</h3>
-                    <p class="date">{{school.date[0]}} - {{school.date[1]}} <br> {{school.schoolLocation}}</p>
+                    <h3 class="subtitle text-capitalize">{{school.degree}}<span v-if="school.degree">,</span> {{school.schoolName}}</h3>
+                    <p class="date">{{school.date.from}} - {{school.date.to}} <br> {{school.schoolLocation}}</p>
                     <p class="description" v-html="school.description" />
                     </div>
                 </div>
@@ -42,11 +42,11 @@
               <div v-if="personal" class="mb-5">
                 <div v-if="personal.birthday || personal.nationality || personal.family || personal.sex || motherLang.title" class="text-left">
                     <h3 class="subtitle mb-2" v-text="$t('cvPlaceholder.personal')" />
-                    <p class="description"><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}: {{personal.birthday}}</span></p>
-                    <p class="description"><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}: {{personal.nationality}}</span></p>
-                    <p class="description"><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}: {{personal.family}}</span></p>
-                    <p class="description"><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}: {{personal.sex}}</span></p>
-                    <p class="description"><span v-if="motherLang.title">{{ $t('cvPlaceholder.motherLang') }}: {{motherLang.title}}</span></p>
+                    <p class="description mb-0"><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}: {{personal.birthday}}</span></p>
+                    <p class="description mb-0"><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}: {{personal.nationality}}</span></p>
+                    <p class="description mb-0"><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}: {{personal.family}}</span></p>
+                    <p class="description mb-0"><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}: {{personal.sex}}</span></p>
+                    <p class="description mb-0"><span v-if="motherLang.title">{{ $t('cvPlaceholder.motherLang') }}: {{motherLang.title}}</span></p>
                     <p class="description mb-0"><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span> <span v-else>Linkedin</span></p>
                 </div>
               </div>
