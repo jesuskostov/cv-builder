@@ -478,5 +478,8 @@
   "add": "Add",
   "downloadPdf": "Download PDF",
   "downloadCV": "Download the CV",
-  "date_format": "en-EN"
+  "date_format": "en-EN",
+  "validation": {
+    "required": "Custom required message in EN"
+  }
 }

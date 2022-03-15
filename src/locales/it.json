@@ -492,5 +492,8 @@
   "downloadPdf": "Scarica PDF",
   "downloadCV": "Scaricare il CV",
   "rights": "© 2016-2022. Tutti i diritti riservati.",
-  "date_format": "it-IT"
+  "date_format": "it-IT",
+  "validation": {
+    "required": "Custom required message in IT"
+  }
 }

@@ -40,8 +40,18 @@ Vue.use(VueMeta);
 Vue.use(VueAwesomeSwiper);
 
 Vue.use(VeeValidate);
+
+// custom messages
+
 const veeLocale = currentDomain().locale === "fr" ? fr : it;
-Validator.localize(currentDomain().locale, veeLocale);
+const dict = {
+  veeLocale,
+  messages: {
+    ...veeLocale.messages,
+    required: i18n.t("validation.required"),
+  },
+};
+Validator.localize(currentDomain().locale, dict);
 
 Vue.use(BootstrapVue);
 Vue.use(VueSweetalert2);
