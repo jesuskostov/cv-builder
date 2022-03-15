@@ -257,7 +257,8 @@
     "fullAddress": "Full address",
     "phoneNumber": "Phone number",
     "linkedin": "Linkedin account (optional)",
-    "button": "Next: Work history"
+    "button": "Next: Work history",
+    "email": "Email"
   },
   "work_history": {
     "title": "Work history",

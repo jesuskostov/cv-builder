@@ -252,7 +252,8 @@
     "fullAddress": "Indirizzo completo",
     "phoneNumber": "Numero di telefono",
     "linkedin": "Account LinkedIn (opzionale)",
-    "button": "Prossimo: Esperienza Lavorativa"
+    "button": "Prossimo: Esperienza Lavorativa",
+    "email": "Email"
   },
   "work_history": {
     "title": "Esperienza Lavorativa",
