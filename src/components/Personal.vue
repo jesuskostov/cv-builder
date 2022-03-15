@@ -54,7 +54,7 @@
                 :data-vv-as="$t('personal_step.name')"
                 id="firstName"
                 v-model="personal.firstName"
-                v-validate="'alpha_spaces'"
+                v-validate="{ required: true, alpha_spaces: true }"
               />
               <span class="error">{{ errors.first("name") }}</span>
             </div>
@@ -74,7 +74,7 @@
                 :data-vv-as="$t('personal_step.surname')"
                 id="surname"
                 v-model="personal.lastName"
-                v-validate="'alpha_spaces'"
+                v-validate="{ required: true, alpha_spaces: true }"
               />
               <span class="error">{{ errors.first("surname") }}</span>
             </div>
@@ -193,7 +193,7 @@
                 :data-vv-as="$t('personal_step.city')"
                 id="city"
                 v-model="personal.city"
-                v-validate="'alpha_spaces'"
+                v-validate="'alpha_spaces|required'"
               />
               <span class="error">{{ errors.first("city") }}</span>
             </div>
@@ -233,7 +233,7 @@
                 :data-vv-as="$t('personal_step.country')"
                 id="country"
                 v-model="personal.country"
-                v-validate="'alpha_spaces'"
+                v-validate="'alpha_spaces|required'"
               />
               <span class="error">{{ errors.first("country") }}</span>
             </div>
@@ -255,7 +255,7 @@
                 :data-vv-as="$t('personal_step.nationality')"
                 id="nationality"
                 v-model="personal.nationality"
-                v-validate="'alpha_spaces'"
+                v-validate="'alpha_spaces|required'"
               />
               <span class="error">{{ errors.first("nationality") }}</span>
             </div>

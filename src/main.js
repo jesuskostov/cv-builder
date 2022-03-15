@@ -48,7 +48,7 @@ const dict = {
   veeLocale,
   messages: {
     ...veeLocale.messages,
-    required: i18n.t("validation.required"),
+    // required: i18n.t("validation.required"),
   },
 };
 Validator.localize(currentDomain().locale, dict);
