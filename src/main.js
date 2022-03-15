@@ -4,7 +4,6 @@ import VueMeta from "vue-meta";
 // import './registerServiceWorker'
 import router from "./router";
 import store from "./store";
-import VeeValidate from "vee-validate";
 import { BootstrapVue } from "bootstrap-vue";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import "../node_modules/vue-multiselect/dist/vue-multiselect.min.css";
@@ -16,8 +15,17 @@ import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
 import { currentDomain } from "./domains";
 import i18n from "./i18n";
+import fr from "vee-validate/dist/locale/fr";
+import it from "vee-validate/dist/locale/it";
+import VeeValidate, { Validator } from "vee-validate";
 
 Vue.config.productionTip = false;
+
+// tova e da slaga * predi labelite na formite
+Vue.filter("requiredLabel", function(value) {
+  if (!value) return "";
+  return `<span class="red">*</span> ${value}`;
+});
 
 Vue.use(
   VueGtag,
@@ -30,11 +38,13 @@ Vue.use(
 
 Vue.use(VueMeta);
 Vue.use(VueAwesomeSwiper);
+
 Vue.use(VeeValidate);
+const veeLocale = currentDomain().locale === "fr" ? fr : it;
+Validator.localize(currentDomain().locale, veeLocale);
+
 Vue.use(BootstrapVue);
 Vue.use(VueSweetalert2);
-
-console.log(VeeValidate);
 
 new Vue({
   i18n,
