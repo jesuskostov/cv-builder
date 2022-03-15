@@ -348,7 +348,8 @@
     "education": "Educazione",
     "languages": "Lingue",
     "socialProf": "Profili sociali",
-    "currentWork": "Lavoro attuale"
+    "currentWork": "Lavoro attuale",
+    "country": "Nazione"
   },
   "languages": {
     "italian": "Italiano",

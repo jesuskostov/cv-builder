@@ -42,12 +42,12 @@
               <div v-if="personal" class="mb-5">
                 <div v-if="personal.birthday || personal.nationality || personal.family || personal.sex || motherLang.title" class="text-left">
                     <h3 class="subtitle mb-2" v-text="$t('cvPlaceholder.personal')" />
-                    <p class="description mb-0"><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}: {{personal.birthday}}</span></p>
-                    <p class="description mb-0"><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}: {{personal.nationality}}</span></p>
-                    <p class="description mb-0"><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}: {{personal.family}}</span></p>
-                    <p class="description mb-0"><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}: {{personal.sex}}</span></p>
-                    <p class="description mb-0"><span v-if="motherLang.title">{{ $t('cvPlaceholder.motherLang') }}: {{motherLang.title}}</span></p>
-                    <p class="description mb-0"><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span> <span v-else>Linkedin</span></p>
+                    <p class="description mb-0"><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.birthday}}</span></p>
+                    <p class="description mb-0"><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.nationality}}</span></p>
+                    <p class="description mb-0"><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.family}}</span></p>
+                    <p class="description mb-0"><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.sex}}</span></p>
+                    <p class="description mb-0"><span v-if="motherLang.title">{{ $t('cvPlaceholder.motherLang') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{motherLang.title}}</span></p>
+                    <p class="description mb-0"><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span></p>
                 </div>
               </div>
                 <!-- Skills -->
@@ -174,6 +174,11 @@ export default {
   filters: {
     toDate(val) {
       return val.toString().split('T')[0]
+    }
+  },
+  computed: {
+    locale() {
+      return this.$store.state.domain.locale
     }
   },
   mounted() {

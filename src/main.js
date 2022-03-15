@@ -34,8 +34,6 @@ Vue.use(VeeValidate);
 Vue.use(BootstrapVue);
 Vue.use(VueSweetalert2);
 
-console.log(VeeValidate);
-
 new Vue({
   i18n,
   router,

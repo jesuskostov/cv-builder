@@ -31,10 +31,10 @@
           </div>
           <div>
             <h4 class="mb-0" v-text="$t('cvPlaceholder.personal')" />
-            <p class="description"><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}: {{personal.birthday}}</span></p>
-            <p class="description"><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}: {{personal.nationality}}</span></p>
-            <p class="description"><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}: {{personal.family}}</span></p>
-            <p class="description"><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}: {{personal.sex}}</span></p>
+            <p class="description"><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.birthday}}</span></p>
+            <p class="description"><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.nationality}}</span></p>
+            <p class="description"><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.family}}</span></p>
+            <p class="description"><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.sex}}</span></p>
           </div>
         </div>
         <div class="details mb-4 text-left">
@@ -42,7 +42,7 @@
           <div>
             <h4 class="mb-0" v-text="$t('cvPlaceholder.motherLang')" />
             <p v-if="motherLang">
-                {{ $t('cvPlaceholder.motherLang') }}: {{motherLang.title}}
+                {{motherLang.title}}
             </p>
           </div>
         </div>
@@ -149,6 +149,11 @@ export default {
   filters: {
     toDate(val) {
       return val.toString().split('T')[0]
+    }
+  },
+  computed: {
+    locale() {
+      return this.$store.state.domain.locale
     }
   },
   watch: {

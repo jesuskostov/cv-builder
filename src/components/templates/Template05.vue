@@ -9,7 +9,7 @@
           <h1 class="text-capitalize"><span v-if="personal && personal.firstName">{{personal.firstName}} {{personal.lastName}}</span> <span v-else v-text="$t('cvPlaceholder.name')" /></h1>
           <p v-if="personal && personal.profession" class="profession"><span v-if="personal && personal.profession">{{personal.profession}}</span><span v-else v-text="$t('cvPlaceholder.profession')" /></p>
           <p v-if="personal && personal.fullAddress" class="address"><span v-if="personal && personal.fullAddress">{{personal.fullAddress}}, {{personal.city}} {{personal.zipCode}}, {{personal.country}}</span> <span v-else>Full address</span> <br> <span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}} |</span><span v-else>Phone number</span> <span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
-          <p class="address mt-0"><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span> <span v-else>Linkedin</span></p>
+          <p class="address mt-0"><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span></p>
         </div>
       </div>
       <div class="body">
@@ -66,11 +66,11 @@
             <div v-if="personal.birthday || personal.nationality || personal.family || personal.sex || motherLang.title" class="text-left">
               <h2 class="title small" v-text="$t('cvPlaceholder.personal')" />
               <div>
-                <p class="description mb-1"><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}: {{personal.birthday}}</span></p>
-                <p class="description mb-1"><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}: {{personal.nationality}}</span></p>
-                <p class="description mb-1"><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}: {{personal.family}}</span></p>
-                <p class="description mb-1"><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}: {{personal.sex}}</span></p>
-                <p class="description mb-1"><span v-if="motherLang.title">{{ $t('cvPlaceholder.motherLang') }}: {{motherLang.title}}</span></p>
+                <p class="description mb-1"><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.birthday}}</span></p>
+                <p class="description mb-1"><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.nationality}}</span></p>
+                <p class="description mb-1"><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.family}}</span></p>
+                <p class="description mb-1"><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.sex}}</span></p>
+                <p class="description mb-1"><span v-if="motherLang.title">{{ $t('cvPlaceholder.motherLang') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{motherLang.title}}</span></p>
               </div>
             </div>
           </div>
@@ -182,6 +182,11 @@ export default {
   filters: {
     toDate(val) {
       return val.toString().split('T')[0]
+    }
+  },
+  computed: {
+    locale() {
+      return this.$store.state.domain.locale
     }
   },
   mounted() {

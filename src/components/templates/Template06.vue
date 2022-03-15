@@ -13,11 +13,11 @@
               <h2 class="title mb-4" v-text="$t('cvPlaceholder.details')" />
               <div v-if="personal.birthday || personal.nationality || personal.family || personal.sex || motherLang.title" class="mb-3">
                 <h3 class="subtitle" v-text="$t('cvPlaceholder.personal')" />
-                <p class="description"><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}: {{personal.birthday}}</span></p>
-                <p class="description"><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}: {{personal.nationality}}</span></p>
-                <p class="description"><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}: {{personal.family}}</span></p>
-                <p class="description"><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}: {{personal.sex}}</span></p>
-                <p class="description"><span v-if="motherLang.title">{{ $t('cvPlaceholder.motherLang') }}: {{motherLang.title}}</span></p>
+                <p class="description"><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.birthday}}</span></p>
+                <p class="description"><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.nationality}}</span></p>
+                <p class="description"><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.family}}</span></p>
+                <p class="description"><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.sex}}</span></p>
+                <p class="description"><span v-if="motherLang.title">{{ $t('cvPlaceholder.motherLang') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{motherLang.title}}</span></p>
               </div>
             </div>
             <div v-if="personal && personal.fullAddress" class="mb-3">
@@ -124,6 +124,11 @@ export default {
       type: Number,
       default: 1,
     },
+  },
+  computed: {
+    locale() {
+      return this.$store.state.domain.locale
+    }
   },
   filters: {
     toDate(val) {

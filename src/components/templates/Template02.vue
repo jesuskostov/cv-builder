@@ -7,19 +7,19 @@
             <img v-if="personal && personal.image" :src="personal.image" alt="question img">
             <img v-else src="../../assets/images/question-img.png" alt="question img">
           </div>
-          <h1 class="name"><span v-if="personal.name">{{personal.firstName}} {{personal.lastName}}</span><span v-else v-text="$t('cvPlaceholder.name')" /></h1>
+          <h1 class="name"><span v-if="personal.firstName">{{personal.firstName}} {{personal.lastName}}</span><span v-else v-text="$t('cvPlaceholder.name')" /></h1>
           <span class="line"></span>
           <p v-if="personal && personal.profession" class="profession"><span v-if="personal && personal.profession">{{personal.profession}}</span><span v-else>customer service</span></p>
         </div>
         <div v-if="personal" class="details mb-4">
           <div v-if="personal.birthday || personal.nationality || personal.family || personal.sex" class="text-left">
             <h2 v-text="$t('cvPlaceholder.personal')" />
-            <p><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}: {{personal.birthday}}</span></p>
-            <p><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}: {{personal.nationality}}</span></p>
-            <p><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}: {{personal.family}}</span></p>
-            <p><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}: {{personal.sex}}</span></p>
+            <p><span v-if="personal && personal.birthday">{{ $t('cvPlaceholder.birthday') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.birthday}}</span></p>
+            <p><span v-if="personal && personal.nationality">{{ $t('cvPlaceholder.nationality') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.nationality}}</span></p>
+            <p><span v-if="personal && personal.family">{{ $t('cvPlaceholder.familyStatus') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.family}}</span></p>
+            <p><span v-if="personal && personal.sex">{{ $t('cvPlaceholder.sex') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{personal.sex}}</span></p>
             <p v-if="motherLang.title">
-              {{$t('cvPlaceholder.motherLang')}}: {{motherLang.title}}
+              {{$t('cvPlaceholder.motherLang')}}<span v-if="locale === 'fr'">&nbsp;</span>: {{motherLang.title}}
             </p>
           </div>
         </div>
@@ -30,8 +30,8 @@
             <p><span v-if="personal && personal.zipCode">{{personal.zipCode}}</span> <span v-else v-text="$t('cvPlaceholder.zipCode')" /></p>
             <p><span v-if="personal && personal.country">{{personal.country}}</span> <span v-else v-text="$t('cvPlaceholder.country')" /></p>
             <p><span v-if="personal && personal.phoneNumber">{{personal.phoneNumber}}</span> <span v-else v-text="$t('cvPlaceholder.phoneNumb')" /></p>
-            <p><span v-if="personal && personal.email">{{personal.email}}</span> <span v-else>Email</span></p>
-            <p><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span> <span v-else>Linkedin</span></p>
+            <p><span v-if="personal && personal.email">{{personal.email}}</span></p>
+            <p><span v-if="personal && personal.socialProfiles">{{personal.socialProfiles}}</span></p>
           </div>
         </div>
         <div v-if="skills.length !== 0" class="skills text-left">
@@ -60,7 +60,7 @@
               <br>
               <span v-if="work.date && work.date.from">{{work.date.from | toDate}} - </span>
               <span v-if="work.date && work.date.to && !work.date.present">{{work.date.to | toDate}}</span>
-              <span v-if="work.date.present">Current work</span>
+              <span v-if="work.date.present">{{ $t('cvPlaceholder.currentWork') }}</span>
             </h3>
             <p class="description" v-html="work.description" />
           </div>
@@ -84,7 +84,6 @@
 
 <script>
 export default {
-  name: "Titan",
   props: {
     color: {
       type: String
@@ -129,6 +128,11 @@ export default {
         let height = this.$refs.inner.clientHeight
         this.$store.dispatch('setPreviewHeight', {height})
       }, )
+    }
+  },
+  computed: {
+    locale() {
+      return this.$store.state.domain.locale
     }
   },
   filters: {

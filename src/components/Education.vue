@@ -211,8 +211,8 @@ export default {
                 'schoolLocation': '',
                 'degree': '',
                 'date': {
-                    'from': '',
-                    'to': ''
+                    'from': null,
+                    'to': null
                 },
                 'description': ''
             })
