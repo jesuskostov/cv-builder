@@ -16,9 +16,9 @@
             <div class="col-md-4">
                 <div class="d-flex flex-column text-left">
                     <router-link to="/" v-text="$t('footer_menu')[11]" />
-                            <router-link to="/i-nostri-valori" v-text="$t('footer_menu')[12]" />
-                            <router-link to="/aiuto" v-text="$t('footer_menu')[13]" />
-                            <router-link to="/site-map" v-text="$t('footer_menu')[14]" />
+                            <router-link :to="`/${$t('link.values')}`" v-text="$t('footer_menu')[12]" />
+                            <router-link :to="`/${$t('link.help')}`" v-text="$t('footer_menu')[13]" />
+                            <router-link :to="`/${$t('link.siteMap')}`" v-text="$t('footer_menu')[14]" />
                             <router-link :to="{name: 'Contact'}" v-text="$t('footer_menu')[16]" />
                 </div>
             </div>
@@ -26,9 +26,30 @@
                 <div class="d-flex flex-column text-left">
                     <router-link :to="{name: 'Partnership'}" v-text="$t('footer_menu')[5]" />
                     <router-link :to="{name: 'SecurePayment'}" v-text="$t('footer_menu')[6]" />
-                    <router-link to="#" v-text="$t('footer_menu')[7]" />
-                    <router-link to="#" v-text="$t('footer_menu')[8]" />
-                    <router-link to="#" v-text="$t('footer_menu')[9]" />
+                    <a
+                      :href="`./legal/confidentialite-${legalDocsSlug}.png`"
+                      target="_blank"
+                      rel="noopener"
+                      v-text="$t('footer_menu')[7]"
+                    />
+                    <a
+                      :href="`./legal/cgu-${legalDocsSlug}.png`"
+                      target="_blank"
+                      rel="noopener"
+                      v-text="$t('footer_menu')[8]"
+                    />
+                    <a
+                      :href="`./legal/cookies-${legalDocsSlug}.png`"
+                      target="_blank"
+                      rel="noopener"
+                      v-text="$t('footer_menu')[9]"
+                    />
+                    <a
+                      :href="`./legal/mentions-${legalDocsSlug}.png`"
+                      target="_blank"
+                      rel="noopener"
+                      v-text="$t('footer_menu')[10]"
+                    />
                 </div>
             </div>
             <div class="col-md-4">
@@ -55,6 +76,14 @@ export default {
   components: {
     Footer,
   },
+  computed: {
+    domain() {
+      return this.$store.state.domain;
+    },
+    legalDocsSlug() {
+      return this.domain.site.legalDocsSlug;
+    },
+  }
 }
 </script>
 

@@ -91,7 +91,7 @@
   },
   "homeFeedback": {
     "0": {
-      "name": "Bernardo Buontalenti",
+      "name": "Bernard Maistre",
       "text": "Questo è stato il miglior aiuto per il cv di sempre! Nient'altro che offerte di lavoro. Ha superato le mie aspettative. Lo consiglio vivamente!"
     },
     "1": {
@@ -99,7 +99,7 @@
       "text": "Servizio molto facile da usare. Molteplici opzioni per i modelli. Riempi in bianco in molte sezioni e tutto è già preformattato. Impeccabile! Userò ancora questo servizio."
     },
     "2": {
-      "name": "Giulio Parigi",
+      "name": "Edouard Michaud",
       "text": "Ho FINALMENTE un curriculum dall'aspetto professionale !!!!!! Questo mi ha risparmiato così tante lacrime! Senza sforzo. WOW!!!!! MOLTI GRAZIE!!!!!!"
     }
   },
@@ -297,7 +297,7 @@
     "choose": "Scegliere",
     "car": "Auto",
     "moto": "Moto",
-    "none": "Nessuno",
+    "none": "Aucun",
     "interests": "Interessi",
     "accomplishments": "Risultati raggiunti",
     "goBack": "Torna indietro",
@@ -485,6 +485,13 @@
   "paymentError": {
     "title": "C'è stato un errore nei nostri sistemi! <br> Non siamo in grado di soddisfare la sua richiesta.",
     "text": "Importante: Nessun pagamento è stato effettuato. Il nostro team è stato appena informato di questo errore tecnico. <br> Una soluzione sarà fornita al più presto possibile. Grazie per la vostra comprensione."
+  },
+  "cvPayInfo": {
+    "name": "Nome",
+    "surname": "Cognome",
+    "city": "Città",
+    "country": "Paese",
+    "email": "Email"
   },
   "zoom": "Ingrandisci",
   "pickCv": "Scegli",

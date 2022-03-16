@@ -91,7 +91,7 @@
   },
   "homeFeedback": {
     "0": {
-      "name": "Bernardo Buontalenti",
+      "name": "Bernard Maistre",
       "text": "C'est le meilleur assistant pour CV de tous les temps ! Rien que pour les offres d'emploi. Il a dépassé mes attentes. Je le recommande fortement !"
     },
     "1": {
@@ -99,7 +99,7 @@
       "text": "Service très simple d'utilisation. Plusieurs options pour les modèles. Remplissez simplement les champs et tout est déjà préformaté. Sans défaut ! J'utiliserai à nouveau ce service."
     },
     "2": {
-      "name": "Giulio Parigi",
+      "name": "Edouard Michaud",
       "text": "J'ai ENFIN un CV d'allure professionnelle !!!!!! Cela m'a épargné tant de larmes ! Sans effort. WOW !!!!! MERCI BEAUCOUP !!!!!!"
     }
   },
@@ -425,7 +425,7 @@
     },
     "cancelSubscription": {
       "title": "Comment résilier mon abonnement ?",
-      "description": "C’est simple ! Vous disposez des options suivantes pour annuler votre abonnement : <ol> <li>Accédez à votre espace client : dans la rubrique « MON COMPTE », utilisez l'option de désinscription. C'est automatique et instantané...</li> <li>Par email : écrivez-nous à support@cv-rapide.com Votre demande sera prise en compte dans les deux jours ouvrés suivant la réception de votre message.</li> <li>Par téléphone : vous pouvez nous appeler tous les jours de la semaine de 10h à 17h, pour cela rendez-vous sur la page « Nous contacter ».</li> </ol>"
+      "description": "C’est simple ! Vous disposez des options suivantes pour annuler votre abonnement : <ol> <li>Accédez à votre espace client : dans la rubrique « MON COMPTE », utilisez l'option de désinscription. C'est automatique et instantané...</li> <li>Par email : écrivez-nous à aide@cv-immediat.com Votre demande sera prise en compte dans les deux jours ouvrés suivant la réception de votre message.</li> <li>Par téléphone : vous pouvez nous appeler tous les jours de la semaine de 10h à 17h, pour cela rendez-vous sur la page « Nous contacter ».</li> </ol>"
     }
   },
   "partnership": {
@@ -440,8 +440,8 @@
   "login": {
     "login": "Se connecter",
     "registered": "Déjà inscrit ?",
-    "email": "Email",
-    "password": "Password",
+    "email": "Votre email",
+    "password": "Mot de passe",
     "access": "Connexion"
   },
   "navSteps": {
@@ -480,12 +480,12 @@
     "cardNumber": "Numéro de carte",
     "cardDate": "Date d'expiration",
     "cardCVV": "Code de sécurité",
-    "pay": "Completare il pagamento",
+    "pay": "Procéder au paiement",
     "editCV": "Modifier",
     "period3days": "Période d'essai 3 jours",
     "amountToPay": "Montant à payer",
     "subscriptionText": "Abonnement et système de crédit à l'issue de la période d'essai de 3 jours, chaque mois 44,90 € vous seront facturés pour votre abonnement à durée indéterminée, sous réserve de rétractation possible à tout moment. Vous obtiendrez 100 crédits, que vous pourrez utiliser pour demander des documents supplémentaires. Je ne suis pas sûre du tout de cette traduction !!! Les crédits peuvent être utilisés pour demander des documents supplémentaires, notamment Certificat PRA (20), Inscription à la chambre de commerce (10), Certificat cadastral (18), Certificat CRIF (10), Protestations de recherche (12) et les états financiers de l'entreprise (15).",
-    "subscriptionFree": "* Abonnement et système de crédit A l'issue de la période d'essai de 3 jours, chaque mois 44,90 € vous seront facturés pour votre Abonnement, qui aura une durée indéterminée, sous réserve d'une possibilité de rétractation à tout moment. Vous aurez 100 crédits disponibles, que vous pourrez utiliser pour demander des documents supplémentaires. Les crédits peuvent être utilisés pour demander des documents supplémentaires, notamment Visura PRA (20), Visura Camerale (10), Visura Cadastale (18), Visura CRIF (10), Visura Protesti (12) et les états financiers de l'entreprise (15).",
+    "subscriptionFree": "* Abonnement et système de crédit A l'issue de la période d'essai de 3 jours, chaque mois 44,90 € vous seront facturés pour votre Abonnement, qui aura une durée indéterminée, sous réserve d'une possibilité de rétractation à tout moment.",
     "cvFormat": "CV au format PDF"
   },
   "errors": {
@@ -493,8 +493,15 @@
     "emailNotValid": "L'e-mail est invalide"
   },
   "paymentError": {
-    "title": "Il y a eu une erreur dans nos systèmes ! <br> Nous ne sommes pas en mesure de répondre à votre demande.",
-    "text": "Important : Aucun paiement n'a été effectué. Notre équipe vient d'être prévenue de cette erreur technique. <br> Une solution sera apportée dans les plus brefs délais. Merci pour votre compréhension."
+    "title": "Erreur technique dans notre système ! <br> Nous ne sommes pas en mesure de répondre à votre demande.",
+    "text": "Important : Aucun paiement n'a été effectué. <br> Notre équipe vient d'être prévenue de cette erreur technique. <br> Une solution sera apportée dans les plus brefs délais. <br> Merci pour votre compréhension."
+  },
+  "cvPayInfo": {
+   "name" :"Prénom",
+   "surname" :"Nom",
+   "city" :"Ville",
+   "country" :"Pays",
+   "email" :"Email"
   },
   "pickCv": "Choisir",
   "zoom": "Agrandir",

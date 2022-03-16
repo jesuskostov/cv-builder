@@ -17,8 +17,8 @@
                 <div class="form">
                     <form @submit.prevent="login">
                         <h2 class="mb-4"><b>{{ $t('login.registered') }}</b></h2>
-                        <input type="text" class="form-control" placeholder="Email" required>
-                        <input type="password" class="form-control" placeholder="Password" required>
+                        <input type="text" class="form-control" :placeholder="$t('login.email')" required>
+                        <input type="password" class="form-control" :placeholder="$t('login.password')" required>
                         <div class="text-center mt-4">
                             <button type="submit" class="custom-btn px-5">{{ $t('login.access') }}</button>
                         </div>

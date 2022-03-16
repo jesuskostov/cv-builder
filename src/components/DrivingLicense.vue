@@ -40,7 +40,7 @@ export default {
   data() {
     return {
       licenses: [],
-      predefined: [{ title: "Auto" }, { title: "Moto" }, { title: "Nessuno" }],
+      predefined: [{ title: "Auto" }, { title: "Moto" }, { title: "Aucun" }],
       selected: "",
       selectLangLabel: {
           select: {

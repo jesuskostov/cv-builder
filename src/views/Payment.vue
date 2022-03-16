@@ -25,7 +25,7 @@
               </div>
               <div class="row mb-4">
                 <div class="col-md-4">
-                  <label>{{ $t('payment.cardType') }} :</label>
+                  <label>{{ $t('payment.cardType') }}<span v-if="locale === 'fr'">&nbsp;</span>:</label>
                 </div>
                 <div class="col-md-8">
                   <div class="custom-form-group">
@@ -66,7 +66,7 @@
                 <div class="row">
                   <div class="col-md-4">
                     <label for="firstName">
-                      {{ $t('payment.cardHolder') }}:
+                      {{ $t('payment.cardHolder') }}<span v-if="locale === 'fr'">&nbsp;</span>:
                     </label>
                   </div>
                   <div class="col-md-8">
@@ -86,7 +86,7 @@
                 <div class="row">
                   <div class="col-md-4">
                     <label for="creditCard">
-                      {{ $t('payment.cardNumber') }} :
+                      {{ $t('payment.cardNumber') }}<span v-if="locale === 'fr'">&nbsp;</span>:
                     </label>
                   </div>
                   <div class="col-md-8">
@@ -231,11 +231,11 @@
                 <h2>{{ $t('downloadCV') }}</h2>
                 <hr />
                 <div class="personal-info">
-                  <p class="mb-0">Nome : {{ personal.firstName }}</p>
-                  <p class="mb-0">Cognome : {{ personal.lastName }}</p>
-                  <p class="mb-0">Città : {{ personal.city }}</p>
-                  <p class="mb-0">Paese : {{ personal.country }}</p>
-                  <p class="mb-0">Email : {{ personal.email }}</p>
+                  <p class="mb-0">{{ $t('cvPayInfo.name') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{ personal.firstName }}</p>
+                  <p class="mb-0">{{ $t('cvPayInfo.surname') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{ personal.lastName }}</p>
+                  <p class="mb-0">{{ $t('cvPayInfo.city') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{ personal.city }}</p>
+                  <p class="mb-0">{{ $t('cvPayInfo.country') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{ personal.country }}</p>
+                  <p class="mb-0">{{ $t('cvPayInfo.email') }}<span v-if="locale === 'fr'">&nbsp;</span>: {{ personal.email }}</p>
                   <div class="text-right">
                     <button @click="showBigPreview" class="view-large-btn">
                       {{ $t('payment.editCV') }}
@@ -406,23 +406,23 @@
 <script>
 import Templates from "../components/Template.vue";
 import Footer from "../components/Footer.vue";
-import { Validator } from "vee-validate";
+// import { Validator } from "vee-validate";
 
-const dict = {
-  custom: {
-    creditCard: {
-      credit_card: "Il campo della carta di credito non è valido",
-    },
-    cvv: {
-      digits: "Il campo cvv non è valido",
-    },
-    firstName: {
-      alpha_spaces: "Il campo può contenere solo caratteri alfabetici e spazi",
-    },
-  },
-};
+// const dict = {
+//   custom: {
+//     creditCard: {
+//       credit_card: "Il campo della carta di credito non è valido",
+//     },
+//     cvv: {
+//       digits: "Il campo cvv non è valido",
+//     },
+//     firstName: {
+//       alpha_spaces: "Il campo può contenere solo caratteri alfabetici e spazi",
+//     },
+//   },
+// };
 
-Validator.localize("en", dict);
+// Validator.localize("en", dict);
 export default {
   name: "Payment",
   components: {
@@ -463,6 +463,9 @@ export default {
     plan() {
       return this.$store.state.plan;
     },
+    locale() {
+      return this.$store.state.domain.locale
+    }
   },
   filters: {
     formatCardNumber(value) {

@@ -91,7 +91,7 @@
   },
   "homeFeedback": {
     "0": {
-      "name": "Bernardo Buontalenti",
+      "name": "Bernard Maistre",
       "text": "This was the best CV helper ever! Nothing but job offers. It exceeded my expectations. I highly recommend it!"
     },
     "1": {
@@ -99,7 +99,7 @@
       "text": "Very easy to use service. Multiple options for templates. Fill in white in many sections and everything is already preformatted. Flawless! I will use this service again."
     },
     "2": {
-      "name": "Giulio Parigi",
+      "name": "Edouard Michaud",
       "text": "I FINALLY have a professional looking resume !!!!!! This has saved me so many tears! Effortlessly. WOW !!!!! THANK YOU VERY MUCH!!!!!!"
     }
   },
@@ -472,6 +472,13 @@
   "errors": {
     "emailRequired": "Email is required",
     "emailNotValid": "Email is not valid"
+  },
+  "cvPayInfo": {
+    "name": "Name",
+    "surname": "Surname",
+    "city": "City",
+    "country": "Country",
+    "email": "Email"
   },
   "zoom": "Enlarge",
   "pickCv": "Choose",
