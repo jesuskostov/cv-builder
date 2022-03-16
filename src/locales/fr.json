@@ -484,7 +484,7 @@
     "editCV": "Modifier",
     "period3days": "Période d'essai 3 jours",
     "amountToPay": "Montant à payer",
-    "subscriptionText": "Abonnement et système de crédit à l'issue de la période d'essai de 3 jours, chaque mois 44,90 € vous seront facturés pour votre abonnement à durée indéterminée, sous réserve de rétractation possible à tout moment. Vous obtiendrez 100 crédits, que vous pourrez utiliser pour demander des documents supplémentaires. Je ne suis pas sûre du tout de cette traduction !!! Les crédits peuvent être utilisés pour demander des documents supplémentaires, notamment Certificat PRA (20), Inscription à la chambre de commerce (10), Certificat cadastral (18), Certificat CRIF (10), Protestations de recherche (12) et les états financiers de l'entreprise (15).",
+    "subscriptionText": "Abonnement et système de crédit à l'issue de la période d'essai de 3 jours, chaque mois 44,90 € vous seront facturés pour votre abonnement à durée indéterminée, sous réserve de rétractation possible à tout moment.",
     "subscriptionFree": "* Abonnement et système de crédit A l'issue de la période d'essai de 3 jours, chaque mois 44,90 € vous seront facturés pour votre Abonnement, qui aura une durée indéterminée, sous réserve d'une possibilité de rétractation à tout moment.",
     "cvFormat": "CV au format PDF"
   },
@@ -497,11 +497,11 @@
     "text": "Important : Aucun paiement n'a été effectué. <br> Notre équipe vient d'être prévenue de cette erreur technique. <br> Une solution sera apportée dans les plus brefs délais. <br> Merci pour votre compréhension."
   },
   "cvPayInfo": {
-   "name" :"Prénom",
-   "surname" :"Nom",
-   "city" :"Ville",
-   "country" :"Pays",
-   "email" :"Email"
+    "name": "Prénom",
+    "surname": "Nom",
+    "city": "Ville",
+    "country": "Pays",
+    "email": "Email"
   },
   "pickCv": "Choisir",
   "zoom": "Agrandir",

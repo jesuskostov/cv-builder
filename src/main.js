@@ -18,13 +18,26 @@ import i18n from "./i18n";
 import fr from "vee-validate/dist/locale/fr";
 import it from "vee-validate/dist/locale/it";
 import VeeValidate, { Validator } from "vee-validate";
+import VueTheMask from "vue-the-mask";
 
 Vue.config.productionTip = false;
 
-// tova e da slaga * predi labelite na formite
+// required * before form label
 Vue.filter("requiredLabel", function(value) {
   if (!value) return "";
   return `<span class="red">*</span> ${value}`;
+});
+
+// space after label in french
+Vue.filter("formattedLabel", function(value) {
+  if (!value) return "";
+  return i18n.locale === "fr" ? `${value} :` : `${value}:`;
+});
+
+// fields inside errors - add quotes
+Vue.filter("addQuotes", function(value) {
+  if (!value) return "";
+  return `« ${value} »`;
 });
 
 Vue.use(
@@ -55,6 +68,7 @@ Validator.localize(currentDomain().locale, dict);
 
 Vue.use(BootstrapVue);
 Vue.use(VueSweetalert2);
+Vue.use(VueTheMask);
 
 new Vue({
   i18n,
