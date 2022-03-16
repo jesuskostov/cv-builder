@@ -13,23 +13,26 @@
 </template>
 
 <script>
-import Templates from '../components/Template.vue'
-import Footer from '../components/Footer.vue'
+import Templates from "../components/Template.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
   components: {
     Templates,
-    Footer
+    Footer,
   },
   data() {
     return {
-      title: 'Browse Templates | ' + this.$store.state.domain.site.htmlAttrs.title
-    }
+      title:
+        this.$i18n.t("browseTemplatePage.title") +
+        " | " +
+        this.$store.state.domain.site.htmlAttrs.title,
+    };
   },
-  metaInfo () {
+  metaInfo() {
     return {
-      title: this.title
-    }
+      title: this.title,
+    };
   },
-}
+};
 </script>

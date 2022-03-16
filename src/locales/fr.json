@@ -370,11 +370,11 @@
     "spanish": "Espagnol"
   },
   "link": {
-    "browseTemplate": "parcourir-les-modèles",
-    "howToWriteCv": "comment-rédiger-un-cv",
+    "browseTemplate": "parcourir-les-modeles",
+    "howToWriteCv": "comment-rediger-un-cv",
     "payment": "paiement",
     "plan": "des-plans",
-    "builder": "créez-votre-cv",
+    "builder": "creez-votre-cv",
     "error": "erreur",
     "feedback": "avis",
     "faq": "faq",
@@ -384,7 +384,7 @@
     "values": "nos-valeurs",
     "siteMap": "plan-du-site",
     "help": "aide",
-    "securePayment": "paiement-sécurisé"
+    "securePayment": "paiement-securise"
   },
   "ourValues": {
     "title": "Nos valeurs",
