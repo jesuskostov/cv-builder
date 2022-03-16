@@ -52,7 +52,10 @@ import Footer from '../components/Footer.vue'
 export default {
   data() {
     return {
-      title: 'Contact | ' + this.$store.state.domain.site.htmlAttrs.title,
+      title:
+        this.$i18n.t("contact.title") +
+        " | " +
+        this.$store.state.domain.site.htmlAttrs.title,
       name: '',
       surname: '',
       subject: '',

@@ -232,7 +232,16 @@ export default {
       },
       bigPreview: false,
       nickname: "",
+      title:
+        this.$i18n.t("builder.title") +
+        " | " +
+        this.$store.state.domain.site.htmlAttrs.title,
     };
+  },
+  metaInfo () {
+    return {
+      title: this.title
+    }
   },
   components: {
     CvForm,

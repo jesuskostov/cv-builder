@@ -145,7 +145,16 @@ export default {
       },
       plan: "CV Expert",
       email: null,
+      title:
+      this.$i18n.t("plan.title") +
+      " | " +
+      this.$store.state.domain.site.htmlAttrs.title,
     };
+  },
+  metaInfo () {
+    return {
+      title: this.title
+    }
   },
   methods: {
     async setPlan() {

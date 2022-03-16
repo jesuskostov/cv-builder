@@ -69,7 +69,10 @@ export default {
   },
   data() {
     return {
-      title: 'Feedback | ' + this.$store.state.domain.site.htmlAttrs.title
+      title:
+        this.$i18n.t("nav_menu")[3] +
+        " | " +
+        this.$store.state.domain.site.htmlAttrs.title,
     }
   },
   metaInfo () {

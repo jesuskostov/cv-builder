@@ -359,6 +359,9 @@
     "german": "Tedesco",
     "spanish": "Spagnolo"
   },
+  "builder": {
+    "title": "Crea il tuo CV"
+  },
   "link": {
     "browseTemplate": "cerca-un-template",
     "howToWriteCv": "come-scrivere-un-cv",

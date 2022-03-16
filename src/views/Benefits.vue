@@ -91,6 +91,19 @@ import Footer from '../components/Footer.vue'
 
 export default {
   name: 'Home',
+  data() {
+    return {
+      title:
+        this.$i18n.t("ourValues.title") +
+        " | " +
+        this.$store.state.domain.site.htmlAttrs.title,
+    }
+  },
+  metaInfo () {
+    return {
+      title: this.title
+    }
+  },
   components: {
     Footer,
   },

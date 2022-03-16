@@ -17,6 +17,19 @@
 <script>
 export default {
   name: "Error",
+  data() {
+    return {
+      title:
+        this.$i18n.t("link.error") +
+        " | " +
+        this.$store.state.domain.site.htmlAttrs.title,
+    }
+  },
+  metaInfo () {
+    return {
+      title: this.title
+    }
+  },
   mounted() {
     this.$gtag.event("conversion", {
       send_to: this.domain.googleConversionTag,

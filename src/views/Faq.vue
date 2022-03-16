@@ -54,7 +54,10 @@ export default {
   },
   data() {
     return {
-      title: 'FAQ | ' + this.$store.state.domain.site.htmlAttrs.title
+      title:
+        this.$i18n.t("faq.title") +
+        " | " +
+        this.$store.state.domain.site.htmlAttrs.title,
     }
   },
   metaInfo () {

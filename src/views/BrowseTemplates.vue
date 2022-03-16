@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       title:
-        this.$i18n.t("browseTemplatePage.title") +
+        this.$i18n.t("nav_menu")[0] +
         " | " +
         this.$store.state.domain.site.htmlAttrs.title,
     };

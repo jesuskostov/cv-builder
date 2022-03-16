@@ -40,6 +40,19 @@ export default {
   components: {
     Footer,
   },
+  data() {
+    return {
+      title:
+        this.$i18n.t("login.login") +
+        " | " +
+        this.$store.state.domain.site.htmlAttrs.title,
+    }
+  },
+  metaInfo () {
+    return {
+      title: this.title
+    }
+  },
   methods: {
       login() {
           this.$swal({

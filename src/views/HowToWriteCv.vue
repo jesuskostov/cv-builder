@@ -44,7 +44,10 @@ export default {
   },
   data() {
     return {
-      title: 'How to write CV | ' + this.$store.state.domain.site.htmlAttrs.title
+      title:
+        this.$i18n.t("howToWriteCV.title") +
+        " | " +
+        this.$store.state.domain.site.htmlAttrs.title,
     }
   },
   metaInfo () {

@@ -309,7 +309,10 @@ export default {
   name: "Home",
   data() {
     return {
-      title: this.$store.state.domain.site.htmlAttrs.title,
+      title:
+        this.$i18n.t("hero.title") +
+        " | " +
+        this.$store.state.domain.site.htmlAttrs.title,
     };
   },
   components: {

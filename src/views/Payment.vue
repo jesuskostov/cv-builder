@@ -457,6 +457,10 @@ export default {
   },
   data() {
     return {
+      title:
+        this.$i18n.t("payment.title") +
+        " | " +
+        this.$store.state.domain.site.htmlAttrs.title,
       bigPreview: false,
       cardNumber: "",
       firstName: "",
@@ -471,6 +475,11 @@ export default {
       },
       years: ["2022", "2023", "2024", "2025", "2026", "2027", "2028", "2029"],
     };
+  },
+  metaInfo () {
+    return {
+      title: this.title
+    }
   },
   computed: {
     selectedCv() {

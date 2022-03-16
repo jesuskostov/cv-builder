@@ -76,6 +76,19 @@ export default {
   components: {
     Footer,
   },
+  data() {
+    return {
+      title:
+        this.$i18n.t("footer_menu")[14] +
+        " | " +
+        this.$store.state.domain.site.htmlAttrs.title,
+    }
+  },
+  metaInfo () {
+    return {
+      title: this.title
+    }
+  },
   computed: {
     domain() {
       return this.$store.state.domain;

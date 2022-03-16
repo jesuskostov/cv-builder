@@ -39,6 +39,19 @@ import Footer from '../components/Footer.vue'
 
 export default {
   name: 'Help',
+  data() {
+    return {
+      title:
+        this.$i18n.t("help.title") +
+        " | " +
+        this.$store.state.domain.site.htmlAttrs.title,
+    }
+  },
+  metaInfo () {
+    return {
+      title: this.title
+    }
+  },
   components: {
     Footer,
   },
