@@ -115,7 +115,7 @@
                   <div class="row">
                     <div class="col-md-4">
                       <label for="expiryMonth">
-                        {{ $t("payment.cardDate") }} :
+                        {{ $t("payment.cardDate") | formattedLabel }}
                       </label>
                     </div>
                     <div class="col-md-4">
