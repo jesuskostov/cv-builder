@@ -292,9 +292,9 @@
                     {{ $t("payment.amountToPay") }} : 4,90€!*
                   </p>
                 </div>
-                <small v-if="offer === 'paid'">
+                <p v-if="offer === 'paid'">
                   {{ $t("payment.subscriptionText") }}
-                </small>
+                </p>
                 <ul v-if="offer === 'paid'" class="mt-3 pl-0 mb-0">
                   <li
                     v-for="i in $t('plan.benefits')"

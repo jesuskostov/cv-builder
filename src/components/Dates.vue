@@ -7,7 +7,7 @@
         <date-picker
           type="month"
           :disabled-date="disabledRangeStartDate"
-          :default-value="startDate"
+          default-value="2016-01-01"
           v-model="startDate"
           ref="startDate"
           class="w-100"
@@ -22,7 +22,7 @@
         <date-picker
           type="month"
           :disabled-date="disabledRangeEndDate"
-          :default-value="startDate"
+          default-value="2016-01-01"
           v-model="endDate"
           ref="endDate"
           class="w-100"
@@ -97,8 +97,8 @@ export default {
     },
   },
   created() {
-    this.startDate = new Date(this.dates.from);
-    this.endDate = new Date(this.dates.to);
+    // this.startDate = new Date(this.dates.from);
+    // this.endDate = new Date(this.dates.to);
   },
 };
 </script>
