@@ -318,9 +318,9 @@
                     {{ i }}
                   </li>
                 </ul>
-                <small v-if="offer === 'free'">
+                <p v-if="offer === 'free'">
                   {{ $t("payment.subscriptionFree") }}
-                </small>
+                </p>
               </div>
             </div>
             <ul v-if="plan === 'CV Expert'" class="mt-3 pl-0">
