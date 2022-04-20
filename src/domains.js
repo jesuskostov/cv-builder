@@ -65,9 +65,9 @@ const DOMAINS = [
   {
     offer: "paid",
     url: ["www.cv-immediat.com", "cv-immediat.com", "cv-immediat.local"],
-    googleAdsId: "cv-immediat-1",
-    googleAnaliticsId: "cv-immediat-2",
-    googleConversionTag: "cv-immediat-3",
+    googleAdsId: "AW-10884793507",
+    googleAnaliticsId: "UA-115340529-28",
+    googleConversionTag: "AW-10884793507/fO7rCJ7m2LMDEKOJo8Yo",
     locale: "fr",
     site: {
       title: "CV Immediat",
